@@ -124,28 +124,6 @@
 					<textureslidernibfocus>OSD/ScrollbarNibFO.png</textureslidernibfocus>
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
-			    <control type="ranges">
-				    <posx>30</posx>
-				    <posy>3</posy>
-				    <width>1570</width>
-				    <height>9</height>
-				    <texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
-				    <lefttexture>colors/white.png</lefttexture>
-				    <midtexture colordiffuse="FFFF0000">colors/white.png</midtexture>
-				    <righttexture>colors/white.png</righttexture>
-                    <colordiffuse>Highlight</colordiffuse>
-				    <info>Player.Cutlist</info>
-			    </control>
-			    <control type="ranges">
-				    <posx>30</posx>
-				    <posy>13</posy>
-				    <width>1570</width>
-				    <height>5</height>
-				    <texturebg border="3" colordiffuse="00FFFFFF">colors/white50.png</texturebg>
-				    <righttexture>colors/white.png</righttexture>
-                    <colordiffuse>Highlight</colordiffuse>
-				    <info>Player.Chapters</info>
-			    </control>
 				<control type="label" description="Progress time label">
 					<left>30</left>
 					<top>30</top>
@@ -246,7 +224,7 @@
 				</control>
 				<!-- Currently recording indicator -->
                 <control type="group">
-					<visible>[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive] | PVR.IsPlayingActiveRecording</visible>
+					<visible>[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive]</visible>
 					<control type="image">
 						<posy>90</posy>
 						<left>720</left>

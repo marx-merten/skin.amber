@@ -389,13 +389,6 @@
                         <font>ListDetails</font>
 						<align>center</align>
 					</control>
-                    <control type="button" id="35">
-						<description>Add Group</description>
-						<width>335</width>
-						<label>$LOCALIZE[13315]</label>
-                        <font>ListDetails</font>
-						<align>center</align>
-					</control>
                     <control type="togglebutton" id="34">
 					    <description>TV/Radio toggle</description>
 					    <width>325</width>

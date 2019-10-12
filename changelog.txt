@@ -1,3 +1,5 @@
+3.2.23 (12-10-2019)
+- Remove all Matrix code from Leia version
 3.2.22 (09-10-2019)
 - Fixes to blur settings
 - Changes to fanart view
