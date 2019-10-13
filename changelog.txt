@@ -1,3 +1,5 @@
+3.2.25 (13-10-2019)
+- Add use poster for blur
 3.2.24 (13-10-2019)
 - Fixes
 - Update Brazilian Portuguese translation
