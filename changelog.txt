@@ -1,3 +1,6 @@
+3.2.24 (13-10-2019)
+- Fixes
+- Update Brazilian Portuguese translation
 3.2.23 (12-10-2019)
 - Remove all Matrix code from Leia version
 3.2.22 (09-10-2019)
