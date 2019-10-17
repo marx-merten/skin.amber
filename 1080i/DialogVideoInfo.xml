@@ -128,7 +128,7 @@
         <control type="grouplist" description="Ratings">
             <top>83</top>
             <left>705</left>
-            <width>1200</width>
+            <width>1275</width>
             <height>40</height>
             <itemgap>8</itemgap>
             <orientation>horizontal</orientation>
@@ -190,7 +190,7 @@
             </control>
             <control type="grouplist" description="RT Critics rating">
                 <visible>!String.IsEmpty(ListItem.Rating(tomatometerallcritics))</visible>
-                <width>120</width>
+                <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>3</itemgap>            
@@ -202,7 +202,7 @@
                 </control>
                 <control type="label">
                     <height>40</height>
-                    <width>55</width>
+                    <width>60</width>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
                     <label>$VAR[RottenFreshLabelVar]%</label>
@@ -210,7 +210,7 @@
             </control>
             <control type="grouplist" description="RT Audience rating">
                 <visible>!String.IsEmpty(ListItem.Rating(tomatometerallaudience))</visible>
-                <width>120</width>
+                <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>3</itemgap>            
@@ -222,7 +222,7 @@
                 </control>
                 <control type="label">
                     <height>40</height>
-                    <width>50</width>
+                    <width>60</width>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
                     <label>$VAR[RottenFreshAudienceLabelVar]%</label>
@@ -230,7 +230,7 @@
             </control>
             <control type="grouplist" description="Metacritic rating">
                 <visible>!String.IsEmpty(ListItem.Rating(metacritic))</visible>
-                <width>80</width>
+                <width>90</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>5</itemgap>            
@@ -242,7 +242,7 @@
                 </control>
                 <control type="label">
                     <height>40</height>
-                    <width>40</width>
+                    <width>50</width>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
                     <label>$VAR[MetacriticLabelVar]</label>
@@ -250,7 +250,7 @@
             </control>
             <control type="grouplist" description="TMDB rating">
                 <visible>!String.IsEmpty(ListItem.Rating(themoviedb))</visible>
-                <width>105</width>
+                <width>115</width>
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>  
                 <align>left</align>
@@ -261,7 +261,7 @@
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="label" description="TMDB Rating">
-                    <width>50</width>
+                    <width>60</width>
                     <height>40</height>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
@@ -316,7 +316,7 @@
         <control type="grouplist" description="Ratings for tmdbhelper widget items">
             <top>83</top>
             <left>705</left>
-            <width>1200</width>
+            <width>1275</width>
             <height>40</height>
             <itemgap>8</itemgap>
             <orientation>horizontal</orientation>
@@ -356,7 +356,7 @@
             </control>
             <control type="grouplist" description="RT Critics rating">
                 <visible>!String.IsEmpty(Container(5100).ListItemAbsolute(0).Property(rottentomatoes_rating)) + !String.IsEqual(Container(5100).ListItemAbsolute(0).Property(rottentomatoes_rating),N/A)</visible>
-                <width>120</width>
+                <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>3</itemgap>            
@@ -368,7 +368,7 @@
                 </control>
                 <control type="label">
                     <height>40</height>
-                    <width>55</width>
+                    <width>60</width>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
                     <label>$INFO[Container(5100).ListItemAbsolute(0).Property(rottentomatoes_rating)]%</label>
@@ -376,7 +376,7 @@
             </control>
             <control type="grouplist" description="RT Audience rating">
                 <visible>!String.IsEmpty(Container(5100).ListItemAbsolute(0).Property(rottentomatoes_usermeter)) + !String.IsEqual(Container(5100).ListItemAbsolute(0).Property(rottentomatoes_usermeter),N/A)</visible>
-                <width>120</width>
+                <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>3</itemgap>            
@@ -388,7 +388,7 @@
                 </control>
                 <control type="label">
                     <height>40</height>
-                    <width>55</width>
+                    <width>65</width>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
                     <label>$INFO[Container(5100).ListItemAbsolute(0).Property(rottentomatoes_usermeter)]%</label>
@@ -396,7 +396,7 @@
             </control>
             <control type="grouplist" description="Metacritic rating">
                 <visible>!String.IsEmpty(Container(5100).ListItemAbsolute(0).Property(metacritic_rating)) + !String.IsEqual(Container(5100).ListItemAbsolute(0).Property(metacritic_rating),N/A)</visible>
-                <width>80</width>
+                <width>90</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>5</itemgap>            
@@ -408,7 +408,7 @@
                 </control>
                 <control type="label">
                     <height>40</height>
-                    <width>40</width>
+                    <width>50</width>
                     <font>ListDetails</font>
                     <textcolor>Highlight</textcolor>
                     <label>$INFO[Container(5100).ListItemAbsolute(0).Property(metacritic_rating)]</label>
@@ -1156,6 +1156,17 @@
                 <visible>[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,movie)] + system.hasaddon(script.embuary.info)</visible>
                 <visible>!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
             </control>
+            <control type="button" id="296" description="Special Features">
+                <height>90</height>
+                <width min="220">auto</width>
+                <align>center</align>
+                <font>Details</font>
+                <label>$LOCALIZE[32007]</label>
+                <onclick>Dialog.Close(1121)</onclick>
+                <onclick>RunScript(plugin.video.specialfeatures,listitem)</onclick>
+                <visible>Skin.HasSetting(Enable.SpecialFeatures) + String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + 
+                        [!String.isEqual(ListItem.DBType,set) + !String.IsEmpty(Listitem.DBID)]</visible>
+            </control>
             <control type="button" id="297" description="Extras">
                 <height>90</height>
                 <width min="220">auto</width>
@@ -1165,6 +1176,27 @@
                 <onclick>SetProperty(DoInfoExtras,True,Home)</onclick>
                 <onclick>SetProperty(InfoExtrasDBID,$INFO[ListItem.DBID],Home)</onclick>
                 <onclick>SetProperty(InfoExtrasDBType,$INFO[ListItem.DBType],Home)</onclick>
+                <onclick>SetProperty(fanart,$ESCINFO[ListItem.Art(fanart)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart1,$ESCINFO[ListItem.Art(fanart1)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart2,$ESCINFO[ListItem.Art(fanart2)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart3,$ESCINFO[ListItem.Art(fanart3)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart4,$ESCINFO[ListItem.Art(fanart4)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart5,$ESCINFO[ListItem.Art(fanart5)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart6,$ESCINFO[ListItem.Art(fanart6)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart7,$ESCINFO[ListItem.Art(fanart7)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart8,$ESCINFO[ListItem.Art(fanart8)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart9,$ESCINFO[ListItem.Art(fanart9)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart10,$ESCINFO[ListItem.Art(fanart10)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart11,$ESCINFO[ListItem.Art(fanart11)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart12,$ESCINFO[ListItem.Art(fanart12)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart13,$ESCINFO[ListItem.Art(fanart13)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart14,$ESCINFO[ListItem.Art(fanart14)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart15,$ESCINFO[ListItem.Art(fanart15)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart16,$ESCINFO[ListItem.Art(fanart16)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart17,$ESCINFO[ListItem.Art(fanart17)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart18,$ESCINFO[ListItem.Art(fanart18)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart19,$ESCINFO[ListItem.Art(fanart19)],home)</onclick>
+                <onclick condition="Skin.HasSetting(SkinHelper.EnableExtraFanart)">SetProperty(fanart20,$ESCINFO[ListItem.Art(fanart20)],home)</onclick>
                 <onclick>ActivateWindow(1121)</onclick>
                 <visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
                 <visible>!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
