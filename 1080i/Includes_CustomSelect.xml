@@ -22,7 +22,7 @@
             <onclick>Dialog.Close(1121)</onclick>
             <onclick>SendClick(movieinformation,10)</onclick>
             <visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
-            <visible>!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
+            <visible>[!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))] | [!String.IsEmpty(Window(Home).Property(InfoExtrasDBID)) + !String.IsEmpty(Window(Home).Property(InfoExtrasDBType))]</visible>
 		</item>
         <item>
 			<label>$LOCALIZE[32005]</label>
@@ -34,7 +34,7 @@
             <onclick condition="String.IsEqual(ListItem.DBType,set)">XBMC.RunScript(script.artwork.beef, mode=gui, mediatype=set, dbid=$INFO[ListItem.DBID])</onclick>
             <onclick condition="String.IsEqual(ListItem.DBType,musicvideo)">XBMC.RunScript(script.artwork.beef, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
             <visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
-            <visible>!String.IsEmpty(Listitem.DBID) + !ListItem.IsCollection + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
+            <visible>[!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))] | [!String.IsEmpty(Window(Home).Property(InfoExtrasDBID)) + !String.IsEmpty(Window(Home).Property(InfoExtrasDBType))]</visible>
 		</item>
 		<item>
 			<label>$LOCALIZE[32006]</label>
@@ -46,7 +46,7 @@
             <onclick condition="String.IsEqual(ListItem.DBType,set)">XBMC.RunScript(script.artwork.beef, mode=auto, mediatype=set, dbid=$INFO[ListItem.DBID])</onclick>
             <onclick condition="String.IsEqual(ListItem.DBType,musicvideo)">XBMC.RunScript(script.artwork.beef, mode=auto, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
             <visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
-            <visible>!String.IsEmpty(Listitem.DBID) + !ListItem.IsCollection + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
+            <visible>[!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))] | [!String.IsEmpty(Window(Home).Property(InfoExtrasDBID)) + !String.IsEmpty(Window(Home).Property(InfoExtrasDBType))]</visible>
 		</item>
         <item>
 			<label>$LOCALIZE[32068]</label>
@@ -79,14 +79,17 @@
 			<label>$LOCALIZE[32007]</label>
             <onclick>Dialog.Close(1121)</onclick>
             <onclick>RunScript(plugin.video.specialfeatures,listitem)</onclick>
-            <visible>Skin.HasSetting(Enable.SpecialFeatures) + String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + !String.isEqual(ListItem.DBType,set) + !String.IsEmpty(Listitem.DBID)</visible>
+            <visible>Skin.HasSetting(Enable.SpecialFeatures) + String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true) + 
+                     [[!String.isEqual(ListItem.DBType,set) + !String.IsEmpty(Listitem.DBID)] | [!String.IsEmpty(Window(Home).Property(InfoExtrasDBID)) + 
+                     [!String.IsEmpty(Window(Home).Property(InfoExtrasDBType) + !String.IsEqual(Window(Home).Property(InfoExtrasDBType),set)]]]
+                     </visible>
 		</item>
 		<item>
 			<visible>System.HasAddon(script.cinemavision) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]</visible>
             <label>$LOCALIZE[31005]</label>
             <onclick>Dialog.Close(1121)</onclick>
             <onclick>RunScript(script.cinemavision,experience)</onclick>
-            <visible>!String.IsEmpty(Listitem.DBID) + !ListItem.IsCollection + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
+            <visible>[!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))] | [!String.IsEmpty(Window(Home).Property(InfoExtrasDBID)) + !String.IsEmpty(Window(Home).Property(InfoExtrasDBType))]</visible>
 		</item>
 		<item>
 			<onclick>Dialog.Close(all,true)</onclick>

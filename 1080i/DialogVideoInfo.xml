@@ -56,7 +56,7 @@
             </include>
             <include condition="Skin.HasSetting(Enable.BlurredVideoInfo)" content="BackgroundOverlay">
                 <param name="parentid" value="9000"/>
-<!--                <param name="colordiffuse">8FFFFFFF</param> -->
+<!--                <param name="colordiffuse" value="9FC8C8C8"/> -->
             </include>
         </control>
         
@@ -717,7 +717,7 @@
                             <label>$LOCALIZE[20339]:</label>
                             <label2>$INFO[ListItem.Director]</label2>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-                            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[ListItem.Director],type=person,call_id=1129,prevent_del))</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Dialog.Close(all,true)||RunScript(plugin.video.themoviedb.helper,add_query=$INFO[ListItem.Director],type=person,call_id=1129,prevent_del))</onclick>
 			                <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
 			                <onclick condition="String.Contains(ListItem.Director, / )">SetProperty(Dialog.2.BuiltIn,SetProperty(Dialog.Builtin,Skin.SetString(CustomSearchTerm,???)++Dialog.Close(all)++ActivateWindow(1122))||RunScript(script.embuary.helper,action=splitandcreateselect,header='"$LOCALIZE[32110]"',items='$ESCINFO[ListItem.Director]',seperator='" / "',splitby='"++"'))</onclick>
 			                <onclick condition="!String.Contains(ListItem.Director, / )">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$INFO[ListItem.Director])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
@@ -728,7 +728,7 @@
                             <label>$LOCALIZE[20339]:</label>
                             <label2>$INFO[Container(5100).ListItemAbsolute(0).Director]</label2>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-                            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(5100).ListItemAbsolute(0).Director],type=person,call_id=1129,prevent_del))</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Dialog.Close(all,true)||RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(5100).ListItemAbsolute(0).Director],type=person,call_id=1129,prevent_del))</onclick>
 			                <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
 			                <onclick condition="String.Contains(Container(5100).ListItemAbsolute(0).Director, / )">SetProperty(Dialog.2.BuiltIn,SetProperty(Dialog.Builtin,Skin.SetString(CustomSearchTerm,???)++Dialog.Close(all)++ActivateWindow(1122))||RunScript(script.embuary.helper,action=splitandcreateselect,header='"$LOCALIZE[32110]"',items='$ESCINFO[Container(5100).ListItemAbsolute(0).Director]',seperator='" / "',splitby='"++"'))</onclick>
 			                <onclick condition="!String.Contains(Container(5100).ListItemAbsolute(0).Director, / )">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$INFO[Container(5100).ListItemAbsolute(0).Director])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
@@ -739,7 +739,7 @@
                             <label>$LOCALIZE[20339](s):</label>
                             <label2>$INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)]</label2>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-                            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)],type=person,call_id=1129,prevent_del))</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Dialog.Close(all,true)||RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)],type=person,call_id=1129,prevent_del))</onclick>
 			                <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
 			                <onclick condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movies.Director), / )">SetProperty(Dialog.2.BuiltIn,SetProperty(Dialog.Builtin,Skin.SetString(CustomSearchTerm,???)++Dialog.Close(all)++ActivateWindow(1122))||RunScript(script.embuary.helper,action=splitandcreateselect,header='"$LOCALIZE[32110]"',items='$ESCINFO[Window(Home).Property(SkinInfo.Set.Movies.Director)]',seperator='" / "',splitby='"++"'))</onclick>
 			                <onclick condition="!String.Contains(Window(Home).Property(SkinInfo.Set.Movies.Director), / )">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
@@ -750,7 +750,7 @@
                             <label>$LOCALIZE[20417]:</label>
                             <label2>$INFO[ListItem.Writer]</label2>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-                            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[ListItem.Writer],type=person,call_id=1129,prevent_del))</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Dialog.Close(all)||RunScript(plugin.video.themoviedb.helper,add_query=$INFO[ListItem.Writer],type=person,call_id=1129,prevent_del))</onclick>
 			                <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
 			                <onclick condition="String.Contains(ListItem.Writer, / )">SetProperty(Dialog.2.BuiltIn,SetProperty(Dialog.Builtin,Skin.SetString(CustomSearchTerm,???)++Dialog.Close(all)++ActivateWindow(1122))||RunScript(script.embuary.helper,action=splitandcreateselect,header='"$LOCALIZE[32113]"',items='$ESCINFO[ListItem.Writer]',seperator='" / "',splitby='"++"'))</onclick>
 			                <onclick condition="!String.Contains(ListItem.Writer, / )">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$INFO[ListItem.Writer])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
@@ -761,7 +761,7 @@
                             <label>$LOCALIZE[20417]:</label>
                             <label2>$INFO[Container(5100).ListItemAbsolute(0).Writer]</label2>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-                            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(5100).ListItemAbsolute(0).Writer],type=person,call_id=1129,prevent_del))</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Dialog.Close(all,true)||RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(5100).ListItemAbsolute(0).Writer],type=person,call_id=1129,prevent_del))</onclick>
 			                <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
 			                <onclick condition="String.Contains(Container(5100).ListItemAbsolute(0).Writer, / )">SetProperty(Dialog.2.BuiltIn,SetProperty(Dialog.Builtin,Skin.SetString(CustomSearchTerm,???)++Dialog.Close(all)++ActivateWindow(1122))||RunScript(script.embuary.helper,action=splitandcreateselect,header='"$LOCALIZE[32113]"',items='$ESCINFO[Container(5100).ListItemAbsolute(0).Writer]',seperator='" / "',splitby='"++"'))</onclick>
 			                <onclick condition="!String.Contains(Container(5100).ListItemAbsolute(0).Writer, / )">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$INFO[Container(5100).ListItemAbsolute(0).Writer])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
@@ -772,7 +772,7 @@
                             <label>$LOCALIZE[20417](s):</label>
                             <label2>$INFO[Window(Home).Property(SkinInfo.Set.Movies.Writer)]</label2>
                             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-                            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Window(Home).Property(SkinInfo.Set.Movies.Writer)],type=person,call_id=1129,prevent_del))</onclick>
+                            <onclick>SetProperty(Dialog.1.BuiltIn,Dialog.Close(all,true)||RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Window(Home).Property(SkinInfo.Set.Movies.Writer)],type=person,call_id=1129,prevent_del))</onclick>
 			                <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
 			                <onclick condition="String.Contains(Window(Home).Property(SkinInfo.Set.Movies.Writer), / )">SetProperty(Dialog.2.BuiltIn,SetProperty(Dialog.Builtin,Skin.SetString(CustomSearchTerm,???)++Dialog.Close(all)++ActivateWindow(1122))||RunScript(script.embuary.helper,action=splitandcreateselect,header='"$LOCALIZE[32113]"',items='$ESCINFO[Window(Home).Property(SkinInfo.Set.Movies.Writer)]',seperator='" / "',splitby='"++"'))</onclick>
 			                <onclick condition="!String.Contains(Window(Home).Property(SkinInfo.Set.Movies.Writer), / )">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$INFO[Window(Home).Property(SkinInfo.Set.Movies.Writer)])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
@@ -1100,7 +1100,9 @@
                 <onclick condition="String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))">Action(Close)</onclick>
                 <onclick condition="!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Property(tmdb_id))">Action(Close)</onclick>
                 <onclick condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)">SendClick(8)</onclick>
+                <onclick condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.DBID)">Dialog.Close(all,true)</onclick>
                 <onclick condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.DBID)">SendClick(8)</onclick>
+                <onclick condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.DBID)">Dialog.Close(all,true)</onclick>
                 <onclick condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.DBID)">RunScript(script.embuary.helper,action=goto,path='"videodb://tvshows/titles/$INFO[ListItem.DBID]/"',target=videos)</onclick>
             </control>
             <control type="button" id="8001" description="Set">
@@ -1161,6 +1163,8 @@
                 <font>Details</font>
                 <label>$LOCALIZE[32135]</label>
                 <onclick>SetProperty(DoInfoExtras,True,Home)</onclick>
+                <onclick>SetProperty(InfoExtrasDBID,$INFO[ListItem.DBID],Home)</onclick>
+                <onclick>SetProperty(InfoExtrasDBType,$INFO[ListItem.DBType],Home)</onclick>
                 <onclick>ActivateWindow(1121)</onclick>
                 <visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
                 <visible>!String.IsEmpty(Listitem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))</visible>

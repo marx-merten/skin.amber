@@ -238,12 +238,12 @@
 					<content>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="7"/>
-							<param name="itemlabel" value="$LOCALIZE[32048]"/>
+							<param name="itemlabel" value="[B]$LOCALIZE[32048][/B]"/>
 							<param name="skinsetting" value="Enable.FanartTitle"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="12"/>
-							<param name="itemlabel" value="$LOCALIZE[32070]"/>
+							<param name="itemlabel" value="      $LOCALIZE[32070]"/>
 							<param name="skinsetting" value="FanartTitle.InTopBar"/>
 							<param name="itemvisibility" value="Skin.HasSetting(Enable.FanartTitle)"/>
 						</include>
@@ -453,6 +453,7 @@
 							<param name="itemid" value="5"/>
 							<param name="itemlabel" value="      $LOCALIZE[32165]"/>
 							<param name="skinsetting" value="Blur.UsePoster"/>
+                            <param name="itemvisibility" value="Skin.HasSetting(Enable.BlurredVideoInfo)"/>
 						</include>
                         <item id="6" description="Blur Settings">
 							<label>      $LOCALIZE[32157]</label>

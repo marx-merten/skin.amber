@@ -4,6 +4,7 @@
 	<views>50,51,52,53,54,55,56,501</views>
 	<onload>ClearProperty(gallery)</onload>
     <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+    <onload condition="System.HasAddon(plugin.video.themoviedb.helper)">RunScript(plugin.video.themoviedb.helper,reset_path)</onload>
 	<onunload>ClearProperty(gallery)</onunload>
 	<menucontrol>9000</menucontrol>
 	<controls>
