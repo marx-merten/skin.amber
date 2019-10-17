@@ -51,12 +51,12 @@
 			    <texture background="true">$VAR[VideoInfoBackground]</texture>
 			    <fadetime>IconCrossfadeTime</fadetime>
             </control>
-            <include condition="!Skin.HasSetting(Enable.BlurredVideoInfo)" content="BackgroundOverlay">
+            <include condition="!Skin.HasSetting(Enable.BlurredVideoInfo) | [Skin.HasSetting(Enable.BlurredVideoInfo) + !Skin.HasSetting(Blur.UsePoster)]" content="BackgroundOverlay">
                 <param name="parentid" value="9000"/>
             </include>
-            <include condition="Skin.HasSetting(Enable.BlurredVideoInfo)" content="BackgroundOverlay">
+            <include condition="Skin.HasSetting(Enable.BlurredVideoInfo) + Skin.HasSetting(Blur.UsePoster)" content="BackgroundOverlay">
                 <param name="parentid" value="9000"/>
-<!--                <param name="colordiffuse" value="9FC8C8C8"/> -->
+                <param name="colordiffuse" value="9FC8C8C8"/>
             </include>
         </control>
         
