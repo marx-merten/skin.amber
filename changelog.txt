@@ -1,3 +1,7 @@
+3.2.26 (18-10-2019)
+- Fixes for playback from sets info
+- Add missing options to Extras for shelf items
+- Misc. fixes
 3.2.25 (13-10-2019)
 - Add use poster for blur
 3.2.24 (13-10-2019)
