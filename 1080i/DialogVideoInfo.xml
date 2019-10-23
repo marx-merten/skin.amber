@@ -15,6 +15,9 @@
         <include condition="System.HasAddon(plugin.video.themoviedb.helper) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + 
                             [!Skin.HasSetting(Disable.ExtendedInfo) | !String.IsEmpty(ListItem.Property(tmdb_id))]">TMDbMediaDetails</include>
 
+        <!-- Get additional TV Show details from Embuary Helper script to be able to jump to season from an episode info -->
+        <include condition="System.HasAddon(script.embuary.helper) + String.IsEqual(ListItem.DBType,episode) + 
+                            !String.IsEmpty(ListItem.DBID)">EmbuaryHelperTVShowDetails</include>
 
         <!-- Hide default cast list 50, using a custom cast -->
         <include>HiddenCast</include>
@@ -35,7 +38,6 @@
 			<include>HiddenObject</include>
 			<imagepath background="true">$VAR[VideoInfoBlurSource]</imagepath>
 		</control>
-
 
         <control type="group">
             <control type="image">
@@ -700,6 +702,12 @@
                             <label2>$INFO[ListItem.TVShowTitle]</label2>
                             <onclick condition="String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.DBID)">RunScript(script.embuary.helper,action=jumptoshow_by_episode,dbid=$INFO[ListItem.DBID])</onclick>
                             <visible>!String.IsEmpty(ListItem.TVShowTitle)</visible>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[20373]:</label>
+                            <label2>$INFO[ListItem.Season]</label2>
+                            <onclick>RunScript(script.embuary.helper,action=goto,path='"videodb://tvshows/titles/$INFO[Container(5200).ListItem.DBID]/$INFO[ListItem.Season]/?tvshowid=$INFO[Container(5200).ListItem.DBID]"',target=videos)</onclick>
+                            <visible>String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.DBID)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[557]:</label>
