@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;options=noGroups)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|powermenu)</onunload>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<backgroundcolor>0</backgroundcolor>
 	<controls>
@@ -186,44 +186,48 @@
 					<include>SettingsListCommons</include>
 					<content>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="0"/>
+							<param name="itemid" value="1"/>
 							<param name="itemlabel" value="[B]$LOCALIZE[31994][/B]"/>
 							<param name="skinsetting" value="VerticalHome"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="1"/>
+							<param name="itemid" value="2"/>
 							<param name="itemlabel" value="      $LOCALIZE[31363]"/>
 							<param name="skinsetting" value="StaticVerticalHome"/>
                             <param name="font" value="font14"/>
 							<param name="itemvisibility" value="Skin.HasSetting(VerticalHome)"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="2"/>
+							<param name="itemid" value="3"/>
 							<param name="itemlabel" value="[B]      $LOCALIZE[32054][/B]"/>
                             <param name="font" value="font14"/>
 							<param name="skinsetting" value="Vertical.BiggerFont"/>
 							<param name="itemvisibility" value="Skin.HasSetting(VerticalHome)"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="3"/>
+							<param name="itemid" value="4"/>
 							<param name="itemlabel" value="            $LOCALIZE[32055]"/>
                             <param name="font" value="font13"/>
 							<param name="skinsetting" value="VerticalNavWrap"/>
 							<param name="itemvisibility" value="Skin.HasSetting(VerticalHome) + Skin.HasSetting(Vertical.BiggerFont)"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="0"/>
+							<param name="itemid" value="5"/>
 							<param name="itemlabel" value="$LOCALIZE[31920]"/>
 							<param name="skinsetting" value="Hide.AllShelves"/>
 						</include>                        
-						<item id="19" description="Set Favourite Addons">
+						<item id="6" description="Set Favourite Addons">
 							<label>$LOCALIZE[32062]</label>
 							<onclick>SetProperty(CustomSelectFavouriteAddons,True)</onclick>
 							<onclick>ActivateWindow(1125)</onclick>
 						</item>
-						<item id="18" description="Customize Home Menu">
+						<item id="7" description="Customize Home Menu">
 							<label>$LOCALIZE[32043]</label>
 							<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+						</item>
+                        <item id="7" description="Customize Power Menu">
+							<label>$LOCALIZE[32166]</label>
+							<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
 						</item>
 					</content>
 				</control>

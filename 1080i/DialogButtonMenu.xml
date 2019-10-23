@@ -12,18 +12,42 @@
 				<effect type="zoom" start="100" end="95" center="960,540" time="100" />
 				<effect type="fade" start="100" end="0" time="100" />
 			</animation>
-			<control type="image" description="Menu BG">
+            <control type="image" description="Menu BG">
 				<posx>699</posx>
 				<posy>300</posy>
-				<height>512</height>
+				<height>310</height>
 				<width>522</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsLessOrEqual(Container(9009).NumItems,3)</visible>
 			</control>
+            <control type="image" description="Menu BG">
+				<posx>699</posx>
+				<posy>300</posy>
+				<height>500</height>
+				<width>522</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsGreater(Container(9009).NumItems,3) + Integer.IsLessOrEqual(Container(9009).NumItems,6)</visible>
+			</control>
+            <control type="image" description="Menu BG">
+				<posx>699</posx>
+				<posy>300</posy>
+				<height>612</height>
+				<width>522</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsGreater(Container(9009).NumItems,6)</visible>
+			</control>
+            <control type="label">
+                <posx>850</posx>
+				<posy>320</posy>
+				<height>40</height>
+				<width>200</width>
+                <label>$LOCALIZE[31528]</label>
+            </control>
 			<control type="panel" id="9009" description="PW Options">
 				<posx>699</posx>
 				<posy>384</posy>
 				<width>522</width>
-				<height>500</height>
+				<height>495</height>
 				<onleft>close</onleft>
 				<onright>close</onright>
 				<onup>9009</onup>
@@ -41,13 +65,13 @@
 						<height>60</height>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
+<!--					<control type="image">
 						<posx>72r</posx>
 						<width>40</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<info>ListItem.Thumb</info>
-					</control>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control> -->
 				</itemlayout>
 				<focusedlayout height="60" width="522">
 					<control type="image">
@@ -69,16 +93,19 @@
 						<shadowcolor></shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
+<!--					<control type="image">
 						<posx>72r</posx>
 						<width>40</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<info>ListItem.Thumb</info>
+						<texture>$INFO[ListItem.Icon]</texture>
 						<colordiffuse>Black</colordiffuse>
-					</control>
+					</control> -->
 				</focusedlayout>
-				<content>
+                <content>
+                    <include>skinshortcuts-group-powermenu</include>
+                </content>
+<!--				<content>
 					<item id="1" description="LogOff">
 						<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 						<visible>System.Loggedon</visible>
@@ -140,7 +167,7 @@
 						<label>$LOCALIZE[5]</label>
 						<thumb>SettingsNF.png</thumb>
 					</item>
-				</content>
+				</content> -->
 			</control>
 		</control>
 	</controls>

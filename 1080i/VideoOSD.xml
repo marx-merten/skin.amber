@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">603</defaultcontrol>
+	<defaultcontrol>602</defaultcontrol>
+    <onload condition="!Player.PauseEnabled">SetFocus(603)</onload>
 	<onload>Dialog.Close(fullscreeninfo)</onload>
 <!--	<onload condition="VideoPlayer.Content(livetv)">SetFocus(603)</onload> -->
 	<include>OSDFade</include>

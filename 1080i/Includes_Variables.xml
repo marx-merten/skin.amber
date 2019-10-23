@@ -798,6 +798,7 @@
         <value condition="!String.IsEmpty(Window(Home).Property(skinshortcuts-Background))">$LOCALIZE[33068]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(skinshortcuts-Widget))">$LOCALIZE[32045]</value>
         <value condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[33061]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),powermenu)">$LOCALIZE[31528]</value>
         <value>$LOCALIZE[32044]</value>
     </variable>
     
@@ -954,6 +955,10 @@
 		<value>-</value>
 	</variable>
 
+    <variable name="ShortcutsDisabled">
+		<value condition="String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)">[COLOR Red]×[/COLOR] </value>
+		<value />
+	</variable>
 
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
 

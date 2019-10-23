@@ -52,7 +52,14 @@
 		<condition>Skin.HasSetting(Enable.GlobalSearch) + System.HasAddon(script.globalsearch)</condition>
 		<action>RunScript(script.globalsearch)</action>
 	</override>
+    <override action="reboot_to_android">
+        <action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
+        <action>XBMC.Reset()</action>
+    </override>
 
+    <!-- For Power Menu -->
+    <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
+    
 	<!-- Warning to Remove/Disable Settings -->
 	<warn heading="31395" message="31396">ActivateWindow(Settings)</warn>
 	<!-- Warning to Remove/Disable Search -->

@@ -1193,7 +1193,15 @@ msgctxt "#31526"
 msgid "Next Up Episodes"
 msgstr ""
 
-# empty strings from id 31527 to 31900
+msgctxt "#31527"
+msgid "Reboot to Android"
+msgstr ""
+
+msgctxt "#31528"
+msgid "Power Menu"
+msgstr ""
+
+# empty strings from id 31528 to 31900
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""
@@ -2113,4 +2121,8 @@ msgstr ""
 
 msgctxt "#32165"
 msgid "Use Poster for Blur"
+msgstr ""
+
+msgctxt "#32166"
+msgid "Customize Power Menu"
 msgstr ""
