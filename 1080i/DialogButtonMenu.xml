@@ -62,7 +62,7 @@
 				<height>590</height>
 				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
-                <visible>Integer.IsGreaterOrEqual(Container(9009).NumItems,8)</visible>
+                <visible>Integer.IsGreaterOrEqual(Container(9009).NumItems,7)</visible>
 			</control>
             <control type="label">
                 <posx>40</posx>
