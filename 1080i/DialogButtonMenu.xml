@@ -4,6 +4,10 @@
 	<onload condition="!Integer.IsGreater(Container(9009).NumItems,0)">close</onload>
 	<controls>
 		<control type="group" description="MENU">
+            <centerleft>50%</centerleft>
+            <centertop>50%</centertop>
+            <width>382</width>
+            <height>582</height>
 			<animation type="WindowOpen">
 				<effect type="zoom" start="95" end="100" center="960,540" time="200" />
 				<effect type="fade" start="80" end="100" time="200" />
@@ -13,78 +17,82 @@
 				<effect type="fade" start="100" end="0" time="100" />
 			</animation>
             <control type="image" description="Menu BG">
-				<posx>699</posx>
-				<posy>300</posy>
-				<height>310</height>
-				<width>522</width>
+				<height>290</height>
+				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
                 <visible>Integer.IsLessOrEqual(Container(9009).NumItems,3)</visible>
 			</control>
             <control type="image" description="Menu BG">
-				<posx>699</posx>
-				<posy>300</posy>
-				<height>500</height>
-				<width>522</width>
+				<height>470</height>
+				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
                 <visible>Integer.IsGreater(Container(9009).NumItems,3) + Integer.IsLessOrEqual(Container(9009).NumItems,6)</visible>
 			</control>
             <control type="image" description="Menu BG">
-				<posx>699</posx>
-				<posy>300</posy>
-				<height>612</height>
-				<width>522</width>
+				<height>582</height>
+				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
                 <visible>Integer.IsGreater(Container(9009).NumItems,6)</visible>
 			</control>
             <control type="label">
-                <posx>699</posx>
-				<posy>320</posy>
+                <posx>40</posx>
+				<posy>20</posy>
 				<height>40</height>
-				<width>522</width>
-                <align>center</align>
-                <label>$LOCALIZE[31528]</label>
+				<width>260</width>
+                <align>left</align>
+                <font>ListDetails</font>
+                <label>[B]$LOCALIZE[31528][/B]</label>
             </control>
+            <control type="image" description="Power icon">
+				<posy>20</posy>
+                <right>30</right>
+                <width>40</width>
+                <height>40</height>
+				<texture>ShutdownNF.png</texture>
+			</control>
 			<control type="panel" id="9009" description="PW Options">
-				<posx>699</posx>
-				<posy>384</posy>
-				<width>522</width>
-				<height>495</height>
+				<posx>0</posx>
+				<posy>80</posy>
+				<width>382</width>
+				<height>465</height>
 				<onleft>close</onleft>
 				<onright>close</onright>
 				<onup>9009</onup>
 				<ondown>9009</ondown>
 				<scrolltime tween="sine" easing="inout">280</scrolltime>
-				<itemlayout height="60" width="522">
+				<itemlayout height="60" width="382">
 					<control type="image">
-						<width>522</width>
+						<width>382</width>
 						<height>60</height>
 						<texture border="3">buttons/ButtonNF.png</texture>
 					</control>
 					<control type="label">
-						<width>522</width>
+						<width>382</width>
 						<height>60</height>
                         <align>center</align>
+                        <font>ListDetails</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="522">
+				<focusedlayout height="60" width="382">
 					<control type="image">
-						<width>522</width>
+						<width>382</width>
 						<height>60</height>
 						<texture border="3">buttons/ButtonNF.png</texture>
 					</control>
 					<control type="image">
 						<posx>16</posx>
-						<width>490</width>
+						<width>350</width>
 						<height>60</height>
 						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="label">
-						<width>522</width>
+						<width>382</width>
 						<height>60</height>
                         <align>center</align>
 						<textcolor>Black</textcolor>
 						<shadowcolor></shadowcolor>
+                        <font>ListDetails</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
