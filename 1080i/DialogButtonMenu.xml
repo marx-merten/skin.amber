@@ -7,7 +7,7 @@
             <centerleft>50%</centerleft>
             <centertop>50%</centertop>
             <width>382</width>
-            <height>582</height>
+            <height>590</height>
 			<animation type="WindowOpen">
 				<effect type="zoom" start="95" end="100" center="960,540" time="200" />
 				<effect type="fade" start="80" end="100" time="200" />
@@ -17,22 +17,52 @@
 				<effect type="fade" start="100" end="0" time="100" />
 			</animation>
             <control type="image" description="Menu BG">
+				<height>190</height>
+				<width>382</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsEqual(Container(9009).NumItems,1)</visible>
+			</control>
+            <control type="image" description="Menu BG">
+				<height>230</height>
+				<width>382</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsEqual(Container(9009).NumItems,2)</visible>
+			</control>
+            <control type="image" description="Menu BG">
 				<height>290</height>
 				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
-                <visible>Integer.IsLessOrEqual(Container(9009).NumItems,3)</visible>
+                <visible>Integer.IsEqual(Container(9009).NumItems,3)</visible>
+			</control>
+            <control type="image" description="Menu BG">
+				<height>350</height>
+				<width>382</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsEqual(Container(9009).NumItems,4)</visible>
+			</control>
+            <control type="image" description="Menu BG">
+				<height>410</height>
+				<width>382</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsEqual(Container(9009).NumItems,5)</visible>
 			</control>
             <control type="image" description="Menu BG">
 				<height>470</height>
 				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
-                <visible>Integer.IsGreater(Container(9009).NumItems,3) + Integer.IsLessOrEqual(Container(9009).NumItems,6)</visible>
+                <visible>Integer.IsEqual(Container(9009).NumItems,6)</visible>
 			</control>
             <control type="image" description="Menu BG">
-				<height>582</height>
+				<height>530</height>
 				<width>382</width>
 				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
-                <visible>Integer.IsGreater(Container(9009).NumItems,6)</visible>
+                <visible>Integer.IsEqual(Container(9009).NumItems,7)</visible>
+			</control>
+            <control type="image" description="Menu BG">
+				<height>590</height>
+				<width>382</width>
+				<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+                <visible>Integer.IsGreaterOrEqual(Container(9009).NumItems,8)</visible>
 			</control>
             <control type="label">
                 <posx>40</posx>
@@ -54,7 +84,7 @@
 				<posx>0</posx>
 				<posy>80</posy>
 				<width>382</width>
-				<height>465</height>
+<!--				<height>465</height> -->
 				<onleft>close</onleft>
 				<onright>close</onright>
 				<onup>9009</onup>
