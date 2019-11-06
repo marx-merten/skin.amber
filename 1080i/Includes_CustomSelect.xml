@@ -56,6 +56,14 @@
             <onclick>ActivateWindow(1126)</onclick>
             <visible>!String.IsEmpty(Window(Home).Property(fanart))</visible>
 		</item>
+        <item>
+			<label>$LOCALIZE[32167]</label>
+            <onclick>Dialog.Close(1121)</onclick>
+            <onclick>XBMC.RunScript(script.metadata.editor,dbid=$INFO[Window(Home).Property(InfoExtrasDBID)],type=$INFO[Window(Home).Property(InfoExtrasDBType)])</onclick>
+            <visible>!Skin.HasSetting(KioskMode.Enabled)</visible>
+            <visible>System.HasAddon(script.metadata.editor) + [!String.IsEmpty(Window(Home).Property(InfoExtrasDBID)) + !String.IsEmpty(Window(Home).Property(InfoExtrasDBType))]
+            </visible>
+		</item>
 		<item>
 			<visible>System.HasAddon(script.cinemavision) + $EXP[IsProperDBType]</visible>
             <label>$LOCALIZE[31005]</label>
