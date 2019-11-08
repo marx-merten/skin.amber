@@ -1645,7 +1645,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.1.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.1.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.1.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.1.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.1.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.1.Outlook))</visible>
 		    </item>
@@ -1657,7 +1657,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.2.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.2.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.2.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.2.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.2.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.2.Outlook))</visible>
 		    </item>
@@ -1669,7 +1669,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.3.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.3.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.3.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.3.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.3.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.3.Outlook))</visible>
 		    </item>
@@ -1681,7 +1681,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.4.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.4.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.4.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.4.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.4.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.4.Outlook))</visible>
 		    </item>
@@ -1693,7 +1693,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.5.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.5.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.5.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.5.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.5.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.5.Outlook))</visible>
 		    </item>
@@ -1705,7 +1705,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.6.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.6.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.6.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.6.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.6.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.6.Outlook))</visible>
 		    </item>
@@ -1717,7 +1717,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.7.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.7.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.7.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.7.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.7.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.7.Outlook))</visible>
 		    </item>
@@ -1729,7 +1729,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.8.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.8.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.8.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.8.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.8.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.8.Outlook))</visible>
 		    </item>
@@ -1741,7 +1741,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.9.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.9.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.9.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.9.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.9.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.9.Outlook))</visible>
 		    </item>
@@ -1753,7 +1753,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.10.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.10.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.10.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.10.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.10.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.10.Outlook))</visible>
 		    </item>
@@ -1765,7 +1765,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.11.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.11.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.11.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.11.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.11.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.11.Outlook))</visible>
 		    </item>
@@ -1777,7 +1777,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.12.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.12.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.12.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.12.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.12.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.12.Outlook))</visible>
 		    </item>
@@ -1789,7 +1789,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.13.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.13.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.13.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.13.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.13.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.13.Outlook))</visible>
 		    </item>
@@ -1801,7 +1801,7 @@
 			    <property name="Outlook">$INFO[Window(weather).Property(Daily.14.Outlook)]</property>
 			    <property name="ShortDate">$INFO[Window(weather).Property(Daily.14.ShortDate)]</property>
 			    <property name="FanartCode">$INFO[Window(weather).Property(Daily.14.FanartCode)]</property>
-			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Hourly.14.FanartCode)]$VAR[WeatherIconExt]</icon>
+			    <icon>$VAR[WeatherIconPath]$INFO[Window(weather).Property(Daily.14.FanartCode)]$VAR[WeatherIconExt]</icon>
 			    <onclick>noop</onclick>
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.14.Outlook))</visible>
 		    </item>
