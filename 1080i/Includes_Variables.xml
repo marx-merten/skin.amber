@@ -336,13 +336,13 @@
         <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),pvr) + PVR.HasNonRecordingTimer">$LOCALIZE[209]: $INFO[Pvr.NextRecordingTitle][COLOR=Highlight]  •  [/COLOR]$INFO[Pvr.NextRecordingDateTime]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),pvr)">$LOCALIZE[31409]: $INFO[Pvr.BackendChannels] $LOCALIZE[14301]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),weather)">$INFO[Weather.Location]  $INFO[Weather.Conditions]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),addons)">$LOCALIZE[24001]: $INFO[Window(Home).Property(SkinHelper.TotalAddons)]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),videoaddons)">$LOCALIZE[1037]: $INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),musicaddons)">$LOCALIZE[1038]: $INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),videomusicaddons)">$LOCALIZE[1037]: $INFO[Window(Home).Property(SkinHelper.TotalVideoAddons)][COLOR=Highlight]  •  [/COLOR]$LOCALIZE[1038]: $INFO[Window(Home).Property(SkinHelper.TotalAudioAddons)]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),programaddons)">$LOCALIZE[1043]: $INFO[Window(Home).Property(SkinHelper.TotalProgramAddons)]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),pictureaddons)">$LOCALIZE[1039]: $INFO[Window(Home).Property(SkinHelper.TotalPicturesAddons)]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),favourites)">$LOCALIZE[1036]: $INFO[Window(Home).Property(SkinHelper.TotalFavourites)]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),addons)">$LOCALIZE[24001]: $INFO[Container(9985).NumItems]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),videoaddons)">$LOCALIZE[1037]: $INFO[Container(9980).NumItems]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),musicaddons)">$LOCALIZE[1038]: $INFO[Container(9981).NumItems]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),programaddons)">$LOCALIZE[1043]: $INFO[Container(9982).NumItems]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),pictureaddons)">$LOCALIZE[1039]: $INFO[Container(9983).NumItems]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),gameaddons)">$LOCALIZE[35049]: $INFO[Container(9984).NumItems]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),favourites)">$LOCALIZE[1036]: $INFO[Window(Home).Property(favourite.count)]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),disc) + System.HasMediadvd">$LOCALIZE[427]: $INFO[System.DVDLabel]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),disc) + !System.HasMediadvd">$LOCALIZE[427]: $LOCALIZE[504]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(InfoLine),systeminfo)">$LOCALIZE[31415]: $INFO[System.memory(used.percent)][COLOR=Highlight]  •  [/COLOR]$LOCALIZE[31416]: $INFO[System.CPUUsage]</value>
