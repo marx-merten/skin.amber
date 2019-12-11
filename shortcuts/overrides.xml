@@ -14,7 +14,7 @@
 	<propertyfallback property="widgetTarget.6">false</propertyfallback>
 
 	<!-- Browse for Backgrounds -->
-	<backgroundBrowse>True</backgroundBrowse>
+	<backgroundBrowse default="special://skin/backgrounds">True</backgroundBrowse>
 	<background label="::PLAYLIST::">playlistBackground</background>
 	<background label="31399">Movie.Fanart</background>
 	<background label="31400">TV.Fanart</background>
