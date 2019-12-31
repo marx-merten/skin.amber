@@ -638,6 +638,7 @@
     
 	<include name="GenericActorIconBig">
 		<param name="isFocused">false</param>
+		<param name="belowlabel2">$INFO[ListItem.Label2]</param>
 		<definition>
 			<include content="GenericThumbIconTemplate">
 				<param name="isFocused">$PARAM[isFocused]</param>
@@ -651,7 +652,7 @@
 				<param name="bordersizeRB">20</param>
 				<param name="belowdoublelabelvisibility">true</param>
 				<param name="belowdoublelabel1">$INFO[ListItem.Label]</param>
-				<param name="belowdoublelabel2">$INFO[ListItem.Label2]</param>
+				<param name="belowdoublelabel2">$PARAM[belowlabel2]</param>
 				<param name="aspect">scale</param>
 			</include>
 		</definition>
@@ -945,15 +946,18 @@
 
 	<include name="ActorLayout">
 		<param name="viewid"/>
+		<param name="belowlabel2" />
 		<definition>
 			<itemlayout height="410" width="232.5">
 				<include content="GenericActorIconBig">
 					<param name="isFocused">false</param>
+					<param name="belowlabel2">$PARAM[belowlabel2]</param>
 				</include>
 			</itemlayout>
 			<focusedlayout height="410" width="232.5">
 				<include content="GenericActorIconBig">
 					<param name="isFocused">Control.HasFocus($PARAM[viewid])</param>
+					<param name="belowlabel2">$PARAM[belowlabel2]</param>
 				</include>
 			</focusedlayout>
 		</definition>

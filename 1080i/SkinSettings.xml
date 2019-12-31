@@ -90,15 +90,19 @@
 						<label>$LOCALIZE[32107]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="7" description="Advanced">
+					<item id="7" description="Search">
+						<label>Search</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="8" description="Advanced">
 						<label>$LOCALIZE[31985]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="8" description="Backup/Restore">
+					<item id="9" description="Backup/Restore">
 						<label>$LOCALIZE[32064]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="9" description="Manage dependencies">
+					<item id="10" description="Manage dependencies">
 						<label>$LOCALIZE[24996]</label>
 						<onclick>noop</onclick>
 					</item>
@@ -481,12 +485,34 @@
 						</item>
 					</content>
 				</control>
-				<!-- 9000 7 Advanced options -->
+				<!-- 9000 7 Search -->
 				<control type="panel" id="9107">
 					<visible>Container(9000).HasFocus(7)</visible>
 					<onright>500</onright>
 					<onup>9107</onup>
 					<ondown>9107</ondown>
+					<pagecontrol></pagecontrol>
+					<include>SettingsListCommons</include>
+					<content>
+						<include content="YesNoSettingItemAddon">
+							<param name="itemid" value="1"/>
+							<param name="itemlabel" value="$LOCALIZE[31938]"/>
+							<param name="skinsetting" value="Enable.GlobalSearch"/>
+							<param name="addonpath" value="script.globalsearch"/>
+						</include>
+						<item id="2" description="Select Search Categories">
+							<label>Select Search Categories</label>
+							<onclick>SetProperty(CustomSelectSearchOptions,True)</onclick>
+							<onclick>ActivateWindow(1133)</onclick>
+						</item>
+					</content>
+				</control>
+				<!-- 9000 8 Advanced options -->
+				<control type="panel" id="9108">
+					<visible>Container(9000).HasFocus(8)</visible>
+					<onright>500</onright>
+					<onup>9108</onup>
+					<ondown>9108</ondown>
 					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
@@ -564,12 +590,12 @@
 						</include>
 					</content>
 				</control>
-				<!-- 9000 8 - Backup/Restore -->
-				<control type="panel" id="9108">
-					<visible>Container(9000).HasFocus(8)</visible>
+				<!-- 9000 9 - Backup/Restore -->
+				<control type="panel" id="9109">
+					<visible>Container(9000).HasFocus(9)</visible>
 					<onright>500</onright>
-					<onup>9108</onup>
-					<ondown>9108</ondown>
+					<onup>9109</onup>
+					<ondown>9109</ondown>
 					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
@@ -599,13 +625,13 @@
 						</item>
 					</content>
 				</control>                
-				<!-- 9000 9 - Manage Dependencies -->
-				<control type="grouplist" id="9109">
-					<visible>Container(9000).HasFocus(9)</visible>
+				<!-- 9000 10 - Manage Dependencies -->
+				<control type="grouplist" id="9110">
+					<visible>Container(9000).HasFocus(10)</visible>
 					<onright>500</onright>
                     <include>SettingsListCommons</include>
-					<onup>9109</onup>
-					<ondown>9109</ondown>                    
+					<onup>9110</onup>
+					<ondown>9110</ondown>                    
 					<control type="radiobutton" id="91121">
 						<label>script.favourites</label>
 						<label2>$INFO[System.AddonVersion(script.favourites)]        </label2>

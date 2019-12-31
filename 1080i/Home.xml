@@ -6,8 +6,7 @@
     <onload condition="System.HasAddon(script.skin.info.service) + String.IsEmpty(Window(home).Property(skininfos_daemon_running))">RunScript(script.skin.info.service)</onload>
     <onunload condition="!String.IsEmpty(Container(300).ListItem.Property(Background))">Skin.SetString(FocusedMenu.Background,$INFO[Container(300).ListItem.Property(Background)])</onunload>
     <onunload condition="!String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">Skin.SetString(FocusedMenu.BackgroundPlaylist,$INFO[Container(300).ListItem.Property(backgroundPlaylist)])</onunload>
-<!--    <include>ClearWidgetNavProperties2</include> -->
-	<onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
+	<onunload condition="System.HasAddon(plugin.video.themoviedb.helper)">ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
 	<defaultcontrol always="true">300</defaultcontrol>
 	<controls>
 		<control type="list" id="9988">
