@@ -2130,3 +2130,63 @@ msgstr ""
 msgctxt "#32167"
 msgid "Edit Library Data"
 msgstr ""
+
+msgctxt "#32168"
+msgid "Select Search Categories"
+msgstr ""
+
+msgctxt "#32169"
+msgid "Select Search Categories to Enable"
+msgstr ""
+
+msgctxt "#32170"
+msgid "By Title"
+msgstr ""
+
+msgctxt "#32171"
+msgid "With Genre"
+msgstr ""
+
+msgctxt "#32172"
+msgid "From Year"
+msgstr ""
+
+msgctxt "#32173"
+msgid "From Studio"
+msgstr ""
+
+msgctxt "#32174"
+msgid "From Country"
+msgstr ""
+
+msgctxt "#32175"
+msgid "With Actor"
+msgstr ""
+
+msgctxt "#32176"
+msgid "By Director"
+msgstr ""
+
+msgctxt "#32177"
+msgid "By Writer"
+msgstr ""
+
+msgctxt "#32178"
+msgid "Artists by Name"
+msgstr ""
+
+msgctxt "#32179"
+msgid "Albums by Title"
+msgstr ""
+
+msgctxt "#32180"
+msgid "Songs by Title"
+msgstr ""
+
+msgctxt "#32181"
+msgid "By Artist"
+msgstr ""
+
+msgctxt "#32182"
+msgid "YouTube by Title"
+msgstr ""

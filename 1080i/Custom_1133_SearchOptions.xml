@@ -30,7 +30,7 @@
 				    <posy>261</posy>
 				    <width>690</width>
 				    <height>52</height>
-				    <label>Select Search Categories to Enable</label>
+				    <label>$LOCALIZE[32169]</label>
 				    <align>center</align>
 				    <aligny>center</aligny>
 				    <textcolor>Highlight</textcolor>
@@ -46,203 +46,203 @@
 				<pagecontrol>9010163</pagecontrol>
                 <orientation>vertical</orientation>
                 <control type="radiobutton" id="901011">
-                    <label>[B]Movies[/B]</label>
+                    <label>[B]$LOCALIZE[342][/B]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMovies)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMovies)</selected>
                 </control>
 				<control type="radiobutton" id="9010111">
-                    <label>      By Title</label>
+                    <label>      $LOCALIZE[32170]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesTitle)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesTitle)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010112">
-                    <label>      With Genre</label>
+                    <label>      $LOCALIZE[32171]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesGenre)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesGenre)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010113">
-                    <label>      From Year</label>
+                    <label>      $LOCALIZE[32172]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesYear)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesYear)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010114">
-                    <label>      From Studio</label>
+                    <label>      $LOCALIZE[32173]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesStudio)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesStudio)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010115">
-                    <label>      From Country</label>
+                    <label>      $LOCALIZE[32174]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesCountry)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesCountry)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010116">
-                    <label>      With Actor</label>
+                    <label>      $LOCALIZE[32175]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesActor)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesActor)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010117">
-                    <label>      By Director</label>
+                    <label>      $LOCALIZE[32176]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesDirector)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesDirector)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
 				<control type="radiobutton" id="9010118">
-                    <label>      By Writer</label>
+                    <label>      $LOCALIZE[32177]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMoviesWriter)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMoviesWriter)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMovies)</visible>
                 </control>
                 <control type="radiobutton" id="901012">
-                    <label>[B]TV Shows[/B]</label>
+                    <label>[B]$LOCALIZE[20343][/B]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShows)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShows)</selected>
                 </control>
 				<control type="radiobutton" id="9010121">
-                    <label>      By Title</label>
+                    <label>      $LOCALIZE[32170]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShowsTitle)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShowsTitle)</selected>
 					<visible>!Skin.HasSetting(DisableSearchTVShows)</visible>
                 </control>
 				<control type="radiobutton" id="9010122">
-                    <label>      With Genre</label>
+                    <label>      $LOCALIZE[32171]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShowsGenre)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShowsGenre)</selected>
 					<visible>!Skin.HasSetting(DisableSearchTVShows)</visible>
                 </control>
 				<control type="radiobutton" id="9010123">
-                    <label>      From Year</label>
+                    <label>      $LOCALIZE[32172]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShowsYear)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShowsYear)</selected>
 					<visible>!Skin.HasSetting(DisableSearchTVShows)</visible>
                 </control>
 				<control type="radiobutton" id="9010124">
-                    <label>      From Studio</label>
+                    <label>      $LOCALIZE[32173]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShowsStudio)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShowsStudio)</selected>
 					<visible>!Skin.HasSetting(DisableSearchTVShows)</visible>
                 </control>
 				<control type="radiobutton" id="9010125">
-                    <label>      With Actor</label>
+                    <label>      $LOCALIZE[32175]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShowsActor)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShowsActor)</selected>
 					<visible>!Skin.HasSetting(DisableSearchTVShows)</visible>
                 </control>
 				<control type="radiobutton" id="9010126">
-                    <label>      By Director</label>
+                    <label>      $LOCALIZE[32176]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchTVShowsDirector)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchTVShowsDirector)</selected>
 					<visible>!Skin.HasSetting(DisableSearchTVShows)</visible>
                 </control>
                 <control type="radiobutton" id="901013">
-                    <label>[B]Episodes[/B]</label>
+                    <label>[B]$LOCALIZE[20360][/B]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodes)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodes)</selected>
                 </control>
 				<control type="radiobutton" id="9010131">
-                    <label>      By Title</label>
+                    <label>      $LOCALIZE[32170]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodesTitle)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodesTitle)</selected>
 					<visible>!Skin.HasSetting(DisableSearchEpisodes)</visible>
                 </control>
 				<control type="radiobutton" id="9010132">
-                    <label>      With Genre</label>
+                    <label>      $LOCALIZE[32171]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodesGenre)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodesGenre)</selected>
 					<visible>!Skin.HasSetting(DisableSearchEpisodes)</visible>
                 </control>
 				<control type="radiobutton" id="9010133">
-                    <label>      From Studio</label>
+                    <label>      $LOCALIZE[32173]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodesStudio)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodesStudio)</selected>
 					<visible>!Skin.HasSetting(DisableSearchEpisodes)</visible>
                 </control>
 				<control type="radiobutton" id="9010134">
-                    <label>      With Actor</label>
+                    <label>      $LOCALIZE[32175]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodesActor)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodesActor)</selected>
 					<visible>!Skin.HasSetting(DisableSearchEpisodes)</visible>
                 </control>
 				<control type="radiobutton" id="9010135">
-                    <label>      By Director</label>
+                    <label>      $LOCALIZE[32176]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodesDirector)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodesDirector)</selected>
 					<visible>!Skin.HasSetting(DisableSearchEpisodes)</visible>
                 </control>
 				<control type="radiobutton" id="9010136">
-                    <label>      By Writer</label>
+                    <label>      $LOCALIZE[32177]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchEpisodesWriter)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchEpisodesWriter)</selected>
 					<visible>!Skin.HasSetting(DisableSearchEpisodes)</visible>
                 </control>
                 <control type="radiobutton" id="901014">
-                    <label>Artists by Name</label>
+                    <label>$LOCALIZE[32178]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchArtists)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchArtists)</selected>
                 </control>
                 <control type="radiobutton" id="901015">
-                    <label>Albums by Title</label>
+                    <label>$LOCALIZE[32179]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchAlbums)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchAlbums)</selected>
                 </control>
                 <control type="radiobutton" id="901016">
-                    <label>Songs by Title</label>
+                    <label>$LOCALIZE[32180]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchSongs)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchSongs)</selected>
                 </control>
                 <control type="radiobutton" id="901017">
-                    <label>[B]Music Videos[/B]</label>
+                    <label>[B]$LOCALIZE[20389][/B]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMusicVideos)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMusicVideos)</selected>
                 </control>
 				<control type="radiobutton" id="9010171">
-                    <label>      By Title</label>
+                    <label>      $LOCALIZE[32170]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMusicVideosTitle)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMusicVideosTitle)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMusicVideos)</visible>
                 </control>
 				<control type="radiobutton" id="9010172">
-                    <label>      By Artist</label>
+                    <label>      $LOCALIZE[32181]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchMusicVideosArtist)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchMusicVideosArtist)</selected>
 					<visible>!Skin.HasSetting(DisableSearchMusicVideos)</visible>
                 </control>
                 <control type="radiobutton" id="901018">
-                    <label>YouTube by Title</label>
+                    <label>$LOCALIZE[32182]</label>
                     <radioposx>605</radioposx>
                     <onclick>Skin.ToggleSetting(DisableSearchYouTube)</onclick>
                     <selected>!Skin.HasSetting(DisableSearchYouTube)</selected>

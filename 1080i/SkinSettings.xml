@@ -91,7 +91,7 @@
 						<onclick>noop</onclick>
 					</item>
 					<item id="7" description="Search">
-						<label>Search</label>
+						<label>$LOCALIZE[137]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="8" description="Advanced">
@@ -501,7 +501,7 @@
 							<param name="addonpath" value="script.globalsearch"/>
 						</include>
 						<item id="2" description="Select Search Categories">
-							<label>Select Search Categories</label>
+							<label>$LOCALIZE[32168]</label>
 							<onclick>SetProperty(CustomSelectSearchOptions,True)</onclick>
 							<onclick>ActivateWindow(1133)</onclick>
 						</item>
