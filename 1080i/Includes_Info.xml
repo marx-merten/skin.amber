@@ -1345,8 +1345,8 @@
     <!-- Cast source for online widget items -->	
 	<variable name="TMDb_Cast">
         <value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.IMDBNumber) + String.StartsWith(ListItem.IMDBNumber,tt)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
-        <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;query=$INFO[ListItem.Title]</value>
-        <value condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=tv&amp;query=$INFO[ListItem.TvShowTitle]</value>
+        <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;query=$INFO[ListItem.Title]&amp;year=$INFO[ListItem.Year]</value>
+        <value condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=tv&amp;query=$INFO[ListItem.TvShowTitle]&amp;year=$INFO[ListItem.Year]</value>
     </variable>
     <!-- Custom Cast Panel -->
     <include name="CustomCast">
