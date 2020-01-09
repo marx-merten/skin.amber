@@ -966,28 +966,23 @@
     </variable>
     <!-- Cast in Movies info list -->
     <variable name="InfoCastList01">
-        <value condition="!Container(9999).IsUpdating + Integer.IsGreater(Container(9999).NumItems,0)">$INFO[Container(9999).ListItemAbsolute(1).FolderPath]</value>
-        <value>videodb://</value>
+	    <value>plugin://plugin.video.themoviedb.helper?info=stars_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</value>
     </variable>
     <!-- Cast in TV Shows info list -->
     <variable name="InfoCastList02">
-        <value condition="!Container(9999).IsUpdating + Integer.IsGreater(Container(9999).NumItems,0)">$INFO[Container(9999).ListItemAbsolute(2).FolderPath]</value>
-        <value>videodb://</value>
+	    <value>plugin://plugin.video.themoviedb.helper?info=stars_in_tvshows&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</value>
     </variable>
     <!-- Crew in Movies info list -->
     <variable name="InfoCastList03">
-        <value condition="!Container(9999).IsUpdating + Integer.IsGreater(Container(9999).NumItems,0)">$INFO[Container(9999).ListItemAbsolute(3).FolderPath]</value>
-        <value>videodb://</value> 
+	    <value>plugin://plugin.video.themoviedb.helper?info=crew_in_movies&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</value>
     </variable>
     <!-- Crew in TV Shows info list -->
     <variable name="InfoCastList04">
-        <value condition="!Container(9999).IsUpdating + Integer.IsGreater(Container(9999).NumItems,0)">$INFO[Container(9999).ListItemAbsolute(4).FolderPath]</value>
-        <value>videodb://</value>
+	    <value>plugin://plugin.video.themoviedb.helper?info=crew_in_tvshows&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</value>
     </variable>
     <!-- Person images info list -->
     <variable name="InfoCastList05">
-        <value condition="!Container(9999).IsUpdating + Integer.IsGreater(Container(9999).NumItems,0)">$INFO[Container(9999).ListItemAbsolute(5).FolderPath]</value>
-        <value>videodb://</value>
+	    <value>plugin://plugin.video.themoviedb.helper?info=images&amp;type=person&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</value>
     </variable>
     <!-- Header for single search of movies/tv shows/episodes with genre -->
     <variable name="GenreOnlineHeaderVar">
@@ -1046,8 +1041,8 @@
     <variable name="AgeLabel">
         <value condition="!String.IsEmpty(Container(10051).ListItem.Property(Age)) + String.IsEmpty(Container(10051).ListItem.Property(Deathday))">$LOCALIZE[32084]</value>
         <value condition="!String.IsEmpty(Container(10051).ListItem.Property(Age)) + !String.IsEmpty(Container(10051).ListItem.Property(Deathday))">$LOCALIZE[32153]</value>
-        <value condition="!String.IsEmpty(Container(9999).ListItemAbsolute(0).Property(Age)) + String.IsEmpty(Container(9999).ListItemAbsolute(0).Property(Deathday))">$LOCALIZE[32084]</value>
-        <value condition="!String.IsEmpty(Container(9999).ListItemAbsolute(0).Property(Age)) + !String.IsEmpty(Container(9999).ListItemAbsolute(0).Property(Deathday))">$LOCALIZE[32153]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(Age)) + String.IsEmpty(ListItem.Property(Deathday))">$LOCALIZE[32084]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(Age)) + !String.IsEmpty(ListItem.Property(Deathday))">$LOCALIZE[32153]</value>
     </variable>
     
     <variable name="VideoInfoButton8">
@@ -1326,9 +1321,9 @@
 			<visible>Container(50).IsUpdating | Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0) | Integer.IsGreater(Container(50).NumItems,0)</visible>
             <!-- select online tmdb search or local search -->
             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_id=1129,prevent_del))</onclick>
+            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
             <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
-	        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
+	        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Dialog.Close(All)||ActivateWindow(1122))</onclick>
 		    <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
             <include content="CastLayout">
                     <param name="viewid">90050</param>
@@ -1381,9 +1376,9 @@
 			<visible>Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0)</visible>
             <!-- select online tmdb search or local search -->
             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_id=1129,prevent_del))</onclick>
+            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
             <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
-	        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
+	        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Action(Close)||ActivateWindow(1122))</onclick>
 		    <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
             <include content="CastLayout">
                 <param name="viewid">90050</param>
@@ -1448,37 +1443,33 @@
 
     <!-- Onclick actions for most custom info lists -->
     <include name="InfoList_OnClick">
-        <param name="prevent_del" default="prevent_del" />
         <definition>
-            <onclick condition="String.IsEmpty(ListItem.DBID) | [!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.FolderPath],call_id=1129,$PARAM[prevent_del])</onclick>
-            <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D],call_id=1129,$PARAM[prevent_del])</onclick>
-            <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_id=1129,$PARAM[prevent_del])</onclick>
+            <onclick condition="String.IsEmpty(ListItem.DBID) | [!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.FolderPath],call_auto=1134)</onclick>
+            <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D],call_auto=1134)</onclick>
+            <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_auto=1134)</onclick>
         </definition>
     </include>
     <!-- Onclick action for person images info list -->
     <include name="InfoList_OnClickPictures">
-        <param name="prevent_del" default="prevent_del" />
         <definition>
             <onclick>SetFocus(91506)</onclick>
         </definition>
     </include>
     <!-- Onclick action for Seasons info list -->
     <include name="InfoList_OnClickSeasons">
-        <param name="prevent_del" default="prevent_del" />
         <definition>
-            <onclick>Dialog.Close(all,force)</onclick>
+            <onclick>Action(Close)</onclick>
             <onclick>ActivateWindow(videos,$INFO[Container(91002).ListItem.FolderPath])</onclick>
         </definition>
     </include>
     <!-- Onclick for Crew info list -->
     <include name="InfoList_OnClickCrew">
-        <param name="prevent_del" default="prevent_del" />
         <definition>
             <!-- select online tmdb search or local search -->
             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(91003).ListItem.Label],type=person,call_id=1129,prevent_del))</onclick>
+            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(91003).ListItem.Label],type=person,call_auto=1134))</onclick>
 			<onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
-			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(91003).ListItem.Label])||Dialog.Close(all)||ActivateWindow(1122))</onclick>
+			<onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(91003).ListItem.Label])||Action(Close)||ActivateWindow(1122))</onclick>
 			<onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
         </definition>
     </include>
@@ -1532,10 +1523,7 @@
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,$PARAM[minnumitems]) | Container($PARAM[id]).IsUpdating</visible>
 				<visible>$PARAM[visibility1]</visible>
                 <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container($PARAM[id]).NumItems,$PARAM[minnumitems]) | Container($PARAM[id]).IsUpdating">Conditional</animation>
-                <include>InfoList_OnBack</include>
-                <include content="$PARAM[onclickinclude]">
-                    <param name="prevent_del">$PARAM[prevent_del]</param>
-                </include>
+                <include content="$PARAM[onclickinclude]"></include>
                 <include content="CastLayout">
                     <param name="viewid">$PARAM[id]</param>
                     <param name="belowdoublelabelvisibility">$PARAM[belowdoublelabelvisibility]</param>

@@ -2190,3 +2190,39 @@ msgstr ""
 msgctxt "#32182"
 msgid "YouTube by Title"
 msgstr ""
+
+msgctxt "#32183"
+msgid "Known for Character"
+msgstr ""
+
+msgctxt "#32184"
+msgid "Known for Department"
+msgstr ""
+
+msgctxt "#32185"
+msgid "Known for Job"
+msgstr ""
+
+msgctxt "#32186"
+msgid "Total Items in TMDb"
+msgstr ""
+
+msgctxt "#32187"
+msgid "Items in TMDb as Cast"
+msgstr ""
+
+msgctxt "#32188"
+msgid "Items in TMDb as Crew"
+msgstr ""
+
+msgctxt "#32189"
+msgid "Total Items in Local Database"
+msgstr ""
+
+msgctxt "#32190"
+msgid "Movies in Local Database"
+msgstr ""
+
+msgctxt "#32191"
+msgid "TV Shows in Local Database"
+msgstr ""
