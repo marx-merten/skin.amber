@@ -190,8 +190,10 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
-        <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes">true</property>
+        <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes|people">true</property>
         <property name="labelvisibility1">false</property>
+		<property name="labelfont1" tag="property" attribute="name|widgetType" value="people">ListDetailsSmall</property>
+		<property name="labelfont1">Shelf_Label</property>
         <property name="aspect1" tag="property" attribute="name|widgetType" value="musicvideos">scale</property>
         <property name="aspect1">keep</property>        
         <property name="isYear1">'true' if path1 in 'years' else 'false'</property>
@@ -229,6 +231,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre1]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
 					</include>
                     <content>
 						<item>
@@ -272,8 +275,10 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
-        <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes">true</property>
-        <property name="labelvisibility2">false</property> 
+        <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes|people">true</property>
+        <property name="labelvisibility2">false</property>
+		<property name="labelfont2" tag="property" attribute="name|widgetType.2" value="people">ListDetailsSmall</property>
+		<property name="labelfont2">Shelf_Label</property> 
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="musicvideos">scale</property>
         <property name="aspect2">keep</property>        
         <property name="isYear2">'true' if path2 in 'years' else 'false'</property>
@@ -313,6 +318,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre2]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
 					</include>
                     <content>
 						<item>
@@ -357,8 +363,10 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
-        <property name="labelvisibility3" tag="property" attribute="name|widgetType.3" value="episodes">true</property>
+        <property name="labelvisibility3" tag="property" attribute="name|widgetType.3" value="episodes|people">true</property>
         <property name="labelvisibility3">false</property>
+		<property name="labelfont3" tag="property" attribute="name|widgetType.3" value="people">ListDetailsSmall</property>
+		<property name="labelfont3">Shelf_Label</property>
         <property name="aspect3" tag="property" attribute="name|widgetType.3" value="musicvideos">scale</property>
         <property name="aspect3">keep</property>        
         <property name="isYear3">'true' if path3 in 'years' else 'false'</property>
@@ -398,6 +406,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre3]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility3]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont3]</param>
 					</include>
                     <content>
 						<item>
@@ -443,8 +452,10 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
-        <property name="labelvisibility4" tag="property" attribute="name|widgetType.4" value="episodes">true</property>
+        <property name="labelvisibility4" tag="property" attribute="name|widgetType.4" value="episodes|people">true</property>
         <property name="labelvisibility4">false</property>
+		<property name="labelfont4" tag="property" attribute="name|widgetType.4" value="people">ListDetailsSmall</property>
+		<property name="labelfont4">Shelf_Label</property>
         <property name="aspect4" tag="property" attribute="name|widgetType.4" value="musicvideos">scale</property>
         <property name="aspect4">keep</property>        
         <property name="isYear4">'true' if path4 in 'years' else 'false'</property>
@@ -484,6 +495,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre4]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility4]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect4]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont4]</param>
 					</include>
                     <content>
 						<item>
@@ -530,8 +542,10 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
-        <property name="labelvisibility5" tag="property" attribute="name|widgetType.5" value="episodes">true</property>
+        <property name="labelvisibility5" tag="property" attribute="name|widgetType.5" value="episodes|people">true</property>
         <property name="labelvisibility5">false</property>
+		<property name="labelfont5" tag="property" attribute="name|widgetType.5" value="people">ListDetailsSmall</property>
+		<property name="labelfont5">Shelf_Label</property>
         <property name="aspect5" tag="property" attribute="name|widgetType.5" value="musicvideos">scale</property>
         <property name="aspect5">keep</property>        
         <property name="isYear5">'true' if path5 in 'years' else 'false'</property>
@@ -571,6 +585,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre5]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility5]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect5]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont5]</param>
 					</include>
                     <content>
 						<item>
@@ -615,8 +630,10 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
-        <property name="labelvisibility6" tag="property" attribute="name|widgetType.6" value="episodes">true</property>
-        <property name="labelvisibility6">false</property> 
+        <property name="labelvisibility6" tag="property" attribute="name|widgetType.6" value="episodes|people">true</property>
+        <property name="labelvisibility6">false</property>
+		<property name="labelfont6" tag="property" attribute="name|widgetType.6" value="people">ListDetailsSmall</property>
+		<property name="labelfont6">Shelf_Label</property> 
         <property name="aspect6" tag="property" attribute="name|widgetType.6" value="musicvideos">scale</property>
         <property name="aspect6">keep</property>        
         <property name="isYear6">'true' if path6 in 'years' else 'false'</property>
@@ -654,6 +671,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre6]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility6]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect6]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont6]</param>
 					</include>
                     <content>
 						<item>
@@ -1223,8 +1241,10 @@
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
         <!-- Content -->
-        <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes">true</property>
-        <property name="labelvisibility1">false</property>  
+        <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes|people">true</property>
+        <property name="labelvisibility1">false</property>
+		<property name="labelfont1" tag="property" attribute="name|widgetType" value="people">ListDetailsSmall</property>
+		<property name="labelfont1">Shelf_Label</property>  
         <property name="aspect1" tag="property" attribute="name|widgetType" value="musicvideos">scale</property>
         <property name="aspect1">keep</property>        
         <property name="isYear1">'true' if path1 in 'years' else 'false'</property>
@@ -1256,6 +1276,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre1]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
 					</include>
                     <content>
 						<item>
@@ -1285,8 +1306,10 @@
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
         <!-- Content -->
-        <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes">true</property>
-        <property name="labelvisibility2">false</property>  
+        <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes|people">true</property>
+        <property name="labelvisibility2">false</property>
+		<property name="labelfont2" tag="property" attribute="name|widgetType.2" value="people">ListDetailsSmall</property>
+		<property name="labelfont2">Shelf_Label</property>  
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="musicvideos">scale</property>
         <property name="aspect2">keep</property>        
         <property name="isYear2">'true' if path2 in 'years' else 'false'</property>
@@ -1319,6 +1342,7 @@
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre2]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
+						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
 					</include>
                     <content>
 						<item>

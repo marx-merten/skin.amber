@@ -1011,12 +1011,13 @@
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalEpisodeStudio)">videodb://tvshows/titles/-1/-1/-1/-1/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</value>
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalMovieCountry)">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22country%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
     </variable>
-    <!-- Crew for movies/tv shows, guest stars for seasons -->
+	
+    <!-- Embuary Info Crew for movies/tv shows, guest stars for seasons -->
 	<variable name="EmbuaryInfoCrewLabel">
 		<value condition="String.IsEqual(Container(10051).ListItem.DBType,season)">$LOCALIZE[32129]</value>
 		<value>$LOCALIZE[32099]</value>
 	</variable>
-    <!-- Movie/TV Show status from TMDb -->
+    <!-- Embuary Info Movie/TV Show status from TMDb -->
     <variable name="EmbuaryInfoStatus">
 		<value condition="String.IsEqual(Container(10051).ListItem.Status,Ended)">$LOCALIZE[32139]</value>
 		<value condition="String.IsEqual(Container(10051).ListItem.Status,Rumored)">$LOCALIZE[32140]</value>
@@ -1027,7 +1028,7 @@
 		<value condition="String.IsEqual(Container(10051).ListItem.Status,Canceled)">$LOCALIZE[32145]</value>
 		<value condition="String.IsEqual(Container(10051).ListItem.Status,Returning Series)">$LOCALIZE[32146]</value>
 	</variable>
-    <!-- TMDb Person Known For -->
+    <!-- Embuary Info Person Known For -->
     <variable name="EmbuaryInfoKnownFor">
 		<value condition="String.IsEqual(Container(10051).ListItem.Property(Known_For_Department),Acting)">$LOCALIZE[32147]</value>
 		<value condition="String.IsEqual(Container(10051).ListItem.Property(Known_For_Department),Directing)">$LOCALIZE[32148]</value>
@@ -1037,13 +1038,81 @@
 		<value condition="String.IsEqual(Container(10051).ListItem.Property(Known_For_Department),Crew)">$LOCALIZE[32099]</value>
 		<value condition="String.IsEqual(Container(10051).ListItem.Property(Known_For_Department),Creator)">$LOCALIZE[32152]</value>
 	</variable>
-    
+	
+    <!-- Person Info Variables -->
     <variable name="AgeLabel">
-        <value condition="!String.IsEmpty(Container(10051).ListItem.Property(Age)) + String.IsEmpty(Container(10051).ListItem.Property(Deathday))">$LOCALIZE[32084]</value>
-        <value condition="!String.IsEmpty(Container(10051).ListItem.Property(Age)) + !String.IsEmpty(Container(10051).ListItem.Property(Deathday))">$LOCALIZE[32153]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(Age)) + String.IsEmpty(ListItem.Property(Deathday))">$LOCALIZE[32084]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(Age)) + !String.IsEmpty(ListItem.Property(Deathday))">$LOCALIZE[32153]</value>
+        <value condition="[!String.IsEmpty(Container(10051).ListItem.Property(Age)) + String.IsEmpty(Container(10051).ListItem.Property(Deathday))]">$LOCALIZE[32084]</value>
+		<value condition="[!String.IsEmpty(ListItem.Property(Age)) + String.IsEmpty(ListItem.Property(Deathday))]">$LOCALIZE[32084]</value>
+		<value condition="[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Age)) + String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Deathday))]">$LOCALIZE[32084]</value>
+        <value condition="[!String.IsEmpty(Container(10051).ListItem.Property(Age)) + !String.IsEmpty(Container(10051).ListItem.Property(Deathday))]">$LOCALIZE[32153]</value>
+		<value condition="[!String.IsEmpty(ListItem.Property(Age)) + !String.IsEmpty(ListItem.Property(Deathday))]">$LOCALIZE[32153]</value>
+		<value condition="[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Age)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Deathday))]">$LOCALIZE[32153]</value>
     </variable>
+    <variable name="TMDbPersonBio">
+	    <value condition="!String.IsEmpty(ListItem.Property(Biography))">$INFO[ListItem.Property(Biography)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Biography))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Biography)]</value>
+	</variable>
+    <variable name="TMDbPersonBirthday">
+	    <value condition="!String.IsEmpty(ListItem.Property(Birthday))">$INFO[ListItem.Property(Birthday)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Birthday))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Birthday)]</value>
+	</variable>
+	<variable name="TMDbPersonBorn">
+	    <value condition="!String.IsEmpty(ListItem.Property(Born))">$INFO[ListItem.Property(Born)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Born))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Born)]</value>
+	</variable>
+	<variable name="TMDbPersonAge">
+	    <value condition="!String.IsEmpty(ListItem.Property(Age))">$INFO[ListItem.Property(Age)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Age))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Age)]</value>
+	</variable>
+	<variable name="TMDbPersonDeathday">
+	    <value condition="!String.IsEmpty(ListItem.Property(Deathday))">$INFO[ListItem.Property(Deathday)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Deathday))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Deathday)]</value>
+	</variable>
+	<variable name="TMDbPersonAliases">
+	    <value condition="!String.IsEmpty(ListItem.Property(aliases))">$INFO[ListItem.Property(aliases)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Aliases))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Aliases)]</value>
+	</variable>
+	<variable name="TMDbPersonKnownFor">
+	    <value condition="!String.IsEmpty(ListItem.Property(Known_For))">$INFO[ListItem.Property(Known_For)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Known_For))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Known_For)]</value>
+	</variable>
+	<variable name="TMDbPersonCharacter">
+	    <value condition="!String.IsEmpty(ListItem.Property(Character))">$INFO[ListItem.Property(Character)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Character))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Character)]</value>
+	</variable>
+	<variable name="TMDbPersonDepartment">
+	    <value condition="!String.IsEmpty(ListItem.Property(Department))">$INFO[ListItem.Property(Department)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Department))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Department)]</value>
+	</variable>
+	<variable name="TMDbPersonJob">
+	    <value condition="!String.IsEmpty(ListItem.Property(Job))">$INFO[ListItem.Property(Job)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Job))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Job)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBTotal">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Total))">$INFO[ListItem.Property(NumItems.TMDB.Total)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Total))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Total)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBCast">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Cast))">$INFO[ListItem.Property(NumItems.TMDB.Cast)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Cast))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Cast)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBCrew">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Crew))">$INFO[ListItem.Property(NumItems.TMDB.Crew)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsDBIDTotal">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.DBID.Total))">$INFO[ListItem.Property(NumItems.DBID.Total)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Total))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Total)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsDBIDMovies">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.DBID.Movies))">$INFO[ListItem.Property(NumItems.DBID.Movies)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Movies))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Movies)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsDBIDTvShows">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.DBID.TvShows))">$INFO[ListItem.Property(NumItems.DBID.TvShows)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.TvShows))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.TvShows)]</value>
+	</variable>
+
     
     <variable name="VideoInfoButton8">
         <value condition="String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))">$LOCALIZE[15067]</value>
@@ -1453,6 +1522,18 @@
     <include name="InfoList_OnClickPictures">
         <definition>
             <onclick>SetFocus(91506)</onclick>
+        </definition>
+    </include>
+	<!-- Onclick action for Posters info list -->
+    <include name="InfoList_OnClickPosters">
+        <definition>
+            <onclick>SetFocus(91507)</onclick>
+        </definition>
+    </include>
+	<!-- Onclick action for Fanart info list -->
+    <include name="InfoList_OnClickFanart">
+        <definition>
+            <onclick>SetFocus(91508)</onclick>
         </definition>
     </include>
     <!-- Onclick action for Seasons info list -->

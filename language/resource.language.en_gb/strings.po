@@ -1201,6 +1201,38 @@ msgctxt "#31528"
 msgid "Power Menu"
 msgstr ""
 
+msgctxt "#31529"
+msgid "Popular People"
+msgstr ""
+
+msgctxt "#31530"
+msgid "Trending Today"
+msgstr ""
+
+msgctxt "#31531"
+msgid "Trending this Week"
+msgstr ""
+
+msgctxt "#31532"
+msgid "Highest Revenue"
+msgstr ""
+
+msgctxt "#31533"
+msgid "Most Voted"
+msgstr ""
+
+msgctxt "#31534"
+msgid "People"
+msgstr ""
+
+msgctxt "#31535"
+msgid "People Trending Today"
+msgstr ""
+
+msgctxt "#31536"
+msgid "People Trending this Week"
+msgstr ""
+
 # empty strings from id 31528 to 31900
 msgctxt "#31901"
 msgid "36 Hour Forecast"

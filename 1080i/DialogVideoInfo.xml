@@ -616,7 +616,7 @@
                     <texture>$VAR[InfoStudios]</texture>
                     <aspectratio>keep</aspectratio>
                     <aligny>center</aligny>
-                    <visible>!String.IsEmpty(ListItem.Studio) + String.IsEmpty(ListItem.Property(tmdb_id)) + !String.IsEmpty(Skin.String(studiosResource.path))</visible>
+                    <visible>!String.IsEmpty(ListItem.Studio) + !String.Contains(ListItem.Studio,/) + String.IsEmpty(ListItem.Property(tmdb_id)) + !String.IsEmpty(Skin.String(studiosResource.path))</visible>
                 </control>
                 <control type="image" description="1st. Studio - Sets">
                     <posy>-51</posy>
@@ -631,12 +631,12 @@
                 <control type="image" description="Studio - TMDb Helper">
                     <posy>-51</posy>
                     <left>1000</left>
-                    <height>75</height>
+                    <height>70</height>
                     <width>160</width>
                     <texture>$INFO[Window(Home).Property(TMDbHelper.ListItem.Studio.1.Icon)]</texture>
                     <aspectratio>keep</aspectratio>
                     <aligny>center</aligny>
-                    <visible>!String.IsEmpty(ListItem.Property(tmdb_id)) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio))</visible>
+                    <visible>[!String.IsEmpty(ListItem.Property(tmdb_id)) | String.Contains(ListItem.Studio,/)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio))</visible>
                 </control>                
                 <control type="image" description="Line Split">
                     <posy>23</posy>
@@ -687,7 +687,6 @@
                     <onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">SetProperty(TextViewerSubHeader,$ESCINFO[ListItem.Tagline,[I],[/I]],Home)</onclick>
                     <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + String.IsEmpty(ListItem.Tagline) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Tagline))">SetProperty(TextViewerSubHeader,$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Tagline)),[I],[/I]],Home)</onclick>
                     <onclick condition="String.IsEqual(ListItem.DBType,set) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Years))">SetProperty(TextViewerSubHeader,$ESCINFO[Window(Home).Property(SkinInfo.Set.Movies.Years),[I],[/I]],Home)</onclick>
-                    <onclick condition="String.Contains(ListItem.FolderPath,type=person)">SetProperty(TextViewerContent,$ESCINFO[ListItem.Property(biography)],Home)</onclick>
 					<onclick>SetProperty(TextViewerContent,$ESCVAR[Plots],Home)</onclick>
                     <onclick>ActivateWindow(1124)</onclick>
                 </control>
@@ -709,93 +708,99 @@
 					    <!-- Person Info items -->
 					    <item>
                             <label>$LOCALIZE[32082]:</label>
-                            <label2>$INFO[ListItem.Property(Birthday)]</label2>
+                            <label2>$VAR[TMDbPersonBirthday]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Birthday)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Birthday)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Birthday))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32083]:</label>
-                            <label2>$INFO[ListItem.Property(Born)]</label2>
+                            <label2>$VAR[TMDbPersonBorn]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Born)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Born)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Born))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$VAR[AgeLabel]:</label>
-                            <label2>$INFO[ListItem.Property(Age)]</label2>
+                            <label2>$VAR[TMDbPersonAge]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Age)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Age)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Age))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32085]:</label>
-                            <label2>$INFO[ListItem.Property(Deathday)]</label2>
+                            <label2>$VAR[TMDbPersonDeathday]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Deathday)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Deathday)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Deathday))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32086]:</label>
-                            <label2>$INFO[ListItem.Property(aliases)]</label2>
-                            <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(aliases)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <label2>$VAR[TMDbPersonAliases]</label2>
+                            <onclick>SetProperty(TextViewerHeader,$ESCINFO[ListItem.Title],Home)</onclick>
+                            <onclick>SetProperty(TextViewerSubHeader,[I]$LOCALIZE[32086][/I],Home)</onclick>
+                            <onclick>SetProperty(TextViewerContent,$ESCVAR[TMDbPersonAliases],Home)</onclick>
+                            <onclick>ActivateWindow(1124)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(aliases)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Aliases))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
 						<item>
                             <label>$LOCALIZE[32136]:</label>
-                            <label2>$INFO[ListItem.Property(Known_For)]</label2>
-                            <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Known_For)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <label2>$VAR[TMDbPersonKnownFor]</label2>
+							<onclick>SetProperty(TextViewerHeader,$ESCINFO[ListItem.Title],Home)</onclick>
+                            <onclick>SetProperty(TextViewerSubHeader,[I]$LOCALIZE[32136][/I],Home)</onclick>
+                            <onclick>SetProperty(TextViewerContent,$ESCVAR[TMDbPersonKnownFor],Home)</onclick>
+                            <onclick>ActivateWindow(1124)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(Known_For)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Known_For))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32183]:</label>
-                            <label2>$INFO[ListItem.Property(Character)]</label2>
+                            <label2>$VAR[TMDbPersonCharacter]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Character)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Character)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Character))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32184]:</label>
-                            <label2>$INFO[ListItem.Property(Department)]</label2>
+                            <label2>$VAR[TMDbPersonDepartment]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Department)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Department)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Department))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32185]:</label>
-                            <label2>$INFO[ListItem.Property(Job)]</label2>
+                            <label2>$VAR[TMDbPersonJob]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(Job)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(Job)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Job))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32186]:</label>
-                            <label2>$INFO[ListItem.Property(NumItems.TMDB.Total)]</label2>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBTotal]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(NumItems.TMDB.Total)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Total)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Total))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
 						<item>
                             <label>$LOCALIZE[32187]:</label>
-                            <label2>$INFO[ListItem.Property(NumItems.TMDB.Cast)]</label2>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBCast]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(NumItems.TMDB.Cast)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Cast)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Cast))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32188]:</label>
-                            <label2>$INFO[ListItem.Property(NumItems.TMDB.Crew)]</label2>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBCrew]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(NumItems.TMDB.Crew)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Crew)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew)) + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32189]:</label>
-                            <label2>$INFO[ListItem.Property(NumItems.DBID.Total)]</label2>
+                            <label2>$VAR[TMDbPersonNumItemsDBIDTotal]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(NumItems.DBID.Total)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.Total)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Total))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32190]:</label>
-                            <label2>$INFO[ListItem.Property(NumItems.DBID.Movies)]</label2>
+                            <label2>$VAR[TMDbPersonNumItemsDBIDMovies]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(NumItems.DBID.Movies)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.Movies)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Movies))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32191]:</label>
-                            <label2>$INFO[ListItem.Property(NumItems.DBID.TvShows)]</label2>
+                            <label2>$VAR[TMDbPersonNumItemsDBIDTvShows]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Property(NumItems.DBID.TvShows)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.TvShows)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.TvShows))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
 						<!-- Video Info items -->
                         <item>
@@ -942,25 +947,25 @@
                             <label>$LOCALIZE[2050]:</label>
                             <label2>$INFO[ListItem.Duration] $LOCALIZE[12391]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.HourMinutes) + !String.IsEqual(ListItem.DBType,set)</visible>
+                            <visible>!String.IsEmpty(ListItem.Duration) + !String.IsEqual(ListItem.Duration,0) + !Skin.HasSetting(Enable.HourMinutes) + !String.IsEqual(ListItem.DBType,set)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[2050]:</label>
                             <label2>$VAR[ItemDurationHrMins]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.HourMinutes) + !String.IsEqual(ListItem.DBType,set)</visible>
+                            <visible>!String.IsEmpty(ListItem.Duration) + !String.IsEqual(ListItem.Duration,0) + Skin.HasSetting(Enable.HourMinutes) + !String.IsEqual(ListItem.DBType,set)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[2050]:</label>
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.Duration)] $LOCALIZE[12391]</label2>
                             <onclick>noop</onclick>
-                            <visible>String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration))</visible>
+                            <visible>String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration),0)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[2050]:</label>
                             <label2>$VAR[OnlineItemDurationHrMins]</label2>
                             <onclick>noop</onclick>
-                            <visible>String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration))</visible>
+                            <visible>String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Duration)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Duration),0)</visible>
                         </item>                        
                         <item>
                             <label>$LOCALIZE[20161] $LOCALIZE[2050]:</label>
@@ -1138,7 +1143,6 @@
                             <onclick>SetProperty(TextViewerSubHeader,$VAR[AwardsLabel],Home)</onclick>
                             <onclick>SetProperty(TextViewerContent,$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.awards)],Home)</onclick>
                             <onclick>ActivateWindow(1124)</onclick>
-                            <onclick>noop</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.awards)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.awards),N/A)</visible>
                         </item>
                         <item>
@@ -1454,6 +1458,17 @@
                 <param name="sortby">year</param>
                 <param name="sortorder">descending</param>
             </include>
+			<!-- Posters -->
+            <include content="VideoInfoPosterWidget">
+                <param name="id">910016</param>
+				<param name="labelid">9100161</param>
+                <param name="headinglabel">$LOCALIZE[32130]</param>
+                <param name="belowdoublelabelvisibility">false</param>
+                <param name="belowlabelvisibility">true</param>
+                <param name="onclickinclude">InfoList_OnClickPosters</param>
+				<param name="visibility1">!Skin.HasSetting(DisableInfoListPosters)</param>
+                <param name="content">$VAR[TMDbPosters]</param>
+            </include>
             <!-- Person Info Widget Lists -->
 			<!-- Cast in Movies-->
             <include content="VideoInfoPosterWidget" condition="String.Contains(ListItem.FolderPath,type=person)">
@@ -1506,7 +1521,7 @@
                 <param name="content">$VAR[InfoCastList05]</param>
             </include>
         </control>
-        
+		
 		<!-- Provide slideshow for person pictures -->
         <control type="button" id="91506">
             <include>HiddenButton</include>
@@ -1527,6 +1542,29 @@
             <control type="image">
                 <aspectratio>keep</aspectratio>
                 <texture background="true">$INFO[Container(910015).ListItem.Art(poster)]</texture>
+            </control>
+        </control>
+		
+		<!-- Provide slideshow for Posters -->
+        <control type="button" id="91507">
+            <include>HiddenButton</include>
+            <onleft>Control.Move(910016,-1)</onleft>
+            <onright>Control.Move(910016,1)</onright>
+            <onback>910016</onback>
+        </control>
+        <control type="group">
+            <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="350" tween="cubic" easing="inout">Hidden</animation>
+            <control type="image">
+                <width>1920</width>
+                <height>1080</height>
+                <texture>img/BlackDot.png</texture>
+                <aspectratio>scale</aspectratio>
+            </control>
+            <visible>Control.HasFocus(91507)</visible>
+            <control type="image">
+                <aspectratio>keep</aspectratio>
+                <texture background="true">$INFO[Container(910016).ListItem.Art(poster)]</texture>
             </control>
         </control>
 		

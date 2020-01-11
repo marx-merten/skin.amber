@@ -48,22 +48,33 @@
 			<property name="defaultID">videos</property>
 			<property name="background">special://skin/backgrounds/Videos.jpg</property>
 			<property name="backgroundName">special://skin/backgrounds/Videos.jpg</property>
-			<property name="widget">tmbdhelpermovies</property>
-			<property name="widgetName">31520</property>
-			<property name="widgetType">movies</property>
+			<property name="widget">tmdbhelperpeople</property>
+			<property name="widgetName">31536</property>
+			<property name="widgetType">people</property>
 			<property name="widgetTarget">videos</property>
-			<property name="widgetPath">plugin://plugin.video.themoviedb.helper/?info=upcoming&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
-			<property name="widgetDouble">true</property>
-			<property name="widgetTarget.2">false</property>
-			<property name="widgetTarget.3">false</property>
-			<property name="widgetTarget.4">false</property>
-			<property name="widgetTarget.5">false</property>
+			<property name="widgetPath">plugin://plugin.video.themoviedb.helper/?info=trending_week&amp;type=person&amp;widget=True&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.2">tmbdhelpermovies</property>
+			<property name="widgetName.2">31532</property>
+			<property name="widgetType.2">movies</property>
+			<property name="widgetTarget.2">videos</property>
+			<property name="widgetPath.2">plugin://plugin.video.themoviedb.helper/?info=revenue_movies&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.3">tmbdhelpermovies</property>
+			<property name="widgetName.3">31533</property>
+			<property name="widgetType.3">movies</property>
+			<property name="widgetTarget.3">videos</property>
+			<property name="widgetPath.3">plugin://plugin.video.themoviedb.helper/?info=most_voted&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.4">tmbdhelpermovies</property>
+			<property name="widgetName.4">31530</property>
+			<property name="widgetType.4">movies</property>
+			<property name="widgetTarget.4">videos</property>
+			<property name="widgetPath.4">plugin://plugin.video.themoviedb.helper/?info=trending_day&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.5">tmbdhelpermovies</property>
+			<property name="widgetName.5">31531</property>
+			<property name="widgetType.5">movies</property>
+			<property name="widgetTarget.5">videos</property>
+			<property name="widgetPath.5">plugin://plugin.video.themoviedb.helper/?info=trending_week&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
 			<property name="widgetTarget.6">false</property>
 			<property name="widgetTwoShelves">false</property>
-			<property name="widgetType.2">none</property>
-			<property name="widgetType.3">none</property>
-			<property name="widgetType.4">none</property>
-			<property name="widgetType.5">none</property>
 			<property name="widgetType.6">none</property>
 			<property name="widgetContent">default</property>
 			<property name="widgetContent.2">default</property>
@@ -5720,10 +5731,10 @@
 	</include>
 	<include name="skinshortcuts-template-ShelfOnUpMainMenu-Master user">
 		<onup condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEmpty(Window(home).Property(WidgetFocus2))">SetFocus(160021)</onup>
-		<onup condition="false">SetFocus(160022)</onup>
-		<onup condition="false">SetFocus(160023)</onup>
-		<onup condition="false">SetFocus(160024)</onup>
-		<onup condition="false">SetFocus(160025)</onup>
+		<onup condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),2)">SetFocus(160022)</onup>
+		<onup condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),3)">SetFocus(160023)</onup>
+		<onup condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),4)">SetFocus(160024)</onup>
+		<onup condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),5)">SetFocus(160025)</onup>
 		<onup condition="false">SetFocus(160026)</onup>
 		<onup condition="String.IsEqual(Container(300).ListItem.Property(id),3) + String.IsEmpty(Window(home).Property(WidgetFocus3))">SetFocus(160031)</onup>
 		<onup condition="false">SetFocus(160032)</onup>
@@ -5743,10 +5754,10 @@
 	</include>
 	<include name="skinshortcuts-template-ShelfOnRightMainMenu-Master user">
 		<onright condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEmpty(Window(home).Property(WidgetFocus2))">SetFocus(160021)</onright>
-		<onright condition="false">SetFocus(160022)</onright>
-		<onright condition="false">SetFocus(160023)</onright>
-		<onright condition="false">SetFocus(160024)</onright>
-		<onright condition="false">SetFocus(160025)</onright>
+		<onright condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),2)">SetFocus(160022)</onright>
+		<onright condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),3)">SetFocus(160023)</onright>
+		<onright condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),4)">SetFocus(160024)</onright>
+		<onright condition="String.IsEqual(Container(300).ListItem.Property(id),2) + String.IsEqual(Window(home).Property(WidgetFocus2),5)">SetFocus(160025)</onright>
 		<onright condition="false">SetFocus(160026)</onright>
 		<onright condition="String.IsEqual(Container(300).ListItem.Property(id),3) + String.IsEmpty(Window(home).Property(WidgetFocus3))">SetFocus(160031)</onright>
 		<onright condition="false">SetFocus(160032)</onright>
@@ -5786,42 +5797,42 @@
 					<texture colordiffuse="Highlight">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160025).NumItems,0) + !Control.HasFocus(160025)</visible>
+					<visible>true + Integer.IsGreater(Container(160025).NumItems,0) + !Control.HasFocus(160025)</visible>
 					<height>16</height>
 					<texture colordiffuse="Grey3">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160025).NumItems,0) + Control.HasFocus(160025)</visible>
+					<visible>true + Integer.IsGreater(Container(160025).NumItems,0) + Control.HasFocus(160025)</visible>
 					<height>16</height>
 					<texture colordiffuse="Highlight">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160024).NumItems,0) + !Control.HasFocus(160024)</visible>
+					<visible>true + Integer.IsGreater(Container(160024).NumItems,0) + !Control.HasFocus(160024)</visible>
 					<height>16</height>
 					<texture colordiffuse="Grey3">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160024).NumItems,0) + Control.HasFocus(160024)</visible>
+					<visible>true + Integer.IsGreater(Container(160024).NumItems,0) + Control.HasFocus(160024)</visible>
 					<height>16</height>
 					<texture colordiffuse="Highlight">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160023).NumItems,0) + !Control.HasFocus(160023)</visible>
+					<visible>true + Integer.IsGreater(Container(160023).NumItems,0) + !Control.HasFocus(160023)</visible>
 					<height>16</height>
 					<texture colordiffuse="Grey3">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160023).NumItems,0) + Control.HasFocus(160023)</visible>
+					<visible>true + Integer.IsGreater(Container(160023).NumItems,0) + Control.HasFocus(160023)</visible>
 					<height>16</height>
 					<texture colordiffuse="Highlight">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160022).NumItems,0) + !Control.HasFocus(160022)</visible>
+					<visible>true + Integer.IsGreater(Container(160022).NumItems,0) + !Control.HasFocus(160022)</visible>
 					<height>16</height>
 					<texture colordiffuse="Grey3">icons/circle.png</texture>
 				</control>
 				<control type="image">
-					<visible>false + Integer.IsGreater(Container(160022).NumItems,0) + Control.HasFocus(160022)</visible>
+					<visible>true + Integer.IsGreater(Container(160022).NumItems,0) + Control.HasFocus(160022)</visible>
 					<height>16</height>
 					<texture colordiffuse="Highlight">icons/circle.png</texture>
 				</control>
@@ -5990,21 +6001,21 @@
 			<visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),num-3)</visible>
 			<include content="WidgetBackground">
 				<param name="id">160021</param>
-				<param name="label">31520</param>
-				<param name="top">170</param>
-				<param name="height">690</param>
+				<param name="label">31536</param>
+				<param name="top">327</param>
+				<param name="height">375</param>
 				<param name="visible">String.IsEmpty(Window(home).Property(WidgetFocus2))</param>
 			</include>
 			<control id="160021" type="panel">
-				<top>170</top>
+				<top>327</top>
 				<left>32</left>
 				<right>0</right>
-				<height>630</height>
+				<height>315</height>
 				<onfocus>SetProperty(TMDbHelper.WidgetContainer,160021,Home)</onfocus>
 				<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 				<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
-				<onup condition="false">SetProperty(WidgetFocus2,2,home)</onup>
-				<onup condition="false">SetFocus(160022)</onup>
+				<onup condition="true">SetProperty(WidgetFocus2,2,home)</onup>
+				<onup condition="true">SetFocus(160022)</onup>
 				<ondown>300</ondown>
 				<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
 				<preloaditems>2</preloaditems>
@@ -6014,8 +6025,9 @@
 					<param name="isYear">false</param>
 					<param name="isPlaylist">false</param>
 					<param name="isMusicGenre">false</param>
-					<param name="labelvisibility">false</param>
+					<param name="labelvisibility">true</param>
 					<param name="aspect">keep</param>
+					<param name="labelfont">ListDetailsSmall</param>
 				</include>
 				<content>
 					<item>
@@ -6024,7 +6036,7 @@
 						<visible>String.IsEmpty(Container(160021).ListItem(1).Label)</visible>
 					</item>
 				</content>
-				<content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.themoviedb.helper/?info=upcoming&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+				<content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.themoviedb.helper/?info=trending_week&amp;type=person&amp;widget=True&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
 			</control>
 		</control>
 		<control type="group">
@@ -6057,6 +6069,7 @@
 					<param name="isMusicGenre">false</param>
 					<param name="labelvisibility">false</param>
 					<param name="aspect">keep</param>
+					<param name="labelfont">Shelf_Label</param>
 				</include>
 				<content>
 					<item>
@@ -6098,6 +6111,7 @@
 					<param name="isMusicGenre">false</param>
 					<param name="labelvisibility">true</param>
 					<param name="aspect">keep</param>
+					<param name="labelfont">Shelf_Label</param>
 				</include>
 				<content>
 					<item>
@@ -6114,6 +6128,50 @@
 		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-shelfgroup2-Master user</include>
 	</include>
 	<include name="skinshortcuts-template-shelfgroup2-Master user">
+		<control type="group">
+			<visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),num-3)</visible>
+			<include content="WidgetBackground">
+				<param name="id">160022</param>
+				<param name="label">31532</param>
+				<param name="top">327</param>
+				<param name="height">375</param>
+				<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus2),2)</param>
+			</include>
+			<control id="160022" type="panel">
+				<top>327</top>
+				<left>32</left>
+				<right>0</right>
+				<height>315</height>
+				<onfocus>SetProperty(TMDbHelper.WidgetContainer,160022,Home)</onfocus>
+				<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
+				<onup condition="true">SetProperty(WidgetFocus2,3,home)</onup>
+				<onup condition="true">SetFocus(160023)</onup>
+				<onup condition="!true">ClearProperty(WidgetFocus2,home)</onup>
+				<onup condition="!true">SetFocus(160021)</onup>
+				<ondown>300</ondown>
+				<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<include content="Shelf_GenericPoster">
+					<param name="id1">160022</param>
+					<param name="isYear">false</param>
+					<param name="isPlaylist">false</param>
+					<param name="isMusicGenre">false</param>
+					<param name="labelvisibility">false</param>
+					<param name="aspect">keep</param>
+					<param name="labelfont">Shelf_Label</param>
+				</include>
+				<content>
+					<item>
+						<icon>DefaultAddonNone.png</icon>
+						<thumb>DefaultAddonNone.png</thumb>
+						<visible>String.IsEmpty(Container(160022).ListItem(1).Label)</visible>
+					</item>
+				</content>
+				<content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.themoviedb.helper/?info=revenue_movies&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+			</control>
+		</control>
 		<control type="group">
 			<visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<include content="WidgetBackground">
@@ -6155,6 +6213,153 @@
 				<content>
 					<include>skinshortcuts-template-NextAiredContent</include>
 				</content>
+			</control>
+		</control>
+	</include>
+	<include name="skinshortcuts-template-shelfgroup3">
+		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-shelfgroup3-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-shelfgroup3-Master user">
+		<control type="group">
+			<visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),num-3)</visible>
+			<include content="WidgetBackground">
+				<param name="id">160023</param>
+				<param name="label">31533</param>
+				<param name="top">327</param>
+				<param name="height">375</param>
+				<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus2),3)</param>
+			</include>
+			<control id="160023" type="panel">
+				<top>327</top>
+				<left>32</left>
+				<right>0</right>
+				<height>315</height>
+				<onfocus>SetProperty(TMDbHelper.WidgetContainer,160023,Home)</onfocus>
+				<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
+				<onup condition="true">SetProperty(WidgetFocus2,4,home)</onup>
+				<onup condition="true">SetFocus(160024)</onup>
+				<onup condition="!true">ClearProperty(WidgetFocus2,home)</onup>
+				<onup condition="!true">SetFocus(160021)</onup>
+				<ondown>300</ondown>
+				<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<include content="Shelf_GenericPoster">
+					<param name="id1">160023</param>
+					<param name="isYear">false</param>
+					<param name="isPlaylist">false</param>
+					<param name="isMusicGenre">false</param>
+					<param name="labelvisibility">false</param>
+					<param name="aspect">keep</param>
+					<param name="labelfont">Shelf_Label</param>
+				</include>
+				<content>
+					<item>
+						<icon>DefaultAddonNone.png</icon>
+						<thumb>DefaultAddonNone.png</thumb>
+						<visible>String.IsEmpty(Container(160023).ListItem(1).Label)</visible>
+					</item>
+				</content>
+				<content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.themoviedb.helper/?info=most_voted&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+			</control>
+		</control>
+	</include>
+	<include name="skinshortcuts-template-shelfgroup4">
+		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-shelfgroup4-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-shelfgroup4-Master user">
+		<control type="group">
+			<visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),num-3)</visible>
+			<include content="WidgetBackground">
+				<param name="id">160024</param>
+				<param name="label">31530</param>
+				<param name="top">327</param>
+				<param name="height">375</param>
+				<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus2),4)</param>
+			</include>
+			<control id="160024" type="panel">
+				<top>327</top>
+				<left>32</left>
+				<right>0</right>
+				<height>315</height>
+				<onfocus>SetProperty(TMDbHelper.WidgetContainer,160024,Home)</onfocus>
+				<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
+				<onup condition="true">SetProperty(WidgetFocus2,5,home)</onup>
+				<onup condition="true">SetFocus(160025)</onup>
+				<onup condition="!true">ClearProperty(WidgetFocus2,home)</onup>
+				<onup condition="!true">SetFocus(160021)</onup>
+				<ondown>300</ondown>
+				<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<include content="Shelf_GenericPoster">
+					<param name="id1">160024</param>
+					<param name="isYear">false</param>
+					<param name="isPlaylist">false</param>
+					<param name="isMusicGenre">false</param>
+					<param name="labelvisibility">false</param>
+					<param name="aspect">keep</param>
+					<param name="labelfont">Shelf_Label</param>
+				</include>
+				<content>
+					<item>
+						<icon>DefaultAddonNone.png</icon>
+						<thumb>DefaultAddonNone.png</thumb>
+						<visible>String.IsEmpty(Container(160024).ListItem(1).Label)</visible>
+					</item>
+				</content>
+				<content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.themoviedb.helper/?info=trending_day&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+			</control>
+		</control>
+	</include>
+	<include name="skinshortcuts-template-shelfgroup5">
+		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-shelfgroup5-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-shelfgroup5-Master user">
+		<control type="group">
+			<visible>String.IsEqual(Container(300).ListItem.Property(submenuVisibility),num-3)</visible>
+			<include content="WidgetBackground">
+				<param name="id">160025</param>
+				<param name="label">31531</param>
+				<param name="top">327</param>
+				<param name="height">375</param>
+				<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus2),5)</param>
+			</include>
+			<control id="160025" type="panel">
+				<top>327</top>
+				<left>32</left>
+				<right>0</right>
+				<height>315</height>
+				<onfocus>SetProperty(TMDbHelper.WidgetContainer,160025,Home)</onfocus>
+				<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+				<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
+				<onup condition="false">SetProperty(WidgetFocus2,6,home)</onup>
+				<onup condition="false">SetFocus(160026)</onup>
+				<onup condition="!false">ClearProperty(WidgetFocus2,home)</onup>
+				<onup condition="!false">SetFocus(160021)</onup>
+				<ondown>300</ondown>
+				<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<include content="Shelf_GenericPoster">
+					<param name="id1">160025</param>
+					<param name="isYear">false</param>
+					<param name="isPlaylist">false</param>
+					<param name="isMusicGenre">false</param>
+					<param name="labelvisibility">false</param>
+					<param name="aspect">keep</param>
+					<param name="labelfont">Shelf_Label</param>
+				</include>
+				<content>
+					<item>
+						<icon>DefaultAddonNone.png</icon>
+						<thumb>DefaultAddonNone.png</thumb>
+						<visible>String.IsEmpty(Container(160025).ListItem(1).Label)</visible>
+					</item>
+				</content>
+				<content limit="" sortby="" sortorder="" target="videos">plugin://plugin.video.themoviedb.helper/?info=trending_week&amp;type=movie&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
 			</control>
 		</control>
 	</include>
@@ -6342,15 +6547,6 @@
 			<icon>$INFO[Window(Home).Property(NextAired.20.Art(poster))]</icon>
 			<onclick>RunAddOn(script.tv.show.next.aired)</onclick>
 		</item>
-	</include>
-	<include name="skinshortcuts-template-shelfgroup3">
-		<description>This include was built automatically as the template didn't match any menu items</description>
-	</include>
-	<include name="skinshortcuts-template-shelfgroup4">
-		<description>This include was built automatically as the template didn't match any menu items</description>
-	</include>
-	<include name="skinshortcuts-template-shelfgroup5">
-		<description>This include was built automatically as the template didn't match any menu items</description>
 	</include>
 	<include name="skinshortcuts-template-shelfgroup6">
 		<description>This include was built automatically as the template didn't match any menu items</description>

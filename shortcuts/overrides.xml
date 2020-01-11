@@ -437,6 +437,10 @@
 				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31519]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=top_rated&amp;type=movie</shortcut>
 				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31520]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=upcoming&amp;type=movie</shortcut>
 				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31521]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=now_playing&amp;type=movie</shortcut>
+				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31530]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=trending_day&amp;type=movie</shortcut>
+				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31531]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=trending_week&amp;type=movie</shortcut>
+				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31532]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=revenue_movies&amp;type=movie</shortcut>
+				<shortcut widget="tmbdhelpermovies" label="$LOCALIZE[31533]" icon="shelves/themoviedb.helper.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=most_voted&amp;type=movie</shortcut>
 			</node>
 			<!-- TV Shows -->
 			<node label="$LOCALIZE[31432]" icon="DefaultTVShows.png">
@@ -444,6 +448,12 @@
 				<shortcut widget="tmdbhelpertvshows" label="$LOCALIZE[31523]" icon="shelves/themoviedb.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=top_rated&amp;type=tv</shortcut>
 				<shortcut widget="tmdbhelpertvshows" label="$LOCALIZE[31524]" icon="shelves/themoviedb.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=airing_today&amp;type=tv</shortcut>
 				<shortcut widget="tmdbhelpertvshows" label="$LOCALIZE[31525]" icon="shelves/themoviedb.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=on_the_air&amp;type=tv</shortcut>
+			</node>
+			<!-- People -->
+			<node label="$LOCALIZE[31534]" icon="DefaultActor.png">
+				<shortcut widget="tmdbhelperpeople" label="$LOCALIZE[31529]" icon="shelves/themoviedb.helper.png" widgetType="people" widgetTarget="video" condition="[Library.HasContent(tvshows) | Library.HasContent(movies)] + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=popular&amp;type=person&amp;widget=True</shortcut>
+				<shortcut widget="tmdbhelperpeople" label="$LOCALIZE[31535]" icon="shelves/themoviedb.helper.png" widgetType="people" widgetTarget="video" condition="[Library.HasContent(tvshows) | Library.HasContent(movies)] + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=trending_day&amp;type=person&amp;widget=True</shortcut>
+				<shortcut widget="tmdbhelperpeople" label="$LOCALIZE[31536]" icon="shelves/themoviedb.helper.png" widgetType="people" widgetTarget="video" condition="[Library.HasContent(tvshows) | Library.HasContent(movies)] + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=trending_week&amp;type=person&amp;widget=True</shortcut>
 			</node>
         </node>            
 		<!-- Picture sources -->
