@@ -50,7 +50,6 @@
 				<onright>300</onright>
 				<ondown>9001</ondown>
                 <include condition="!Skin.HasSetting(Hide.AllShelves)">skinshortcuts-template-ShelfOnUpMainMenu</include>
-<!--				<onup condition="!Skin.HasSetting(Hide.AllShelves)">700</onup> -->
 				<pagecontrol></pagecontrol>
 				<focusposition>2</focusposition>
 				<orientation>horizontal</orientation>

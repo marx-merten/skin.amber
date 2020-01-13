@@ -1003,6 +1003,7 @@
     <!-- Single Search content sources -->
     <variable name="SingleSearchContent">
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),Online)">plugin://plugin.video.themoviedb.helper?info=discover&amp;$INFO[Skin.String(OnlineMediaType)]&amp;$INFO[Skin.String(OnlineCallType)]=$INFO[Skin.String(SingleSearchTerm)]</value>
+		<value condition="String.IsEqual(Window(Home).Property(SingleSearchType),OnlineTotals)">plugin://plugin.video.themoviedb.helper?info=$INFO[Skin.String(OnlineTotalsCall)]&amp;type=person&amp;tmdb_id=$INFO[Skin.String(SingleSearchID)]</value>
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalMovieGenre)">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalTVShowGenre)">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalEpisodeGenre)">videodb://tvshows/titles/-1/-1/-1/-1/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22genre%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</value>
@@ -1010,6 +1011,10 @@
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalTVShowStudio)">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalEpisodeStudio)">videodb://tvshows/titles/-1/-1/-1/-1/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22studio%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22episodes%22%7D</value>
         <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalMovieCountry)">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22country%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
+		<value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalMovieActor)">videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D</value>
+        <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalTVShowActor)">videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22actor%22%2C%22operator%22%3A%22contains%22%2C%22value%22%3A%5B%22$INFO[Skin.String(SingleSearchTerm)]%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D</value>
+        <value condition="String.IsEqual(Window(Home).Property(SingleSearchType),LocalEpisodeActor)">videodb://tvshows/titles/-1/-1/-1/-1/?xsp=%7b%22rules%22%3a%7b%22and%22%3a%5b%7b%22field%22%3a%22actor%22%2c%22operator%22%3a%22is%22%2c%22value%22%3a%5b%22$INFO[Skin.String(SingleSearchTerm)]%22%5d%7d%5d%7d%2c%22type%22%3a%22episodes%22%7d</value>
+
     </variable>
 	
     <!-- Embuary Info Crew for movies/tv shows, guest stars for seasons -->
@@ -1092,6 +1097,22 @@
 	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Total))">$INFO[ListItem.Property(NumItems.TMDB.Total)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Total))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Total)]</value>
 	</variable>
+	<variable name="TMDbPersonNumItemsTMDBMoviesTotal">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Movies.Total))">$INFO[ListItem.Property(NumItems.TMDB.Movies.Total)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Total))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Total)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBTvShowsTotal">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.TvShows.Total))">$INFO[ListItem.Property(NumItems.TMDB.TvShows.Total)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Total))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Total)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBMoviesCast">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Movies.Cast))">$INFO[ListItem.Property(NumItems.TMDB.Movies.Cast)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Cast))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Cast)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBTvShowsCast">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.TvShows.Cast))">$INFO[ListItem.Property(NumItems.TMDB.TvShows.Cast)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Cast))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Cast)]</value>
+	</variable>
 	<variable name="TMDbPersonNumItemsTMDBCast">
 	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Cast))">$INFO[ListItem.Property(NumItems.TMDB.Cast)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Cast))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Cast)]</value>
@@ -1099,6 +1120,14 @@
 	<variable name="TMDbPersonNumItemsTMDBCrew">
 	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Crew))">$INFO[ListItem.Property(NumItems.TMDB.Crew)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBMoviesCrew">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.Movies.Crew))">$INFO[ListItem.Property(NumItems.TMDB.Movies.Crew)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Crew))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Crew)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsTMDBTvShowsCrew">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.TMDB.TvShows.Crew))">$INFO[ListItem.Property(NumItems.TMDB.TvShows.Crew)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Crew))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Crew)]</value>
 	</variable>
 	<variable name="TMDbPersonNumItemsDBIDTotal">
 	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.DBID.Total))">$INFO[ListItem.Property(NumItems.DBID.Total)]</value>
@@ -1111,6 +1140,10 @@
 	<variable name="TMDbPersonNumItemsDBIDTvShows">
 	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.DBID.TvShows))">$INFO[ListItem.Property(NumItems.DBID.TvShows)]</value>
         <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.TvShows))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.TvShows)]</value>
+	</variable>
+	<variable name="TMDbPersonNumItemsDBIDEpisodes">
+	    <value condition="!String.IsEmpty(ListItem.Property(NumItems.DBID.Episodes))">$INFO[ListItem.Property(NumItems.DBID.Episodes)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Episodes))">$INFO[Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Episodes)]</value>
 	</variable>
 
     
@@ -1410,7 +1443,8 @@
 	<variable name="TMDb_Cast">
         <value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.IMDBNumber) + String.StartsWith(ListItem.IMDBNumber,tt)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;imdb_id=$INFO[ListItem.IMDBNumber]</value>
         <value condition="String.IsEqual(ListItem.DBType,movie)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=movie&amp;query=$INFO[ListItem.Title]&amp;year=$INFO[ListItem.Year]</value>
-        <value condition="String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=tv&amp;query=$INFO[ListItem.TvShowTitle]&amp;year=$INFO[ListItem.Year]</value>
+        <value condition="[String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)] + String.IsEmpty(ListItem.Property(tmdb_id))">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=tv&amp;query=$INFO[ListItem.TvShowTitle]&amp;year=$INFO[ListItem.Year]</value>
+		<value condition="[String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(ListItem.Property(tmdb_id))">plugin://plugin.video.themoviedb.helper?info=cast&amp;type=tv&amp;tmdb_id=$INFO[ListItem.Property(tmdb_id)]</value>
     </variable>
     <!-- Custom Cast Panel -->
     <include name="CustomCast">

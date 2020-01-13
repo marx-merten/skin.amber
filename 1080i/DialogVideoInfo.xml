@@ -774,33 +774,113 @@
                         </item>
 						<item>
                             <label>$LOCALIZE[32187]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBMoviesTotal]</label2>
+							<onclick>noop</onclick>
+							<visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Movies.Total)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Total))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+						<item>
+                            <label>$LOCALIZE[32188]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBTvShowsTotal]</label2>
+							<onclick>noop</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.TvShows.Total)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Total))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+						<item>
+                            <label>$LOCALIZE[32189]:</label>
                             <label2>$VAR[TMDbPersonNumItemsTMDBCast]</label2>
                             <onclick>noop</onclick>
                             <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Cast)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Cast))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
-                        <item>
-                            <label>$LOCALIZE[32188]:</label>
-                            <label2>$VAR[TMDbPersonNumItemsTMDBCrew]</label2>
-                            <onclick>noop</onclick>
-                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Crew)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew)) + String.Contains(ListItem.FolderPath,type=person)</visible>
+						<item>
+                            <label>$LOCALIZE[32190]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBMoviesCast]</label2>
+                            <onclick>SetProperty(SingleSearchType,OnlineTotals,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchID,$INFO[ListItem.Property(tmdb_id)])</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(OnlineTotalsCall,stars_in_movies)</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32199])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Movies.Cast)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Cast))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+						<item>
+                            <label>$LOCALIZE[32191]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBTvShowsCast]</label2>
+                            <onclick>SetProperty(SingleSearchType,OnlineTotals,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchID,$INFO[ListItem.Property(tmdb_id)])</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(OnlineTotalsCall,stars_in_tvshows)</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32200])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.TvShows.Cast)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Cast))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
-                            <label>$LOCALIZE[32189]:</label>
-                            <label2>$VAR[TMDbPersonNumItemsDBIDTotal]</label2>
+                            <label>$LOCALIZE[32192]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBCrew]</label2>
                             <onclick>noop</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Crew)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Crew))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+						<item>
+                            <label>$LOCALIZE[32193]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBMoviesCrew]</label2>
+                            <onclick>SetProperty(SingleSearchType,OnlineTotals,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchID,$INFO[ListItem.Property(tmdb_id)])</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(OnlineTotalsCall,crew_in_movies)</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32201])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.Movies.Crew)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.Movies.Crew))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+						<item>
+                            <label>$LOCALIZE[32194]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsTMDBTvShowsCrew]</label2>
+                            <onclick>SetProperty(SingleSearchType,OnlineTotals,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchID,$INFO[ListItem.Property(tmdb_id)])</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(OnlineTotalsCall,crew_in_tvshows)</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32202])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.TMDB.TvShows.Crew)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.TMDB.TvShows.Crew))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[32195]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsDBIDTotal]</label2>
+                            <onclick>Skin.SetString(CustomSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1122)</onclick>
                             <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.Total)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Total))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
-                            <label>$LOCALIZE[32190]:</label>
+                            <label>$LOCALIZE[32196]:</label>
                             <label2>$VAR[TMDbPersonNumItemsDBIDMovies]</label2>
-                            <onclick>noop</onclick>
+                            <onclick>SetProperty(SingleSearchType,LocalMovieActor,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32025])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
                             <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.Movies)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Movies))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
                         <item>
-                            <label>$LOCALIZE[32191]:</label>
+                            <label>$LOCALIZE[32197]:</label>
                             <label2>$VAR[TMDbPersonNumItemsDBIDTvShows]</label2>
-                            <onclick>noop</onclick>
+                            <onclick>SetProperty(SingleSearchType,LocalTVShowActor,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32027])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
                             <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.TvShows)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.TvShows))] + String.Contains(ListItem.FolderPath,type=person)</visible>
+                        </item>
+						<item>
+                            <label>$LOCALIZE[32198]:</label>
+                            <label2>$VAR[TMDbPersonNumItemsDBIDEpisodes]</label2>
+                            <onclick>SetProperty(SingleSearchType,LocalEpisodeActor,Home)</onclick>
+							<onclick>Skin.SetString(SingleSearchTerm,$INFO[ListItem.Label])</onclick>
+							<onclick>Skin.SetString(SingleSearchHeader,$LOCALIZE[32096])</onclick>
+							<onclick>Action(Close)</onclick>
+							<onclick>ActivateWindow(1131)</onclick>
+                            <visible>[!String.IsEmpty(ListItem.Property(NumItems.DBID.Episodes)) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.NumItems.DBID.Episodes))] + String.Contains(ListItem.FolderPath,type=person)</visible>
                         </item>
 						<!-- Video Info items -->
                         <item>
