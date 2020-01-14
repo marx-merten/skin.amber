@@ -1,3 +1,8 @@
+3.2.34 (14-01-2020)
+- Add tmdb helper people shelves, addtitional movie/tv shelves
+- Add tmdb helper trakt shelves
+- Add option to start in 1st menu item for vert. menu
+- tmdb helper and embuary helper are requirements
 3.2.33 (09-01-2020)
 - Use new capabilities of tmdb helper in video info
 - Improve PVR Guide layout (Thanks Dumyat!)
