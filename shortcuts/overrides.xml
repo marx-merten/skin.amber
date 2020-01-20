@@ -429,6 +429,25 @@
 			<shortcut widget="embuaryhelpertvshows" label="$LOCALIZE[31517]" icon="shelves/embuary.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.helper)">plugin://script.embuary.helper/?info=getbygenre&amp;unwatched=True&amp;type=tvshow&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]</shortcut>
             <shortcut widget="embuaryhelpernextepisodes" label="$LOCALIZE[31526]" icon="shelves/embuary.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.helper)">plugin://script.embuary.helper/?info=getnextup&amp;reload=$INFO[Window(home).Property(EmbuaryWidgetUpdate)]</shortcut>
         </node>
+		<!-- Embuary Info Widgets -->
+		<node label="$LOCALIZE[31553]" icon="DefaultFolder.png">
+			<!-- Movies -->
+			<node label="$LOCALIZE[342]" icon="DefaultMovies.png">
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31554]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=popular</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31555]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=top_rated</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31556]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=upcoming</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31557]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=now_playing</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31558]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=trending&amp;call=movie&amp;get=week</shortcut>
+			</node>
+			<!-- TV Shows -->
+			<node label="$LOCALIZE[31432]" icon="DefaultTVShows.png">
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31559]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=popular</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31560]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=top_rated</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31561]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=airing_today</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31562]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=on_the_air</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31563]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=trending&amp;call=tv&amp;get=week</shortcut>
+			</node>
+        </node>
         <!-- Themoviedb Helper Widgets -->
 		<node label="$LOCALIZE[31498]" icon="DefaultFolder.png">
 			<!-- Movies -->

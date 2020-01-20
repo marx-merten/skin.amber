@@ -1278,7 +1278,7 @@ msgid "Trakt - Top 10 Box Office This Week"
 msgstr ""
 
 msgctxt "#31548"
-msgid "Trakt - Your Shows Airing This Week"
+msgid "Trakt - My Shows Airing This Week"
 msgstr ""
 
 msgctxt "#31549"
@@ -1297,7 +1297,51 @@ msgctxt "#31552"
 msgid "Trakt - Your Lists"
 msgstr ""
 
-# empty strings from id 31553 to 31900
+msgctxt "#31553"
+msgid "Embuary Info Shelves"
+msgstr ""
+
+msgctxt "#31554"
+msgid "Embuary Info - Popular Movies"
+msgstr ""
+
+msgctxt "#31555"
+msgid "Embuary Info - Top Rated Movies"
+msgstr ""
+
+msgctxt "#31556"
+msgid "Embuary Info - Upcoming Movies"
+msgstr ""
+
+msgctxt "#31557"
+msgid "Embuary Info - Now Playing Movies"
+msgstr ""
+
+msgctxt "#31558"
+msgid "Embuary Info - Movies Trending This Week"
+msgstr ""
+
+msgctxt "#31559"
+msgid "Embuary Info - Popular TV Shows"
+msgstr ""
+
+msgctxt "#31560"
+msgid "Embuary Info - Top Rated TV Shows"
+msgstr ""
+
+msgctxt "#31561"
+msgid "Embuary Info - Airing Today TV Shows"
+msgstr ""
+
+msgctxt "#31562"
+msgid "Embuary Info - Currently Airing TV Shows"
+msgstr ""
+
+msgctxt "#31563"
+msgid "Embuary Info - TV Shows Trending This Week"
+msgstr ""
+
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""
@@ -2369,4 +2413,8 @@ msgstr ""
 
 msgctxt "#32203"
 msgid "Start at First Menu Item"
+msgstr ""
+
+msgctxt "#32204"
+msgid "Set Default View"
 msgstr ""

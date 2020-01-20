@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="1122">
+<window type="dialog" id="1122">
 
 <!-- Search functionality adapted from sualfred's embuary and jurialmunkey's arctic.zephyr.2 -->
     <onload condition="String.IsEmpty(Skin.String(CustomSearchTerm))">Action(Close)</onload>
@@ -290,7 +290,7 @@
 			    <height>50</height>
 			    <align>center</align>
 			    <shadowcolor>Black</shadowcolor>
-			    <label>$VAR[panelsubheading]</label>
+			    <label>$VAR[ContainerPanelSubHeading]</label>
 			</control>
 		</control>
 		<control type="grouplist" description="Left Flags">
@@ -306,6 +306,7 @@
 		        <param name="showvideobadge">true</param>
 				<param name="showaudiobadge">false</param>
 				<param name="showratingbadge">false</param>
+				<param name="type">Container.ListItem</param>
 			</include>
 		</control>
 		<control type="grouplist" description="Right Flags">
@@ -321,6 +322,7 @@
 		        <param name="showvideobadge">false</param>
 			    <param name="showaudiobadge">true</param>
 			    <param name="showratingbadge">true</param>
+				<param name="type">Container.ListItem</param>
 			</include>
 		</control>
 

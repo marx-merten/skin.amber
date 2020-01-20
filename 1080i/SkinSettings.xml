@@ -315,6 +315,21 @@
 					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
+						<item id="19" description="Set Default View">
+							<label>$LOCALIZE[32204]</label>
+							<onclick>SetProperty(CustomSelectDefaultView,True)</onclick>
+							<onclick>ActivateWindow(1135)</onclick>
+						</item>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="3"/>
+							<param name="itemlabel" value="$LOCALIZE[20189]"/>
+							<param name="skinsetting" value="AutoScroll"/>
+						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="7"/>
+							<param name="itemlabel" value="$LOCALIZE[31514]"/>
+							<param name="skinsetting" value="EpisodesUsePoster"/>
+						</include>						
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="0"/>
 							<param name="itemlabel" value="$LOCALIZE[31981]"/>
@@ -332,16 +347,6 @@
 							<param name="itemlabel" value="$LOCALIZE[31972]"/>
 							<param name="itemicon" value="OverlayInProgress.png"/>
 							<param name="skinsetting" value="Hide_InProgress_Marks"/>
-						</include>
-						<include content="YesNoSettingItem">
-							<param name="itemid" value="3"/>
-							<param name="itemlabel" value="$LOCALIZE[20189]"/>
-							<param name="skinsetting" value="AutoScroll"/>
-						</include>
-						<include content="YesNoSettingItem">
-							<param name="itemid" value="7"/>
-							<param name="itemlabel" value="$LOCALIZE[31514]"/>
-							<param name="skinsetting" value="EpisodesUsePoster"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="8"/>

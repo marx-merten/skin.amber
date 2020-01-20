@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Custom Select -->
-    <!-- Select item info source: local library or tmdb -->
-	<include name="SelectItemInfoSource">
-		<item>
-			<label>$LOCALIZE[32017]</label>
-			<onclick>Skin.SetString(CustomSearchTerm,$ESCINFO[Window(Home).Property(ItemTitle)])</onclick>
-            <onclick>Dialog.Close(all)</onclick>
-			<onclick>ActivateWindow(1122)</onclick>
-		</item>
-		<item>
-			<label>$LOCALIZE[32018]</label>
-			<onclick>Dialog.Close(1121)</onclick>
-			<onclick>RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Window(Home).Property(ItemTitle)],type=person,call_id=1129,prevent_del)</onclick>
-		</item>
-	</include>
-    
+    <!-- Video Info Extras Button Items -->
     <include name="SelectVideoInfoExtras">
 		<item>
 			<label>$LOCALIZE[13511]</label>

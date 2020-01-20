@@ -3,6 +3,11 @@
 
 <!-- Search functionality adapted from sualfred's embuary and jurialmunkey's arctic.zephyr.2 -->
 
+    <variable name="SearchBelowLabel2">
+	    <value condition="!String.IsEmpty(Container.ListItem.Property(Character))">$INFO[Container.ListItem.Property(Character)]</value>
+		<value condition="!String.IsEmpty(Container.ListItem.Property(Job))">$INFO[Container.ListItem.Property(Job)]</value>
+	</variable>
+
 	<include name="BackgroundOverlaySearch">
 		<param name="overlaywidth">1920</param>
 		<param name="overlayheight">1120</param>
@@ -68,6 +73,10 @@
 				<scrolltime>300</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>4</preloaditems>
+				<onclick>Dialog.Close(1122)</onclick>
+				<onclick condition="String.IsEmpty(Container.ListItem.DBID) | [!String.IsEqual(Container.ListItem.DBType,movie) + !String.IsEqual(Container.ListItem.DBType,tvshow)]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container.ListItem.FolderPath],call_auto=1134)</onclick>
+                <onclick condition="!String.IsEmpty(Container.ListItem.DBID) + String.IsEqual(Container.ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container.ListItem.Label,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D],call_auto=1134)</onclick>
+                <onclick condition="!String.IsEmpty(Container.ListItem.DBID) + String.IsEqual(Container.ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container.ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_auto=1134)</onclick>
 				<viewtype label="$PARAM[list_name]">list</viewtype>
                 <itemlayout height="226" width="310">
 		            <include content="GenericEpisodeIconBig">
@@ -79,7 +88,7 @@
 			            <param name="isFocused">Control.HasFocus($PARAM[id])</param>
 		            </include>
 	            </focusedlayout>
-                <content target="$PARAM[contenttype]">$PARAM[content]</content>
+                <content sortby="year" sortorder="descending" target="$PARAM[contenttype]">$PARAM[content]</content>
 			</control>
 		</definition>
 	</include>
@@ -115,7 +124,11 @@
                 <scrolltime>200</scrolltime>
                 <orientation>horizontal</orientation>
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,$PARAM[minnumitems]) | Container($PARAM[id]).IsUpdating</visible>
-                <itemlayout height="326" width="232.5">
+				<onclick>Dialog.Close(1122)</onclick>
+				<onclick condition="String.IsEmpty(Container.ListItem.DBID) | [!String.IsEqual(Container.ListItem.DBType,movie) + !String.IsEqual(Container.ListItem.DBType,tvshow)]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container.ListItem.FolderPath],call_auto=1134)</onclick>
+                <onclick condition="!String.IsEmpty(Container.ListItem.DBID) + String.IsEqual(Container.ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container.ListItem.Label,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D],call_auto=1134)</onclick>
+                <onclick condition="!String.IsEmpty(Container.ListItem.DBID) + String.IsEqual(Container.ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[Container.ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_auto=1134)</onclick>
+				<itemlayout height="326" width="232.5">
     	            <include content="GenericPosterIconSmall">
 			            <param name="isFocused">false</param>
 		            </include>
@@ -125,7 +138,7 @@
 			            <param name="isFocused">Control.HasFocus($PARAM[id])</param>
 		            </include>
 	            </focusedlayout>
-                <content target="$PARAM[contenttype]">$PARAM[content]</content>
+                <content sortby="year" sortorder="descending" target="$PARAM[contenttype]">$PARAM[content]</content>
 			</control>
 		</definition>
 	</include>
@@ -160,6 +173,7 @@
 				<scrolltime>300</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>4</preloaditems>
+				<onclick>noop</onclick>
 				<viewtype label="$PARAM[list_name]">list</viewtype>
 	            <itemlayout height="310" width="310">
 		            <include content="GenericMusicIconSearch">

@@ -1510,8 +1510,6 @@
         <control type="panel" id="90150">
             <width>1180</width>
             <height>410</height>
-            <onleft>90150</onleft>
-            <onright>90150</onright>
             <onup>9000</onup>
             <scrolltime>200</scrolltime>            
             <orientation>horizontal</orientation>
@@ -1537,11 +1535,6 @@
             <focusedlayout height="1" width="1" />
             <content>plugin://plugin.video.themoviedb.helper/?info=details&amp;$VAR[TMDbMediaType]&amp;$VAR[TMDbParam]</content>
         </control>
-    </include>
-    <!-- On back actions for custom info lists -->
-    <include name="InfoList_OnBack">
-        <onback condition="Window.IsVisible(1128)">9000</onback>
-        <onback>SetFocus(90050)</onback>
     </include>
 
     <!-- Onclick actions for most custom info lists -->

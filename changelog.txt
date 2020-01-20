@@ -1,3 +1,7 @@
+3.2.35 (20-01-2020)
+- Add setting to select default view
+- Add embuary info shelves
+- Fixes/Optimizations to video info and search (WIP)
 3.2.34 (14-01-2020)
 - Add tmdb helper people shelves, addtitional movie/tv shelves
 - Add tmdb helper trakt shelves
