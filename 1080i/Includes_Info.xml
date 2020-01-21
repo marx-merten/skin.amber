@@ -1394,21 +1394,30 @@
 		    <top>44</top>
 			<height>44</height>
 		    <visible>Container(50).IsUpdating | Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0) | Integer.IsGreater(Container(50).NumItems,0)</visible>
-            <control type="label">
-                <left>8</left>
-                <top>0</top>
-                <height>30</height>
-                <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
-                <font>ListDetails</font>
+            <control type="group">
+			    <top>44</top>
+				<height>410</height>
+                <visible>Container(50).IsUpdating)  | Container(90050).IsUpdating</visible>
+                <include>InfoLoading</include>
             </control>
-            <control type="image" description="Line Split">
-		        <top>40</top>
-                <left>10</left>
-		        <width>1180</width>
-		        <height>1</height>
-		        <texture>img/LineL.png</texture>
-		        <aspectratio>stretch</aspectratio>
-		    </control>
+			<control type="group">
+			    <visible>Integer.IsGreater(Container(90050).NumItems,0) | Integer.IsGreater(Container(50).NumItems,0)</visible>
+			    <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>30</height>
+                    <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
+                    <font>ListDetails</font>
+                </control>
+                <control type="image" description="Line Split">
+		            <top>40</top>
+                    <left>10</left>
+		            <width>1180</width>
+		            <height>1</height>
+		            <texture>img/LineL.png</texture>
+		            <aspectratio>stretch</aspectratio>
+		        </control>
+			</control>	
         </control>	
         <control type="panel" id="90050">
             <top>44</top>
@@ -1452,21 +1461,30 @@
 		    <top>44</top>
 			<height>44</height>
 		    <visible>Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0)</visible>
-            <control type="label">
-                <left>8</left>
-                <top>0</top>
-                <height>30</height>
-                <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
-                <font>ListDetails</font>
+            <control type="group">
+			    <top>44</top>
+				<height>410</height>
+                <visible>Container(90050).IsUpdating</visible>
+                <include>InfoLoading</include>
             </control>
-            <control type="image" description="Line Split">
-		        <top>40</top>
-                <left>10</left>
-		        <width>1180</width>
-		        <height>1</height>
-		        <texture>img/LineL.png</texture>
-		        <aspectratio>stretch</aspectratio>
-		    </control>
+			<control type="group">
+				<visible>Integer.IsGreater(Container(90050).NumItems,0)</visible>
+			    <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <height>30</height>
+                    <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
+                    <font>ListDetails</font>
+                </control>
+                <control type="image" description="Line Split">
+		            <top>40</top>
+                    <left>10</left>
+		            <width>1180</width>
+		            <height>1</height>
+		            <texture>img/LineL.png</texture>
+		            <aspectratio>stretch</aspectratio>
+		        </control>
+			</control>	
         </control>	
         <control type="panel" id="90050">
             <top>44</top>
@@ -1605,21 +1623,30 @@
 				<height>44</height>
 				<visible>Integer.IsGreater(Container($PARAM[id]).NumItems,$PARAM[minnumitems]) | Container($PARAM[id]).IsUpdating</visible>
 				<visible>$PARAM[visibility1]</visible>
-                <control type="label">
-                    <left>8</left>
-                    <top>0</top>
-                    <height>30</height>
-                    <label>[COLOR=Highlight]$PARAM[headinglabel] $INFO[Container($PARAM[id]).NumItems,(,)][/COLOR]</label>
-                    <font>ListDetails</font>
+                <control type="group">
+			        <top>44</top>
+				    <height>410</height>
+                    <visible>Container($PARAM[id]).IsUpdating</visible>
+                    <include>InfoLoading</include>
                 </control>
-                <control type="image" description="Line Split">
-			        <top>40</top>
-                    <left>10</left>
-			        <width>1180</width>
-			        <height>1</height>
-			        <texture>img/LineL.png</texture>
-			        <aspectratio>stretch</aspectratio>
-			    </control>
+				<control type="group">
+				    <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,$PARAM[minnumitems])</visible>
+				    <control type="label">
+                        <left>8</left>
+                        <top>0</top>
+                        <height>30</height>
+                        <label>[COLOR=Highlight]$PARAM[headinglabel] $INFO[Container($PARAM[id]).NumItems,(,)][/COLOR]</label>
+                        <font>ListDetails</font>
+                    </control>
+                    <control type="image" description="Line Split">
+			            <top>40</top>
+                        <left>10</left>
+			            <width>1180</width>
+			            <height>1</height>
+			            <texture>img/LineL.png</texture>
+			            <aspectratio>stretch</aspectratio>
+			        </control>
+				</control>	
             </control>    
             <control type="panel" id="$PARAM[id]">
                 <top>44</top>
