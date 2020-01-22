@@ -1,3 +1,6 @@
+3.2.36 (22-01-2020)
+- Subtitle button opens subtitle settings in OSD
+- Finish work on video info and search
 3.2.35 (20-01-2020)
 - Add setting to select default view
 - Add embuary info shelves
