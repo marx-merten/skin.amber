@@ -1022,7 +1022,10 @@
 
     <variable name="HighlightColor">
 		<value condition="!String.IsEmpty(Skin.String(HighlightColorStr)) + !String.IsEqual(Skin.String(HighlightColorStr),None)">$INFO[Skin.String(HighlightColorStr)]</value>
-		<value>FFF6B12B</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT)">FFF6B12B</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,Blue)">FF456DB8</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,Green)">FF45B864</value>
+		<value condition="String.IsEqual(Skin.CurrentColourTheme,White)">FFF1F1F1</value>
 	</variable>
 
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
