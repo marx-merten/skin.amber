@@ -21,7 +21,7 @@
 				<posy>155</posy>
 				<width>630</width>
 				<height>36</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<font>InfoTitle</font>
 				<align>center</align>
 				<label>[B]$INFO[VideoPlayer.ChannelName][/B]</label>
@@ -31,7 +31,7 @@
 				<posy>195</posy>
 				<width>630</width>
 				<height>36</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<align>center</align>
 				<label>$INFO[Container(11).ListItem.StartDate]</label>
 			</control>
@@ -76,7 +76,7 @@
 					<control type="image">
 						<width>720</width>
 						<height>75</height>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="image">
 						<posx>144</posx>

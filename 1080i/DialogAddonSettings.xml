@@ -28,7 +28,7 @@
 			<control type="label" id="2" description="Header">
 				<posy>90</posy>
 				<width>1920</width>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<align>center</align>
 			</control>
 			<control type="grouplist" id="5" description="Controls for settings">

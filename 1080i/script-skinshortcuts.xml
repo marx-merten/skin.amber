@@ -29,7 +29,7 @@
 			<control type="label">
 				<posx>100</posx>
 				<posy>80</posy>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<label>[B]$VAR[SkinShortcutsLeftLabelVar][/B]</label>
 			</control>
 
@@ -67,7 +67,7 @@
 						<animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(211)">Conditional</animation>
 						<width>322</width>
 						<height>60</height>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>10</posx>
@@ -86,7 +86,7 @@
 				<label>[B]$INFO[Control.GetLabel(211)][/B]</label>
 				<posx>500</posx>
 				<posy>80</posy>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 			</control>
 			<control type="image">
 				<visible>ControlGroup(90000).HasFocus</visible>
@@ -94,7 +94,7 @@
 				<left>500</left>
 				<height>60</height>
 				<width>1340</width>
-				<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+				<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 			</control>
 			<control type="image">
 				<visible>!ControlGroup(90000).HasFocus</visible>

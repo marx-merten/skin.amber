@@ -152,14 +152,14 @@
 				</control>
 				<control type="label" id="9180" description="Spacer">
 					<height>36</height>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<align>left</align>
 					<textoffsetx>10</textoffsetx>
 					<include>9000ViewButtons</include>
 					<label></label>
 				</control>
 				<control type="label" id="9181">
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<align>left</align>
 					<textoffsetx>10</textoffsetx>
 					<include>9000ViewButtons</include>

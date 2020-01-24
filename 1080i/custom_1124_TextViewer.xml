@@ -36,7 +36,7 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>
 			</control>
 			<control type="image" description="Line Split">

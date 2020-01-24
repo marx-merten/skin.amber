@@ -167,7 +167,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating(imdb)]$INFO[ListItem.Votes(imdb), (, $LOCALIZE[205])]</label>
                     <visible>!String.IsEmpty(ListItem.Rating(imdb))</visible>
@@ -176,7 +176,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]$INFO[ListItem.Votes, (, $LOCALIZE[205])]</label>
                     <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !String.IsEqual(ListItem.Votes,0)</visible>
@@ -185,7 +185,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]</label>
                     <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + [String.IsEmpty(ListItem.Votes) | String.IsEqual(ListItem.Votes,0)]</visible>
@@ -200,7 +200,7 @@
                     <height>40</height>
                     <font>ListDetails</font>
                     <align>left</align>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>[B]$INFO[ListItem.Top250,#][/B]</label>
                 </control>
             </control>
@@ -220,7 +220,7 @@
                     <height>40</height>
                     <width>60</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$VAR[RottenFreshLabelVar]%</label>
                 </control>
             </control>
@@ -240,7 +240,7 @@
                     <height>40</height>
                     <width>60</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$VAR[RottenFreshAudienceLabelVar]%</label>
                 </control>
             </control>
@@ -260,7 +260,7 @@
                     <height>40</height>
                     <width>50</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$VAR[MetacriticLabelVar]</label>
                 </control>
             </control>
@@ -280,7 +280,7 @@
                     <width>60</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$VAR[TheMovieDBLabelVar]%</label>
                 </control>
             </control>
@@ -302,7 +302,7 @@
                     <height>40</height>
                     <font>ListDetails</font>
                     <align>left</align>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[ListItem.Rating(tvdb)]$INFO[ListItem.Votes(tvdb), (, $LOCALIZE[205])]</label>
                 </control>
             </control>
@@ -322,7 +322,7 @@
                     <height>40</height>
                     <font>ListDetails</font>
                     <align>left</align>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[ListItem.UserRating]</label>
                 </control>
             </control>            
@@ -355,7 +355,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]$INFO[ListItem.Votes, (, $LOCALIZE[205])]</label>
                     <visible>!String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !String.IsEqual(ListItem.Votes,0)</visible>
@@ -364,7 +364,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]</label>
                     <visible>!String.IsEmpty(ListItem.Rating) + [String.IsEmpty(ListItem.Votes) | String.IsEqual(ListItem.Votes,0)]</visible>
@@ -386,7 +386,7 @@
                     <height>40</height>
                     <width>60</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_rating)]%</label>
                 </control>
             </control>
@@ -406,7 +406,7 @@
                     <height>40</height>
                     <width>65</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_usermeter)]%</label>
                 </control>
             </control>
@@ -426,7 +426,7 @@
                     <height>40</height>
                     <width>50</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.metacritic_rating)]</label>
                 </control>
             </control>
@@ -447,7 +447,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.imdb_rating)]$INFO[Window(Home).Property(TMDbHelper.ListItem.imdb_votes), (, $LOCALIZE[205])]</label>
                 </control>
@@ -455,7 +455,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.imdb_rating)]</label>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.imdb_rating)) + [String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.imdb_votes)) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.imdb_votes),0)]</visible>
@@ -592,7 +592,7 @@
                     <width>950</width>
                     <height>75</height>
                     <font>InfoTitle</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>                       
                     <label>$VAR[panelheading]</label>
@@ -603,7 +603,7 @@
                     <width>950</width>
                     <height>60</height>
                     <font>InfoTitle</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Title,[B],[/B]] $INFO[Window(Home).Property(SkinInfo.Set.Movies.Years),(,)]</label>
                     <visible>String.IsEqual(ListItem.DBType,set)</visible>
@@ -673,7 +673,7 @@
                     <aligny>center</aligny>
                     <textureradioonfocus colordiffuse="Black">icons/dots7.png</textureradioonfocus>
                     <textureradioonnofocus>icons/dots7.png</textureradioonnofocus>
-                    <texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+                    <texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
                     <texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
                     <width>37</width>
                     <height>17</height>

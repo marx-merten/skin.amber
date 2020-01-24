@@ -14,7 +14,7 @@
 			<top>100</top>
 			<width>1848</width>
 			<height>35</height>
-			<textcolor>Highlight</textcolor>
+			<textcolor>$VAR[HighlightColor]</textcolor>
 			<align>center</align>
 			<label>$LOCALIZE[35058]</label>
 		</control>
@@ -31,7 +31,7 @@
 					<label>$LOCALIZE[35050]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
@@ -97,7 +97,7 @@
 					<label>$LOCALIZE[35059]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="image">
@@ -129,7 +129,7 @@
 				<control type="label" id="8">
 					<width>360</width>
 					<align>center</align>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<font>Details</font>
 				</control>
 				<control type="image" id="9">

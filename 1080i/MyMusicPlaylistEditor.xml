@@ -21,7 +21,7 @@
 				<posy>84</posy>
 				<width>837</width>
 				<height>60</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<label>$LOCALIZE[20094]</label>
 			</control>
@@ -54,7 +54,7 @@
 					<control type="image">
 						<height>60</height>
 						<width>909</width>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 						<animation type="Conditional" condition="!Control.HasFocus(50)">
 							<effect type="fade" start="100" end="50" time="100" />
 						</animation>
@@ -124,7 +124,7 @@
 				<posy>84</posy>
 				<width>837</width>
 				<height>60</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<textoffsetx>20</textoffsetx>
 				<label>$LOCALIZE[13350]</label>
 			</control>
@@ -133,7 +133,7 @@
 				<posy>85</posy>
 				<width>837</width>
 				<align>right</align>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 			</control>
 			<control type="list" id="100">
 				<posx>20</posx>
@@ -164,7 +164,7 @@
 					<control type="image">
 						<height>60</height>
 						<width>855</width>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 						<animation type="Conditional" condition="!Control.HasFocus(100)">
 							<effect type="fade" start="100" end="50" time="100" />
 						</animation>

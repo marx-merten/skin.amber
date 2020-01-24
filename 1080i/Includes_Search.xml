@@ -72,7 +72,7 @@
 			            <align>left</align>
 			            <aligny>center</aligny>
 			            <label>$PARAM[headline]</label>
-			            <textcolor>Highlight</textcolor>
+			            <textcolor>$VAR[HighlightColor]</textcolor>
 		            </control>
 				</control>
             </control>				
@@ -136,7 +136,7 @@
 			            <align>left</align>
 			            <aligny>center</aligny>
 			            <label>$PARAM[headline]</label>
-			            <textcolor>Highlight</textcolor>
+			            <textcolor>$VAR[HighlightColor]</textcolor>
 		            </control>
 				</control>
             </control>
@@ -196,7 +196,7 @@
 			            <align>left</align>
 			            <aligny>center</aligny>
 			            <label>$PARAM[headline]</label>
-			            <textcolor>Highlight</textcolor>
+			            <textcolor>$VAR[HighlightColor]</textcolor>
 		            </control>
 				</control>
             </control>

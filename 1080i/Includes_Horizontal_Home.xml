@@ -70,7 +70,7 @@
 				<focusedlayout height="70" width="519">
 					<control type="label">
 						<width>519</width>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<shadowcolor>ShadowDark</shadowcolor>
 						<height>70</height>
 						<align>center</align>
@@ -135,7 +135,7 @@
 						<posy>8</posy>
 						<width>250</width>
 						<height>36</height>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="label">
 						<visible>!Control.HasFocus(9001)</visible>

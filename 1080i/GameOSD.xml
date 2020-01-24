@@ -31,7 +31,7 @@
 						<height>70</height>
 						<font>ListDetails</font>
 						<label>$LOCALIZE[35221]</label>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<align>center</align>
 					</control>
 				</control>
@@ -80,7 +80,7 @@
 				    <width>700</width>
 				    <height>40</height>
 				    <align>center</align>
-				    <textcolor>Highlight</textcolor>
+				    <textcolor>$VAR[HighlightColor]</textcolor>
 				    <label>$LOCALIZE[35221]</label>
 			    </control>
 				<control type="group" id="2000">
@@ -147,7 +147,7 @@
 							<control type="image">
 							    <left>6</left>
 								<width>691</width>
-							    <texture colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+							    <texture colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 								<visible>Control.HasFocus(1103)</visible>
 							</control>
 							<control type="image">
@@ -182,7 +182,7 @@
 							<control type="image">
 							    <left>6</left>
 								<width>691</width>
-								<texture colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+								<texture colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 								<visible>Control.HasFocus(1103)</visible>
 							</control>
 							<control type="image">

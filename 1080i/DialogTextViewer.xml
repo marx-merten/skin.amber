@@ -18,7 +18,7 @@
 				<width>1920</width>
 				<height>45</height>
 				<align>center</align>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 			</control>
 			<control type="textbox" id="5" description="Textarea">
 				<posx>424</posx>

@@ -101,7 +101,7 @@
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target6] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]6).NumItems,0) + Control.HasFocus(1600$SKINSHORTCUTS[id]6)</visible>
 						<height>16</height>
-						<texture colordiffuse="Highlight">icons/circle.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">icons/circle.png</texture>
 					</control>
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target5] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]5).NumItems,0) + !Control.HasFocus(1600$SKINSHORTCUTS[id]5)</visible>
@@ -111,7 +111,7 @@
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target5] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]5).NumItems,0) + Control.HasFocus(1600$SKINSHORTCUTS[id]5)</visible>
 						<height>16</height>
-						<texture colordiffuse="Highlight">icons/circle.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">icons/circle.png</texture>
 					</control>
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target4] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]4).NumItems,0) + !Control.HasFocus(1600$SKINSHORTCUTS[id]4)</visible>
@@ -121,7 +121,7 @@
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target4] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]4).NumItems,0) + Control.HasFocus(1600$SKINSHORTCUTS[id]4)</visible>
 						<height>16</height>
-						<texture colordiffuse="Highlight">icons/circle.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">icons/circle.png</texture>
 					</control>
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target3] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]3).NumItems,0) + !Control.HasFocus(1600$SKINSHORTCUTS[id]3)</visible>
@@ -131,7 +131,7 @@
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target3] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]3).NumItems,0) + Control.HasFocus(1600$SKINSHORTCUTS[id]3)</visible>
 						<height>16</height>
-						<texture colordiffuse="Highlight">icons/circle.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">icons/circle.png</texture>
 					</control>
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target2] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0) + !Control.HasFocus(1600$SKINSHORTCUTS[id]2)</visible>
@@ -141,7 +141,7 @@
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target2] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0) + Control.HasFocus(1600$SKINSHORTCUTS[id]2)</visible>
 						<height>16</height>
-						<texture colordiffuse="Highlight">icons/circle.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">icons/circle.png</texture>
 					</control>
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target1] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0) + !Control.HasFocus(1600$SKINSHORTCUTS[id]1)</visible>
@@ -151,7 +151,7 @@
 					<control type="image">
 						<visible>$SKINSHORTCUTS[target1] + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0) + Control.HasFocus(1600$SKINSHORTCUTS[id]1)</visible>
 						<height>16</height>
-						<texture colordiffuse="Highlight">icons/circle.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">icons/circle.png</texture>
 					</control>
 				</control>
 			</control>

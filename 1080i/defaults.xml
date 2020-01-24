@@ -49,7 +49,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-		<texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 		<texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
 		<bordersize>4</bordersize>
 		<pulseonselect>false</pulseonselect>
@@ -64,7 +64,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-		<texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 		<texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
 	</default>
 	<default type="togglebutton">
@@ -77,9 +77,9 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Disabled</disabledcolor>
-		<texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 		<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
-		<alttexturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</alttexturefocus>
+		<alttexturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</alttexturefocus>
 		<alttexturenofocus border="3">buttons/ButtonNF.png</alttexturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -93,7 +93,7 @@
 		<disabledcolor>Disabled</disabledcolor>
 		<radiowidth>80</radiowidth>
 		<radioheight>60</radioheight>
-		<texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 		<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 		<textureradioonfocus>buttons/RadioOn.png</textureradioonfocus>
 		<textureradioonnofocus>buttons/RadioOn.png</textureradioonnofocus>
@@ -128,7 +128,7 @@
 		<textureupfocus>buttons/SpinUpFO.png</textureupfocus>
 		<texturedown>buttons/SpinDownNF.png</texturedown>
 		<texturedownfocus>buttons/SpinDownFO.png</texturedownfocus>
-		<texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 		<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 		<spinwidth>40</spinwidth>
 		<spinheight>60</spinheight>
@@ -167,7 +167,7 @@
 		<texturesliderbar>buttons/SliderBG.png</texturesliderbar>
 		<textureslidernib>buttons/SliderNibNF.png</textureslidernib>
 		<textureslidernibfocus>buttons/SliderNibFO.png</textureslidernibfocus>
-		<texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+		<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 		<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 		<font>font16</font>
 		<textcolor>White</textcolor>

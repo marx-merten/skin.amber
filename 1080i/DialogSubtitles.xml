@@ -17,7 +17,7 @@
 					<left>30</left>
 					<top>20</top>
 					<width>1350</width>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -28,7 +28,7 @@
 					<width>1350</width>
 					<height>40</height>
 					<label>$VAR[SubtitleDialogTitle]</label>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
@@ -101,7 +101,7 @@
 							<height>42</height>
 							<font>ListDetails</font>
 							<align>center</align>
-							<textcolor>Highlight</textcolor>
+							<textcolor>$VAR[HighlightColor]</textcolor>
 							<label>$INFO[ListItem.Thumb,[UPPERCASE],[/UPPERCASE]]</label>
 						</control>
 						<control type="image">
@@ -157,7 +157,7 @@
 						<control type="image">
 							<width>1286</width>
 							<height>54</height>
-							<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+							<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 							<animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(120)">Conditional</animation>
 						</control>
 						<control type="image" description="Country Tag BG">
@@ -284,7 +284,7 @@
 						<control type="image">
 							<height>54</height>
 							<width>348</width>
-							<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+							<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 							<visible>Control.HasFocus(150)</visible>
 						</control>
 						<control type="label">
@@ -348,7 +348,7 @@
 					<top>660</top>
 					<width>348</width>
 					<height>60</height>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<label>$LOCALIZE[31357]</label>
 					<font>ListDetails</font>
 					<align>center</align>

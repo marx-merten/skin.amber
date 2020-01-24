@@ -155,7 +155,7 @@
                         <height>60</height>
                         <font>MainLabelBigTitle</font>
                         <label>$INFO[MusicPlayer.TrackNumber,,: ]$INFO[Player.Title]</label>
-                        <textcolor>Highlight</textcolor>
+                        <textcolor>$VAR[HighlightColor]</textcolor>
                         <scroll>true</scroll>
                         <scrollspeed>25</scrollspeed>
                     </control>

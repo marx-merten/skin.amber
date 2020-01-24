@@ -23,7 +23,7 @@
 				<scrolltime>200</scrolltime>
 				<orientation>vertical</orientation>
 				<control type="label" id="200">
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<textoffsetx>10</textoffsetx>
 					<align>left</align>
 					<include>9000ViewButtons</include>
@@ -75,7 +75,7 @@
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick> 
 				</control>
 				<control type="label" id="201">
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<textoffsetx>10</textoffsetx>
 					<align>left</align>
 					<include>9000ViewButtons</include>
@@ -118,7 +118,7 @@
 				</control>
 				<control type="label" id="300">
 					<label>$LOCALIZE[31026]</label>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<textoffsetx>10</textoffsetx>
 					<align>left</align>
 					<include>9000ViewButtons</include>
@@ -194,7 +194,7 @@
 				<onup>11</onup>
 				<ondown>10</ondown>
 				<pagecontrol>60</pagecontrol>
-				<progresstexture border="0,96,18,14">img/EPGMarker.png</progresstexture>
+				<progresstexture border="0,96,18,14" colordiffuse="$VAR[HighlightColor]">img/EPGMarker.png</progresstexture>
 				<rulerlayout height="80" width="1400">
 					<control type="image" id="1" description="Header row">
 						<width>1400</width>
@@ -252,7 +252,7 @@
 						<height>70</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					</control>
 					<control type="label" id="1" description="Column 1 Focused">
@@ -260,7 +260,7 @@
 						<posx>80</posx>
 						<width>258</width>
 						<height>70</height>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<font>ListDetails</font>
@@ -325,7 +325,7 @@
 					<control type="image" id="2" description="Row">
 						<width>54</width>
 						<height>71</height>
-						<texture colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 						<bordersize>1</bordersize>
 					</control>
 					<control type="image">
@@ -392,7 +392,7 @@
 					<width>306</width>
 					<height>80</height>
 					<aligny>center</aligny>
-					<texture colordiffuse="Highlight" border="20">button-fo.png</texture>
+					<texture colordiffuse="$VAR[HighlightColor]" border="20">button-fo.png</texture>
 					<visible>Control.HasFocus(11)</visible>
 				</control>
 				<control type="image">
@@ -400,14 +400,14 @@
 					<posy>315</posy>
 					<width>20</width>
 					<height>30</height>
-					<texture colordiffuse="Highlight">arrowleft.png</texture>
+					<texture colordiffuse="$VAR[HighlightColor]">arrowleft.png</texture>
 				</control>
 				<control type="image">
 					<posx>30r</posx>
 					<posy>315</posy>
 					<width>20</width>
 					<height>30</height>
-					<texture colordiffuse="Highlight">arrowright.png</texture>
+					<texture colordiffuse="$VAR[HighlightColor]">arrowright.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -452,7 +452,7 @@
 							<width>306</width>
 							<height>80</height>
 							<aligny>center</aligny>
-							<texture colordiffuse="Highlight" border="20">button-fo.png</texture>
+							<texture colordiffuse="$VAR[HighlightColor]" border="20">button-fo.png</texture>
 							<animation effect="fade" end="30" condition="true">Conditional</animation>
 							<visible>!Control.HasFocus(11)</visible>
 						</control>

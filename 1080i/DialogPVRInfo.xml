@@ -35,7 +35,7 @@
 					<width>1180</width>
 					<height>60</height>
 					<font>InfoTitle</font>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Title]</label>
 				</control>
@@ -179,7 +179,7 @@
 			<height>410</height>
 			<align>left</align>
 			<font>InfoPlot</font>
-			<label>$INFO[ListItem.Cast,[COLOR=Highlight]$LOCALIZE[206]:[/COLOR][CR]]</label>
+			<label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[206]:[/COLOR][CR]$INFO[ListItem.Cast]</label>
 		</control>
 	</controls>
 </window>

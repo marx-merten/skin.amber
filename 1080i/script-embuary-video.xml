@@ -89,7 +89,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[Container(10051).ListItem.Rating]$INFO[Container(10051).ListItem.Votes, (, $LOCALIZE[205])]</label>
                     <visible>!String.IsEmpty(Container(10051).ListItem.Rating) + !String.IsEmpty(Container(10051).ListItem.Votes) + !String.IsEqual(Container(10051).ListItem.Votes,0)</visible>
@@ -98,7 +98,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[Container(10051).ListItem.Rating]</label>
                     <visible>!String.IsEmpty(Container(10051).ListItem.Rating) + [String.IsEmpty(Container(10051).ListItem.Votes) | String.IsEqual(Container(10051).ListItem.Votes,0)]</visible>
@@ -120,7 +120,7 @@
                     <height>40</height>
                     <width>60</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[Container(10051).ListItem.Property(rating.rotten)]%</label>
                 </control>
             </control>
@@ -140,7 +140,7 @@
                     <height>40</height>
                     <width>50</width>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[Container(10051).ListItem.Property(rating.metacritic)]</label>
                 </control>
             </control>
@@ -161,7 +161,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[Container(10051).ListItem.Property(rating.imdb)]$INFO[Container(10051).ListItem.Property(votes.imdb), (, $LOCALIZE[205])]</label>
                 </control>
@@ -169,7 +169,7 @@
                     <width>auto</width>
                     <height>40</height>
                     <font>ListDetails</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[Container(10051).ListItem.Property(rating.imdb)]</label>
                     <visible>!String.IsEmpty(Container(10051).ListItem.Property(rating.imdb)) + [String.IsEmpty(Container(10051).ListItem.Property(votes.imdb)) | String.IsEqual(Container(10051).ListItem.Property(votes.imdb),0)]</visible>
@@ -199,7 +199,7 @@
                     <width>950</width>
                     <height>75</height>
                     <font>InfoTitle</font>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>                       
                     <label>$VAR[panelheading]</label>
@@ -259,7 +259,7 @@
                     <aligny>center</aligny>
                     <textureradioonfocus colordiffuse="Black">icons/dots7.png</textureradioonfocus>
                     <textureradioonnofocus>icons/dots7.png</textureradioonnofocus>
-                    <texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+                    <texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
                     <texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
                     <width>37</width>
                     <height>17</height>
@@ -512,7 +512,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(10052).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[206] $INFO[Container(10052).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -550,7 +550,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$VAR[EmbuaryInfoCrewLabel] $INFO[Container(10056).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$VAR[EmbuaryInfoCrewLabel] $INFO[Container(10056).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -587,7 +587,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$INFO[Container(10051).ListItem.Property(collection),$LOCALIZE[32097] ,] $INFO[Container(10057).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$INFO[Container(10051).ListItem.Property(collection),$LOCALIZE[32097] ,] $INFO[Container(10057).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -625,7 +625,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[33054] $INFO[Container(10058).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[33054] $INFO[Container(10058).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -663,7 +663,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[32105] $INFO[Container(10053).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[32105] $INFO[Container(10053).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -701,7 +701,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[32131] $INFO[Container(10054).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[32131] $INFO[Container(10054).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -739,7 +739,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[20445] $INFO[Container(10055).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[20445] $INFO[Container(10055).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -777,7 +777,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[32130] $INFO[Container(10059).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[32130] $INFO[Container(10059).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">

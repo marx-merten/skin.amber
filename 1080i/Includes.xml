@@ -293,7 +293,7 @@
                         <height>51</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$VAR[TopBarMediaIcon]</texture>
-                        <colordiffuse>Highlight</colordiffuse>
+                        <colordiffuse>$VAR[HighlightColor]</colordiffuse>
                     </control>
                     <control type="label">
                         <include>VisibleFadeEffect</include>
@@ -342,7 +342,7 @@
                         <font>Details</font>
                         <textcolor>White</textcolor>
                         <shadowcolor>ShadowDark</shadowcolor>
-                        <label>$INFO[Weather.Temperature,,[COLOR=Highlight]  • [/COLOR]]</label>
+                        <label>$INFO[Weather.Temperature][COLOR=$VAR[HighlightColor]]  • [/COLOR]</label>
                         <height>40</height>
                     </control>
                     <control type="label">
@@ -362,8 +362,8 @@
                         <height>30</height>
                         <texturefocus>NoMasterNF.png</texturefocus>
                         <texturenofocus>NoMasterNF.png</texturenofocus>
-                        <alttexturefocus colordiffuse="Highlight">MasterNF.png</alttexturefocus>
-                        <alttexturenofocus colordiffuse="Highlight">MasterNF.png</alttexturenofocus>
+                        <alttexturefocus colordiffuse="$VAR[HighlightColor]">MasterNF.png</alttexturefocus>
+                        <alttexturenofocus colordiffuse="$VAR[HighlightColor]">MasterNF.png</alttexturenofocus>
                         <usealttexture>System.IsMaster</usealttexture>
                         <onclick>mastermode</onclick>
                         <aligny>center</aligny>
@@ -714,7 +714,7 @@
         <orientation>vertical</orientation>
         <animation effect="fade" time="200" start="100" end="20" reversible="true" condition="!ControlGroup(9000).HasFocus()">Conditional</animation>
         <control type="label" id="9140">
-            <textcolor>Highlight</textcolor>
+            <textcolor>$VAR[HighlightColor]</textcolor>
             <textoffsetx>10</textoffsetx>
             <align>left</align>
             <include>9000ViewButtons</include>
@@ -833,9 +833,9 @@
         <focusedcolor>Black</focusedcolor>
         <shadowcolor></shadowcolor>
         <textoffsety>-3</textoffsety>
-        <texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+        <texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
         <texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
-        <alttexturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</alttexturefocus>
+        <alttexturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</alttexturefocus>
         <alttexturenofocus border="4">img/WhiteRoundedT.png</alttexturenofocus>
     </include>
 
@@ -846,7 +846,7 @@
         <textureradiooffnofocus>$PARAM[icon]</textureradiooffnofocus>
         <textureradioondisabled colordiffuse="Disabled">$PARAM[icon]</textureradioondisabled>
         <textureradiooffdisabled colordiffuse="Disabled">$PARAM[icon]</textureradiooffdisabled>
-        <texturefocus border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texturefocus>
+        <texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
         <width>64</width>
         <height>64</height>
         <radiowidth>64</radiowidth>
@@ -1049,7 +1049,7 @@
                     <haspath>true</haspath>
                     <align>right</align>
                     <scroll>false</scroll>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[ListItem.Label2]</label>
                 </control>
                 <control type="image" description="Icon">
@@ -1066,7 +1066,7 @@
                 <control type="image">
                     <height>60</height>
                     <width>$PARAM[listwidth]</width>
-                    <texture border="3" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+                    <texture border="3" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
                 </control>
                 <control type="label" description="Main Label">
                     <posx>30</posx>
@@ -1212,8 +1212,8 @@
         <param name="subheading2"></param>
         <param name="subheading2_visible">false</param>
         <param name="plot">$INFO[ListItem.Plot]</param>
-        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR Highlight]  (,)[/COLOR]]</param>
-        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR Highlight]  (,)[/COLOR]]</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
         <param name="subcontent_path">$INFO[ListItem.Path]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>
@@ -1238,7 +1238,7 @@
                     <width>$PARAM[width]</width>
                     <height>60</height>
                     <aligny>center</aligny>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <font>font20_title</font>
                     <wrapmultiline>true</wrapmultiline>
                     <label>$PARAM[heading]</label>
@@ -1248,7 +1248,7 @@
                     <width>$PARAM[width]</width>
                     <height>40</height>
                     <aligny>center</aligny>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <font>font20_title</font>
                     <label>$PARAM[heading]</label>
                 </control>
@@ -1389,8 +1389,8 @@
         <param name="footertop">845</param>
         <param name="flagstop"></param>
         <param name="plot">$INFO[ListItem.Plot]</param>
-        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR Highlight]  (,)[/COLOR]]</param>
-        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR Highlight]  (,)[/COLOR]]</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
         <param name="subcontent_path">$INFO[ListItem.Path]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>
@@ -1414,7 +1414,7 @@
                     <width>$PARAM[width]</width>
                     <height>60</height>
                     <aligny>center</aligny>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <font>font20_title</font>
                     <wrapmultiline>true</wrapmultiline>
                     <label>$PARAM[heading]</label>
@@ -1526,8 +1526,8 @@
         <param name="heading">$VAR[panelheading]</param>
         <param name="plot">$VAR[Plots]</param>
         <param name="plotheight">320</param>
-        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR Highlight]  (,)[/COLOR]]</param>
-        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR Highlight]  (,)[/COLOR]]</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
         <param name="subcontent_path">$INFO[ListItem.Path]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>
@@ -1549,7 +1549,7 @@
                     <height>60</height>
                     <aligny>center</aligny>
                     <align>center</align>
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
                     <font>font20_title</font>
                     <wrapmultiline>true</wrapmultiline>
                     <label>$PARAM[heading]</label>
@@ -1979,7 +1979,7 @@
                 <label>$INFO[ListItem.Label]</label>
                 <textoffsetx>15</textoffsetx>
                 <font>InfoTitle</font>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="label">
                 <top>360</top>
@@ -1988,13 +1988,13 @@
                 <label>$LOCALIZE[32009]:</label>
                 <textoffsetx>15</textoffsetx>
                 <font>InfoTitle</font>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="label">
                 <top>410</top>
                 <width>425</width>
                 <height>45</height>
-                <label>[COLOR Highlight]$LOCALIZE[20373]:[/COLOR] [B][COLOR Grey2]$INFO[ListItem.Property(NextSeasonNumber)][/COLOR][/B]  [COLOR Highlight]$LOCALIZE[20359]:[/COLOR] [B][COLOR Grey2]$INFO[ListItem.Property(NextEpisodeNumber)][/COLOR][/B]</label>
+                <label>[COLOR $VAR[HighlightColor]]$LOCALIZE[20373]:[/COLOR] [B][COLOR Grey2]$INFO[ListItem.Property(NextSeasonNumber)][/COLOR][/B]  [COLOR $VAR[HighlightColor]]$LOCALIZE[20359]:[/COLOR] [B][COLOR Grey2]$INFO[ListItem.Property(NextEpisodeNumber)][/COLOR][/B]</label>
                 <textoffsetx>15</textoffsetx>
                 <font>InfoPlot</font>
             </control>			
@@ -2014,7 +2014,7 @@
                 <label>$LOCALIZE[126]:</label>
                 <textoffsetx>15</textoffsetx>
                 <font>InfoTitle</font>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="label">
                 <top>695</top>
@@ -2032,7 +2032,7 @@
                 <label>$LOCALIZE[32011]:</label>
                 <textoffsetx>15</textoffsetx>
                 <font>InfoTitle</font>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="label">
                 <top>790</top>
@@ -2048,7 +2048,7 @@
             <control type="image" description="fa overlay">
                 <width>447</width>
                 <height>840</height>
-                <texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+                <texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
                 <visible>ControlGroup(9001).HasFocus()</visible>
             </control>
             <control type="image">
@@ -2151,7 +2151,7 @@
                 <description>Go Back</description>
                 <width>40</width>
                 <height>40</height>
-                <texturefocus colordiffuse="Highlight">icons/home.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">icons/home.png</texturefocus>
                 <texturenofocus colordiffuse="Grey2">icons/home.png</texturenofocus>
                 <onclick>ActivateWindow(home)</onclick>
             </control>
@@ -2159,7 +2159,7 @@
                 <description>Go Back</description>
                 <width>40</width>
                 <height>40</height>
-                <texturefocus colordiffuse="Highlight">icons/back.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">icons/back.png</texturefocus>
                 <texturenofocus colordiffuse="Grey2">icons/back.png</texturenofocus>
                 <onclick>Action(back)</onclick>
             </control>                
@@ -2167,7 +2167,7 @@
                 <description>Open Side Menu</description>
                 <width>40</width>
                 <height>40</height>
-                <texturefocus colordiffuse="Highlight">icons/settings.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[HighlightColor]">icons/settings.png</texturefocus>
                 <texturenofocus colordiffuse="Grey2">icons/settings.png</texturenofocus>
                 <onclick condition="!Skin.HasSetting(KioskMode.Enabled)">SetFocus(9000)</onclick>
                 <onclick condition="Skin.HasSetting(KioskMode.Enabled)">noop</onclick>
@@ -2195,7 +2195,7 @@
         <align>center</align>
         <font>FanartTitleFont</font>
         <textcolor>FFDFDFDF</textcolor>
-        <focusedcolor>Highlight</focusedcolor>
+        <focusedcolor>$VAR[HighlightColor]</focusedcolor>
         <wrapmultiline>true</wrapmultiline>
         <label>[I]$VAR[FanartTitleVar][/I]</label>
     </include>
@@ -2209,7 +2209,7 @@
         <align>center</align>
         <font>FanartTitleFont</font>
         <textcolor>FFDFDFDF</textcolor>
-        <focusedcolor>Highlight</focusedcolor>
+        <focusedcolor>$VAR[HighlightColor]</focusedcolor>
         <wrapmultiline>true</wrapmultiline>
         <label>[I]$VAR[FanartTitleVar][/I]</label>    
     </include>
@@ -2530,7 +2530,7 @@
             <label>[B]$PARAM[label][/B]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>Highlight</textcolor>
+            <textcolor>$VAR[HighlightColor]</textcolor>
             <font>ListDetails</font>
             <visible>String.IsEqual(ListItem.SortLetter,$PARAM[label])</visible>
         </control>
@@ -2553,7 +2553,7 @@
             <label>[B]#[/B]</label>
             <align>center</align>
             <aligny>center</aligny>
-            <textcolor>Highlight</textcolor>
+            <textcolor>$VAR[HighlightColor]</textcolor>
             <font>ListDetails</font>
             <visible>$EXP[SortLetterIsNumber]</visible>
         </control>
@@ -2565,6 +2565,7 @@
         <onclick>AlarmClock(nms2,SetProperty(FIVE_daemon_fire,True,home),00:01,silent)</onclick>
     </include>
 	
+	<!-- Default views includes: The first view id determines the default view -->
 	<include name="DefaultViews">
         <views>50,51,52,53,54,55,56,501</views>
 		<defaultcontrol>50</defaultcontrol>
@@ -2582,7 +2583,7 @@
 		<defaultcontrol>52</defaultcontrol>
     </include>
 	<include name="PanelDefaultView">
-        <views>51,52,53,54,55,56,501</views>
+        <views>51,50,52,53,54,55,56,501</views>
 		<defaultcontrol>51</defaultcontrol>
     </include>
 	<include name="BigPanelDefaultView">
@@ -2590,12 +2591,29 @@
 		<defaultcontrol>55</defaultcontrol>
     </include>
 	<include name="IconsDefaultView">
-        <views>53,5-,51,52,54,55,56,501</views>
+        <views>53,50,51,52,54,55,56,501</views>
 		<defaultcontrol>53</defaultcontrol>
     </include>
 	<include name="FanartDefaultView">
         <views>56,50,51,52,53,54,55,501</views>
 		<defaultcontrol>56</defaultcontrol>
     </include>
+
+    <include name="ColorButton">
+		<param name="ColorString" />
+		<definition>
+			<width>1385</width>
+			<height>60</height>
+			<textoffsetx>30</textoffsetx>
+			<font>font16</font>
+			<radiowidth>150</radiowidth>
+		    <radioheight>50</radioheight>
+			<textureradioonfocus colordiffuse="$PARAM[ColorString]">color_swatch.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="$PARAM[ColorString]">color_swatch.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$PARAM[ColorString]">color_swatch.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="$PARAM[ColorString]">color_swatch.png</textureradiooffnofocus>
+			<texturefocus colordiffuse="$VAR[HighlightColor]" border="4">img/WhiteRoundedST2.png</texturefocus>
+		</definition>
+	</include>
 
 </includes>

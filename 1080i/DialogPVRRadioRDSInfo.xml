@@ -20,7 +20,7 @@
                 <height>45</height>
                 <align>center</align>
                 <label>$LOCALIZE[29900]</label>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="group">
                 <description>Normal song info group</description>

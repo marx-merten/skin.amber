@@ -17,7 +17,7 @@
 				<width>704</width>
 				<height>40</height>
 				<align>center</align>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 			</control>
 			<control type="slider" id="11" description="Slider">
 				<posx>80</posx>

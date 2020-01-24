@@ -28,7 +28,7 @@
                 <left>64</left>
                 <top>24</top>
                 <width>1429</width>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
                 <align>center</align>
             </control>
             <control type="image">
@@ -148,7 +148,7 @@
                         <description>Symbols button</description>
                         <width>143</width>
                         <label>@#!*</label>
-                        <altlabel>[COLOR=Highlight][UPPERCASE]@ ? , # ; ) ![/UPPERCASE][/COLOR]</altlabel>
+                        <altlabel>[COLOR=$VAR[HighlightColor]][UPPERCASE]@ ? , # ; ) ![/UPPERCASE][/COLOR]</altlabel>
                         <onup>309</onup>
                         <ondown>303</ondown>
                         <font>ListDetails</font>
@@ -248,7 +248,7 @@
                         <ondown>302</ondown>
                         <font>ListDetails</font>
                         <label>$LOCALIZE[20179]</label>
-                        <altlabel>[COLOR=Highlight][UPPERCASE]$LOCALIZE[20179][/UPPERCASE][/COLOR]</altlabel>
+                        <altlabel>[COLOR=$VAR[HighlightColor]][UPPERCASE]$LOCALIZE[20179][/UPPERCASE][/COLOR]</altlabel>
                         <include>KeyboardButtons</include>
                     </control>
                     <control type="button" id="140">
@@ -335,7 +335,7 @@
                         <ondown>300</ondown>
                         <font>ListDetails</font>
                         <label>$LOCALIZE[20178]</label>
-                        <altlabel>[COLOR=Highlight][UPPERCASE]$LOCALIZE[20178][/UPPERCASE][/COLOR]</altlabel>
+                        <altlabel>[COLOR=$VAR[HighlightColor]][UPPERCASE]$LOCALIZE[20178][/UPPERCASE][/COLOR]</altlabel>
                         <include>KeyboardButtons</include>
                     </control>
                     <control type="button" id="160">
@@ -497,7 +497,7 @@
                             <control type="image">
                                 <width>450</width>
                                 <height>60</height>
-                                <texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+                                <texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
                             </control>
                             <control type="label">
                                 <height>60</height>

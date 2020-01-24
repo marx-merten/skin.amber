@@ -33,7 +33,7 @@
 				    <label>$LOCALIZE[32063]</label>
 				    <align>center</align>
 				    <aligny>center</aligny>
-				    <textcolor>Highlight</textcolor>
+				    <textcolor>$VAR[HighlightColor]</textcolor>
 			    </control>
             </control>            
 			<control type="list" id="90101">
@@ -70,7 +70,7 @@
 					    <animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(90101)">Conditional</animation>
 					    <width>625</width>
 					    <height>60</height>
-					    <texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+					    <texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 				    </control>
 				    <control type="label" description="Main Label">
 					    <width>225</width>

@@ -2418,3 +2418,7 @@ msgstr ""
 msgctxt "#32204"
 msgid "Set Default View"
 msgstr ""
+
+msgctxt "#32205"
+msgid "Select Highlight Color"
+msgstr ""

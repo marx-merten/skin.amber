@@ -1188,14 +1188,14 @@
                 <aligny>center</aligny>
                 <textcolor>Grey2</textcolor>
                 <selectedcolor>selected</selectedcolor>
-                <label>$INFO[ListItem.Label,[COLOR=Highlight],[/COLOR] ]$INFO[ListItem.Label2]</label>
+                <label>[COLOR=$VAR[HighlightColor]]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Label2]</label>
                 <textoffsetx>8</textoffsetx>
                 <scroll>false</scroll>
             </control>
         </itemlayout>
         <focusedlayout height="47" width="530">
             <control type="image">
-                <texture colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+                <texture colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
             </control>
             <control type="label">
                 <height>45</height>
@@ -1406,7 +1406,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -1473,7 +1473,7 @@
                     <left>8</left>
                     <top>0</top>
                     <height>30</height>
-                    <label>[COLOR=Highlight]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[206] $INFO[Container(90050).NumItems,(,)][/COLOR]</label>
                     <font>ListDetails</font>
                 </control>
                 <control type="image" description="Line Split">
@@ -1635,7 +1635,7 @@
                         <left>8</left>
                         <top>0</top>
                         <height>30</height>
-                        <label>[COLOR=Highlight]$PARAM[headinglabel] $INFO[Container($PARAM[id]).NumItems,(,)][/COLOR]</label>
+                        <label>[COLOR=$VAR[HighlightColor]]$PARAM[headinglabel] $INFO[Container($PARAM[id]).NumItems,(,)][/COLOR]</label>
                         <font>ListDetails</font>
                     </control>
                     <control type="image" description="Line Split">
@@ -1716,7 +1716,7 @@
                 <height>100</height>
                 <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
                 <control type="image">
-                    <texture colordiffuse="Highlight">dialogs/loading-spinner.png</texture>
+                    <texture colordiffuse="$VAR[HighlightColor]">dialogs/loading-spinner.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
             </control>
@@ -1729,7 +1729,7 @@
                 <aligny>center</aligny>
                 <align>center</align>
                 <label>$LOCALIZE[20186]...</label>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
         </control>
     </include>    

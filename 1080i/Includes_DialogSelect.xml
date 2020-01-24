@@ -17,7 +17,7 @@
 				<height>30</height>
 				<align>center</align>
 				<font>ListDetails</font>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<label></label>
 			</control>
 			<control type="group" description="Group 6 Thumbs">
@@ -78,7 +78,7 @@
 							<include>VisibleFadeEffect</include>
 							<width>1010</width>
 							<height>120</height>
-							<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+							<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 						</control>
 						<include content="ShadowedImage">
 							<param name="top">8</param>
@@ -167,7 +167,7 @@
 							<include>VisibleFadeEffect</include>
 							<width>1010</width>
 							<height>60</height>
-							<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+							<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 						</control>
 						<control type="label">
 							<width>810</width>
@@ -294,7 +294,7 @@
 						    <width>444</width>
 						    <height>89</height>
 						    <texture border="4">img/WhiteRoundedST2.png</texture>
-						    <colordiffuse>Highlight</colordiffuse>
+						    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
 						    <aspectratio>stretch</aspectratio>
 							<visible>Control.HasFocus(11)</visible>
 					    </control>						
@@ -311,7 +311,7 @@
 						<control type="image">
 							<width>444</width>
 							<height>250</height>
-                            <texture colordiffuse="Highlight" border="8">thumbs/IconBorder_FO.png</texture>
+                            <texture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</texture>
 							<visible>Control.HasFocus(11)</visible>
 						</control>
 					</control>

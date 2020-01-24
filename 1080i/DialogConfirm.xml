@@ -16,7 +16,7 @@
 				<posy>40</posy>
 				<height>40</height>
 				<width>970</width>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<align>center</align>
 				<font></font>
 			</control>
@@ -25,7 +25,7 @@
 				<posy>40</posy>
 				<width>970</width>
 				<height>40</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<align>center</align>
 				<label>$INFO[Control.GetLabel(1)]$INFO[System.Progressbar,  ,%]</label>
 			</control>

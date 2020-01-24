@@ -54,7 +54,7 @@
 						<animation effect="fade" start="100" end="40" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
 						<width>322</width>
 						<height>60</height>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>10</posx>
@@ -90,19 +90,23 @@
 						<label>$LOCALIZE[32107]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="7" description="Search">
+					<item id="7" description="Color Options">
+						<label>Color Options</label>
+						<onclick>noop</onclick>
+					</item>
+					<item id="8" description="Search">
 						<label>$LOCALIZE[137]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="8" description="Advanced">
+					<item id="9" description="Advanced">
 						<label>$LOCALIZE[31985]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="9" description="Backup/Restore">
+					<item id="10" description="Backup/Restore">
 						<label>$LOCALIZE[32064]</label>
 						<onclick>noop</onclick>
 					</item>
-					<item id="10" description="Manage dependencies">
+					<item id="11" description="Manage dependencies">
 						<label>$LOCALIZE[24996]</label>
 						<onclick>noop</onclick>
 					</item>
@@ -497,12 +501,29 @@
 						</item>
 					</content>
 				</control>
-				<!-- 9000 7 Search -->
-				<control type="panel" id="9107">
-					<visible>Container(9000).HasFocus(7)</visible>
+				<!-- 9000 7 - Color Options -->
+				<control type="grouplist" id="9107">
+					<visible>Container(9000).HasFocus(07)</visible>
 					<onright>500</onright>
+                    <include>SettingsListCommons</include>
 					<onup>9107</onup>
 					<ondown>9107</ondown>
+                    <control type="radiobutton" id="91071">
+						<label>$LOCALIZE[32205]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32205])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=HighlightColorStr)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[HighlightColor]</param>
+						</include>
+					</control>					
+				</control>
+				<!-- 9000 8 Search -->
+				<control type="panel" id="9108">
+					<visible>Container(9000).HasFocus(8)</visible>
+					<onright>500</onright>
+					<onup>9108</onup>
+					<ondown>9108</ondown>
 					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
@@ -519,12 +540,12 @@
 						</item>
 					</content>
 				</control>
-				<!-- 9000 8 Advanced options -->
-				<control type="panel" id="9108">
-					<visible>Container(9000).HasFocus(8)</visible>
+				<!-- 9000 9 Advanced options -->
+				<control type="panel" id="9109">
+					<visible>Container(9000).HasFocus(9)</visible>
 					<onright>500</onright>
-					<onup>9108</onup>
-					<ondown>9108</ondown>
+					<onup>9109</onup>
+					<ondown>9109</ondown>
 					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
@@ -602,12 +623,12 @@
 						</include>
 					</content>
 				</control>
-				<!-- 9000 9 - Backup/Restore -->
-				<control type="panel" id="9109">
-					<visible>Container(9000).HasFocus(9)</visible>
+				<!-- 9000 10 - Backup/Restore -->
+				<control type="panel" id="9110">
+					<visible>Container(9000).HasFocus(10)</visible>
 					<onright>500</onright>
-					<onup>9109</onup>
-					<ondown>9109</ondown>
+					<onup>9110</onup>
+					<ondown>9110</ondown>
 					<pagecontrol></pagecontrol>
 					<include>SettingsListCommons</include>
 					<content>
@@ -637,13 +658,13 @@
 						</item>
 					</content>
 				</control>                
-				<!-- 9000 10 - Manage Dependencies -->
-				<control type="grouplist" id="9110">
-					<visible>Container(9000).HasFocus(10)</visible>
+				<!-- 9000 11 - Manage Dependencies -->
+				<control type="grouplist" id="9111">
+					<visible>Container(9000).HasFocus(11)</visible>
 					<onright>500</onright>
                     <include>SettingsListCommons</include>
-					<onup>9110</onup>
-					<ondown>9110</ondown>                    
+					<onup>9111</onup>
+					<ondown>9111</ondown>                    
 					<control type="radiobutton" id="91121">
 						<label>script.favourites</label>
 						<label2>$INFO[System.AddonVersion(script.favourites)]        </label2>

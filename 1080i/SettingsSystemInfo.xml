@@ -21,7 +21,7 @@
                 <height>50</height>
                 <label>$LOCALIZE[130]</label>
                 <align>center</align>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="group">
                 <posy>60</posy>
@@ -87,14 +87,14 @@
                             <height>45</height>
                             <width>680</width>
                             <font>ListDetails</font>
-                            <label>[COLOR=Highlight]$LOCALIZE[13271][/COLOR] $INFO[System.CPUUsage]</label>
+                            <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[13271][/COLOR] $INFO[System.CPUUsage]</label>
                         </control>
                         <control type="label" id="23">
                             <description>Memory Text</description>
                             <height>45</height>
                             <width>680</width>
                             <font>ListDetails</font>
-                            <label>[COLOR=Highlight]$LOCALIZE[31309][/COLOR] $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)]</label>
+                            <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[31309][/COLOR] $INFO[system.memory(used)] [B]/[/B] $INFO[system.memory(total)] [B]-[/B] $INFO[system.memory(used.percent)]</label>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -127,14 +127,14 @@
                             <height>45</height>
                             <width>680</width>
                             <font>ListDetails</font>
-                            <label>$INFO[Control.GetLabel(52),[COLOR=Highlight]$LOCALIZE[144] [/COLOR]]</label>
+                            <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[144] [/COLOR]$INFO[Control.GetLabel(52)]</label>
                         </control>
                         <control type="label" id="23">
                             <description>Memory Text</description>
                             <height>45</height>
                             <width>680</width>
                             <font>ListDetails</font>
-                            <label>$INFO[Control.GetLabel(53),[COLOR=Highlight]$LOCALIZE[174] [/COLOR]]</label>
+                            <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[174] [/COLOR]$INFO[Control.GetLabel(53)]</label>
                         </control>
                     </control>
                     <control type="label">

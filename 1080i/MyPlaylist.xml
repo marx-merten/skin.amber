@@ -20,7 +20,7 @@
 				<width>820</width>
 				<align>center</align>
 				<label>$VAR[PlaylistHeader]</label>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 			</control>
 			<control type="group">
 				<include content="ShadowedImage">
@@ -74,7 +74,7 @@
 							<control type="image">
 								<width>820</width>
 								<height>60</height>
-								<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+								<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 							</control>
 							<control type="label">
 								<posx>30</posx>

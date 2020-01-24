@@ -342,7 +342,7 @@
      		    <align>left</align>
 			    <aligny>center</aligny>
 			    <label>$LOCALIZE[19055]</label>
-			    <textcolor>Highlight</textcolor>
+			    <textcolor>$VAR[HighlightColor]</textcolor>
 			</control>
 		</control>		
 

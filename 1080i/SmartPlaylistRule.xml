@@ -18,7 +18,7 @@
         <posy>40</posy>
         <width>1010</width>
         <align>center</align>
-        <textcolor>Highlight</textcolor>
+        <textcolor>$VAR[HighlightColor]</textcolor>
         <label>$LOCALIZE[21422]</label>
       </control>
       <control type="group" id="9001">

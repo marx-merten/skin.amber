@@ -32,7 +32,7 @@
 			<control type="grouplist" id="9000">
 				<include>9000GrouplistParameters</include>
 				<control type="label" id="9181">
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<align>left</align>
 					<textoffsetx>10</textoffsetx>
 					<include>9000ViewButtons</include>

@@ -21,7 +21,7 @@
 				<posy>3</posy>
 				<width>1010</width>
 				<height>40</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<label>$LOCALIZE[1021]</label>
 			</control>
 			<control type="list" id="10" description="Path list">

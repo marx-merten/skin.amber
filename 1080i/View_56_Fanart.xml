@@ -442,7 +442,7 @@
 						<posy>87</posy>
 						<width>900</width>
 						<height>60</height>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<font>InfoTitle</font>
 						<scroll>false</scroll>
 						<label>$VAR[panelheading]</label>

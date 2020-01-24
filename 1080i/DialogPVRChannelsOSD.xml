@@ -21,7 +21,7 @@
 				<posy>155</posy>
 				<width>630</width>
 				<height>36</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<font>InfoTitle</font>
 				<align>center</align>
 				<label>$VAR[PVRChannelsOSDHeader]</label>
@@ -31,7 +31,7 @@
 				<posy>195</posy>
 				<width>630</width>
 				<height>36</height>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<align>center</align>
 				<label>$INFO[System.Date] • $INFO[System.Time]</label>
 			</control>
@@ -124,7 +124,7 @@
 						<posy>3</posy>
 						<width>680</width>
 						<height>96</height>
-						<texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<include>RecOverlay</include>
 					<control type="label" description="Number">

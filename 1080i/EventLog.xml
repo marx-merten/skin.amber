@@ -75,7 +75,7 @@
             <control type="image">
               <height>96</height>
               <width>1576</width>
-              <texture border="4" colordiffuse="Highlight">img/WhiteRoundedST2.png</texture>
+              <texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
             </control>
             <control type="image" description="Logo">
               <posx>9</posx>
@@ -168,7 +168,7 @@
         <scrolltime>200</scrolltime>
         <orientation>vertical</orientation>
         <control type="label" id="200">
-          <textcolor>Highlight</textcolor>
+          <textcolor>$VAR[HighlightColor]</textcolor>
           <textoffsetx>10</textoffsetx>
           <align>left</align>
           <include>9000ViewButtons</include>
@@ -183,7 +183,7 @@
           <usealttexture>Container.SortDirection(Ascending)</usealttexture> 
         </control> 
         <control type="label" id="201">
-          <textcolor>Highlight</textcolor>
+          <textcolor>$VAR[HighlightColor]</textcolor>
           <textoffsetx>10</textoffsetx>
           <align>left</align>
           <include>9000ViewButtons</include>

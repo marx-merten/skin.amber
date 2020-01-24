@@ -24,7 +24,7 @@
 				<scroll>true</scroll>
 				<align>center</align>
 				<font>ListDetails</font>
-				<textcolor>Highlight</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<label>$INFO[Control.GetLabel(401)]$INFO[Control.GetLabel(402),[COLOR=White]  •  [/COLOR]]</label>
 			</control>
 			<control type="image" id="400" description="File Icon">

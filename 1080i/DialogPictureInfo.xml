@@ -31,7 +31,7 @@
 			<width>1030</width>
 			<height>60</height>
 			<font>InfoTitle</font>
-			<textcolor>Highlight</textcolor>
+			<textcolor>$VAR[HighlightColor]</textcolor>
 			<align>left</align>
 			<label>$INFO[ListItem.Label]</label>
 		</control>
@@ -62,7 +62,7 @@
 						<font>Details</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>8</textoffsetx>
@@ -86,7 +86,7 @@
 						<font>Details</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>Highlight</textcolor>
+						<textcolor>$VAR[HighlightColor]</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>8</textoffsetx>

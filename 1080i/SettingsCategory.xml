@@ -38,7 +38,7 @@
                 <height>72</height>
                 <align>center</align>
                 <font>InfoTitle</font>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
             </control>
             <control type="grouplist" id="3" description="Left - Button Area">
                 <posx>87</posx>
@@ -73,7 +73,7 @@
                 <width>1377</width>
                 <height>130</height>
                 <align>justify</align>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
                 <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
             </control>
             <control type="button" id="7" description="Button">
@@ -100,7 +100,7 @@
             </control>
             <control type="label" id="14">
                 <align>center</align>
-                <textcolor>Highlight</textcolor>
+                <textcolor>$VAR[HighlightColor]</textcolor>
                 <font>Details</font>
             </control>
             <control type="label" description="Settings level label">

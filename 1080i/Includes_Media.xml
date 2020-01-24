@@ -60,7 +60,7 @@
 					<width>100</width>
 					<font>ListDetails</font>
 					<align>center</align>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 				</control>
 			</control>
@@ -218,7 +218,7 @@
 				    <fadetime>1</fadetime>
 				    <randomize>false</randomize>
                     <aspectratio>$PARAM[aspect]</aspectratio>
-					<bordertexture colordiffuse="Highlight" border="8">thumbs/IconBorder_FO.png</bordertexture>
+					<bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
 					<bordersize>$PARAM[bordersizeLT],$PARAM[bordersizeLT],$PARAM[bordersizeRB],$PARAM[bordersizeRB]</bordersize>
 					<aspectratio>$PARAM[aspect]</aspectratio>
 				</control>
@@ -297,7 +297,7 @@
 				<control type="image">
 					<visible>$PARAM[isFocused]</visible>
 					<texture background="true" fallback="$PARAM[fallbackicon]">$PARAM[iconimage]</texture>
-					<bordertexture colordiffuse="Highlight" border="8">thumbs/IconBorder_FO.png</bordertexture>
+					<bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
 					<bordersize>$PARAM[bordersizeLT],$PARAM[bordersizeLT],$PARAM[bordersizeRB],$PARAM[bordersizeRB]</bordersize>
 					<aspectratio>$PARAM[aspect]</aspectratio>
 				</control>
@@ -371,7 +371,7 @@
 					<width>33</width>
 					<height>33</height>
 					<texture>$VAR[Overlay]</texture>
-					<colordiffuse>Highlight</colordiffuse>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 					<aspectratio>keep</aspectratio>
 				</control>
 			</control>
@@ -415,7 +415,7 @@
 					<width>$PARAM[labelwidth]</width>
 					<height>45</height>
 					<textoffsetx>24</textoffsetx>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 					<font>$PARAM[labelfont]</font>
 					<label>$PARAM[labeltext]</label>
 					<align>$PARAM[labelalign]</align>
@@ -454,7 +454,7 @@
 					<width>$PARAM[labelwidth]</width>
 					<height>$PARAM[labelheight]</height>
 					<texture border="4">img/WhiteRoundedST2.png</texture>
-					<colordiffuse>Highlight</colordiffuse>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 					<bordersize>$PARAM[bordersize]</bordersize>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -516,7 +516,7 @@
 					<width>$PARAM[labelwidth]</width>
 					<height>74</height>
 					<texture border="4">img/WhiteRoundedST2.png</texture>
-					<colordiffuse>Highlight</colordiffuse>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 					<bordersize>4,0,4,0</bordersize>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -581,7 +581,7 @@
 					<width>$PARAM[labelwidth]</width>
 					<height>74</height>
 					<texture border="4">img/WhiteRoundedST2.png</texture>
-					<colordiffuse>Highlight</colordiffuse>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 					<bordersize>$PARAM[bordersize]</bordersize>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -770,6 +770,7 @@
 				<param name="bordersizeRB">24</param>
 				<param name="belowlabelvisibility">true</param>
 				<param name="belowlabel">$INFO[ListItem.Label]</param>
+				<param name="belowlabelheight">35</param>
 			</include>
 		</definition>
 	</include>

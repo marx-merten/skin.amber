@@ -288,7 +288,7 @@
                     <height>45</height>
 					<align>center</align>
 					<label>$VAR[listmediaheader]</label>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 				</control>
 				<include content="ShadowedImage">
                     <param name="top">0</param>
@@ -302,7 +302,7 @@
 					<height>45</height>
 					<align>center</align>
 					<label>$VAR[listmediafooter]</label>
-					<textcolor>Highlight</textcolor>
+					<textcolor>$VAR[HighlightColor]</textcolor>
 				</control>
 			</control>
             <include content="MediaFlags">
