@@ -1056,7 +1056,7 @@
 	
 	<variable name="DialogBGColor">
 		<value condition="!String.IsEmpty(Skin.String(DialogBGColorStr)) + !String.IsEqual(Skin.String(DialogBGColorStr),None)">$INFO[Skin.String(DialogBGColorStr)]</value>
-		<value></value>
+		<value>ffffffff</value>
 	</variable>
 	
 	<variable name="LabelTextColor">
