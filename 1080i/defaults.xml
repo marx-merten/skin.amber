@@ -7,7 +7,7 @@
 		<font>font16</font>
 		<textcolor>$VAR[LabelTextColor]</textcolor>
 		<shadowcolor>ShadowDark</shadowcolor>
-		<selectedcolor>SelectedFocused</selectedcolor>
+		<selectedcolor>$VAR[SelectedTextColor]</selectedcolor>
 		<disabledcolor>Disabled</disabledcolor>
 		<scroll>true</scroll>
 		<scrollspeed>25</scrollspeed>
@@ -20,8 +20,8 @@
 		<font>font16</font>
 		<textcolor>$VAR[LabelTextColor]</textcolor>
 		<shadowcolor>ShadowDark</shadowcolor>
-		<focusedcolor>$VAR[LabelTextColor]2</focusedcolor>
-		<selectedcolor>SelectedFocused</selectedcolor>
+		<focusedcolor>$VAR[LabelTextColor]</focusedcolor>
+		<selectedcolor>$VAR[SelectedTextColor]</selectedcolor>
 		<disabledcolor>Disabled</disabledcolor>
 		<scrollout>false</scrollout>
 		<pauseatend>3000</pauseatend>

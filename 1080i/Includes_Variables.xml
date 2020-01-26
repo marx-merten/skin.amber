@@ -394,9 +394,10 @@
 
     <variable name="TopBarMedia">
         <value condition="Player.HasAudio">$INFO[MusicPlayer.Artist][COLOR=$VAR[HighlightColor]]  •  [/COLOR]$INFO[MusicPlayer.Title][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[MusicPlayer.TimeSpeed]$INFO[MusicPlayer.Duration, / ][/COLOR]</value>
-        <value condition="Player.HasVideo + !VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ][/COLOR]</value>
-        <value condition="Player.HasVideo + VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]]$INFO[VideoPlayer.ChannelName][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]]INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ][/COLOR]</value>
-    </variable>
+        <value condition="Player.HasVideo + !VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration][/COLOR]</value>
+        <value condition="Player.HasVideo + VideoPlayer.Content(livetv) + !VideoPlayer.HasEPG">$INFO[VideoPlayer.Title][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[VideoPlayer.ChannelName][/COLOR][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration][/COLOR]</value>
+		<value condition="Player.HasVideo + VideoPlayer.Content(livetv) + VideoPlayer.HasEPG">$INFO[VideoPlayer.Title][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[VideoPlayer.ChannelName][/COLOR][COLOR=$VAR[HighlightColor]]  •  [/COLOR][COLOR=Grey3]$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ][/COLOR]</value>
+	</variable>
 
     <variable name="TopBarMediaIcon">
         <value condition="!Player.Paused">OSD/OSDPlayNF.png</value>
