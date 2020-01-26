@@ -11,6 +11,7 @@
 				<width>664</width>
 				<height>185</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<control type="label" id="10" description="Heading">
 				<posy>20</posy>
@@ -35,7 +36,7 @@
 				<height>40</height>
 				<align>center</align>
 				<font>font24_title</font>
-				<textcolor>White</textcolor>
+				<textcolor>$VAR[LabelTextColor]</textcolor>
 			</control>
 		</control>
 	</controls>

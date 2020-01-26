@@ -80,8 +80,8 @@
                             <width>820</width>
                             <scroll>false</scroll>
                             <label>$INFO[ListItem.Label]</label>
-                            <textcolor>Black</textcolor>
-                            <selectedcolor>Black</selectedcolor>
+                            <textcolor>$VAR[FocusedTextColor]</textcolor>
+                            <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                         </control>
                         <control type="label" description="Label2">
@@ -91,8 +91,8 @@
                             <scroll>false</scroll>
                             <align>right</align>
                             <font>ListDetails</font>
-                            <textcolor>Black</textcolor>
-                            <selectedcolor>Black</selectedcolor>
+                            <textcolor>$VAR[FocusedTextColor]</textcolor>
+                            <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                             <shadowcolor></shadowcolor>
                             <label>$INFO[ListItem.Date]</label>
                         </control>
@@ -136,7 +136,7 @@
                             <height>40</height>
                             <width>860</width>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label,[COLOR=White2],[/COLOR]][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Duration]</label>
+                            <label>$INFO[ListItem.Label][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Duration]</label>
                             <font>ListDetails</font>
                             <scrollspeed>25</scrollspeed>
                             <visible>!Skin.HasSetting(Enable.HourMinutes)</visible>
@@ -146,7 +146,7 @@
                             <height>40</height>
                             <width>860</width>
                             <aligny>center</aligny>
-                            <label>$INFO[ListItem.Label,[COLOR=White2],[/COLOR]][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$VAR[ItemDurationHrMins]</label>
+                            <label>$INFO[ListItem.Label][COLOR=$VAR[HighlightColor]] • [/COLOR]$INFO[ListItem.Date][COLOR=$VAR[HighlightColor]] • [/COLOR]$VAR[ItemDurationHrMins]</label>
                             <font>ListDetails</font>
                             <scrollspeed>25</scrollspeed>
                             <visible>Skin.HasSetting(Enable.HourMinutes)</visible>
@@ -185,7 +185,7 @@
             <texturesliderbar></texturesliderbar>
             <texturesliderbarfocus></texturesliderbarfocus>
             <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-            <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+            <textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
             <showonepage>false</showonepage>
             <orientation>vertical</orientation>
             <onleft>50</onleft>

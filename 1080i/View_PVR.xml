@@ -16,7 +16,8 @@
 				<height>1120</height>
 				<itemgap>0</itemgap>
 				<onleft>9001</onleft>
-				<onright>10</onright>
+				<onright condition="Window.IsActive(MyPVRGuide.xml)">10</onright>
+				<onright condition="!Window.IsActive(MyPVRGuide.xml)">50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onback>50</onback>
@@ -306,7 +307,7 @@
 						<font>ListDetails</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
-						<textcolor>White2</textcolor>
+						<textcolor>$VAR[LabelTextColor]</textcolor>
 						<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
 					</control>
 					<control type="label" id="1">
@@ -315,7 +316,7 @@
 						<width>45</width>
 						<height>36</height>
 						<scroll>false</scroll>
-						<textcolor>White2</textcolor>
+						<textcolor>$VAR[LabelTextColor]</textcolor>
 						<font>ListDetails</font>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
@@ -343,8 +344,8 @@
 						<font>ListDetails</font>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>true</scroll>
-						<textcolor>Black</textcolor>
-						<selectedcolor>Black</selectedcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 						<shadowcolor></shadowcolor>
 						<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
 					</control>
@@ -354,8 +355,8 @@
 						<width>45</width>
 						<height>36</height>
 						<scroll>false</scroll>
-						<textcolor>Black</textcolor>
-						<selectedcolor>Black</selectedcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 						<shadowcolor></shadowcolor>
 						<font>ListDetails</font>
 						<label>$INFO[ListItem.Label]</label>
@@ -464,7 +465,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<scroll>true</scroll>
-							<textcolor>Black</textcolor>
+							<textcolor>$VAR[FocusedTextColor]</textcolor>
 							<font>ListDetails</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>

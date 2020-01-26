@@ -2,7 +2,7 @@
 <includes>
 
     <variable name="TimeLabel" description="Date and time">
-        <value condition="Window.IsActive(home) | !System.Loggedon">[COLOR=Grey2]$INFO[System.Date][COLOR=$VAR[HighlightColor]]  •  [/COLOR][/COLOR]$INFO[System.Time]</value>
+        <value condition="Window.IsActive(home) | !System.Loggedon">[COLOR=$VAR[LabelTextColor]]$INFO[System.Date][COLOR=$VAR[HighlightColor]]  •  [/COLOR][/COLOR]$INFO[System.Time]</value>
         <value>$INFO[System.Time]</value>
     </variable>
 
@@ -97,9 +97,9 @@
     </variable>
 
     <variable name="MusicInfoHeader" description="Header for MusicInfo window">
-        <value condition="Container.Content(Artists)">$LOCALIZE[21891]: [COLOR=White]$INFO[ListItem.Artist][/COLOR]</value>
-        <value condition="Container.Content(Albums)">$LOCALIZE[10523]: [COLOR=White]$INFO[ListItem.Album][/COLOR]</value>
-        <value condition="Container.Content(Songs)">$LOCALIZE[658]: [COLOR=White]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/COLOR]</value>
+        <value condition="Container.Content(Artists)">$LOCALIZE[21891]: [COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Artist][/COLOR]</value>
+        <value condition="Container.Content(Albums)">$LOCALIZE[10523]: [COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Album][/COLOR]</value>
+        <value condition="Container.Content(Songs)">$LOCALIZE[658]: [COLOR=$VAR[LabelTextColor]]$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title][/COLOR]</value>
     </variable>
 
     <variable name="PVRChannelManagerHeader" description="Header for PVRChannelManager window">
@@ -212,23 +212,23 @@
     <variable name="HomeWidgetLabel">
         <value condition="String.Contains(ListItem.FolderPath,type=person)">[B]$INFO[ListItem.Label][/B]</value>
 		<value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]</value>
-        <value condition="String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Premiered, (,)][COLOR=White]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Premiered, (,)][COLOR=White]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Premiered, (,)][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Premiered, (,)][COLOR=$VAR[LabelTextColor]]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
         <value condition="!String.IsEmpty(ListItem.Property(nextairedtvshowtitle))">$INFO[ListItem.Label]</value>
         <value condition="!String.IsEmpty(ListItem.Property(recommendedtvshowtitle))">$INFO[ListItem.Label]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(Label3))">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Label2, • ,][COLOR=White]$INFO[ListItem.Property(Label3), • ][/COLOR]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(Outlook))">$INFO[ListItem.Property(LongDay),[B],[/B]]$INFO[ListItem.Property(Time),[B],[/B]]$INFO[ListItem.Property(ShortDate), • [B],[/B]][COLOR=White]$INFO[ListItem.Property(Outlook), • ,][/COLOR]</value>
-        <value condition="!String.IsEmpty(ListItem.Property(TotalEpisodes))">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=White]$INFO[ListItem.Property(TotalEpisodes), • ,]$INFO[ListItem.Property(UnWatchedEpisodes), (,)]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=White]$INFO[ListItem.Artist, • ,]$INFO[ListItem.Album, • ,]$INFO[ListItem.Year, • ,]$INFO[ListItem.Duration, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=White]$INFO[ListItem.Artist, • ,]$INFO[ListItem.Album, • ,]$INFO[ListItem.Year, • ,]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Label,[B],[/B]][COLOR=White]$INFO[ListItem.Artist, • ,]$INFO[ListItem.Year, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="String.Contains(ListItem.Path,pvr://channels)">$INFO[ListItem.Label,[B],[/B]][COLOR=White]$INFO[ListItem.StartTime, • [B],[/B]]$INFO[ListItem.Title, ,]$INFO[ListItem.NextStartTime, • [B],[/B]]$INFO[ListItem.NextTitle, ,][/COLOR]</value>
-        <value condition="String.Contains(ListItem.Path,pvr://recordings) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=White]$INFO[ListItem.Date, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]][/COLOR]</value>
-        <value condition="String.Contains(ListItem.Path,pvr://recordings) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=White]$INFO[ListItem.Date, • ,]$VAR[ItemDurationHrMins, • ,][/COLOR]</value>
-        <value condition="!Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=White]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=White]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
-		<value condition="!Skin.HasSetting(Enable.HourMinutes) + String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=White]$INFO[ListItem.Rating, • ][/COLOR]</value>
-        <value condition="Skin.HasSetting(Enable.HourMinutes) + String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=White]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(Label3))">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Label2, • ,][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Property(Label3), • ][/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(Outlook))">$INFO[ListItem.Property(LongDay),[B],[/B]]$INFO[ListItem.Property(Time),[B],[/B]]$INFO[ListItem.Property(ShortDate), • [B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Property(Outlook), • ,][/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Property(TotalEpisodes))">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Property(TotalEpisodes), • ,]$INFO[ListItem.Property(UnWatchedEpisodes), (,)]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Duration) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Artist, • ,]$INFO[ListItem.Album, • ,]$INFO[ListItem.Year, • ,]$INFO[ListItem.Duration, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Artist) + !String.IsEmpty(ListItem.Duration) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Artist, • ,]$INFO[ListItem.Album, • ,]$INFO[ListItem.Year, • ,]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Label,[B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Artist, • ,]$INFO[ListItem.Year, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="String.Contains(ListItem.Path,pvr://channels)">$INFO[ListItem.Label,[B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.StartTime, • [B],[/B]]$INFO[ListItem.Title, ,]$INFO[ListItem.NextStartTime, • [B],[/B]]$INFO[ListItem.NextTitle, ,][/COLOR]</value>
+        <value condition="String.Contains(ListItem.Path,pvr://recordings) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Date, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[12391]][/COLOR]</value>
+        <value condition="String.Contains(ListItem.Path,pvr://recordings) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.Label,[B],[/B]][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Date, • ,]$VAR[ItemDurationHrMins, • ,][/COLOR]</value>
+        <value condition="!Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="Skin.HasSetting(Enable.HourMinutes) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=$VAR[LabelTextColor]]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
+		<value condition="!Skin.HasSetting(Enable.HourMinutes) + String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Rating, • ][/COLOR]</value>
+        <value condition="Skin.HasSetting(Enable.HourMinutes) + String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Year, (,)][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Rating, • ][/COLOR]</value>
     </variable>
 
     <variable name="WidgetItemLabel">
@@ -476,11 +476,11 @@
     </variable>
 
     <variable name="panelheading">
-        <value condition="Window.IsActive(script-embuary-video.xml)">$INFO[Container(10051).ListItem.Title,[B],[/B] ]$INFO[Container(10051).ListItem.Year,(,)]</value>
-        <value condition="ListItem.IsParentFolder">..</value>
-		<value condition="[Window.IsActive(1122) | Window.IsActive(1131)] + !String.IsEqual(Container.ListItem.DBType,episode)">$INFO[Container.Listitem.Title,, ]$INFO[Container.ListItem.Year,(,)]</value>
+        <value condition="[Window.IsActive(1122) | Window.IsActive(1131)] + !String.IsEqual(Container.ListItem.DBType,episode)">$INFO[Container.Listitem.Title] $INFO[Container.ListItem.Year,(,)]</value>
 		<value condition="[Window.IsActive(1122) | Window.IsActive(1131)] + String.IsEqual(Container.ListItem.DBType,episode)">$INFO[Container.ListItem.TVShowTitle,, • ]$INFO[Container.ListItem.Label]</value>
         <value condition="Window.IsActive(1122) + String.IsEqual(ListItem.DBType,album)">$INFO[Container.ListItem.Artist,, • ]$INFO[Container.ListItem.Label]</value>
+		<value condition="Window.IsActive(script-embuary-video.xml)">$INFO[Container(10051).ListItem.Title,[B],[/B] ]$INFO[Container(10051).ListItem.Year,(,)]</value>
+        <value condition="ListItem.IsParentFolder">..</value>
 		<value condition="String.IsEqual(ListItem.DBType,set) + !String.IsEqual(Container.ViewMode,biglist)">$INFO[Listitem.Title,[B],[/B]]</value>
         <value condition="String.IsEqual(ListItem.DBType,set) + String.IsEqual(Container.ViewMode,biglist)">$INFO[Listitem.Title,,]</value>
         <value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(Container.ViewMode,biglist)">$INFO[Listitem.Title,[B],[/B] ]$INFO[ListItem.Year,(,)]</value>
@@ -563,7 +563,8 @@
     </variable>
 
     <variable name="panelsubheading2">
-        <value condition="Container.Content(Seasons) | Container.Content(TVShows)">$LOCALIZE[32009]: $INFO[Window(Home).Property(NextAired.NextNumber)] - $INFO[Window(Home).Property(NextAired.NextTitle)] - $INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value condition="[Container.Content(Seasons) | Container.Content(TVShows)] + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[32009]: $INFO[Window(Home).Property(NextAired.NextNumber)] - $INFO[Window(Home).Property(NextAired.NextTitle)] - $INFO[Window(Home).Property(NextAired.NextDate)]</value>
+		<value condition="[Container.Content(Seasons) | Container.Content(TVShows)] + !String.IsEmpty(ListItem.Status)">$LOCALIZE[126]: $INFO[ListItem.Status]</value>
     </variable>
 
 
@@ -765,12 +766,12 @@
     </variable>
 
     <variable name="SeekLabel">
-        <value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize,[COLOR=$VAR[HighlightColor]]$LOCALIZE[773]:[/COLOR] ]</value>
-        <value condition="Player.Caching">$INFO[Player.CacheLevel,$LOCALIZE[15107] ,%]</value>
+        <value condition="!String.IsEmpty(Player.SeekStepSize)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[773]:[/COLOR] $INFO[Player.SeekStepSize]</value>
+        <value condition="Player.Caching">[COLOR=$VAR[HighlightColor]]$LOCALIZE[15107] [/COLOR]$INFO[Player.CacheLevel,,%]</value>
         <value condition="Player.Paused">$LOCALIZE[112]</value>
         <value condition="Player.Forwarding">[COLOR=$VAR[HighlightColor]]$VAR[ForwardRewindLabel][/COLOR] $LOCALIZE[31353]</value>
         <value condition="Player.Rewinding">[COLOR=$VAR[HighlightColor]]$VAR[ForwardRewindLabel][/COLOR] $LOCALIZE[31354]</value>
-        <value condition="Player.IsTempo">$LOCALIZE[31142]: $INFO[Player.PlaySpeed]</value>
+        <value condition="Player.IsTempo">[COLOR=$VAR[HighlightColor]]$LOCALIZE[31142]: [/COLOR]$INFO[Player.PlaySpeed]</value>
     </variable>
 
     <variable name="ForwardRewindLabel">
@@ -1027,7 +1028,52 @@
 		<value condition="String.IsEqual(Skin.CurrentColourTheme,Green)">FF45B864</value>
 		<value condition="String.IsEqual(Skin.CurrentColourTheme,White)">FFF1F1F1</value>
 	</variable>
+	
+	<variable name="GlowBarsColor">
+		<value condition="!String.IsEmpty(Skin.String(GlowBarsColorStr)) + !String.IsEqual(Skin.String(GlowBarsColorStr),None)">$INFO[Skin.String(GlowBarsColorStr)]</value>
+		<value></value>
+	</variable>
+	
+	<variable name="MenuBarColor">
+		<value condition="!String.IsEmpty(Skin.String(MenuBarColorStr)) + !String.IsEqual(Skin.String(MenuBarColorStr),None)">$INFO[Skin.String(MenuBarColorStr)]</value>
+		<value></value>
+	</variable>
 
+    <variable name="VertMenuBladeColor">
+		<value condition="!String.IsEmpty(Skin.String(VertMenuBladeColorStr)) + !String.IsEqual(Skin.String(VertMenuBladeColorStr),None)">$INFO[Skin.String(VertMenuBladeColorStr)]</value>
+		<value></value>
+	</variable>
+	
+	<variable name="TopBarColor">
+		<value condition="!String.IsEmpty(Skin.String(TopBarColorStr)) + !String.IsEqual(Skin.String(TopBarColorStr),None)">$INFO[Skin.String(TopBarColorStr)]</value>
+		<value></value>
+	</variable>
+	
+	<variable name="SkinColorTheme">
+		<value condition="!String.IsEqual(Skin.CurrentColourTheme,SKINDEFAULT) + !String.StartsWith(Skin.CurrentColourTheme,Default)">$INFO[Skin.CurrentColourTheme]</value>
+		<value>Default</value>
+	</variable>
+	
+	<variable name="DialogBGColor">
+		<value condition="!String.IsEmpty(Skin.String(DialogBGColorStr)) + !String.IsEqual(Skin.String(DialogBGColorStr),None)">$INFO[Skin.String(DialogBGColorStr)]</value>
+		<value></value>
+	</variable>
+	
+	<variable name="LabelTextColor">
+		<value condition="!String.IsEmpty(Skin.String(LabelTextColorStr)) + !String.IsEqual(Skin.String(LabelTextColorStr),None)">$INFO[Skin.String(LabelTextColorStr)]</value>
+		<value>White</value>
+	</variable>
+	
+	<variable name="FocusedTextColor">
+		<value condition="!String.IsEmpty(Skin.String(FocusedTextColorStr)) + !String.IsEqual(Skin.String(FocusedTextColorStr),None)">$INFO[Skin.String(FocusedTextColorStr)]</value>
+		<value>Black</value>
+	</variable>
+	
+	<variable name="SelectedTextColor">
+		<value condition="!String.IsEmpty(Skin.String(SelectedTextColorStr)) + !String.IsEqual(Skin.String(SelectedTextColorStr),None)">$INFO[Skin.String(SelectedTextColorStr)]</value>
+		<value>SelectedFocused</value>
+	</variable>
+	
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
 
     <expression name="56_FanartViewGallery">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Gallery)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Gallery)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Gallery)]</expression>

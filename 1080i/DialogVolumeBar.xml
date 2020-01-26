@@ -34,7 +34,7 @@
 					<width>353</width>
 					<height>82</height>
 					<font>MainLabelBigTitle</font>
-					<textcolor>White2</textcolor>
+					<textcolor>$VAR[LabelTextColor]</textcolor>
 					<shadowcolor>ShadowDark</shadowcolor>
 					<label>$INFO[Control.GetLabel(20)]</label>
 				</control>

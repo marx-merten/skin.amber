@@ -88,7 +88,7 @@
 						<height>75</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
@@ -96,7 +96,7 @@
 						<posx>150</posx>
 						<width>495</width>
 						<height>75</height>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -117,7 +117,7 @@
 				<texturesliderbar></texturesliderbar>
 				<texturesliderbarfocus></texturesliderbarfocus>
 				<textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-				<textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+				<textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>

@@ -24,6 +24,7 @@
 				    <height>750</height>
 				    <width>747</width>
 				    <texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+					<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			    </control>
 			    <control type="label" description="Dialog heading">
 				    <posx>705</posx>
@@ -258,7 +259,7 @@
                 <texturesliderbar></texturesliderbar>
                 <texturesliderbarfocus></texturesliderbarfocus>
                 <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-                <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+                <textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
                 <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
                 <onleft>90101</onleft>

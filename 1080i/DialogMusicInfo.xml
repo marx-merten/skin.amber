@@ -63,7 +63,7 @@
                     <ondown>9000</ondown>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <textureradioonfocus colordiffuse="Black">icons/dots7.png</textureradioonfocus>
+                    <textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">icons/dots7.png</textureradioonfocus>
                     <textureradioonnofocus>icons/dots7.png</textureradioonnofocus>
                     <texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
                     <texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
@@ -324,7 +324,7 @@
 					<font>Details</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
+					<textcolor>$VAR[LabelTextColor]</textcolor>
 					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]$INFO[ListItem.Duration, • (,)]</label>
 					<textoffsetx>8</textoffsetx>
 					<scroll>false</scroll>
@@ -334,7 +334,7 @@
 					<font>Details</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
+					<textcolor>$VAR[LabelTextColor]</textcolor>
 					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]$VAR[ItemDurationHrMins, • (,)]</label>
 					<textoffsetx>8</textoffsetx>
 					<scroll>false</scroll>
@@ -349,7 +349,7 @@
 					<font>Details</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Black</textcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor></shadowcolor>
 					<textoffsetx>8</textoffsetx>
 					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]$INFO[ListItem.Duration, • (,)]</label>
@@ -359,7 +359,7 @@
 					<font>Details</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Black</textcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor></shadowcolor>
 					<textoffsetx>8</textoffsetx>
 					<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]$VAR[ItemDurationHrMins, • (,)]</label>
@@ -371,7 +371,7 @@
 					<font>Details</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Grey2</textcolor>
+					<textcolor>$VAR[LabelTextColor]</textcolor>
 					<label>$INFO[ListItem.Label,,: ]$INFO[ListItem.Label2]</label>
 					<textoffsetx>8</textoffsetx>
 					<scroll>false</scroll>
@@ -385,7 +385,7 @@
 					<font>Details</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Black</textcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor></shadowcolor>
 					<textoffsetx>8</textoffsetx>
 					<label>$INFO[ListItem.Label,,. ]$INFO[ListItem.Label2]</label>

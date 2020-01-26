@@ -138,7 +138,7 @@
 						<align>center</align>
 						<scroll>false</scroll>
 						<font>Details</font>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>

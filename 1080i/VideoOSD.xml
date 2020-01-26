@@ -18,7 +18,7 @@
 				<action>seek</action>
 				<texturesliderbar>OSD/seekslider.png</texturesliderbar>
 				<textureslidernib>OSD/ScrollbarNibNF.png</textureslidernib>
-				<textureslidernibfocus>OSD/ScrollbarNibFO.png</textureslidernibfocus>
+				<textureslidernibfocus colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 				<visible>Player.SeekEnabled</visible>
 			</control>
 			<control type="grouplist" id="100">
@@ -161,9 +161,9 @@
 					<oninfo>Skin.ToggleSetting(OSDInfo)</oninfo>
 				</control>
 				<control type="radiobutton" id="602">
-					<textureradioonfocus colordiffuse="Black">OSD/OSDPlayNF.png</textureradioonfocus>
+					<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">OSD/OSDPlayNF.png</textureradioonfocus>
 					<textureradioonnofocus>OSD/OSDPlayNF.png</textureradioonnofocus>
-					<textureradioofffocus colordiffuse="Black">OSD/OSDPauseNF.png</textureradioofffocus>
+					<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">OSD/OSDPauseNF.png</textureradioofffocus>
 					<textureradiooffnofocus>OSD/OSDPauseNF.png</textureradiooffnofocus>
 					<texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
 					<width>64</width>
@@ -322,7 +322,7 @@
 						<height>80</height>
 						<width>470</width>
 						<label>$LOCALIZE[32004]</label>
-						<label2>$INFO[VideoPlayer.SubtitlesLanguage,[COLOR=Selected],[/COLOR]]</label2>
+						<label2>$INFO[VideoPlayer.SubtitlesLanguage,[COLOR=$VAR[SelectedTextColor]],[/COLOR]]</label2>
 						<onclick>CycleSubtitle</onclick>
 						<enable>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</enable>
 						<font>Details</font>

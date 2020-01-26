@@ -143,7 +143,7 @@
 		        <width>1140</width>
 		        <height>50</height>
 		        <align>center</align>
-		        <textcolor>Black</textcolor>
+		        <textcolor>$VAR[FocusedTextColor]</textcolor>
 		        <shadowcolor></shadowcolor>
 		        <font>InfoTitle</font>
 		        <scroll>false</scroll>
@@ -153,7 +153,7 @@
 			    <width>1140</width>
 			    <height>50</height>
 			    <align>center</align>
-			    <textcolor>White2</textcolor>
+			    <textcolor>$VAR[LabelTextColor]</textcolor>
 			    <shadowcolor></shadowcolor>
 			    <font>InfoTitle</font>
 			    <scroll>false</scroll>
@@ -182,6 +182,7 @@
 				<param name="showaudiobadge">false</param>
 				<param name="showratingbadge">false</param>
 				<param name="type">Container.ListItem</param>
+				<param name="diffuse">$VAR[LabelTextColor]</param>
 			</include>
 		</control>
 		<control type="grouplist" description="Right Flags">
@@ -198,6 +199,7 @@
 			    <param name="showaudiobadge">true</param>
 			    <param name="showratingbadge">true</param>
 				<param name="type">Container.ListItem</param>
+				<param name="diffuse">$VAR[LabelTextColor]</param>
 			</include>
 		</control>
 

@@ -52,6 +52,7 @@
 							<param name="type">VideoPlayer</param>
 							<param name="itemheight" value="48"/>
 							<param name="itemwidth" value="102"/>
+							<param name="diffuse">$VAR[LabelTextColor]</param>
 						</include>
 					</control>
 					<control type="grouplist" description="Flags">

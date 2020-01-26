@@ -32,7 +32,7 @@
 					<width>50</width>
 					<height>42</height>
 					<texture border="3">img/WhiteRoundedT.png</texture>
-					<colordiffuse>Black</colordiffuse>
+					<colordiffuse>$VAR[FocusedTextColor]</colordiffuse>
 				</control>
 				<control type="image" description="Label2 BG">
 					<visible>!$PARAM[isFocused]</visible>
@@ -49,7 +49,7 @@
 					<width>100</width>
 					<font>ListDetails</font>
 					<align>center</align>
-					<textcolor>Black</textcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<shadowcolor></shadowcolor>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 				</control>
@@ -475,8 +475,8 @@
 					<height>$PARAM[labelheight]</height>
 					<font>Shelf_Label</font>
 					<textoffsetx>24</textoffsetx>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<label>$PARAM[labeltext]</label>
 					<align>$PARAM[labelalign]</align>
@@ -538,8 +538,8 @@
 					<left>$PARAM[bordersize]</left>
 					<width>$PARAM[textboxwidth]</width>
 					<height>64</height>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<label>$PARAM[labeltext]</label>
 					<align>$PARAM[labelalign]</align>
@@ -612,8 +612,8 @@
 					<height>35</height>
 					<font>$PARAM[labelfont1]</font>
 					<textoffsetx>24</textoffsetx>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<label>$PARAM[labeltext1]</label>
 					<align>$PARAM[labelalign]</align>
@@ -626,8 +626,8 @@
 					<height>35</height>
 					<font>$PARAM[labelfont2]</font>
 					<textoffsetx>24</textoffsetx>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<label>$PARAM[labeltext2]</label>
 					<align>$PARAM[labelalign]</align>
@@ -1321,7 +1321,7 @@
 				<width>1140</width>
 				<height>50</height>
 				<align>center</align>
-				<textcolor>Black</textcolor>
+				<textcolor>$VAR[FocusedTextColor]</textcolor>
 				<shadowcolor></shadowcolor>
 				<font>InfoTitle</font>
 				<scroll>false</scroll>
@@ -1332,7 +1332,7 @@
 				<width>1140</width>
 				<height>50</height>
 				<align>center</align>
-				<textcolor>White2</textcolor>
+				<textcolor>$VAR[LabelTextColor]</textcolor>
 				<shadowcolor></shadowcolor>
 				<font>InfoTitle</font>
 				<scroll>false</scroll>
@@ -1348,7 +1348,7 @@
 				<label>$VAR[panelsubheading]</label>
 			</control>
 			<control type="label" description="Details2">
-				<visible>[Control.IsVisible(53) | [Control.IsVisible(56) + !Control.IsVisible(66561) + ![$EXP[56_FanartViewInfo]]]] + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+				<visible>[Control.IsVisible(53) | [Control.IsVisible(56) + !Control.IsVisible(66561) + ![$EXP[56_FanartViewInfo]]]]</visible>
 				<posy>100</posy>
                 <width>1140</width>
 				<height>30</height>
@@ -1370,6 +1370,7 @@
 				<param name="showvideobadge">true</param>
 				<param name="showaudiobadge">false</param>
 				<param name="showratingbadge">false</param>
+				<param name="diffuse">$VAR[LabelTextColor]</param>
 			</include>
 		</control>
 		<control type="grouplist" description="Right Flags">
@@ -1385,6 +1386,7 @@
 				<param name="showvideobadge">false</param>
 				<param name="showaudiobadge">true</param>
 				<param name="showratingbadge">true</param>
+				<param name="diffuse">$VAR[LabelTextColor]</param>
 			</include>
 		</control>
 	</include>

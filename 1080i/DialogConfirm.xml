@@ -10,6 +10,7 @@
 				<width>1042</width>
 				<height>380</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<control type="label" id="1" description="Heading hidden">
 				<posx>36</posx>

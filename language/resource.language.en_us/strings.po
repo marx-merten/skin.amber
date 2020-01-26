@@ -2420,5 +2420,41 @@ msgid "Set Default View"
 msgstr ""
 
 msgctxt "#32205"
-msgid "Select Highlight Color"
+msgid "Highlight Color"
+msgstr ""
+
+msgctxt "#32206"
+msgid "Horizontal Menu Glow Bars Tint"
+msgstr ""
+
+msgctxt "#32207"
+msgid "Horizontal Menu Main Bar Tint"
+msgstr ""
+
+msgctxt "#32208"
+msgid "Vertical Menu/Submenu Background Tint"
+msgstr ""
+
+msgctxt "#32209"
+msgid "Top Bar Tint"
+msgstr ""
+
+msgctxt "#32210"
+msgid "Current Color Theme"
+msgstr ""
+
+msgctxt "#32211"
+msgid "Dialogs Background Tint"
+msgstr ""
+
+msgctxt "#32212"
+msgid "Regular Text Color"
+msgstr ""
+
+msgctxt "#32213"
+msgid "Focused Text Color"
+msgstr ""
+
+msgctxt "#32214"
+msgid "Selected Text Color"
 msgstr ""

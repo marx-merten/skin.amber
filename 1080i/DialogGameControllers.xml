@@ -8,6 +8,7 @@
 			<width>1848</width>
 			<height>1010</height>
 			<texture flipx="true">dialogs/DialogBG.png</texture>
+			<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 		</control>
 		<control type="label" id="2" description="Header">
 			<left>36</left>
@@ -72,7 +73,7 @@
 					<texturesliderbar></texturesliderbar>
 					<texturesliderbarfocus></texturesliderbarfocus>
 					<textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-					<textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+					<textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<onleft>3</onleft>
@@ -149,7 +150,7 @@
 					<texturesliderbar></texturesliderbar>
 					<texturesliderbarfocus></texturesliderbarfocus>
 					<textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-					<textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+					<textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 					<onleft>5</onleft>

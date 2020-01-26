@@ -137,6 +137,7 @@
             <align>center</align>
             <include content="MediaFlagItems">
                 <param name="showratingbadge">false</param>
+				<param name="diffuse">$VAR[LabelTextColor]</param>
             </include>
         </control>
 
@@ -671,7 +672,7 @@
                     <onright>9009</onright>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <textureradioonfocus colordiffuse="Black">icons/dots7.png</textureradioonfocus>
+                    <textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">icons/dots7.png</textureradioonfocus>
                     <textureradioonnofocus>icons/dots7.png</textureradioonnofocus>
                     <texturefocus border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texturefocus>
                     <texturenofocus border="4">img/WhiteRoundedT.png</texturenofocus>
@@ -684,7 +685,7 @@
                     <font></font>
                     <selected>true</selected>
                     <onclick>SetProperty(TextViewerHeader,$ESCVAR[panelheading],Home)</onclick>
-                    <onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">SetProperty(TextViewerSubHeader,$ESCINFO[ListItem.Tagline,[I],[/I]],Home)</onclick>
+                    <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + !String.IsEmpty(ListItem.Tagline)">SetProperty(TextViewerSubHeader,$ESCINFO[ListItem.Tagline,[I],[/I]],Home)</onclick>
                     <onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + String.IsEmpty(ListItem.Tagline) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Tagline))">SetProperty(TextViewerSubHeader,$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.Tagline)),[I],[/I]],Home)</onclick>
                     <onclick condition="String.IsEqual(ListItem.DBType,set) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Years))">SetProperty(TextViewerSubHeader,$ESCINFO[Window(Home).Property(SkinInfo.Set.Movies.Years),[I],[/I]],Home)</onclick>
 					<onclick>SetProperty(TextViewerContent,$ESCVAR[Plots],Home)</onclick>
@@ -1045,6 +1046,18 @@
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Runtime)) + !Skin.HasSetting(Enable.HourMinutes) + String.IsEqual(ListItem.DBType,set)</visible>
                         </item>
+						<item>
+                            <label>$LOCALIZE[126]:</label>
+                            <label2>$INFO[ListItem.Status]</label2>
+                            <onclick>noop</onclick>
+                            <visible>!String.IsEmpty(ListItem.Status) + String.IsEqual(ListItem.DBType,tvshow)</visible>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[126]:</label>
+                            <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.Status)]</label2>
+                            <onclick>noop</onclick>
+                            <visible>String.IsEmpty(ListItem.Status) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status)) + String.IsEqual(ListItem.DBType,tvshow)</visible>
+                        </item>
                         <item>
                             <label>$LOCALIZE[21875]:</label>
                             <label2>$INFO[ListItem.Country]</label2>
@@ -1182,17 +1195,17 @@
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(ListItem.Tag)</visible>
                         </item>
-                        <item>
+						<item>
                             <label>$LOCALIZE[126]:</label>
                             <label2>$INFO[ListItem.Status]</label2>
                             <onclick>noop</onclick>
-                            <visible>!String.IsEmpty(ListItem.Status)</visible>
+                            <visible>!String.IsEmpty(ListItem.Status) + !String.IsEqual(ListItem.DBType,tvshow)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[126]:</label>
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.Status)]</label2>
                             <onclick>noop</onclick>
-                            <visible>String.IsEmpty(ListItem.Status) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status))</visible>
+                            <visible>String.IsEmpty(ListItem.Status) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Status)) + !String.IsEqual(ListItem.DBType,tvshow)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32073]:</label>

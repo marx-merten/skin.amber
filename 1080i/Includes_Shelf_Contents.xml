@@ -754,7 +754,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>ListDetails</font>
-				<textcolor>White</textcolor>
+				<textcolor>$VAR[LabelTextColor]</textcolor>
 				<label>$INFO[$PARAM[timelabel],$LOCALIZE[19126] - ]</label>
 			</control>
 			<include content="ShadowedImage">

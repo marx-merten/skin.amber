@@ -59,7 +59,7 @@
 						<width>1210</width>
 						<height>72</height>
 						<scroll>false</scroll>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<label>$VAR[MediaListLabel]</label>
 					</control>

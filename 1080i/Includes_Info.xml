@@ -833,7 +833,7 @@
     </variable>
     <!-- Text color for plot -->
     <variable name="InfoPlotTextColor">
-        <value>White</value>
+        <value>$VAR[LabelTextColor]</value>
     </variable>
     <!-- Sub header for textviewer window for RT Consensus -->
     <variable name="RTConsesusLabel">
@@ -1186,8 +1186,8 @@
                 <font>Details</font>
                 <align>left</align>
                 <aligny>center</aligny>
-                <textcolor>Grey2</textcolor>
-                <selectedcolor>selected</selectedcolor>
+                <textcolor>$VAR[LabelTextColor]</textcolor>
+                <selectedcolor>$VAR[SelectedTextColor]</selectedcolor>
                 <label>[COLOR=$VAR[HighlightColor]]$INFO[ListItem.Label][/COLOR] $INFO[ListItem.Label2]</label>
                 <textoffsetx>8</textoffsetx>
                 <scroll>false</scroll>
@@ -1202,8 +1202,8 @@
                 <font>Details</font>
                 <align>left</align>
                 <aligny>center</aligny>
-                <textcolor>Black</textcolor>
-                <selectedcolor>Black</selectedcolor>
+                <textcolor>$VAR[FocusedTextColor]</textcolor>
+                <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
                 <shadowcolor></shadowcolor>
                 <textoffsetx>8</textoffsetx>
                 <label>$INFO[ListItem.Label,, ]$INFO[ListItem.Label2]</label>
@@ -1430,6 +1430,7 @@
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
             <orientation>horizontal</orientation>
 			<visible>Container(50).IsUpdating | Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0) | Integer.IsGreater(Container(50).NumItems,0)</visible>
+			<animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating | !Integer.IsGreater(Container(90050).NumItems,0) | Container(90050).IsUpdating">Conditional</animation>
             <!-- select online tmdb search or local search -->
             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
             <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
@@ -1495,6 +1496,7 @@
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
             <orientation>horizontal</orientation>
 			<visible>Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0)</visible>
+			<animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container(90050).NumItems,0) | Container(90050).IsUpdating">Conditional</animation>
             <!-- select online tmdb search or local search -->
             <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
             <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>

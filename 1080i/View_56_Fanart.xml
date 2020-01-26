@@ -209,7 +209,7 @@
 									<width>300</width>
 									<height>70</height>
 									<font>font24_title</font>
-									<textcolor>White2</textcolor>
+									<textcolor>$VAR[LabelTextColor]</textcolor>
 									<label>$LOCALIZE[31973] $INFO[ListItem.Season,,.]$INFO[ListItem.Episode]</label>
 								</control>
 								<control type="image" description="Watched Overlay">
@@ -275,11 +275,11 @@
 							<posy>72</posy>
 							<width>1360</width>
 							<height>60</height>
-							<textcolor>White2</textcolor>
+							<textcolor>$VAR[LabelTextColor]</textcolor>
 							<shadowcolor>Black</shadowcolor>
 							<font>InfoTitle</font>
 							<scroll>false</scroll>
-							<label>$INFO[ListItem.Label]</label>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
 						<control type="label" description="Details">
 							<posy>135</posy>
@@ -311,7 +311,7 @@
 							<width>1500</width>
 							<height>85</height>
 							<align>left</align>
-							<textcolor>Black</textcolor>
+							<textcolor>$VAR[FocusedTextColor]</textcolor>
 							<shadowcolor></shadowcolor>
 							<label>$VAR[Plots]</label>
 						</control>
@@ -334,6 +334,7 @@
 								<orientation>horizontal</orientation>
 								<align>left</align>
 								<include content="MediaFlagItems">
+								    <param name="diffuse">$VAR[LabelTextColor]</param>
 								</include>
 							</control>
 						</control>
@@ -351,7 +352,7 @@
 					<texturesliderbar></texturesliderbar>
 					<texturesliderbarfocus></texturesliderbarfocus>
 					<textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-					<textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+					<textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 					<showonepage>true</showonepage>
 					<orientation>horizontal</orientation>
 					<onup>56</onup>

@@ -15,6 +15,7 @@
 				<width>412</width>
 				<height>980</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<control type="image" description="2/2 Right Menu">
 				<visible>!Control.IsVisible(9001)</visible>
@@ -23,6 +24,7 @@
 				<width>1419</width>
 				<height>980</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<!-- 9000 Left panel -->
 			<control type="list" id="9000">
@@ -60,7 +62,7 @@
 						<posx>10</posx>
 						<width>301</width>
 						<height>60</height>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -505,16 +507,110 @@
 				<control type="grouplist" id="9107">
 					<visible>Container(9000).HasFocus(07)</visible>
 					<onright>500</onright>
-                    <include>SettingsListCommons</include>
+                    <posx>495</posx>
+                    <posy>120</posy>
+                    <width>1350</width>
+                    <height>860</height>
+                    <onleft>9000</onleft>
+                    <scrolltime>280</scrolltime>
 					<onup>9107</onup>
 					<ondown>9107</ondown>
+					<control type="button" id="91070">
+					    <width>1350</width>
+						<height>60</height>
+						<texturenofocus />
+						<textoffsetx>30</textoffsetx>
+			            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[571])</onclick>
+			            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=SKINDEFAULT)||Skin.SetString(HighlightColorStr,None)||Skin.SetString(LabelTextColorStr,None)||Skin.SetString(FocusedTextColorStr,None)||Skin.SetString(SelectedTextColorStr,None))</onclick>
+			            <onclick>SetProperty(Dialog.2.Label,Blue)</onclick>
+			            <onclick>SetProperty(Dialog.2.BuiltIn,RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Blue)||Skin.SetString(HighlightColorStr,None)||Skin.SetString(LabelTextColorStr,None)||Skin.SetString(FocusedTextColorStr,None)||Skin.SetString(SelectedTextColorStr,None))</onclick>
+			            <onclick>SetProperty(Dialog.3.Label,Green)</onclick>
+			            <onclick>SetProperty(Dialog.3.BuiltIn,RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=Green)||Skin.SetString(HighlightColorStr,None)||Skin.SetString(LabelTextColorStr,None)||Skin.SetString(FocusedTextColorStr,None)||Skin.SetString(SelectedTextColorStr,None))</onclick>
+			            <onclick>SetProperty(Dialog.4.Label,White)</onclick>
+			            <onclick>SetProperty(Dialog.4.BuiltIn,RunScript(script.embuary.helper,action=setkodisetting,setting=lookandfeel.skincolors,value=White)||Skin.SetString(HighlightColorStr,None)||Skin.SetString(LabelTextColorStr,None)||Skin.SetString(FocusedTextColorStr,None)||Skin.SetString(SelectedTextColorStr,None))</onclick>
+			            <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[15111])</onclick>
+			            <label>$LOCALIZE[32210]</label>
+			            <label2>$VAR[SkinColorTheme]</label2>
+		            </control>
                     <control type="radiobutton" id="91071">
 						<label>$LOCALIZE[32205]</label>
 						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32205])</onclick>
 						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=HighlightColorStr)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=HighlightColorStr,palette=rainbow)</onclick>
 						<include content="ColorButton">
 							<param name="ColorString">$VAR[HighlightColor]</param>
+						</include>
+					</control>
+					<control type="radiobutton" id="91072">
+						<label>$LOCALIZE[32212]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32212])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=LabelTextColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[LabelTextColor]</param>
+						</include>
+					</control>					
+					<control type="radiobutton" id="91073">
+						<label>$LOCALIZE[32213]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32213])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=FocusedTextColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[FocusedTextColor]</param>
+						</include>
+					</control>					
+					<control type="radiobutton" id="91074">
+						<label>$LOCALIZE[32214]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32214])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=SelectedTextColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[SelectedTextColor]</param>
+						</include>
+					</control>
+                    <control type="radiobutton" id="91075">
+						<label>$LOCALIZE[32206]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32206])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=GlowBarsColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[GlowBarsColor]</param>
+						</include>
+					</control>
+                    <control type="radiobutton" id="91076">
+						<label>$LOCALIZE[32207]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32207])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=MenuBarColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[MenuBarColor]</param>
+						</include>
+					</control>
+                    <control type="radiobutton" id="91077">
+						<label>$LOCALIZE[32208]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32208])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=VertMenuBladeColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[VertMenuBladeColor]</param>
+						</include>
+					</control>					
+					<control type="radiobutton" id="91078">
+						<label>$LOCALIZE[32209]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32209])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=TopBarColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[TopBarColor]</param>
+						</include>
+					</control>
+                    <control type="radiobutton" id="91079">
+						<label>$LOCALIZE[32211]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32211])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=DialogBGColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[DialogBGColor]</param>
 						</include>
 					</control>					
 				</control>

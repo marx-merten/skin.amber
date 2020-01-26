@@ -14,6 +14,7 @@
                 <width>372</width>
                 <height>980</height>
                 <texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
             </control>
             <control type="image">
                 <left>442</left>
@@ -21,6 +22,7 @@
                 <width>1439</width>
                 <height>980</height>
                 <texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
             </control>
             <control type="label">
                 <posx>87</posx>
@@ -132,7 +134,7 @@
                 <texturesliderbar></texturesliderbar>
                 <texturesliderbarfocus></texturesliderbarfocus>
                 <textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
-                <textureslidernibfocus border="18">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+                <textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
                 <showonepage>false</showonepage>
                 <orientation>vertical</orientation>
                 <onleft>5</onleft>

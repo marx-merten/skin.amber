@@ -8,6 +8,7 @@
 			<control type="image" description="BG">
 				<include>Panel_Size</include>
 				<texture>dialogs/AddonSettingsBG.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<control type="grouplist" id="3" description="Left side">
 				<posx>64</posx>

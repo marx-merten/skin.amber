@@ -19,6 +19,7 @@
 					<width>700</width>
 					<height>1040</height>
 					<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+					<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 				</control>
 				
 				<control type="group">
@@ -74,6 +75,7 @@
 	    			<width>736</width>
 		    		<height>430</height>
 					<texture border="0,40,0,40">dialogs/ContextMenu.png</texture>
+					<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			    </control>
 			    <control type="label" description="Heading">
     				<posy>24</posy>
@@ -164,7 +166,7 @@
 								<info>ListItem.Label</info>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>Black</textcolor>
+								<textcolor>$VAR[FocusedTextColor]</textcolor>
 								<shadowcolor></shadowcolor>
 							</control>
 							<control type="label">
@@ -174,7 +176,7 @@
 								<info>ListItem.Label2</info>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>Black</textcolor>
+								<textcolor>$VAR[FocusedTextColor]</textcolor>
 								<shadowcolor></shadowcolor>
 							</control>
 						</focusedlayout>
@@ -199,7 +201,7 @@
 								<info>ListItem.Label</info>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>Black</textcolor>
+								<textcolor>$VAR[FocusedTextColor]</textcolor>
 								<shadowcolor></shadowcolor>
 							</control>
 							<control type="label">
@@ -209,7 +211,7 @@
 								<info>ListItem.Label2</info>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>Black</textcolor>
+								<textcolor>$VAR[FocusedTextColor]</textcolor>
 								<shadowcolor></shadowcolor>
 							</control>
 						</focusedlayout>

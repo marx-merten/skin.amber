@@ -61,8 +61,8 @@
 				    <height>$PARAM[itemheight]</height>
 				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
 					<label>$VAR[MediaListLabel]</label>
@@ -75,8 +75,8 @@
 				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
 					<label>$VAR[MediaListLabel2]</label>
@@ -162,8 +162,8 @@
 				    <width>600</width>
 				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
 					<label>$VAR[MediaListLabel]</label>
@@ -175,8 +175,8 @@
 				    <width>530</width>
 				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
                     <font>$PARAM[ListLabelFont]</font>
 					<label>$VAR[MediaListLabel]</label>
@@ -190,8 +190,8 @@
 				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
-					<textcolor>Black</textcolor>
-					<selectedcolor>Black</selectedcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
+					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
 					<align>right</align>
 					<label>$VAR[MediaListLabel2]</label>
@@ -258,7 +258,7 @@
 		        <height>40</height>
 		        <width>860</width>
 		        <font>font16</font>
-		        <textcolor>Black</textcolor>
+		        <textcolor>$VAR[FocusedTextColor]</textcolor>
 		        <shadowcolor></shadowcolor>
 		        <scroll>false</scroll>
 		        <aligny>center</aligny>
@@ -295,7 +295,7 @@
 		        <font>ListDetails</font>
 		        <aligny>center</aligny>
 		        <align>left</align>
-		        <textcolor>Black</textcolor>
+		        <textcolor>$VAR[FocusedTextColor]</textcolor>
 		        <shadowcolor></shadowcolor>
 		        <label>$VAR[panelsubheading]</label>
 	        </control>

@@ -24,6 +24,7 @@
 					<width>504</width>
 					<height>54</height>
 					<texture border="48,24,48,0">dialogs/BusyBG.png</texture>
+					<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 				</control>
 				<control type="label" id="1" description="Progress label">
 					<posx>708</posx>

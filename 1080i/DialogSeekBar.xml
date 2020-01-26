@@ -87,7 +87,7 @@
 					<height>18</height>
 					<texturesliderbar>OSD/seekslider.png</texturesliderbar>
 					<textureslidernib>OSD/ScrollbarNibNF.png</textureslidernib>
-					<textureslidernibfocus>OSD/ScrollbarNibFO.png</textureslidernibfocus>
+					<textureslidernibfocus colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 					<visible>VideoPlayer.Content(livetv) + Player.SeekEnabled</visible>
 				</control>                
                 
@@ -121,7 +121,7 @@
 					<height>18</height>
 					<texturesliderbar>OSD/seekslider.png</texturesliderbar>
 					<textureslidernib>OSD/ScrollbarNibNF.png</textureslidernib>
-					<textureslidernibfocus>OSD/ScrollbarNibFO.png</textureslidernibfocus>
+					<textureslidernibfocus colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
 					<visible>!VideoPlayer.Content(livetv)</visible>
 				</control>
 				<control type="label" description="Progress time label">
@@ -153,7 +153,7 @@
 					<width>400</width>
 					<align>left</align>
 					<font>Details</font>
-                    <label>[COLOR-$VAR[HighlightColor]]$LOCALIZE[32039]: [/COLOR] $INFO[PVR.TimeshiftCur]$INFO[PVR.TimeshiftOffset, (-,)]</label>
+                    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[32039]: [/COLOR] $INFO[PVR.TimeshiftCur]$INFO[PVR.TimeshiftOffset, (-,)]</label>
 					<visible>VideoPlayer.Content(livetv) + !Player.ChannelPreviewActive + Pvr.IsTimeShift</visible>
 				</control>                
 				<control type="label" description="Chapter Info with Player info">

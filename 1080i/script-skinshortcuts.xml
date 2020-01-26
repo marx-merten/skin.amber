@@ -17,6 +17,7 @@
 				<width>412</width>
 				<height>980</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<control type="image" description="2/2 Right Menu">
 				<left>462</left>
@@ -24,6 +25,7 @@
 				<width>1419</width>
 				<height>980</height>
 				<texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<!-- Left Content -->
 			<control type="label">
@@ -73,7 +75,7 @@
 						<posx>10</posx>
 						<width>301</width>
 						<height>60</height>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
                         <font>ListDetails</font>
 						<label>$VAR[ShortcutsDisabled]$INFO[ListItem.Label]</label>
@@ -158,7 +160,7 @@
 				</control>
 				<control type="label">
 					<label>$VAR[SkinShortcutLabelVar]</label>
-					<textcolor>Black</textcolor>
+					<textcolor>$VAR[FocusedTextColor]</textcolor>
 				</control>
 			</control>
 

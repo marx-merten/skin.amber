@@ -17,6 +17,7 @@
 				<width>1271</width>
 				<height>832</height>
 				<texture border="45">dialogs/DialogBG.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
 			</control>
 			<control type="label" description="Title">
 				<posx>252</posx>
@@ -78,7 +79,7 @@
 					<control type="label">
 						<height>60</height>
 						<textoffsetx>96</textoffsetx>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -86,7 +87,7 @@
 						<top>50</top>
 						<height>30</height>
 						<textoffsetx>96</textoffsetx>
-						<textcolor>Black</textcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
 						<font>font22</font>
 						<label>$INFO[ListItem.Label2]</label>
@@ -130,9 +131,9 @@
 				<radioheight>80</radioheight>
 				<textoffsetx>0</textoffsetx>
 				<texturenofocus></texturenofocus>
-				<textureradioonfocus colordiffuse="Black">ShutdownNF.png</textureradioonfocus>
+				<textureradioonfocus colordiffuse="$VAR[FocusedTextColor]">ShutdownNF.png</textureradioonfocus>
 				<textureradioonnofocus>ShutdownNF.png</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="Black">ShutdownNF.png</textureradioofffocus>
+				<textureradioofffocus colordiffuse="$VAR[FocusedTextColor]">ShutdownNF.png</textureradioofffocus>
 				<textureradiooffnofocus>ShutdownNF.png</textureradiooffnofocus>
 				<onclick>ActivateWindow(shutdownmenu)</onclick>
 				<radioposx>24</radioposx>4
