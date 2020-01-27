@@ -1,3 +1,6 @@
+3.2.41 (27-01-2020)
+- Allow set tint of shelves background
+- Allow set all tints to the same color
 3.2.40 (26-01-2020)
 - Hotfix for dialog background color
 3.2.39 (26-01-2020)

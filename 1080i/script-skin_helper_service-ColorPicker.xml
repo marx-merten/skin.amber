@@ -75,9 +75,9 @@
 		    <control type="grouplist">
 			    <orientation>horizontal</orientation>
 			    <itemgap>20</itemgap>
-			    <left>145</left>
+			    <left>10</left>
 			    <top>970</top>
-			    <width>1420</width>
+			    <width>1520</width>
 			    <!-- color preview-->
 			    <control type="image">
 				    <width>80</width>
@@ -133,7 +133,7 @@
 					    <top>0</top>
 					    <left>110</left>
 					    <onup>3011</onup>
-					    <ondown>3011</ondown>
+					    <ondown>3029</ondown>
 					    <width>150</width>
 				    </control>
 				    <!-- opacity percentage -->
@@ -147,6 +147,21 @@
 					    <label>$INFO[Control.Getlabel(3015)]</label>
 					    <font>ListDetails</font>
 				    </control>
+			    </control>
+				<control type="button" id="3029">
+				    <width>240</width>
+				    <height>60</height>
+				    <onup>3110</onup>
+				    <onleft>3015</onleft>
+				    <label>$LOCALIZE[32216]</label>
+				    <font>ListDetails</font>
+					<onclick>Skin.SetString(GlowBarsColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>Skin.SetString(MenuBarColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>Skin.SetString(VertMenuBladeColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>Skin.SetString(TopBarColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>Skin.SetString(DialogBGColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>Skin.SetString(WidgetBGColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>SendClick(3012)</onclick>
 			    </control>
 		    </control>		
         </control>

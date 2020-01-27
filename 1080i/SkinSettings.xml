@@ -613,6 +613,15 @@
 							<param name="ColorString">$VAR[DialogBGColor]</param>
 						</include>
 					</control>					
+					<control type="radiobutton" id="910710">
+						<label>$LOCALIZE[32215]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32215])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=WidgetBGColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[WidgetBGColor]</param>
+						</include>
+					</control>					
 				</control>
 				<!-- 9000 8 Search -->
 				<control type="panel" id="9108">

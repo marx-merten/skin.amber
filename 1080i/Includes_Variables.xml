@@ -1075,6 +1075,11 @@
 		<value>SelectedFocused</value>
 	</variable>
 	
+	<variable name="WidgetBGColor">
+		<value condition="!String.IsEmpty(Skin.String(WidgetBGColorStr)) + !String.IsEqual(Skin.String(WidgetBGColorStr),None)">$INFO[Skin.String(WidgetBGColorStr)]</value>
+		<value>ffffffff</value>
+	</variable>
+	
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
 
     <expression name="56_FanartViewGallery">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Gallery)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Gallery)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Gallery)]</expression>
