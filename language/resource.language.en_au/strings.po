@@ -2466,3 +2466,7 @@ msgstr ""
 msgctxt "#32216"
 msgid "Use for All Tints"
 msgstr ""
+
+msgctxt "#32217"
+msgid "Keep Lists Focus Centered"
+msgstr ""

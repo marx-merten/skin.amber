@@ -1,3 +1,5 @@
+3.2.42 (28-01-2020)
+- Add option to keep lists focused centered
 3.2.41 (27-01-2020)
 - Allow set tint of shelves background
 - Allow set all tints to the same color

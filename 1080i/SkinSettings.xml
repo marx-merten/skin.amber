@@ -145,6 +145,11 @@
 							<param name="skinsetting" value="Show.MoreItems.List"/>
 						</include>
 						<include content="YesNoSettingItem">
+							<param name="itemid" value="13"/>
+							<param name="itemlabel" value="$LOCALIZE[32217]"/>
+							<param name="skinsetting" value="ListCenterFocus"/>
+						</include>
+						<include content="YesNoSettingItem">
 							<param name="itemid" value="5"/>
 							<param name="itemlabel" value="$LOCALIZE[32122]"/>
 							<param name="skinsetting" value="ShowABinContextMenu"/>

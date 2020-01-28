@@ -2579,34 +2579,42 @@
 	<include name="DefaultViews">
         <views>50,51,52,53,54,55,56,501</views>
 		<defaultcontrol>50</defaultcontrol>
+		<onload>SetFocus(50)</onload>
     </include>
     <include name="TallListDefaultView">
         <views>501,50,51,52,54,53,55,56</views>
 		<defaultcontrol>501</defaultcontrol>
+		<onload>SetFocus(501)</onload>
     </include>
 	<include name="LowListDefaultView">
         <views>54,50,51,52,53,55,56,501</views>
 		<defaultcontrol>54</defaultcontrol>
+		<onload>SetFocus(54)</onload>
     </include>
 	<include name="BigListDefaultView">
         <views>52,50,51,53,54,55,56,501</views>
 		<defaultcontrol>52</defaultcontrol>
+		<onload>SetFocus(52)</onload>
     </include>
 	<include name="PanelDefaultView">
         <views>51,50,52,53,54,55,56,501</views>
 		<defaultcontrol>51</defaultcontrol>
+		<onload>SetFocus(51)</onload>
     </include>
 	<include name="BigPanelDefaultView">
         <views>55,50,51,52,53,54,56,501</views>
 		<defaultcontrol>55</defaultcontrol>
+		<onload>SetFocus(55)</onload>
     </include>
 	<include name="IconsDefaultView">
         <views>53,50,51,52,54,55,56,501</views>
 		<defaultcontrol>53</defaultcontrol>
+		<onload>SetFocus(53)</onload>
     </include>
 	<include name="FanartDefaultView">
         <views>56,50,51,52,53,54,55,501</views>
 		<defaultcontrol>56</defaultcontrol>
+		<onload>SetFocus(56)</onload>
     </include>
 
     <include name="ColorButton">
