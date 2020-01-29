@@ -48,7 +48,7 @@
             <include>Dimensions_Fullscreen</include>
             <fadetime>400</fadetime>
             <aspectratio>scale</aspectratio>
-            <texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+            <texture background="true">$VAR[MusicNonASFanart]</texture>
             <animation effect="fade" start="0" end="80" time="300">Visible</animation>
             <animation effect="fade" start="80" end="0" time="200">Hidden</animation>
             <animation type="Conditional" condition="Visualisation.Enabled">
