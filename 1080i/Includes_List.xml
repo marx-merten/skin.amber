@@ -7,6 +7,12 @@
 		<focusposition>4</focusposition>
 		<movement>3</movement>
 	</include>
+	
+	<include name="ListCenterFocusParamsLowList">
+	    <defaultcontrol always="true">0</defaultcontrol>
+		<focusposition>2</focusposition>
+		<movement>2</movement>
+	</include>
 
     <!-- List layout for all List views except BigList -->
 	<include name="List_Layout">
