@@ -65,7 +65,7 @@
             <height>400</height>
             <texture  background="true">$INFO[Player.Art(artist.clearlogo)]</texture>
 			<aspectratio>keep</aspectratio>
-            <visible>!String.IsEmpty(Player.Art(artist.clearlogo)) + !Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+            <visible>!String.IsEmpty(Player.Art(artist.clearlogo)) + Skin.HasSetting(ShowLogoMusicViz) + !Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
         </control>
         <control type="image">
             <posy>-110</posy>

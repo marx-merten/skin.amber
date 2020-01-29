@@ -306,6 +306,11 @@
 							<param name="skinsetting" value="MusicPlayingFanart"/>
 						</include>
 						<include content="YesNoSettingItem">
+							<param name="itemid" value="13"/>
+							<param name="itemlabel" value="$LOCALIZE[32218]"/>
+							<param name="skinsetting" value="ShowLogoMusicViz"/>
+						</include>
+						<include content="YesNoSettingItem">
 							<param name="itemid" value="6"/>
 							<param name="itemlabel" value="$LOCALIZE[31949]"/>
 							<param name="skinsetting" value="SkinHelper.EnableExtraFanart"/>

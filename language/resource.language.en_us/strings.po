@@ -2470,3 +2470,7 @@ msgstr ""
 msgctxt "#32217"
 msgid "Keep Lists Focus Centered"
 msgstr ""
+
+msgctxt "#32218"
+msgid "Show Artist Logo In Music Visualization"
+msgstr ""
