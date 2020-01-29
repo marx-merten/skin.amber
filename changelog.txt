@@ -1,3 +1,6 @@
+3.2.43 (29-01-2020)
+- Increase favourite addons to 25
+- Make favourites shelf dynamic
 3.2.42 (28-01-2020)
 - Add option to keep lists focused centered
 3.2.41 (27-01-2020)

@@ -41,9 +41,11 @@
 		        <posx>707</posx>
 				<posy>366</posy>
 				<width>775</width>
-				<height>700</height>
+				<height>600</height>
 				<onup>90101</onup>
 				<ondown>90101</ondown>
+				<onright>9010163</onright>
+				<pagecontrol>9010163</pagecontrol>
 				<scrolltime>280</scrolltime>
 				<itemlayout width="625" height="60">
 				    <control type="image">
@@ -95,7 +97,23 @@
 				<content>
                     <include>SelectFavouriteAddons</include>
 				</content>
-			</control>            
+			</control>
+            <control type="scrollbar" id="9010163">
+				<visible>Control.IsVisible(90101)</visible>
+				<posx>1321</posx>
+				<posy>366</posy>
+				<width>36</width>
+				<height>610</height>
+				<texturesliderbackground></texturesliderbackground>
+				<texturesliderbar></texturesliderbar>
+				<texturesliderbarfocus></texturesliderbarfocus>
+				<textureslidernib border="18">OSD/ScrollbarNibNF.png</textureslidernib>
+				<textureslidernibfocus border="18" colordiffuse="$VAR[HighlightColor]">OSD/ScrollbarNibFO.png</textureslidernibfocus>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<onleft>90101</onleft>
+				<onright>90101</onright>
+			</control>             
 		</control>
 	</controls>
 </window>

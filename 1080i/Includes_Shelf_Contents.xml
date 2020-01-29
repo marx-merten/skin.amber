@@ -339,6 +339,8 @@
         <param name="isPlaylist">false</param>
         <param name="isMusicGenre">false</param>
         <param name="labelvisibility">false</param>
+		<param name="textboxvisibility">false</param>
+		<param name="textboxfont">Shelf_Label</param>
         <param name="aspect">keep</param>
 		<definition>  
 			<itemlayout height="315" width="228" condition="![$PARAM[isYear] | $PARAM[isMusicGenre] | $PARAM[isPlaylist]]">
@@ -353,9 +355,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				
 			</itemlayout>
 			<focusedlayout height="315" width="228" condition="![$PARAM[isYear] | $PARAM[isMusicGenre] | $PARAM[isPlaylist]]">
@@ -370,9 +373,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</focusedlayout>
 			<itemlayout height="315" width="228" condition="$PARAM[isYear]">
@@ -387,9 +391,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</itemlayout>
 			<focusedlayout height="315" width="228" condition="$PARAM[isYear]">
@@ -404,9 +409,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</focusedlayout>
 			<itemlayout height="315" width="228" condition="$PARAM[isMusicGenre]">
@@ -421,9 +427,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</itemlayout>
 			<focusedlayout height="315" width="228" condition="$PARAM[isMusicGenre]">
@@ -438,9 +445,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</focusedlayout>
 			<itemlayout height="315" width="228" condition="$PARAM[isPlaylist]">
@@ -455,9 +463,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</itemlayout>
 			<focusedlayout height="315" width="228" condition="$PARAM[isPlaylist]">
@@ -472,9 +481,10 @@
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
 				    <param name="bordersizeRB">20</param>
-				    <param name="belowtextboxvisibility">!String.IsEqual(ListItem.Icon,DefaultAddonNone.png)</param>
+				    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				    <param name="belowtextboxwidth">204</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>				            
 			</focusedlayout>            
 		</definition>
@@ -484,6 +494,8 @@
 		<param name="id1"/>
         <param name="labelvisibility">false</param>
 		<param name="labelfont">Shelf_Label</param>
+		<param name="textboxvisibility">false</param>
+		<param name="textboxfont">Shelf_Label</param>
 		<definition>  
 			<itemlayout height="315" width="228">
 			    <include content="GenericThumbIconTemplate">
@@ -501,6 +513,9 @@
                     <param name="overlaylabel">[B]$VAR[SeasonEpisodeLabel][/B]</param>
 					<param name="overlaylabelfont">$PARAM[labelfont]</param>
                     <param name="overlaylabelalign">center</param>
+					<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>            
 			</itemlayout>
 			<focusedlayout height="315" width="228">
@@ -519,6 +534,9 @@
                     <param name="overlaylabel">[B]$VAR[SeasonEpisodeLabel][/B]</param>
 					<param name="overlaylabelfont">$PARAM[labelfont]</param>
                     <param name="overlaylabelalign">center</param>
+					<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+				    <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
+					<param name="belowtextboxfont">$PARAM[textboxfont]</param>
 			    </include>                        
 			</focusedlayout>
 		</definition>
