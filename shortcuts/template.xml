@@ -224,6 +224,7 @@
 					<onup condition="$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content1]]">
@@ -314,6 +315,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content2]]">
@@ -405,6 +407,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content3]]">
@@ -497,6 +500,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content4]]">
@@ -590,6 +594,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content5]]">
@@ -679,6 +684,7 @@
 					<onup>SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content6]]">
@@ -768,6 +774,7 @@
 					<onup condition="$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content1]">
@@ -853,6 +860,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content2]">
@@ -939,6 +947,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content3]">
@@ -1026,6 +1035,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content4]">
@@ -1114,6 +1124,7 @@
 					<onup condition="!$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content5]">
@@ -1198,6 +1209,7 @@
 					<onup>SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content6]">
@@ -1287,6 +1299,7 @@
 					<onup condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content1]]">
@@ -1356,6 +1369,7 @@
                     <ondown condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]1)</ondown>
 					<ondown condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$PYTHON[$SKINSHORTCUTS[content2]]">
@@ -1424,6 +1438,7 @@
 					<onup condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content1]">
@@ -1487,6 +1502,7 @@
 					<ondown condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]1)</ondown>
 					<ondown condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
+					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include content="$SKINSHORTCUTS[content2]">
