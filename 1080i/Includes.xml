@@ -1028,7 +1028,7 @@
     <include name="SettingsListCommons">
         <param name="showicon">true</param>
         <param name="listwidth">1350</param>
-        <param name="listheight">860</param>
+        <param name="listheight">840</param>
         <definition>
             <posx>495</posx>
             <posy>120</posy>

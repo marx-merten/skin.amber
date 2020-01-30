@@ -289,6 +289,15 @@
 						<textcolor>$VAR[HighlightColor]</textcolor>
 					</control>
 				</control>
+				<control type="image">
+                    <posy>-50</posy>
+			        <posx>1500</posx>
+                    <width>400</width>
+                    <height>400</height>
+                    <texture  background="true">$VAR[ClearLogo]</texture>
+			        <aspectratio>keep</aspectratio>
+                    <visible>Skin.HasSetting(ShowLogoMediaViews)</visible>
+                </control>
 			</control>
 		</definition>
 	</include>

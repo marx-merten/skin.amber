@@ -337,6 +337,11 @@
 							<onclick>ActivateWindow(1135)</onclick>
 						</item>
 						<include content="YesNoSettingItem">
+							<param name="itemid" value="20"/>
+							<param name="itemlabel" value="$LOCALIZE[32219]"/>
+							<param name="skinsetting" value="ShowLogoMediaViews"/>
+						</include>
+						<include content="YesNoSettingItem">
 							<param name="itemid" value="3"/>
 							<param name="itemlabel" value="$LOCALIZE[20189]"/>
 							<param name="skinsetting" value="AutoScroll"/>
@@ -375,9 +380,9 @@
 							<param name="skinsetting" value="hide.listview"/>
 						</include> -->
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="12"/>
-							<param name="itemlabel" value="$LOCALIZE[31151]"/>
-							<param name="skinsetting" value="hide.panelview"/>
+							<param name="itemid" value="15"/>
+							<param name="itemlabel" value="$LOCALIZE[31154]"/>
+							<param name="skinsetting" value="hide.lowlistview"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="13"/>
@@ -385,14 +390,14 @@
 							<param name="skinsetting" value="hide.biglistview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="14"/>
-							<param name="itemlabel" value="$LOCALIZE[31153]"/>
-							<param name="skinsetting" value="hide.iconsview"/>
+							<param name="itemid" value="18"/>
+							<param name="itemlabel" value="$LOCALIZE[32059]"/>
+							<param name="skinsetting" value="hide.talllistview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="15"/>
-							<param name="itemlabel" value="$LOCALIZE[31154]"/>
-							<param name="skinsetting" value="hide.lowlistview"/>
+							<param name="itemid" value="12"/>
+							<param name="itemlabel" value="$LOCALIZE[31151]"/>
+							<param name="skinsetting" value="hide.panelview"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="16"/>
@@ -400,14 +405,14 @@
 							<param name="skinsetting" value="hide.bigpanelview"/>
 						</include>
 						<include content="YesNoSettingItem">
+							<param name="itemid" value="14"/>
+							<param name="itemlabel" value="$LOCALIZE[31153]"/>
+							<param name="skinsetting" value="hide.iconsview"/>
+						</include>
+						<include content="YesNoSettingItem">
 							<param name="itemid" value="17"/>
 							<param name="itemlabel" value="$LOCALIZE[31156]"/>
 							<param name="skinsetting" value="hide.fanartview"/>
-						</include>
-						<include content="YesNoSettingItem">
-							<param name="itemid" value="18"/>
-							<param name="itemlabel" value="$LOCALIZE[32059]"/>
-							<param name="skinsetting" value="hide.talllistview"/>
 						</include>
 					</content>
 				</control>

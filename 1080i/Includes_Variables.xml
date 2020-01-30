@@ -264,6 +264,14 @@
         <value>DefaultBanner.png</value>
     </variable>
 
+    <variable name="ClearLogo">
+		<value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(artist.clearlogo))">$INFO[ListItem.Art(artist.clearlogo)]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(clearlogo))">$INFO[ListItem.Property(clearlogo)]</value>
+		<value></value>
+	</variable>
+
     <variable name="Poster" description="Poster">
         <value condition="ListItem.IsParentFolder">DefaultPosterBack.png</value>
         <value condition="ListItem.IsFolder + String.IsEmpty(ListItem.Thumb) + String.IsEmpty(ListItem.Icon)">DefaultFolder.png</value>

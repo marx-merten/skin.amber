@@ -339,7 +339,7 @@
         <param name="isPlaylist">false</param>
         <param name="isMusicGenre">false</param>
         <param name="labelvisibility">false</param>
-		<param name="textboxvisibility">false</param>
+		<param name="textboxvisibility">true</param>
 		<param name="textboxfont">Shelf_Label</param>
         <param name="aspect">keep</param>
 		<definition>  

@@ -1397,7 +1397,7 @@
             <control type="group">
 			    <top>44</top>
 				<height>410</height>
-                <visible>Container(50).IsUpdating)  | Container(90050).IsUpdating</visible>
+                <visible>Container(50).IsUpdating  | Container(90050).IsUpdating</visible>
                 <include>InfoLoading</include>
             </control>
 			<control type="group">
@@ -1425,7 +1425,7 @@
             <width>1180</width>
             <height>410</height>
             <onup>9000</onup>
-            <onback>9000</onback>
+<!--            <onback>9000</onback> -->
 			<preloaditems>2</preloaditems>
 			<scrolltime tween="quadratic" easing="out">300</scrolltime>
             <orientation>horizontal</orientation>

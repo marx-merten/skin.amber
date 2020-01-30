@@ -2474,3 +2474,7 @@ msgstr ""
 msgctxt "#32218"
 msgid "Show Artist Logo In Music Visualization"
 msgstr ""
+
+msgctxt "#32219"
+msgid "Show Logo In Media Views"
+msgstr ""

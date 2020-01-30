@@ -194,8 +194,6 @@
         <property name="labelvisibility1">false</property>
 		<property name="labelfont1" tag="property" attribute="name|widgetType" value="people">ListDetailsSmall</property>
 		<property name="labelfont1">Shelf_Label</property>
-		<property name="textboxvisibility1" tag="property" attribute="name|widgetType" value="favourite">true</property>
-        <property name="textboxvisibility1">false</property>
 		<property name="textboxfont1" tag="property" attribute="name|widgetType" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont1">Shelf_Label</property>
         <property name="aspect1" tag="property" attribute="name|widgetType" value="musicvideos">scale</property>
@@ -234,7 +232,6 @@
                         <param name="isPlaylist">$PYTHON[$SKINSHORTCUTS[isPlaylist1]]</param>
                         <param name="isMusicGenre">$PYTHON[$SKINSHORTCUTS[isMusicGenre1]]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont1]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
@@ -285,8 +282,6 @@
         <property name="labelvisibility2">false</property>
 		<property name="labelfont2" tag="property" attribute="name|widgetType.2" value="people">ListDetailsSmall</property>
 		<property name="labelfont2">Shelf_Label</property>
-		<property name="textboxvisibility2" tag="property" attribute="name|widgetType.2" value="favourite">true</property>
-        <property name="textboxvisibility2">false</property>
 		<property name="textboxfont2" tag="property" attribute="name|widgetType.2" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont2">Shelf_Label</property>
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="musicvideos">scale</property>
@@ -329,7 +324,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont2]</param>
 					</include>
                     <content>
@@ -379,8 +373,6 @@
         <property name="labelvisibility3">false</property>
 		<property name="labelfont3" tag="property" attribute="name|widgetType.3" value="people">ListDetailsSmall</property>
 		<property name="labelfont3">Shelf_Label</property>
-		<property name="textboxvisibility3" tag="property" attribute="name|widgetType.3" value="favourite">true</property>
-        <property name="textboxvisibility3">false</property>
 		<property name="textboxfont3" tag="property" attribute="name|widgetType.3" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont3">Shelf_Label</property>
         <property name="aspect3" tag="property" attribute="name|widgetType.3" value="musicvideos">scale</property>
@@ -423,7 +415,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility3]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont3]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont3]</param>
 					</include>
                     <content>
@@ -474,8 +465,6 @@
         <property name="labelvisibility4">false</property>
 		<property name="labelfont4" tag="property" attribute="name|widgetType.4" value="people">ListDetailsSmall</property>
 		<property name="labelfont4">Shelf_Label</property>
-		<property name="textboxvisibility4" tag="property" attribute="name|widgetType.4" value="favourite">true</property>
-        <property name="textboxvisibility4">false</property>
 		<property name="textboxfont4" tag="property" attribute="name|widgetType.4" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont4">Shelf_Label</property>
         <property name="aspect4" tag="property" attribute="name|widgetType.4" value="musicvideos">scale</property>
@@ -518,7 +507,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility4]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect4]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont4]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility4]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont4]</param>
 					</include>
                     <content>
@@ -570,8 +558,6 @@
         <property name="labelvisibility5">false</property>
 		<property name="labelfont5" tag="property" attribute="name|widgetType.5" value="people">ListDetailsSmall</property>
 		<property name="labelfont5">Shelf_Label</property>
-		<property name="textboxvisibility5" tag="property" attribute="name|widgetType.5" value="favourite">true</property>
-        <property name="textboxvisibility5">false</property>
 		<property name="textboxfont5" tag="property" attribute="name|widgetType.5" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont5">Shelf_Label</property>
         <property name="aspect5" tag="property" attribute="name|widgetType.5" value="musicvideos">scale</property>
@@ -614,7 +600,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility5]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect5]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont5]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility5]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont5]</param>
 					</include>
                     <content>
@@ -664,8 +649,6 @@
         <property name="labelvisibility6">false</property>
 		<property name="labelfont6" tag="property" attribute="name|widgetType.6" value="people">ListDetailsSmall</property>
 		<property name="labelfont6">Shelf_Label</property>
-        <property name="textboxvisibility6" tag="property" attribute="name|widgetType.6" value="favourite">true</property>
-        <property name="textboxvisibility6">false</property>
 		<property name="textboxfont6" tag="property" attribute="name|widgetType.6" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont6">Shelf_Label</property>		
         <property name="aspect6" tag="property" attribute="name|widgetType.6" value="musicvideos">scale</property>
@@ -706,7 +689,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility6]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect6]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont6]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility6]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont6]</param>
 					</include>
                     <content>
@@ -1281,8 +1263,6 @@
         <property name="labelvisibility1">false</property>
 		<property name="labelfont1" tag="property" attribute="name|widgetType" value="people">ListDetailsSmall</property>
 		<property name="labelfont1">Shelf_Label</property>
-		<property name="textboxvisibility1" tag="property" attribute="name|widgetType" value="favourite">true</property>
-        <property name="textboxvisibility1">false</property>
 		<property name="textboxfont1" tag="property" attribute="name|widgetType" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont1">Shelf_Label</property>
         <property name="aspect1" tag="property" attribute="name|widgetType" value="musicvideos">scale</property>
@@ -1317,7 +1297,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont1]</param>
 					</include>
                     <content>
@@ -1352,8 +1331,6 @@
         <property name="labelvisibility2">false</property>
 		<property name="labelfont2" tag="property" attribute="name|widgetType.2" value="people">ListDetailsSmall</property>
 		<property name="labelfont2">Shelf_Label</property>
-        <property name="textboxvisibility2" tag="property" attribute="name|widgetType.2" value="favourite">true</property>
-        <property name="textboxvisibility2">false</property>
 		<property name="textboxfont2" tag="property" attribute="name|widgetType.2" value="favourite">ListDetailsSmall</property>
 		<property name="textboxfont2">Shelf_Label</property>		
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="musicvideos">scale</property>
@@ -1389,7 +1366,6 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
-						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont2]</param>
 					</include>
                     <content>
