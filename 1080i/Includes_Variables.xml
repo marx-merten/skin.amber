@@ -272,6 +272,32 @@
 		<value></value>
 	</variable>
 
+    <variable name="HomeClearLogo">
+        <!-- Widget Item Logo -->
+		<value condition="ControlGroup(700).HasFocus + !String.IsEmpty(Container(300).ListItem.Property(WidgetType)) + String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + 
+		                  String.IsEmpty(ListItem.Property(nextairedtvshowtitle)) + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(Container(300).ListItem.Property(WidgetType)) + String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + 
+		                  String.IsEmpty(ListItem.Property(nextairedtvshowtitle)) + !String.IsEmpty(ListItem.TVShowTitle) + !String.IsEmpty(ListItem.Art(clearlogo))+ String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))">$INFO[ListItem.Art(clearlogo)]</value>						  
+        <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(Container(300).ListItem.Property(WidgetType)) + String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + 
+		                  String.IsEmpty(ListItem.Property(nextairedtvshowtitle)) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))">$INFO[Container.ListItem.Art(clearlogo)]</value>
+        <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Property(nextairedtvshowtitle)) + !String.IsEmpty(ListItem.Property(nextairedclearlogo)) + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))">$INFO[ListItem.Property(nextairedclearlogo)]</value>
+        <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + !String.IsEmpty(ListItem.Property(recommendedclearlogo)) + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))">$INFO[ListItem.Property(recommendedclearlogo)]</value>
+		<value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Art(artist.clearlogo)) + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))">$INFO[ListItem.Art(artist.clearlogo)]</value>
+		<value condition="ControlGroup(700).HasFocus + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart))"></value>
+		<!-- Main Menu Background Logo -->
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Movie.Fanart) + !String.IsEmpty(Container(12341).ListItem.Art(tvshow.clearlogo))">$INFO[Container(12341).ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Movie.Fanart) + !String.IsEmpty(Container(12341).ListItem.Art(clearlogo))">$INFO[Container(12341).ListItem.Art(clearlogo)]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(background),TV.Fanart) + !String.IsEmpty(Container(12342).ListItem.Art(tvshow.clearlogo))">$INFO[Container(12342).ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),TV.Fanart) + !String.IsEmpty(Container(12342).ListItem.Art(clearlogo))">$INFO[Container(12342).ListItem.Art(clearlogo)]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(background),Video.Fanart) + !String.IsEmpty(Container(12343).ListItem.Art(tvshow.clearlogo))">$INFO[Container(12343).ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Video.Fanart) + !String.IsEmpty(Container(12343).ListItem.Art(clearlogo))">$INFO[Container(12343).ListItem.Art(clearlogo)]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(background),Global.Fanart) + !String.IsEmpty(Container(12344).ListItem.Art(tvshow.clearlogo))">$INFO[Container(12344).ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Global.Fanart) + !String.IsEmpty(Container(12344).ListItem.Art(clearlogo))">$INFO[Container(12344).ListItem.Art(clearlogo)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),Music.Fanart) + !String.IsEmpty(Container(12345).ListItem.Art(clearlogo))">$INFO[Container(12345).ListItem.Art(clearlogo)]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(background),playlistBackground) + !String.IsEmpty(Container(9988).ListItem.Art(tvshow.clearlogo))">$INFO[Container(9988).ListItem.Art(tvshow.clearlogo)]</value>
+		<value condition="String.IsEqual(Container(300).ListItem.Property(background),playlistBackground) + !String.IsEmpty(Container(9988).ListItem.Art(clearlogo))">$INFO[Container(9988).ListItem.Art(clearlogo)]</value>
+    </variable>
+	
     <variable name="Poster" description="Poster">
         <value condition="ListItem.IsParentFolder">DefaultPosterBack.png</value>
         <value condition="ListItem.IsFolder + String.IsEmpty(ListItem.Thumb) + String.IsEmpty(ListItem.Icon)">DefaultFolder.png</value>
@@ -760,15 +786,15 @@
     </variable>
 
     <variable name="FanartTitleVar">
-        <value condition="ControlGroup(700).HasFocus + [!String.IsEmpty(Container(300).ListItem.Property(WidgetType)) + String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + String.IsEmpty(ListItem.Property(nextairedtvshowtitle))] + !String.IsEmpty(ListItem.TVShowTitle) + $EXP[WidgetFanartVisible]">$INFO[ListItem.TVShowTitle]</value>
+        <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Artist) + $EXP[WidgetFanartVisible]">$INFO[ListItem.Artist]</value>
+		<value condition="ControlGroup(700).HasFocus + [!String.IsEmpty(Container(300).ListItem.Property(WidgetType)) + String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + String.IsEmpty(ListItem.Property(nextairedtvshowtitle))] + !String.IsEmpty(ListItem.TVShowTitle) + $EXP[WidgetFanartVisible]">$INFO[ListItem.TVShowTitle]</value>
         <value condition="ControlGroup(700).HasFocus + [!String.IsEmpty(Container(300).ListItem.Property(WidgetType)) + String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + String.IsEmpty(ListItem.Property(nextairedtvshowtitle))] + !String.IsEmpty(Container.ListItem.Art(fanart)) + $EXP[WidgetFanartVisible]">$INFO[Container.ListItem.Title]</value>
         <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Property(nextairedtvshowtitle)) + !String.IsEmpty(ListItem.Property(nextairedfanart)) + $EXP[WidgetFanartVisible]">$INFO[ListItem.Property(nextairedtvshowtitle)]</value>
         <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Property(recommendedtvshowtitle)) + !String.IsEmpty(ListItem.Property(recommendedfanart)) + $EXP[WidgetFanartVisible]">$INFO[ListItem.Property(recommendedtvshowtitle)]</value>
-        
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),Movie.Fanart)">$INFO[Container(12341).ListItem.Title]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),TV.Fanart)">$INFO[Container(12342).ListItem.Title]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),Video.Fanart)">$INFO[Container(12343).ListItem.Title]</value>
-        <value condition="String.IsEqual(Container(300).ListItem.Property(background),Music.Fanart)">$INFO[Container(12345).ListItem.Title]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(background),Music.Fanart)">$INFO[Container(12345).ListItem.Label]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),Global.Fanart)">$INFO[Container(12344).ListItem.Title]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Title]</value>
         <value></value>
@@ -1093,6 +1119,7 @@
 		<value condition="!String.IsEmpty(Skin.String(Default.Background))">$INFO[Skin.String(Default.Background)]</value>
         <value>special://skin/backgrounds/Default.jpg</value>
 	</variable>
+	
 	
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
 

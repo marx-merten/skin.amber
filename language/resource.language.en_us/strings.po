@@ -2478,3 +2478,7 @@ msgstr ""
 msgctxt "#32219"
 msgid "Show Logo In Media Views"
 msgstr ""
+
+msgctxt "#32220"
+msgid "Show Logo In Home Window"
+msgstr ""

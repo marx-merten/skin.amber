@@ -58,11 +58,12 @@
                 <effect type="fade" start="0" end="80" time="0" />
             </animation>
         </control>
+		<!-- Artist Logo -->
 		<control type="image">
             <posy>-80</posy>
 			<posx>1500</posx>
             <width>400</width>
-            <height>400</height>
+            <height>155</height>
             <texture  background="true">$INFO[Player.Art(artist.clearlogo)]</texture>
 			<aspectratio>keep</aspectratio>
             <visible>!String.IsEmpty(Player.Art(artist.clearlogo)) + Skin.HasSetting(ShowLogoMusicViz) + !Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>

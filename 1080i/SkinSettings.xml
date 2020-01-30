@@ -279,6 +279,11 @@
 							<onclick>SetProperty(CustomSelectFanartTimePerImage,True)</onclick>
 							<onclick>ActivateWindow(1121)</onclick>
 						</item>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="14"/>
+							<param name="itemlabel" value="$LOCALIZE[32220]"/>
+							<param name="skinsetting" value="ShowHomeLogo"/>
+						</include>
 						<item id="11" description="Set Default Background">
 							<label>$LOCALIZE[32061]</label>
 							<onclick>SetProperty(CustomSelectDefaultBackground,True)</onclick>

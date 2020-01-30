@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-<!--	<onload condition="System.HasAddon(plugin.video.themoviedb.helper)">RunScript(plugin.video.themoviedb.helper,reset_path)</onload> -->
     <onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onload condition="System.HasAddon(script.skinshortcuts)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|powermenu)</onload>
     <onload condition="System.HasAddon(script.skin.info.service) + String.IsEmpty(Window(home).Property(skininfos_daemon_running))">RunScript(script.skin.info.service)</onload>
@@ -193,6 +192,34 @@
 			<include condition="!Skin.HasSetting(VerticalHome)">Horizontal_Home_Layout</include>
 			<include>Time</include>
             <include condition="[[!Player.Playing + Skin.HasSetting(FanartTitle.InTopBar)] | !Skin.HasSetting(FanartTitle.InTopBar)] + [!Skin.HasSetting(Home_DefaultBG) + Skin.HasSetting(Enable.FanartTitle)]">ShowFanartTitle</include>
+			<!-- Movie/TV Show Logo -->
+			<control type="image">
+                <posy>43</posy>
+			    <posx>1700</posx>
+                <width>200</width>
+                <height>78</height>
+                <texture  background="true">$VAR[HomeClearLogo]</texture>
+			    <aspectratio>keep</aspectratio>
+                <visible>Skin.HasSetting(ShowHomeLogo) + !Skin.HasSetting(VerticalHome)</visible>
+            </control>
+			<control type="image">
+                <posy>110</posy>
+			    <posx>1700</posx>
+                <width>200</width>
+                <height>78</height>
+                <texture  background="true">$VAR[HomeClearLogo]</texture>
+			    <aspectratio>keep</aspectratio>
+                <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + !Skin.HasSetting(FanartTitle.InTopBar)</visible>
+            </control>
+			<control type="image">
+                <posy>70</posy>
+			    <posx>1650</posx>
+                <width>250</width>
+                <height>97</height>
+                <texture  background="true">$VAR[HomeClearLogo]</texture>
+			    <aspectratio>keep</aspectratio>
+                <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + Skin.HasSetting(FanartTitle.InTopBar)</visible>
+            </control>
 			<control type="group">
 				<include condition="System.HasAddon(script.embuary.helper)">PlayListStatsList</include>
 			</control>

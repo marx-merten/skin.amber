@@ -2248,6 +2248,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.1.label),, • ]$INFO[Window(Home).Property(NextAired.1.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.1.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.1.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.1.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.1.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.1.ShortTime)]$INFO[Window(Home).Property(NextAired.1.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.1.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.1.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.1.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.1.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2257,6 +2258,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.2.label),, • ]$INFO[Window(Home).Property(NextAired.2.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.2.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.2.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.2.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.2.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.2.ShortTime)]$INFO[Window(Home).Property(NextAired.2.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.2.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.2.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.2.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.2.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2266,6 +2268,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.3.label),, • ]$INFO[Window(Home).Property(NextAired.3.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.3.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.3.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.3.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.3.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.3.ShortTime)]$INFO[Window(Home).Property(NextAired.3.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.3.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.3.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.3.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.3.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2275,6 +2278,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.4.label),, • ]$INFO[Window(Home).Property(NextAired.4.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.4.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.4.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.4.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.4.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.4.ShortTime)]$INFO[Window(Home).Property(NextAired.2.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.4.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.4.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.4.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.4.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2284,6 +2288,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.5.label),, • ]$INFO[Window(Home).Property(NextAired.5.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.5.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.5.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.5.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.5.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.5.ShortTime)]$INFO[Window(Home).Property(NextAired.5.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.5.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.5.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.5.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.5.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2293,6 +2298,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.6.label),, • ]$INFO[Window(Home).Property(NextAired.6.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.6.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.6.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.6.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.6.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.6.ShortTime)]$INFO[Window(Home).Property(NextAired.6.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.6.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.6.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.6.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.6.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2302,6 +2308,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.7.label),, • ]$INFO[Window(Home).Property(NextAired.7.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.7.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.7.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.7.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.7.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.7.ShortTime)]$INFO[Window(Home).Property(NextAired.7.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.7.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.7.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.7.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.7.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2311,6 +2318,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.8.label),, • ]$INFO[Window(Home).Property(NextAired.8.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.8.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.8.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.8.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.8.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.8.ShortTime)]$INFO[Window(Home).Property(NextAired.8.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.8.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.8.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.8.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.8.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2320,6 +2328,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.9.label),, • ]$INFO[Window(Home).Property(NextAired.9.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.9.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.9.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.9.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.9.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.9.ShortTime)]$INFO[Window(Home).Property(NextAired.9.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.9.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.9.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.9.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.9.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2329,6 +2338,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.10.label),, • ]$INFO[Window(Home).Property(NextAired.10.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.10.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.10.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.10.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.10.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.10.ShortTime)]$INFO[Window(Home).Property(NextAired.10.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.10.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.10.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.10.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.10.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2338,6 +2348,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.11.label),, • ]$INFO[Window(Home).Property(NextAired.11.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.11.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.11.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.11.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.11.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.11.ShortTime)]$INFO[Window(Home).Property(NextAired.11.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.11.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.11.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.11.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.11.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2347,6 +2358,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.12.label),, • ]$INFO[Window(Home).Property(NextAired.12.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.12.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.12.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.12.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.12.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.12.ShortTime)]$INFO[Window(Home).Property(NextAired.12.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.12.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.12.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.12.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.12.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2356,6 +2368,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.13.label),, • ]$INFO[Window(Home).Property(NextAired.13.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.13.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.13.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.13.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.13.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.13.ShortTime)]$INFO[Window(Home).Property(NextAired.13.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.13.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.13.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.13.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.13.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2365,6 +2378,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.14.label),, • ]$INFO[Window(Home).Property(NextAired.14.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.14.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.14.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.14.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.14.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.14.ShortTime)]$INFO[Window(Home).Property(NextAired.14.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.14.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.14.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.14.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.14.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2374,6 +2388,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.15.label),, • ]$INFO[Window(Home).Property(NextAired.15.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.15.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.15.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.15.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.15.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.15.ShortTime)]$INFO[Window(Home).Property(NextAired.15.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.15.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.15.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.15.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.15.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2383,6 +2398,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.16.label),, • ]$INFO[Window(Home).Property(NextAired.16.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.16.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.16.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.16.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.16.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.16.ShortTime)]$INFO[Window(Home).Property(NextAired.16.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.16.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.16.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.16.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.16.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2392,6 +2408,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.17.label),, • ]$INFO[Window(Home).Property(NextAired.17.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.17.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.17.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.17.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.17.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.17.ShortTime)]$INFO[Window(Home).Property(NextAired.17.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.17.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.17.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.17.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.17.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2401,6 +2418,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.18.label),, • ]$INFO[Window(Home).Property(NextAired.18.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.18.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.18.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.18.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.18.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.18.ShortTime)]$INFO[Window(Home).Property(NextAired.18.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.18.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.18.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.18.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.18.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2410,6 +2428,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.19.label),, • ]$INFO[Window(Home).Property(NextAired.19.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.19.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.19.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.19.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.19.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.19.ShortTime)]$INFO[Window(Home).Property(NextAired.19.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.19.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.19.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.19.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.19.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2419,6 +2438,7 @@
 			    <label>[B]$INFO[Window(Home).Property(NextAired.20.label),, • ]$INFO[Window(Home).Property(NextAired.20.NextSeasonNumber),S,E]$INFO[Window(Home).Property(NextAired.20.NextEpisodeNumber)][/B][COLOR=White] • $INFO[Window(Home).Property(NextAired.20.NextTitle),, • ]$INFO[Window(Home).Property(NextAired.20.Runtime),, $LOCALIZE[12391]] $INFO[Window(Home).Property(NextAired.20.NextDate),(,)][/COLOR]</label>
                 <label2>$INFO[Window(Home).Property(NextAired.20.ShortTime)]$INFO[Window(Home).Property(NextAired.20.Network), @ ,]</label2>
                 <property name="nextairedfanart">$INFO[Window(Home).Property(NextAired.20.Art(fanart))]</property>
+				<property name="nextairedclearlogo">$INFO[Window(Home).Property(NextAired.20.Art(clearlogo))]</property>
                 <property name="nextairedtvshowtitle">$INFO[Window(Home).Property(NextAired.20.Label)]</property>
 			    <icon>$INFO[Window(Home).Property(NextAired.20.Art(poster))]</icon>
 			    <onclick>RunAddOn(script.tv.show.next.aired)</onclick>
@@ -2441,6 +2461,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.1.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.1.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.1.File)])</onclick>
@@ -2450,6 +2471,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.2.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.2.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.2.File)])</onclick>
@@ -2459,6 +2481,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.3.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.3.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.3.File)])</onclick>
@@ -2468,6 +2491,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.4.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.4.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.4.File)])</onclick>
@@ -2477,6 +2501,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.5.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.5.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.5.File)])</onclick>
@@ -2486,6 +2511,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.6.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.6.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.6.File)])</onclick>
@@ -2495,6 +2521,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.7.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.7.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.7.File)])</onclick>
@@ -2504,6 +2531,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.8.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.8.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.8.File)])</onclick>
@@ -2513,6 +2541,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.9.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.9.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.9.File)])</onclick>
@@ -2522,6 +2551,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.10.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.10.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.10.File)])</onclick>
@@ -2531,6 +2561,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.11.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.11.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.11.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.11.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.11.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.11.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.11.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.11.File)])</onclick>
@@ -2540,6 +2571,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.12.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.12.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.12.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.12.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.12.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.12.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.12.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.12.File)])</onclick>
@@ -2549,6 +2581,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.13.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.13.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.13.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.13.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.13.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.13.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.13.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.13.File)])</onclick>
@@ -2558,6 +2591,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.14.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.14.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.14.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.14.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.14.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.14.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.14.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.14.File)])</onclick>
@@ -2567,6 +2601,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.15.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.15.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.15.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.15.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.15.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.15.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.15.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.15.File)])</onclick>
@@ -2576,6 +2611,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.16.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.16.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.16.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.16.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.16.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.16.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.16.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.16.File)])</onclick>
@@ -2585,6 +2621,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.17.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.17.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.17.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.17.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.17.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.17.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.17.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.17.File)])</onclick>
@@ -2594,6 +2631,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.18.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.18.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.18.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.18.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.18.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.18.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.18.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.18.File)])</onclick>
@@ -2603,6 +2641,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.19.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.19.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.19.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.19.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.19.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.19.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.19.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.19.File)])</onclick>
@@ -2612,6 +2651,7 @@
 			    <label>[B]$INFO[Window(Home).Property(RecommendedEpisode.20.TVshowTitle),, • ]$INFO[Window(Home).Property(RecommendedEpisode.20.EpisodeNo)][/B][COLOR=White]$INFO[Window(Home).Property(RecommendedEpisode.20.Title), • ]$INFO[Window(Home).Property(RecommendedEpisode.20.Runtime), • , $LOCALIZE[12391]][/COLOR]</label>
                 <label2>[B]$INFO[Window(Home).Property(RecommendedEpisode.20.EpisodeNo)][/B]</label2>
                 <property name="recommendedfanart">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.fanart))]</property>
+				<property name="recommendedclearlogo">$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.clearlogo))]</property>
                 <property name="recommendedtvshowtitle">$INFO[Window(Home).Property(RecommendedEpisode.20.TVshowTitle)]</property>
 			    <icon>$INFO[Window(Home).Property(RecommendedEpisode.20.Art(tvshow.poster))]</icon>
 			    <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.20.File)])</onclick>
