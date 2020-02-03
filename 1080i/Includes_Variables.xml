@@ -211,6 +211,7 @@
 
     <variable name="HomeWidgetLabel">
         <value condition="String.Contains(ListItem.FolderPath,type=person)">[B]$INFO[ListItem.Label][/B]</value>
+		<value condition="String.IsEqual(ListItem.DBType,artist)">$INFO[ListItem.Label,[B],[/B]]</value>
 		<value condition="String.IsEqual(ListItem.DBType,season)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]</value>
         <value condition="String.IsEqual(ListItem.DBType,episode) + !Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Premiered, (,)][COLOR=$VAR[LabelTextColor]]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ][/COLOR]</value>
         <value condition="String.IsEqual(ListItem.DBType,episode) + Skin.HasSetting(Enable.HourMinutes)">$INFO[ListItem.TVShowTitle,[B],[/B]] - $INFO[ListItem.Label,[B],[/B]]$INFO[ListItem.Premiered, (,)][COLOR=$VAR[LabelTextColor]]$VAR[ItemDurationHrMins, • ,]$INFO[ListItem.Rating, • ][/COLOR]</value>
@@ -1112,6 +1113,11 @@
 	<variable name="WidgetBGColor">
 		<value condition="!String.IsEmpty(Skin.String(WidgetBGColorStr)) + !String.IsEqual(Skin.String(WidgetBGColorStr),None)">$INFO[Skin.String(WidgetBGColorStr)]</value>
 		<value>ffffffff</value>
+	</variable>
+	
+	<variable name="ViewsBGColor">
+		<value condition="!String.IsEmpty(Skin.String(ViewsBGColorStr)) + !String.IsEqual(Skin.String(ViewsBGColorStr),None)">$INFO[Skin.String(ViewsBGColorStr)]</value>
+		<value>dfcebe9e</value>
 	</variable>
 	
 	<variable name="MusicNonASFanart">

@@ -86,7 +86,6 @@
 		<param name="label2"></param>
 		<definition>
 			<control type="group">
-			    <!-- Both shelves have items -->
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<top>170</top>
@@ -94,8 +93,8 @@
 					<top>-48</top>
 					<width>1920</width>
 					<height>727</height>
-					<texture border="0,40,0,40">home/OverlayRA2T.png</texture>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
+					<texture border="0,40,0,40">home/OverlayRA2T.png</texture>
 				</control>
 				<control type="label">
 					<top>-54</top>
@@ -195,7 +194,6 @@
 					<label>$VAR[LibraryStats]</label>
 				</control>                
 			</control>
-			<!-- Shelf 1 has items, shelf 2 does not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id2]).NumItems,0)</visible>
 				<top>327</top>
@@ -203,8 +201,8 @@
 					<top>-48</top>
 					<width>1920</width>
 					<height>375</height>
-					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
+					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 				</control>
 				<control type="label">
 					<top>-54</top>
@@ -261,7 +259,6 @@
 					<label>$VAR[LibraryStats]</label>
 				</control>                
 			</control>
-			<!-- Shelf 2 has items, shelf 1 does not -->
 			<control type="group">
 				<visible>!Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0)</visible>
 				<top>327</top>
@@ -269,8 +266,8 @@
 					<top>-48</top>
 					<width>1920</width>
 					<height>375</height>
-					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
+					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 				</control>
 				<control type="label">
 					<top>-54</top>
