@@ -150,6 +150,11 @@
 							<param name="skinsetting" value="ListCenterFocus"/>
 						</include>
 						<include content="YesNoSettingItem">
+							<param name="itemid" value="14"/>
+							<param name="itemlabel" value="$LOCALIZE[32222]"/>
+							<param name="skinsetting" value="ScrollLongLabels"/>
+						</include>
+						<include content="YesNoSettingItem">
 							<param name="itemid" value="5"/>
 							<param name="itemlabel" value="$LOCALIZE[32122]"/>
 							<param name="skinsetting" value="ShowABinContextMenu"/>
@@ -640,6 +645,15 @@
 						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=WidgetBGColorStr,palette=rainbow)</onclick>
 						<include content="ColorButton">
 							<param name="ColorString">$VAR[WidgetBGColor]</param>
+						</include>
+					</control>
+                    <control type="radiobutton" id="910711">
+						<label>$LOCALIZE[32221]</label>
+						<onclick>Skin.SetString(SelectColorLabel,$LOCALIZE[32221])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,skinstring=ViewsBGColorStr,palette=rainbow)</onclick>
+						<include content="ColorButton">
+							<param name="ColorString">$VAR[ViewsBGColor]</param>
 						</include>
 					</control>					
 				</control>

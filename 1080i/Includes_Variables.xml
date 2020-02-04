@@ -1128,6 +1128,11 @@
         <value>special://skin/backgrounds/Default.jpg</value>
 	</variable>
 	
+	<variable name="LongLabelScroll">
+	    <value condition="Skin.HasSetting(ScrollLongLabels)">true</value>
+		<value>false</value>
+	</variable>
+	
 	
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
 

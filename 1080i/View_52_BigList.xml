@@ -47,7 +47,7 @@
 				    <itemlayout height="104" width="1020" condition="Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
     					<include content="52_layout">
 	    					<param name="left">90</param>
-		    				<param name="width">1100</param>
+		    				<param name="width">880</param>
 			    			<param name="imgwidth">60</param>
 				    		<param name="isfocused">false</param>
 					    </include>
@@ -55,7 +55,7 @@
 				    <focusedlayout height="104" width="1020" condition="Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
 					    <include content="52_layout">
 						    <param name="left">90</param>
-						    <param name="width">1100</param>
+						    <param name="width">880</param>
 						    <param name="imgwidth">60</param>
 						    <param name="isfocused">true</param>
 					    </include>

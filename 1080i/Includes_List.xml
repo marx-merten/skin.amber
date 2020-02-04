@@ -35,7 +35,7 @@
 				    <posy>0</posy>
 				    <width>900</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <label>$VAR[MediaListLabel]</label>
@@ -45,7 +45,7 @@
 				    <posy>0</posy>
 				    <width>400</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
@@ -72,7 +72,7 @@
 				    <posy>0</posy>
 				    <width>900</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
@@ -114,7 +114,7 @@
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
 				    <width>600</width>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <label>$VAR[MediaListLabel]</label>
@@ -123,8 +123,8 @@
 			    <control type="label" description="Main Label">
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
-				    <width>530</width>
-				    <scroll>false</scroll>
+				    <width>465</width>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <label>$VAR[MediaListLabel]</label>
@@ -135,7 +135,7 @@
 				    <posy>0</posy>
 				    <width>500</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
@@ -173,7 +173,7 @@
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
 				    <width>600</width>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
@@ -185,8 +185,8 @@
 			    <control type="label" description="Main Label">
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
-				    <width>530</width>
-				    <scroll>false</scroll>
+				    <width>465</width>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
@@ -200,7 +200,7 @@
 		    		<posy>0</posy>
 			    	<width>500</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>false</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
@@ -273,7 +273,7 @@
 		        <font>font16</font>
 		        <textcolor>$VAR[FocusedTextColor]</textcolor>
 		        <shadowcolor></shadowcolor>
-		        <scroll>false</scroll>
+		        <scroll>$VAR[LongLabelScroll]</scroll>
 		        <aligny>center</aligny>
 		        <label>$VAR[panelheading]</label>
 	        </control>
@@ -284,7 +284,7 @@
 		        <height>40</height>
 		        <width>860</width>
 		        <font>font16</font>
-		        <scroll>false</scroll>
+		        <scroll>$VAR[LongLabelScroll]</scroll>
 		        <aligny>center</aligny>
 		        <label>$VAR[panelheading]</label>
 	        </control>
@@ -297,6 +297,7 @@
 		        <font>ListDetails</font>
 		        <aligny>center</aligny>
 		        <align>left</align>
+				<scroll>$VAR[LongLabelScroll]</scroll>
 		        <label>$VAR[panelsubheading]</label>
 	        </control>
 	        <control type="label">
@@ -308,6 +309,7 @@
 		        <font>ListDetails</font>
 		        <aligny>center</aligny>
 		        <align>left</align>
+				<scroll>$VAR[LongLabelScroll]</scroll>
 		        <textcolor>$VAR[FocusedTextColor]</textcolor>
 		        <shadowcolor></shadowcolor>
 		        <label>$VAR[panelsubheading]</label>

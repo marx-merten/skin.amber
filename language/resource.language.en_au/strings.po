@@ -2482,3 +2482,11 @@ msgstr ""
 msgctxt "#32220"
 msgid "Show Logo In Home Window"
 msgstr ""
+
+msgctxt "#32221"
+msgid "Media Views Background Tint"
+msgstr ""
+
+msgctxt "#32222"
+msgid "Enable Label Scrolling in List Views"
+msgstr ""
