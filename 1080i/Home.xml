@@ -143,7 +143,7 @@
 	        <content sortby="random" limit="5">videodb://musicvideos/titles/</content>
 	        <content sortby="random" limit="5">videodb://tvshows/titles/</content>
 	        <content sortby="random" limit="5">videodb://movies/sets/</content>
-	        <content sortby="random" limit="5">musicdb://artists/</content>
+	        <content sortby="random" limit="5">musicdb://artists/?albumartistsonly=true</content>
 	        <content sortby="random" limit="5">videodb://movies/titles/</content>
 	        <content sortby="random" limit="5">videodb://musicvideos/titles/</content>
 	        <content sortby="random" limit="5">videodb://movies/sets/</content>
@@ -159,7 +159,7 @@
         </control>
         
         <control type="list" id="12345">
-	        <content sortby="random" limit="50">musicdb://artists/</content>
+	        <content sortby="random" limit="50">musicdb://artists/?albumartistsonly=true</content>
 	        <include>AutoscrollTime</include>
 	        <itemlayout />
 	        <focusedlayout />
@@ -212,10 +212,10 @@
                 <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + !Skin.HasSetting(FanartTitle.InTopBar)</visible>
             </control>
 			<control type="image">
-                <posy>70</posy>
-			    <posx>1650</posx>
-                <width>250</width>
-                <height>97</height>
+                <posy>50</posy>
+			    <posx>1500</posx>
+                <width>412</width>
+                <height>160</height>
                 <texture  background="true">$VAR[HomeClearLogo]</texture>
 			    <aspectratio>keep</aspectratio>
                 <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + Skin.HasSetting(FanartTitle.InTopBar)</visible>

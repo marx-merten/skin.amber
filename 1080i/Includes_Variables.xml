@@ -523,7 +523,8 @@
         <value condition="String.IsEqual(ListItem.DBType,movie) + String.IsEqual(Container.ViewMode,biglist)">$INFO[Listitem.Title,, ]$INFO[ListItem.Year,(,)]</value>
         <value condition="String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(Container.ViewMode,biglist)">$INFO[Listitem.Title,[B],[/B] ]$INFO[ListItem.Year,(,)]</value>
         <value condition="String.IsEqual(ListItem.DBType,tvshow) + String.IsEqual(Container.ViewMode,biglist)">$INFO[Listitem.Title,, ]$INFO[ListItem.Year,(,)]</value>
-        <value condition="String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
+        <value condition="String.IsEqual(ListItem.DBType,album) + [String.IsEqual(Container.ViewMode,icons) | String.IsEqual(Container.ViewMode,fanart)]">$INFO[Listitem.Label,[B],[/B] ]$INFO[ListItem.Year,(,)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,song)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
         <value condition="String.IsEqual(ListItem.DBType,msicvideo)">$INFO[Listitem.Label,[B],[/B] ]$INFO[ListItem.Year,(,)]</value>
         <value condition="String.IsEqual(ListItem.DBType,album) + Window.IsActive(script-globalsearch.xml)">$INFO[ListItem.Artist,, • ]$INFO[ListItem.Label]</value>
         <value condition="[String.IsEqual(ListItem.DBType,episode) + Window.IsActive(DialogVideoInfo.xml) + Skin.HasSetting(Show.SeasonEpisodeInfo) + !String.IsEmpty(ListItem.Art(tvshow.banner))]">$VAR[SeasonEpisodeLabel] • $INFO[ListItem.Title]</value>
@@ -765,7 +766,8 @@
         <value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEqual(Skin.String(FocusedMenu.Background),Music.Fanart)">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>
         <value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEqual(Skin.String(FocusedMenu.Background),Global.Fanart)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
         <value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEqual(Skin.String(FocusedMenu.Background),Weather.Fanart)">$INFO[Skin.String(weatherfanartResource.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundExt]</value>
-        <value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + !String.IsEmpty(Skin.String(FocusedMenu.BackgroundPlaylist))">$INFO[Container(9988).ListItem.Art(fanart)]</value>
+        <value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + !String.IsEmpty(Skin.String(FocusedMenu.BackgroundPlaylist)) + !String.IsEmpty(Container(9988).ListItem.Art(fanart))">$INFO[Container(9988).ListItem.Art(fanart)]</value>
+		<value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + !String.IsEmpty(Skin.String(FocusedMenu.BackgroundPlaylist)) + String.IsEmpty(Container(9988).ListItem.Art(fanart))">$INFO[Skin.String(FocusedMenu.Background)]</value>
         <value condition="!Skin.HasSetting(Sub_DefaultBG) + !String.IsEmpty(Skin.String(FocusedMenu.Background)) + String.IsEmpty(Skin.String(FocusedMenu.BackgroundPlaylist))">$INFO[Skin.String(FocusedMenu.Background)]</value>
         <value>special://skin/backgrounds/Default.jpg</value>
     </variable>

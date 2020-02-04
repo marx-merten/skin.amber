@@ -238,6 +238,28 @@
                 <width>$PARAM[overlaywidth]</width>
                 <height>$PARAM[overlayheight]</height>
                 <texture border="0,30,0,0">OSD/FS_OSDBackground.png</texture> 
+                <colordiffuse>$VAR[ViewsBGColor]</colordiffuse>
+            <!--     <colordiffuse>8FFFFFFF</colordiffuse> -->
+            </control>
+        </definition>
+    </include>
+	
+	<include name="BackgroundOverlayVideoInfo">
+        <param name="overlaywidth">1920</param>
+        <param name="overlayheight">1120</param>
+        <param name="overlaytop">-40</param>
+        <param name="overlayleft">0</param>
+        <param name="parentid"/>
+        <param name="colordiffuse">dfcebe9e</param>
+        <definition>
+            <control type="image" description="background overlay">
+                <visible>Control.IsVisible($PARAM[parentid])</visible>
+                <include>VignetteFade</include>
+                <left>$PARAM[overlayleft]</left>
+                <top>$PARAM[overlaytop]</top>
+                <width>$PARAM[overlaywidth]</width>
+                <height>$PARAM[overlayheight]</height>
+                <texture border="0,30,0,0">OSD/FS_OSDBackground.png</texture> 
                 <colordiffuse>$PARAM[colordiffuse]</colordiffuse>
             <!--     <colordiffuse>8FFFFFFF</colordiffuse> -->
             </control>
@@ -377,7 +399,7 @@
         <control type="multiimage">
             <visible>![Player.HasVideo + Skin.HasSetting(Show_Player)]</visible>
             <include>Dimensions_Fullscreen</include>
-            <timeperimage>12000</timeperimage>
+            <timeperimage>8000</timeperimage>
             <fadetime>400</fadetime>
             <imagepath background="true">$VAR[SubBackground]</imagepath>
             <randomize>true</randomize>
