@@ -60,7 +60,7 @@
         </control>
 		<!-- Artist Logo -->
 		<control type="image">
-            <posy>-80</posy>
+            <posy>15</posy>
 			<posx>1500</posx>
             <width>400</width>
             <height>155</height>

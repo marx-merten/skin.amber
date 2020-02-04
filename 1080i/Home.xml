@@ -19,7 +19,7 @@
 			</itemlayout>
 			<focusedlayout height="1" width="1">
 			</focusedlayout>
-			<content>$INFO[Container(300).ListItem.Property(backgroundPlaylist)]</content>
+			<content sortby="random">$INFO[Container(300).ListItem.Property(backgroundPlaylist)]</content>
 		</control>
         
         <control type="list" id="9980">
@@ -212,10 +212,10 @@
                 <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + !Skin.HasSetting(FanartTitle.InTopBar)</visible>
             </control>
 			<control type="image">
-                <posy>50</posy>
-			    <posx>1500</posx>
-                <width>412</width>
-                <height>160</height>
+                <posy>60</posy>
+			    <posx>1540</posx>
+                <width>361</width>
+                <height>140</height>
                 <texture  background="true">$VAR[HomeClearLogo]</texture>
 			    <aspectratio>keep</aspectratio>
                 <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + Skin.HasSetting(FanartTitle.InTopBar)</visible>
