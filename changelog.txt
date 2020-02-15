@@ -1,3 +1,5 @@
+3.2.44 (15-02-2020)
+- Fix for default views issue on new install/update
 3.2.43 (29-01-2020)
 - Increase favourite addons to 25
 - Make favourites shelf dynamic
