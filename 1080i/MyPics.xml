@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 
-    <include condition="Skin.HasSetting(UseListDefault)">DefaultViews</include>
+    <include condition="Skin.HasSetting(UseListDefault) | ![Skin.HasSetting(UseListDefault) | Skin.HasSetting(UseTallListDefault) | Skin.HasSetting(UseLowListDefault) | 
+	                     Skin.HasSetting(UseBigListDefault) | Skin.HasSetting(UsePanelDefault) | Skin.HasSetting(UseBigPanelDefault) | 
+						 Skin.HasSetting(UseIconsDefault) | Skin.HasSetting(UseFanartDefault)]">DefaultViews</include>
     <include condition="Skin.HasSetting(UseTallListDefault)">TallListDefaultView</include>
 	<include condition="Skin.HasSetting(UseLowListDefault)">LowListDefaultView</include>
 	<include condition="Skin.HasSetting(UseBigListDefault)">BigListDefaultView</include>

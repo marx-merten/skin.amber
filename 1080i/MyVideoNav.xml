@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	
-	<include condition="Skin.HasSetting(UseListDefault)">DefaultViews</include>
+	<include condition="Skin.HasSetting(UseListDefault) | ![Skin.HasSetting(UseListDefault) | Skin.HasSetting(UseTallListDefault) | Skin.HasSetting(UseLowListDefault) | 
+	                     Skin.HasSetting(UseBigListDefault) | Skin.HasSetting(UsePanelDefault) | Skin.HasSetting(UseBigPanelDefault) | 
+						 Skin.HasSetting(UseIconsDefault) | Skin.HasSetting(UseFanartDefault)]">DefaultViews</include>
     <include condition="Skin.HasSetting(UseTallListDefault)">TallListDefaultView</include>
 	<include condition="Skin.HasSetting(UseLowListDefault)">LowListDefaultView</include>
 	<include condition="Skin.HasSetting(UseBigListDefault)">BigListDefaultView</include>
@@ -11,7 +13,8 @@
 	<include condition="Skin.HasSetting(UseFanartDefault)">FanartDefaultView</include>
 	
 	<onload>ClearProperty(gallery)</onload>
-    <onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+    <onload condition="System.HasAddon(script.skin.info.service) + String.IsEmpty(Window(home).Property(skininfos_daemon_running))">RunScript(script.skin.info.service)</onload>
+	<onload condition="System.HasAddon(script.tv.show.next.aired) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onunload>ClearProperty(gallery)</onunload>
 	<menucontrol>9000</menucontrol>
 	<controls>
@@ -120,6 +123,38 @@
 			<label>$INFO[Container.ListItem.Art(tvshow.fanart18)]</label>
 			<label>$INFO[Container.ListItem.Art(tvshow.fanart19)]</label>
 			<label>$INFO[Container.ListItem.Art(tvshow.fanart20)]</label>
+		</control>
+		
+		<control type="fadelabel" id="4412">
+			<top>-100</top>
+			<width>2560</width>
+			<height>0</height>
+			<scrollspeed>20</scrollspeed>
+			<scroll>false</scroll>
+			<scrollout>false</scrollout>
+			<resetonlabelchange>true</resetonlabelchange>
+			<label>$INFO[ListItem.Art(poster)]</label>
+			<label>$INFO[ListItem.Art(poster1)]</label>
+			<label>$INFO[ListItem.Art(poster2)]</label>
+			<label>$INFO[ListItem.Art(poster3)]</label>
+			<label>$INFO[ListItem.Art(poster4)]</label>
+			<label>$INFO[ListItem.Art(poster5)]</label>
+			<label>$INFO[ListItem.Art(poster6)]</label>
+			<label>$INFO[ListItem.Art(poster7)]</label>
+			<label>$INFO[ListItem.Art(poster8)]</label>
+			<label>$INFO[ListItem.Art(poster9)]</label>
+			<label>$INFO[ListItem.Art(poster10)]</label>
+			<label>$INFO[ListItem.Art(poster11)]</label>
+			<label>$INFO[ListItem.Art(poster12)]</label>
+			<label>$INFO[ListItem.Art(poster13)]</label>
+			<label>$INFO[ListItem.Art(poster14)]</label>
+			<label>$INFO[ListItem.Art(poster15)]</label>
+			<label>$INFO[ListItem.Art(poster16)]</label>
+			<label>$INFO[ListItem.Art(poster17)]</label>
+			<label>$INFO[ListItem.Art(poster18)]</label>
+			<label>$INFO[ListItem.Art(poster19)]</label>
+			<label>$INFO[ListItem.Art(poster20)]</label>
+			<include>FadeLabelTime</include>
 		</control>
     
 		<include>DefaultBackground</include>
