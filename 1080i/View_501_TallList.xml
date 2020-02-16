@@ -64,7 +64,7 @@
 				</control>
 
 				<control type="button" id="6501">
-					<visible>String.IsEqual(Container.ViewMode,Tall List)</visible>
+					<visible>Control.IsVisible(501)</visible>
 					<visible>Skin.HasSetting(Show.JumpToLetter) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
 					<font />
 					<texturefocus />
@@ -121,7 +121,7 @@
 					<include content="AlphabetLetter"><param name="label" value="T" /></include>
 					<include content="AlphabetLetter"><param name="label" value="U" /></include>
 					<animation effect="fade" start="100" end="0" condition="[String.IsEqual(ListItem.SortLetter,O) | String.IsEqual(ListItem.SortLetter,P) | String.IsEqual(ListItem.SortLetter,Q) | String.IsEqual(ListItem.SortLetter,R) | String.IsEqual(ListItem.SortLetter,S) | String.IsEqual(ListItem.SortLetter,T) | String.IsEqual(ListItem.SortLetter,U) | String.IsEqual(ListItem.SortLetter,V) | String.IsEqual(ListItem.SortLetter,W) | String.IsEqual(ListItem.SortLetter,X) | String.IsEqual(ListItem.SortLetter,Y) | String.IsEqual(ListItem.SortLetter,Z)]">Conditional</animation>
-					<visible>String.IsEqual(Container.ViewMode,Tall List)</visible>
+					<visible>Control.IsVisible(501)</visible>
 					<visible>Skin.HasSetting(Show.JumpToLetter) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
 				</control>
 
@@ -156,7 +156,7 @@
 					<include content="AlphabetLetter"><param name="label" value="Y" /></include>
 					<include content="AlphabetLetter"><param name="label" value="Z" /></include>
 					<animation effect="fade" start="100" end="0" condition="![String.IsEqual(ListItem.SortLetter,O) | String.IsEqual(ListItem.SortLetter,P) | String.IsEqual(ListItem.SortLetter,Q) | String.IsEqual(ListItem.SortLetter,R) | String.IsEqual(ListItem.SortLetter,S) | String.IsEqual(ListItem.SortLetter,T) | String.IsEqual(ListItem.SortLetter,U) | String.IsEqual(ListItem.SortLetter,V) | String.IsEqual(ListItem.SortLetter,W) | String.IsEqual(ListItem.SortLetter,X) | String.IsEqual(ListItem.SortLetter,Y) | String.IsEqual(ListItem.SortLetter,Z)]">Conditional</animation>
-					<visible>String.IsEqual(Container.ViewMode,Tall List)</visible>
+					<visible>Control.IsVisible(501)</visible>
 					<visible>Skin.HasSetting(Show.JumpToLetter) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
 				</control>            
 
@@ -176,13 +176,16 @@
 				<include content="PanelTemplateTall">
 					<param name="top">258</param>
 					<param name="left">605</param>
-					<param name="height">303</param>
+					<param name="height">283</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
+					<param name="plotheight">276</param>
 					<param name="footertop">485</param>
 					<param name="flagstop">989</param>
 					<param name="heading">$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
+					<param name="subheading2">$VAR[panelsubheading2]</param>
+					<param name="subheading2_visible">[Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
 					<param name="visibility">Container.Content(episodes)</param>
@@ -191,13 +194,15 @@
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">595</param>
+					<param name="height">675</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
 					<param name="footertop">845</param>
 					<param name="flagstop">1005</param>
 					<param name="heading">$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
+					<param name="subheading2">$VAR[panelsubheading2]</param>
+					<param name="subheading2_visible">[Container.content(movies)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
 					<param name="visibility">Container.Content(games) | Container.content(movies) | Container.Content(musicvideos)</param>
@@ -219,14 +224,14 @@
 				</include>
 
 				<include content="PanelTemplateTall">
-					<param name="top">108</param>
+					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">565</param>
+					<param name="height">635</param>
 					<param name="width">610</param>
 					<param name="heading">$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="subheading2">$VAR[panelsubheading2]</param>
-					<param name="plotgrouptop">220</param>
+					<param name="plotgrouptop">150</param>
 					<param name="footertop">815</param>
 					<param name="subheading2_visible">!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</param>
 					<param name="plot">$VAR[Plots]</param>
@@ -248,7 +253,7 @@
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">545</param>
+					<param name="height">555</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
 					<param name="footertop">845</param>
@@ -265,7 +270,7 @@
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">545</param>
+					<param name="height">555</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
 					<param name="footertop">845</param>
@@ -273,7 +278,7 @@
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="subcontent_label1">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]$INFO[ListItem.Duration,  (,)]</param>
-					<param name="subcontent_label2">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]VAR[ItemDurationHrMins,  (,)]</param>
+					<param name="subcontent_label2">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]$VAR[ItemDurationHrMins,  (,)]</param>
 					<param name="subcontent_path">$INFO[ListItem.FolderPath]</param>
 					<param name="subcontent_sortby" value="track" />
 					<param name="subcontent_sortorder" value="ascending" />
@@ -294,8 +299,6 @@
 						<textcolor>$VAR[HighlightColor]</textcolor>
 					</control>
 					<include content="ShadowedImage">
-						<param name="top">0</param>
-						<param name="left">0</param>
 						<param name="width">560</param>
 						<param name="height">890</param>
 						<param name="texture">$VAR[ThumbType]</param>
@@ -312,7 +315,14 @@
 					<param name="top">1005</param>
 					<param name="left">20</param>
 					<param name="width">560</param>
-					<param name="visibility">true</param>
+					<param name="visibility">!String.IsEqual(ListItem.DBType,episode)</param>
+					<param name="showratingbadge">false</param>
+				</include>
+				<include content="MediaFlags">
+					<param name="top">735</param>
+					<param name="left">20</param>
+					<param name="width">560</param>
+					<param name="visibility">String.IsEqual(ListItem.DBType,episode)</param>
 					<param name="showratingbadge">false</param>
 				</include>
 			</control>

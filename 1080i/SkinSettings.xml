@@ -352,6 +352,11 @@
 							<param name="skinsetting" value="ShowLogoMediaViews"/>
 						</include>
 						<include content="YesNoSettingItem">
+							<param name="itemid" value="21"/>
+							<param name="itemlabel" value="$LOCALIZE[32223]"/>
+							<param name="skinsetting" value="ShowAudioSub"/>
+						</include>
+						<include content="YesNoSettingItem">
 							<param name="itemid" value="3"/>
 							<param name="itemlabel" value="$LOCALIZE[20189]"/>
 							<param name="skinsetting" value="AutoScroll"/>

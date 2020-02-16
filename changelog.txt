@@ -1,3 +1,8 @@
+3.2.45 (16-02-2020)
+- Fix for side blade issue in other languages
+- New media flag icons (thanks newbii!)
+3.2.44 (15-02-2020)
+- Fix for default view issue
 3.2.43 (29-01-2020)
 - Increase favourite addons to 25
 - Make favourites shelf dynamic
