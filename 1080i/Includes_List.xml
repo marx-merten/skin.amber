@@ -21,7 +21,6 @@
         <param name="ListLabel2Font"></param>
         <param name="itemheight"></param>
         <param name="BGposy"></param>
-		<param name="scroll">false</param>
 		<definition>
 		    <itemlayout condition="![Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image">
@@ -36,7 +35,7 @@
 				    <posy>0</posy>
 				    <width>900</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <label>$VAR[MediaListLabel]</label>
@@ -46,7 +45,7 @@
 				    <posy>0</posy>
 				    <width>400</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
@@ -73,7 +72,7 @@
 				    <posy>0</posy>
 				    <width>900</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
@@ -86,7 +85,7 @@
 		    		<posy>0</posy>
 			    	<width>400</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>false</scroll>
 					<textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
@@ -115,7 +114,7 @@
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
 				    <width>600</width>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <label>$VAR[MediaListLabel]</label>
@@ -125,7 +124,7 @@
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
 				    <width>465</width>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
                     <font>$PARAM[ListLabelFont]</font>
 				    <label>$VAR[MediaListLabel]</label>
@@ -136,7 +135,7 @@
 				    <posy>0</posy>
 				    <width>500</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 				    <textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 				    <textcolor>Grey</textcolor>
@@ -174,7 +173,7 @@
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
 				    <width>600</width>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
@@ -187,7 +186,7 @@
     				<posx>589</posx>
 				    <height>$PARAM[itemheight]</height>
 				    <width>465</width>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
@@ -201,7 +200,7 @@
 		    		<posy>0</posy>
 			    	<width>500</width>
 				    <height>$PARAM[itemheight]</height>
-				    <scroll>$PARAM[scroll]</scroll>
+				    <scroll>$VAR[LongLabelScroll]</scroll>
 					<textoffsetx>16</textoffsetx>
 					<font>$PARAM[ListLabel2Font]</font>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
