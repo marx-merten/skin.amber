@@ -22,7 +22,7 @@
         <param name="itemheight"></param>
         <param name="BGposy"></param>
 		<definition>
-		    <itemlayout condition="![Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
+		    <itemlayout condition="[Container.Content(files) + String.IsEmpty(ListItem.Plot)] | ![Container.Content(files) | Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image">
 				    <posx>0</posx>
 				    <posy>0</posy>
@@ -58,7 +58,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="![Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="[Container.Content(files) + String.IsEmpty(ListItem.Plot)] | ![Container.Content(files) | Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image">
     				<posx>0</posx>
 				    <posy>1</posy>
@@ -102,7 +102,7 @@
 				</include>
 			</focusedlayout>
 			
-		    <itemlayout condition="[Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
+		    <itemlayout condition="[Container.Content(files) + !String.IsEmpty(ListItem.Plot)] | [Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>580</posx>
@@ -160,7 +160,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="[Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="[Container.Content(files) + !String.IsEmpty(ListItem.Plot)] | [Container.Content(videos) | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(addons) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>589</posx>
 					<posy>0</posy>

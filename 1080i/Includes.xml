@@ -1286,7 +1286,7 @@
             <control type="grouplist" id="4000" description="Media Info Panel">
                 <include>OpenClose</include>
                 <visible>$PARAM[visibility]</visible>
-                <visible>!Container.Content(files) + !ListItem.IsParentFolder</visible>
+                <visible>[!Container.Content(files) | [Container.Content(files) + !String.IsEmpty(ListItem.Plot)]] + !ListItem.IsParentFolder</visible>
                 <posx>$PARAM[left]</posx>
                 <posy>$PARAM[top]</posy>
                 <width>$PARAM[width]</width>
