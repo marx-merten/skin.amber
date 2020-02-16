@@ -2490,3 +2490,7 @@ msgstr ""
 msgctxt "#32222"
 msgid "Enable Label Scrolling in List Views"
 msgstr ""
+
+msgctxt "#32223"
+msgid "Show Audio and Subtitle Info"
+msgstr ""

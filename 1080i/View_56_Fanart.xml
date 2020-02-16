@@ -295,7 +295,7 @@
 						    <width>1200</width>
 						    <font>Details</font>
 						    <label>$VAR[panelsubheading2]</label>
-                            <visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+                            <visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) | Container.Content(movies) | Container.Content(episodes)</visible>
 					    </control>                        
 						<control type="label" description="Genre">
 							<posy>207</posy>
@@ -361,7 +361,7 @@
 				</control>
 
                 <control type="button" id="66">
-                    <visible>String.IsEqual(Container.ViewMode,Fanart)</visible>
+                    <visible>Control.IsVisible(56)</visible>
                     <visible>String.IsEmpty(Window.Property(gallery))</visible>
                     <visible>Skin.HasSetting(Show.JumpToLetter) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
                     <font />
@@ -425,7 +425,7 @@
                     <include content="AlphabetLetter"><param name="label" value="X" /></include>
                     <include content="AlphabetLetter"><param name="label" value="Y" /></include>
                     <include content="AlphabetLetter"><param name="label" value="Z" /></include>
-                    <visible>String.IsEqual(Container.ViewMode,Fanart)</visible>
+                    <visible>Control.IsVisible(56)</visible>
                     <visible>String.IsEmpty(Window.Property(gallery))</visible>
                     <visible>Skin.HasSetting(Show.JumpToLetter) + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557])]</visible>
                 </control>                
@@ -460,10 +460,10 @@
 						<posy>195</posy>
 						<height>33</height>
 						<width>900</width>
-						<font>Details</font>
+						<font>ListDetailsSmall</font>
 						<scroll>false</scroll>
 						<label>$VAR[panelsubheading2]</label>
-                        <visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+                        <visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) | Container.Content(movies) | Container.Content(episodes)</visible>
 					</control>                    
 					<control type="label" description="Genre">
 						<posy>235</posy>
@@ -511,6 +511,15 @@
 				<animation effect="fade" start="0" end="100" time="450" delay="400" center="120,350" reversible="false">Visible</animation>
 				<include>FooterInfo</include>
 			</control>
+			<control type="image">
+                <posy>50</posy>
+			    <posx>1610</posx>
+                <width>300</width>
+                <height>116</height>
+                <texture background="true">$VAR[ClearLogo]</texture>
+			    <aspectratio>keep</aspectratio>
+                <visible>Skin.HasSetting(ShowLogoMediaViews) + [![$EXP[56_FanartViewInfo]] | Container.Content(songs)]</visible>
+            </control>
 		</control>
 	</include>
 </includes>

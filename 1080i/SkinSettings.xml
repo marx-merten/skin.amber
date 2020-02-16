@@ -150,11 +150,6 @@
 							<param name="skinsetting" value="ListCenterFocus"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="14"/>
-							<param name="itemlabel" value="$LOCALIZE[32222]"/>
-							<param name="skinsetting" value="ScrollLongLabels"/>
-						</include>
-						<include content="YesNoSettingItem">
 							<param name="itemid" value="5"/>
 							<param name="itemlabel" value="$LOCALIZE[32122]"/>
 							<param name="skinsetting" value="ShowABinContextMenu"/>
@@ -350,6 +345,11 @@
 							<param name="itemid" value="20"/>
 							<param name="itemlabel" value="$LOCALIZE[32219]"/>
 							<param name="skinsetting" value="ShowLogoMediaViews"/>
+						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="21"/>
+							<param name="itemlabel" value="$LOCALIZE[32223]"/>
+							<param name="skinsetting" value="ShowAudioSub"/>
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="3"/>
