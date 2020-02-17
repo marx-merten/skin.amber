@@ -212,7 +212,7 @@
                 <height>78</height>
                 <texture  background="true">$VAR[HomeClearLogo]</texture>
 			    <aspectratio>keep</aspectratio>
-                <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + !Skin.HasSetting(FanartTitle.InTopBar)</visible>
+                <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + [Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar)]</visible>
             </control>
 			<control type="image">
                 <posy>60</posy>
@@ -221,7 +221,7 @@
                 <height>140</height>
                 <texture  background="true">$VAR[HomeClearLogo]</texture>
 			    <aspectratio>keep</aspectratio>
-                <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + Skin.HasSetting(FanartTitle.InTopBar)</visible>
+                <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + [[Skin.HasSetting(Enable.FanartTitle) + Skin.HasSetting(FanartTitle.InTopBar)] | !Skin.HasSetting(Enable.FanartTitle)]</visible>
             </control>
 			<control type="group">
 				<include condition="System.HasAddon(script.embuary.helper)">PlayListStatsList</include>
