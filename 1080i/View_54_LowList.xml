@@ -193,10 +193,10 @@
 
 				<include content="PanelTemplate">
 					<param name="lowpanel">true</param>
-					<param name="top">610</param>
+					<param name="top">600</param>
 					<param name="left">355</param>
-					<param name="groupheight">350</param>
-					<param name="footertop">955</param>
+					<param name="groupheight">365</param>
+					<param name="footertop">965</param>
 		            <param name="footerheight">115</param>
 					<param name="height">205</param>
 					<param name="width">850</param>
@@ -206,7 +206,7 @@
 					<param name="subheading2_visible">[Container.content(movies) | Container.content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(games)</param>
+					<param name="visibility">$EXP[PanelShouldShow] + !Skin.HasSetting(DisableListPanel) + [Container.Content(videos) | Container.Content(files)| Container.Content() | Container.content(movies) | Container.Content(musicvideos) | Container.Content(episodes)]</param>
 				</include>
 
 				<include content="PanelTemplate">
@@ -221,7 +221,10 @@
 					<param name="subheading2_visible">!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.content(seasons) | Container.Content(tvshows)</param>
+					<param name="showflags">false</param>
+					<param name="footertop">990</param>
+		            <param name="footerheight">90</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + [Container.content(seasons) | Container.Content(tvshows)] + $EXP[PanelShouldShow]</param>
 				</include>            
 				<include content="PanelTemplate">
 					<param name="lowpanel">true</param>
@@ -234,7 +237,7 @@
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
 					<param name="showfooter">false</param>
-					<param name="visibility">Container.content(addons) | Container.Content(sets)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + [Container.content(addons) | Container.content(images) | Container.content(games) | Container.Content(sets)]</param>
 				</include>
 				<include content="PanelTemplate">
 					<param name="lowpanel">true</param>
@@ -254,13 +257,13 @@
 					<param name="footertop">1000</param>
 		            <param name="footerheight">75</param>
 					<param name="showflags">false</param>
-					<param name="visibility">Container.Content(artists)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.Content(artists)</param>
 				</include>
 				<include content="PanelTemplate">
 					<param name="lowpanel">true</param>
 					<param name="top">610</param>
 					<param name="left">355</param>
-					<param name="height">280</param>
+					<param name="height">240</param>
 					<param name="width">850</param>
 					<param name="heading">$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
@@ -276,7 +279,7 @@
 					<param name="footertop">1000</param>
 		            <param name="footerheight">75</param>
 					<param name="showflags">false</param>
-					<param name="visibility">Container.Content(albums)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.Content(albums)</param>
 				</include>
 				<control type="group" description="50 MediaInfo">
 					<posx>30</posx>
@@ -296,7 +299,10 @@
 						<param name="width">295</param>
 						<param name="height">450</param>
 						<param name="texture">$VAR[ThumbType]</param>
-						<param name="visibility">[Container.Content(addons) | Container.Content(games) | Container.Content(images) | Container.Content(sets) | Container.Content(albums) | Container.Content(artists) | Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)]</param>
+						<param name="visibility">[$EXP[PanelShouldShow] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | 
+				         Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]] | 
+						 [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | 
+						 Container.Content(images) | Container.Content(games)]</param>
 					</include>
 					<include content="ShadowedImage">
 						<param name="top">75</param>
@@ -304,7 +310,8 @@
 						<param name="width">560</param>
 						<param name="height">320</param>
 						<param name="texture">$VAR[ThumbType]</param>
-						<param name="visibility">![Container.Content(addons) | Container.Content(games) | Container.Content(images) | Container.Content(sets) | Container.Content(albums) | Container.Content(artists) | Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)]</param>
+						<param name="visibility">[![$EXP[PanelShouldShow]] + !ListItem.IsParentFolder + !Container.Content(addons) + !Container.Content(albums) + !Container.Content(artists) + 
+						                          !Container.Content(games) + !Container.Content(images)] | Container.Content(songs)</param>
 					</include>
 <!--					<control type="label">
 						<top>405</top>

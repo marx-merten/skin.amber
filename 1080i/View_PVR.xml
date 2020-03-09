@@ -16,8 +16,7 @@
 				<height>1120</height>
 				<itemgap>0</itemgap>
 				<onleft>9001</onleft>
-				<onright condition="Window.IsActive(MyPVRGuide.xml)">10</onright>
-				<onright condition="!Window.IsActive(MyPVRGuide.xml)">50</onright>
+				<onright>50</onright>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
 				<onback>50</onback>
@@ -42,6 +41,7 @@
 					<description>TV Guide</description>
 					<include>9000SysButtons</include>
 					<label>$LOCALIZE[22020]</label> 
+					<onright>10</onright>	  
 					<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick> 
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick> 
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick> 
@@ -123,7 +123,7 @@
 					<textoffsetx>10</textoffsetx>
 					<align>left</align>
 					<include>9000ViewButtons</include>
-					<visible>Control.IsVisible(31) |Control.IsVisible(5) |Control.IsVisible(6) |Control.IsVisible(7) |Control.IsVisible(8)</visible>
+					<visible>Control.IsVisible(31) | Control.IsVisible(5) | Control.IsVisible(6) | Control.IsVisible(7) | Control.IsVisible(8)</visible>
 				</control>
 				<control type="radiobutton" id="31">
 					<include>9000SysButtons</include>
@@ -138,6 +138,13 @@
 					<selected>Skin.HasSetting(HideEPGLogos)</selected>
 					<onclick>Skin.ToggleSetting(HideEPGLogos)</onclick>
 					<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
+				</control>
+				<control type="radiobutton" id="33">
+					<include>9000SysButtons</include>
+					<label>$LOCALIZE[32229]</label>
+					<selected>Skin.HasSetting(HideGuideChannelGroups)</selected>
+					<onclick>Skin.ToggleSetting(HideGuideChannelGroups)</onclick>
+					<visible>Window.IsActive(MyPVRGuide.xml)</visible>
 				</control>
 				<control type="radiobutton" id="5">
 					<description>Group recording items by folder structure</description>
@@ -294,6 +301,7 @@
 					</control>
 					<control type="image">
 						<posx>7</posx>
+						<posy>-12</posy>
 						<width>20</width>
 						<height>71</height>
 						<texture>$VAR[PVROverlay]</texture>
@@ -301,7 +309,7 @@
 					</control>
 					<control type="label" id="1">
 						<posx>33</posx>
-						<posy>14</posy>
+						<posy>6</posy>
 						<width>23</width>
 						<height>36</height>
 						<font>ListDetails</font>
@@ -312,7 +320,7 @@
 					</control>
 					<control type="label" id="1">
 						<posx>7</posx>
-						<posy>14</posy>
+						<posy>6</posy>
 						<width>45</width>
 						<height>36</height>
 						<scroll>false</scroll>
@@ -331,14 +339,15 @@
 					</control>
 					<control type="image">
 						<posx>7</posx>
+						<posy>-16</posy>
 						<width>20</width>
 						<height>71</height>
-						<texture>$VAR[PVROverlay]</texture>
+						<texture>$VAR[PVROverlay(Focused)]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 					<control type="label" id="1">
 						<posx>33</posx>
-						<posy>14</posy>
+						<posy>2</posy>
 						<width>23</width>
 						<height>36</height>
 						<font>ListDetails</font>
@@ -351,7 +360,7 @@
 					</control>
 					<control type="label" id="1">
 						<posx>7</posx>
-						<posy>14</posy>
+						<posy>2</posy>
 						<width>45</width>
 						<height>36</height>
 						<scroll>false</scroll>
@@ -362,6 +371,17 @@
 						<label>$INFO[ListItem.Label]</label>
 						<visible>![ListItem.IsRecording | ListItem.HasTimer]</visible>
 					</control>
+					<control type="label" id="1">
+						<posx>7</posx>
+						<posy>30</posy>
+						<height>36</height>
+						<font>ListDetails</font>
+						<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime,,]</label>
+						<scroll>false</scroll>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
+						<shadowcolor></shadowcolor> 
+					</control>			  
 				</focusedlayout>
 			</control>
 			<control type="image" description="Top split">
@@ -377,6 +397,7 @@
 				<width>1850</width>
 				<height>122</height>
 				<texture>img/LineST.png</texture>
+				<visible>!Skin.HasSetting(HideGuideChannelGroups)</visible>
 			</control>
 			<control type="image" description="Middle split">
 				<posx>30</posx>
@@ -387,6 +408,7 @@
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(10)</visible>
+				<visible>!Skin.HasSetting(HideGuideChannelGroups)</visible>
 				<control type="image">
 					<posx>40</posx>
 					<posy>290</posy>
@@ -413,7 +435,7 @@
 			</control>
 			<control type="group">
 				<description>Channel Groups on EPG Timeline</description>
-				<visible>Control.IsVisible(10)</visible>
+				<visible>Control.IsVisible(10) + !Skin.HasSetting(HideGuideChannelGroups)</visible>
 				<width>1880</width>
 				<control type="fixedlist" id="11">
 					<posx>42</posx>

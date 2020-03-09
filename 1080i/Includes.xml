@@ -23,6 +23,7 @@
     <include file="Includes_Search.xml" />
     <include file="Includes_CustomSelect.xml" />
     <include file="Includes_Info.xml" />
+	<include file="Includes_TVGuide.xml" />
 
     <include file="Includes_Media.xml" />
     <include file="Includes_List.xml" />
@@ -194,7 +195,7 @@
         <param name="height"/>
         <param name="shadowoffset">8</param>
         <param name="shadowcolor">HeavyShadow</param>
-        <param name="texture">$INFO[ListItem.Icon]</param>
+        <param name="texture"></param>
         <param name="aspect">keep</param>
         <param name="align">center</param>
         <param name="aligny">center</param>
@@ -1268,8 +1269,8 @@
         <param name="plot">$INFO[ListItem.Plot]</param>
 		<param name="plotheight">400</param>
 		<param name="plotheightlow">200</param>
-        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
-        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
         <param name="subcontent_path">$INFO[ListItem.Path]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>
@@ -1280,13 +1281,16 @@
         <param name="visibility"></param>
         <param name="showfooter">true</param>
         <param name="showflags">true</param>
-		<param name="footertop">955</param>
+		<param name="footertop">960</param>
 		<param name="footerheight">115</param>
         <definition>
             <control type="grouplist" id="4000" description="Media Info Panel">
                 <include>OpenClose</include>
                 <visible>$PARAM[visibility]</visible>
-                <visible>[!Container.Content(files) | [Container.Content(files) + !String.IsEmpty(ListItem.Plot)]] + !ListItem.IsParentFolder</visible>
+                <visible>[$EXP[PanelShouldShow] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | 
+				         Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]] | 
+						 [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | 
+						 Container.Content(images) | Container.Content(games)]</visible>
                 <posx>$PARAM[left]</posx>
                 <posy>$PARAM[top]</posy>
                 <width>$PARAM[width]</width>
@@ -1304,16 +1308,17 @@
                     <label>$PARAM[heading]</label>
                 </control>
                 <control type="label" description="Title Label">
-                    <visible>$PARAM[lowpanel]</visible>
+					<visible>$PARAM[lowpanel]</visible>
                     <width>$PARAM[width]</width>
-                    <height>40</height>
+                    <height>55</height>
                     <aligny>center</aligny>
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <font>font20_title</font>
                     <label>$PARAM[heading]</label>
+					<wrapmultiline>true</wrapmultiline>
                 </control>
                 <control type="label" description="Subheading">
-                    <visible>!$PARAM[lowpanel] + Skin.HasSetting(ShowAudioSub)</visible>
+                    <visible>!$PARAM[lowpanel] + Skin.HasSetting(ShowAudioSub) + !Container.Content(addons)</visible>
                     <height>60</height>
                     <width>$PARAM[width]</width>
                     <font>font20_title</font>
@@ -1322,7 +1327,7 @@
                     <wrapmultiline>true</wrapmultiline>
                 </control>
 				<control type="label" description="Subheading">
-                    <visible>!$PARAM[lowpanel] + !Skin.HasSetting(ShowAudioSub)</visible>
+                    <visible>!$PARAM[lowpanel] + !Skin.HasSetting(ShowAudioSub) + !Container.Content(addons)</visible>
                     <height>100</height>
                     <width>$PARAM[width]</width>
                     <font>font20_title</font>
@@ -1331,8 +1336,8 @@
                     <wrapmultiline>true</wrapmultiline>
                 </control>
 				<control type="label" description="Subheading">
-                    <visible>$PARAM[lowpanel]</visible>
-                    <height>40</height>
+					<visible>$PARAM[lowpanel] + !Container.Content(addons)</visible>
+                    <height>60</height>
                     <width>$PARAM[width]</width>
                     <font>ListDetails</font>
                     <label>[B]$PARAM[subheading][/B]</label>
@@ -1400,7 +1405,7 @@
 					    <top>40</top>
 						<visible>$PARAM[lowpanel] + [[Skin.HasSetting(ShowAudioSub) + Container.Content(episodes) + 
 						         ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]] | [!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(tvshows) | Container.Content(seasons)]]]</visible>
-						<height>165</height>
+						<height>160</height>
                         <align>justify</align>
                         <label fallback="19055">$PARAM[plot]</label>
                         <font>InfoPlot</font>
@@ -1410,7 +1415,7 @@
 					<control type="textbox">
 					    <top>40</top>
 						<visible>$PARAM[lowpanel] + [Skin.HasSetting(ShowAudioSub) + Container.Content(movies) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</visible>
-						<height>200</height>
+						<height>165</height>
                         <align>justify</align>
                         <label fallback="19055">$PARAM[plot]</label>
                         <font>InfoPlot</font>
@@ -1479,7 +1484,8 @@
 			<!-- Footer and media flags -->
             <control type="grouplist">
                 <visible>$PARAM[visibility]</visible>
-                <visible>!Container.Content(files) + !ListItem.IsParentFolder</visible>
+                <visible>[!String.IsEmpty(Listitem.Duration) | !String.IsEmpty(Listitem.Genre) | !String.IsEmpty(Listitem.Year) | !String.IsEmpty(ListItem.Episode)] | 
+				         [Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !String.IsEmpty(ListItem.Episode)]</visible>
                 <posx>$PARAM[left]</posx>
                 <posy>$PARAM[footertop]</posy>
                 <width>$PARAM[width]</width>
@@ -1523,8 +1529,8 @@
         <param name="plotgrouptop"></param>
 		<param name="plotheight">630</param>
         <param name="plot">$INFO[ListItem.Plot]</param>
-        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
-        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
         <param name="subcontent_path">$INFO[ListItem.Path]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>
@@ -1542,7 +1548,10 @@
             <control type="group" id="4000" description="Media Info Panel">
                 <include>OpenClose</include>
                 <visible>$PARAM[visibility]</visible>
-                <visible>!Container.Content(files) + !ListItem.IsParentFolder</visible>
+                <visible>[$EXP[PanelShouldShow] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | 
+				         Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]] | 
+						 [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | 
+						 Container.Content(images) | Container.Content(games)]</visible>
                 <posx>$PARAM[left]</posx>
                 <posy>$PARAM[top]</posy>
                 <width>$PARAM[width]</width>
@@ -1561,8 +1570,7 @@
                 </control>
                 <control type="label" description="Subheading">
                     <top>60</top>
-					<visible>[[Skin.HasSetting(ShowAudioSub) + [!String.IsEmpty(ListItem.Property(AudioLanguage.1)) | !String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + [Container.Content(movies) | Container.Content(episodes)]] | 
-						         [!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(tvshows) | Container.Content(seasons)]]]</visible>
+					<visible>Skin.HasSetting(ShowAudioSub) + !Container.Content(addons)</visible>
                     <height>80</height>
                     <width>$PARAM[width]</width>
                     <font>font20_title</font>
@@ -1572,8 +1580,7 @@
                 </control>
 				<control type="label" description="Subheading">
                     <top>65</top>
-					<visible>!Skin.HasSetting(ShowAudioSub) | [Skin.HasSetting(ShowAudioSub) + [String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + [Container.Content(movies) | Container.Content(episodes)]] | 
-								 [String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+					<visible>!Skin.HasSetting(ShowAudioSub) + !Container.Content(addons)</visible>
                     <height>80</height>
                     <width>$PARAM[width]</width>
                     <font>font20_title</font>
@@ -1685,6 +1692,8 @@
                 <control type="label" description="Footer">
                     <top>$PARAM[footertop]</top>
                     <visible>$PARAM[showfooter]</visible>
+					<visible>[!String.IsEmpty(Listitem.Duration) | !String.IsEmpty(Listitem.Genre) | !String.IsEmpty(Listitem.Year) | !String.IsEmpty(ListItem.Episode)] | 
+				         [Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !String.IsEmpty(ListItem.Episode)]</visible>
                     <width>$PARAM[width]</width>
                     <height>75</height>
                     <font>ListDetails</font>
@@ -1705,8 +1714,8 @@
         <param name="plotheight">320</param>
 		<param name="subheading2"></param>
 		<param name="subheading2_visible">false</param>
-        <param name="subcontent_label1">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
-        <param name="subcontent_label2">$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR $VAR[HighlightColor]]  (,)[/COLOR]]</param>
+        <param name="subcontent_label1">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
+        <param name="subcontent_label2">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
         <param name="subcontent_path">$INFO[ListItem.Path]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>

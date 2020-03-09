@@ -102,7 +102,7 @@
 			</focusedlayout>
 			<content>addons://user/all</content>
 		</control>
-        
+        <!-- Hidden list for movies fanart background -->
         <control type="list" id="12341">
 	        <content sortby="random" limit="50">videodb://movies/titles/</content>
 	        <include>AutoscrollTime</include>
@@ -113,7 +113,7 @@
 			<width>1</width>
 			<height>1</height>
         </control>
-        
+        <!-- Hidden list for tv shows fanart background -->
         <control type="list" id="12342">
 	        <content sortby="random" limit="50">videodb://tvshows/titles/</content>
 	        <include>AutoscrollTime</include>
@@ -124,7 +124,7 @@
 			<width>1</width>
 			<height>1</height>
         </control>        
-        
+        <!-- Hidden list for video fanart background -->
         <control type="list" id="12343">
 	        <content sortby="random" limit="5">videodb://movies/titles/</content>
 	        <content sortby="random" limit="5">videodb://tvshows/titles/</content>
@@ -140,7 +140,7 @@
 			<width>1</width>
 			<height>1</height>
         </control>
-        
+        <!-- Hidden list for global fanart background -->
         <control type="list" id="12344">
 	        <content sortby="random" limit="5">videodb://movies/titles/</content>
 	        <content sortby="random" limit="5">videodb://musicvideos/titles/</content>
@@ -151,7 +151,7 @@
 	        <content sortby="random" limit="5">videodb://musicvideos/titles/</content>
 	        <content sortby="random" limit="5">videodb://movies/sets/</content>
 	        <content sortby="random" limit="5">videodb://tvshows/titles/</content>
-	        <content sortby="random" limit="5">musicdb://artists/</content>
+	        <content sortby="random" limit="5">musicdb://artists/?albumartistsonly=true</content>
 	        <include>AutoscrollTime</include>
 	        <itemlayout />
 	        <focusedlayout />
@@ -160,7 +160,7 @@
 			<width>1</width>
 			<height>1</height>
         </control>
-        
+        <!-- Hidden list for music fanart background -->
         <control type="list" id="12345">
 	        <content sortby="random" limit="50">musicdb://artists/?albumartistsonly=true</content>
 	        <include>AutoscrollTime</include>
@@ -194,8 +194,10 @@
 			<include condition="Skin.HasSetting(VerticalHome)">Vertical_Home_Layout</include>
 			<include condition="!Skin.HasSetting(VerticalHome)">Horizontal_Home_Layout</include>
 			<include>Time</include>
-            <include condition="[[!Player.Playing + Skin.HasSetting(FanartTitle.InTopBar)] | !Skin.HasSetting(FanartTitle.InTopBar)] + [!Skin.HasSetting(Home_DefaultBG) + Skin.HasSetting(Enable.FanartTitle)]">ShowFanartTitle</include>
+            <!-- Fanart background title -->
+			<include condition="[[!Player.Playing + Skin.HasSetting(FanartTitle.InTopBar)] | !Skin.HasSetting(FanartTitle.InTopBar)] + [!Skin.HasSetting(Home_DefaultBG) + Skin.HasSetting(Enable.FanartTitle)]">ShowFanartTitle</include>
 			<!-- Movie/TV Show Logo -->
+			<!-- Smaller logo for horizontal menu -->
 			<control type="image">
                 <posy>43</posy>
 			    <posx>1700</posx>
@@ -205,6 +207,7 @@
 			    <aspectratio>keep</aspectratio>
                 <visible>Skin.HasSetting(ShowHomeLogo) + !Skin.HasSetting(VerticalHome)</visible>
             </control>
+			<!-- Smaller logo for vertical menu if fanart title is enabled and not in title bar -->
 			<control type="image">
                 <posy>110</posy>
 			    <posx>1700</posx>
@@ -214,6 +217,7 @@
 			    <aspectratio>keep</aspectratio>
                 <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + [Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar)]</visible>
             </control>
+			<!-- Larger logo for vert. menu if fanart title not enabled or in title bar -->
 			<control type="image">
                 <posy>60</posy>
 			    <posx>1540</posx>
@@ -223,6 +227,7 @@
 			    <aspectratio>keep</aspectratio>
                 <visible>Skin.HasSetting(ShowHomeLogo) + Skin.HasSetting(VerticalHome) + [[Skin.HasSetting(Enable.FanartTitle) + Skin.HasSetting(FanartTitle.InTopBar)] | !Skin.HasSetting(Enable.FanartTitle)]</visible>
             </control>
+			<!-- Hidden list for playlist stats for info line -->
 			<control type="group">
 				<include condition="System.HasAddon(script.embuary.helper)">PlayListStatsList</include>
 			</control>

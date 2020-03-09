@@ -38,8 +38,8 @@
 		<label2 />
 		<icon />
 		<thumb />
-		<action>RunScript(script.tv.show.next.aired,return)</action>
-		<visible>System.HasAddon(script.tv.show.next.aired)</visible>
+		<action>tv_guide</action>
+		<visible>System.HasAddon(plugin.video.themoviedb.helper) | System.HasAddon(script.embuary.info) | System.HasAddon(script.tv.show.next.aired)</visible>
 	</shortcut>
 	<shortcut>
 		<defaultID>tvshowsplaylists</defaultID>

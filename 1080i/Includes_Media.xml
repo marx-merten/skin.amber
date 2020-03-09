@@ -166,7 +166,7 @@
 				<texture>$INFO[$PARAM[type].AudioChannels,badges/audiochannels/channels,.png]</texture>
 			</control>
 			<control type="image" description="Stars">
-				<visible>$PARAM[showratingbadge]</visible>
+				<visible>$PARAM[showratingbadge] + String.IsEmpty(Container.PluginName)</visible>
 				<height>$PARAM[itemheight]</height>
 				<width>$PARAM[itemwidth]</width>
 				<bordersize>3</bordersize>
@@ -770,7 +770,7 @@
 				<param name="bordersizeRB">24</param>
 				<param name="belowlabelvisibility">true</param>
 				<param name="belowlabel">$INFO[ListItem.Label]</param>
-				<param name="belowlabelheight">35</param>
+				<param name="belowlabelheight">52</param>
 			</include>
 		</definition>
 	</include>
@@ -883,7 +883,7 @@
 				<param name="bordersizeLT">12</param>
 				<param name="bordersizeRB">20</param>
 				<param name="overlaylabelvisibility">!ListItem.IsParentFolder + [String.IsEqual(ListItem.DBType,episode) | String.IsEmpty(listitem.DBType)]</param>
-				<param name="overlaylabel">[B]$LOCALIZE[31973] $INFO[ListItem.Season,,.]$INFO[ListItem.Episode][/B]</param>
+				<param name="overlaylabel">$VAR[EpisodeLabel]</param>
 			</include>
 		</definition>
 	</include>
@@ -1285,17 +1285,17 @@
 	<include name="GenericLayout">
 		<param name="viewid"/>
 		<definition>
-			<itemlayout condition="!Skin.HasSetting($PARAM[viewid]_SmallIcons) + ![container.content(episodes) | container.content(addons) | container.content(artists) | container.content(albums) | container.content(songs) | Container.Content(images) | Container.Content(musicvideos) | container.content(movies) | container.content(sets) | container.content(TVshows) | container.content(seasons)]" height="400" width="310">
+			<itemlayout condition="!Skin.HasSetting($PARAM[viewid]_SmallIcons) + ![container.content(episodes) | container.content(addons) | container.content(artists) | container.content(albums) | container.content(songs) | Container.Content(images) | Container.Content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)]" height="400" width="310">
 				<include content="GenericThumbIconBig">
 					<param name="isFocused">false</param>
 				</include>
 			</itemlayout>
-			<focusedlayout condition="!Skin.HasSetting($PARAM[viewid]_SmallIcons) + ![container.content(episodes) | container.content(addons) | container.content(artists) | container.content(albums) | container.content(songs) | Container.Content(images) | Container.Content(musicvideos) | container.content(movies) | container.content(sets) | container.content(TVshows) | container.content(seasons)]" height="400" width="310">
+			<focusedlayout condition="!Skin.HasSetting($PARAM[viewid]_SmallIcons) + ![container.content(episodes) | container.content(addons) | container.content(artists) | container.content(albums) | container.content(songs) | Container.Content(images) | Container.Content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)]" height="400" width="310">
 				<include content="GenericThumbIconBig">
 					<param name="isFocused">true</param>
 				</include>
 			</focusedlayout>
-			<itemlayout condition="Skin.HasSetting($PARAM[viewid]_SmallIcons) + ![container.content(episodes) | container.content(addons) | container.content(artists) | container.content(albums) | container.content(songs) | Container.Content(images) | Container.Content(musicvideos) | container.content(movies) | container.content(sets) | container.content(TVshows) | container.content(seasons)]" height="320" width="232.5">
+			<itemlayout condition="Skin.HasSetting($PARAM[viewid]_SmallIcons) + ![container.content(episodes) | container.content(addons) | container.content(artists) | container.content(albums) | container.content(songs) | Container.Content(images) | Container.Content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)]" height="320" width="232.5">
 				<include content="GenericThumbIconSmall">
 					<param name="isFocused">false</param>
 				</include>
@@ -1321,7 +1321,7 @@
 				<width>1140</width>
 				<height>50</height>
 				<align>center</align>
-				<textcolor>$VAR[FocusedTextColor]</textcolor>
+				<textcolor>Black</textcolor>
 				<shadowcolor></shadowcolor>
 				<font>InfoTitle</font>
 				<scroll>false</scroll>
@@ -1332,7 +1332,7 @@
 				<width>1140</width>
 				<height>50</height>
 				<align>center</align>
-				<textcolor>$VAR[LabelTextColor]</textcolor>
+				<textcolor>$VAR[HighlightColor]</textcolor>
 				<shadowcolor></shadowcolor>
 				<font>InfoTitle</font>
 				<scroll>false</scroll>

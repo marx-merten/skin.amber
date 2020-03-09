@@ -1341,6 +1341,25 @@ msgctxt "#31563"
 msgid "Embuary Info - TV Shows Trending This Week"
 msgstr ""
 
+msgctxt "#31564"
+msgid "TMDb Helper - Next Aired: All Items"
+msgstr ""
+
+msgctxt "#31565"
+msgid "TMDb Helper - Next Aired: Next Week"
+msgstr ""
+
+msgctxt "#31566"
+msgid "TMDb Helper - Next Aired: Today"
+msgstr ""
+
+msgctxt "#31567"
+msgid "Embuary Info - Next Aired: Next 7 Days"
+msgstr ""
+
+msgctxt "#31568"
+msgid "Embuary Info - Next Aired: Today"
+msgstr ""
 
 msgctxt "#31901"
 msgid "36 Hour Forecast"
@@ -2493,4 +2512,28 @@ msgstr ""
 
 msgctxt "#32223"
 msgid "Show Audio and Subtitle Info"
+msgstr ""
+
+msgctxt "#32224"
+msgid "Subtitle Button Opens Subtitle Settings in Video OSD"
+msgstr ""
+
+msgctxt "#32225"
+msgid "Disable Info Panel in List Views"
+msgstr ""
+
+msgctxt "#32226"
+msgid "TMDb Helper - Next Aired Episodes"
+msgstr ""
+
+msgctxt "#32227"
+msgid "Embuary Info - Next Aired Episodes"
+msgstr ""
+
+msgctxt "#32228"
+msgid "Only Search in Local Library"
+msgstr ""
+
+msgctxt "#32229"
+msgid "Hide Channel Groups"
 msgstr ""

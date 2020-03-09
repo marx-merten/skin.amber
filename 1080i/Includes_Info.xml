@@ -1432,12 +1432,15 @@
 			<visible>Container(50).IsUpdating | Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0) | Integer.IsGreater(Container(50).NumItems,0)</visible>
 			<animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating | !Integer.IsGreater(Container(90050).NumItems,0) | Container(90050).IsUpdating">Conditional</animation>
             <!-- select online tmdb search or local search -->
-            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
-            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
-	        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Dialog.Close(All)||ActivateWindow(1122))</onclick>
-		    <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
-            <include content="CastLayout">
+            <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
+            <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
+            <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
+	        <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Dialog.Close(All)||ActivateWindow(1122))</onclick>
+		    <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
+			<onclick condition="!System.HasAddon(script.embuary.helper)">Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])</onclick>
+			<onclick condition="!System.HasAddon(script.embuary.helper)">Dialog.Close(all)</onclick>
+			<onclick condition="!System.HasAddon(script.embuary.helper)">ActivateWindow(1122)</onclick>
+			<include content="CastLayout">
                     <param name="viewid">90050</param>
                     <param name="belowdoublelabelvisibility">true</param>
                     <param name="belowdoublelabel1">$INFO[Container(90050).ListItem.Label]</param>
@@ -1498,12 +1501,15 @@
 			<visible>Container(90050).IsUpdating | Integer.IsGreater(Container(90050).NumItems,0)</visible>
 			<animation effect="fade" start="100" end="0" condition="!Integer.IsGreater(Container(90050).NumItems,0) | Container(90050).IsUpdating">Conditional</animation>
             <!-- select online tmdb search or local search -->
-            <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
-            <onclick>SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
-            <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
-	        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Action(Close)||ActivateWindow(1122))</onclick>
-		    <onclick>RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
-            <include content="CastLayout">
+            <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.1.Label,$LOCALIZE[32018])</onclick>
+            <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.1.BuiltIn,RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(90050).ListItem.Label],type=person,call_auto=1134))</onclick>
+            <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.2.Label,$LOCALIZE[32017])</onclick>
+	        <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">SetProperty(Dialog.2.BuiltIn,Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])||Action(Close)||ActivateWindow(1122))</onclick>
+		    <onclick condition="System.HasAddon(script.embuary.helper) + System.HasAddon(plugin.video.themoviedb.helper)">RunScript(script.embuary.helper,action=createselect,header=$LOCALIZE[137])</onclick>
+            <onclick condition="!System.HasAddon(script.embuary.helper)">Skin.SetString(CustomSearchTerm,$ESCINFO[Container(90050).ListItem.Label])</onclick>
+			<onclick condition="!System.HasAddon(script.embuary.helper)">Dialog.Close(all)</onclick>
+			<onclick condition="!System.HasAddon(script.embuary.helper)">ActivateWindow(1122)</onclick>
+			<include content="CastLayout">
                 <param name="viewid">90050</param>
                 <param name="belowdoublelabelvisibility">true</param>
                 <param name="belowdoublelabel1">$INFO[Container(90050).ListItem.Label]</param>
@@ -1560,9 +1566,9 @@
     <!-- Onclick actions for most custom info lists -->
     <include name="InfoList_OnClick">
         <definition>
-            <onclick condition="String.IsEmpty(ListItem.DBID) | [!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.FolderPath],call_auto=1134)</onclick>
-            <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D],call_auto=1134)</onclick>
-            <onclick condition="!String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_auto=1134)</onclick>
+            <onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + [String.IsEmpty(ListItem.DBID) | [!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)]]">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.FolderPath],call_auto=1134)</onclick>
+            <onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,movie)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://movies/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22movies%22%7D],call_auto=1134)</onclick>
+            <onclick condition="System.HasAddon(plugin.video.themoviedb.helper) + !String.IsEmpty(ListItem.DBID) + String.IsEqual(ListItem.DBType,tvshow)">RunScript(plugin.video.themoviedb.helper,add_path=$INFO[ListItem.Label,videodb://tvshows/titles/?xsp=%7B%22order%22%3A%7B%22direction%22%3A%22ascending%22%2C%22ignorefolders%22%3A0%2C%22method%22%3A%22sorttitle%22%7D%2C%22rules%22%3A%7B%22and%22%3A%5B%7B%22field%22%3A%22title%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%5B%22,%22%5D%7D%5D%7D%2C%22type%22%3A%22tvshows%22%7D],call_auto=1134)</onclick>
         </definition>
     </include>
     <!-- Onclick action for person images info list -->

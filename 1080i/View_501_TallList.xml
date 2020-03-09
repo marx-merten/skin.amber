@@ -170,7 +170,7 @@
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.content(addons)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.content(addons)</param>
 				</include>
 
 				<include content="PanelTemplateTall">
@@ -188,7 +188,7 @@
 					<param name="subheading2_visible">[Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.Content(episodes)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.Content(episodes)</param>
 				</include>
 
 				<include content="PanelTemplateTall">
@@ -205,7 +205,7 @@
 					<param name="subheading2_visible">[Container.content(movies)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.Content(games) | Container.content(movies) | Container.Content(musicvideos)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Control.IsVisible(501) + [[[Container.Content(files) | Container.Content()] + !String.IsEmpty(ListItem.Plot)] | [Container.Content(videos) | Container.Content(games) | Container.content(movies) | Container.Content(musicvideos)]]</param>
 				</include>
 
 				<include content="PanelTemplateTall">
@@ -236,7 +236,7 @@
 					<param name="subheading2_visible">!String.IsEmpty(Window(Home).Property(NextAired.NextDate))</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.content(tvshows) | Container.Content(seasons)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + [Container.content(tvshows) | Container.Content(seasons)]</param>
 				</include>            
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
@@ -248,7 +248,7 @@
 					<param name="heading">$VAR[panelheading]</param>
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.content(sets)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.content(sets)</param>
 				</include>
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
@@ -265,7 +265,7 @@
 					<param name="subcontent_visible">String.IsEmpty(ListItem.Property(Artist_Description))</param>
 					<param name="subcontent_image_visible">false</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.content(artists)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.content(artists)</param>
 				</include>
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
@@ -285,7 +285,7 @@
 					<param name="subcontent_visible">String.IsEmpty(ListItem.Property(Album_Description))</param>
 					<param name="subcontent_image_visible">false</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.content(albums)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.content(albums)</param>
 				</include>
 				<control type="group" description="501 MediaInfo">
 					<posx>20</posx>

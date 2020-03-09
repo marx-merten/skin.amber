@@ -161,6 +161,7 @@
 					<onclick>Skin.SetString(TopBarColorStr,$INFO[Window.Property(colorstring)])</onclick>
 					<onclick>Skin.SetString(DialogBGColorStr,$INFO[Window.Property(colorstring)])</onclick>
 					<onclick>Skin.SetString(WidgetBGColorStr,$INFO[Window.Property(colorstring)])</onclick>
+					<onclick>Skin.SetString(ViewsBGColorStr,$INFO[Window.Property(colorstring)])</onclick>
 					<onclick>SendClick(3012)</onclick>
 			    </control>
 		    </control>		

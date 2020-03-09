@@ -26,6 +26,7 @@
 		<texture background="true" flipy="true">$VAR[Poster]</texture>
 		<aspectratio aligny="top">scale</aspectratio>
 	</include>
+	
 	<include name="SquareFanartThumbDimensions">
 		<posx>15</posx>
 		<width>297</width>
@@ -45,6 +46,7 @@
 		<texture background="true" flipy="true">$VAR[Square]</texture>
 		<aspectratio aligny="top">keep</aspectratio>
 	</include>
+	
 	<include name="EpisodeFanartThumbDimensions">
 		<posx>12</posx>
 		<posy>12</posy>
@@ -65,6 +67,7 @@
 		<texture background="true">$VAR[Episode]</texture>
 		<aspectratio aligny="top">scale</aspectratio>
 	</include>
+	
 	<include name="View_56_Fanart">
 		<control type="group">
 			<visible>Control.IsVisible(56)</visible>
@@ -469,7 +472,7 @@
 						<posy>235</posy>
 						<visible>!Container.Content(Artists)</visible>
 						<height>33</height>
-						<width>1640</width>
+						<width>900</width>
 						<font>Details</font>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.Genre]</label>

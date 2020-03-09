@@ -52,6 +52,18 @@
 		<condition>Skin.HasSetting(Enable.GlobalSearch) + System.HasAddon(script.globalsearch)</condition>
 		<action>RunScript(script.globalsearch)</action>
 	</override>
+	<override action="tv_guide">
+		<condition>System.HasAddon(plugin.video.themoviedb.helper)</condition>
+		<action>ActivateWindow(1136)</action>
+	</override>
+	<override action="tv_guide">
+		<condition>!System.HasAddon(plugin.video.themoviedb.helper) + System.HasAddon(script.embuary.info)</condition>
+		<action>ActivateWindow(1137)</action>
+	</override>
+	<override action="tv_guide">
+		<condition>!System.HasAddon(plugin.video.themoviedb.helper) + !System.HasAddon(script.embuary.info) + System.HasAddon(script.tv.show.next.aired)</condition>
+		<action>RunScript(script.tv.show.next.aired)</action>
+	</override>
     <override action="reboot_to_android">
         <action>System.ExecWait("/usr/sbin/rebootfromnand")</action>
         <action>XBMC.Reset()</action>
@@ -448,6 +460,11 @@
 				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31562]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=on_the_air</shortcut>
 				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31563]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=trending&amp;call=tv&amp;get=week</shortcut>
 			</node>
+			<!-- Episodes -->
+			<node label="$LOCALIZE[20360]" icon="DefaultTVShows.png">
+			    <shortcut widget="embuaryinfoepisodes" label="$LOCALIZE[31567]" icon="shelves/embuary.info.png" widgetType="episodes" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/nextaired/week</shortcut>
+				<shortcut widget="embuaryinfoepisodes" label="$LOCALIZE[31568]" icon="shelves/embuary.info.png" widgetType="episodes" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/nextaired/today</shortcut>
+			</node>
         </node>
         <!-- Themoviedb Helper Widgets -->
 		<node label="$LOCALIZE[31498]" icon="DefaultFolder.png">
@@ -490,6 +507,12 @@
 				<shortcut widget="tmdbhelpertvshows" label="$LOCALIZE[31545]" icon="shelves/themoviedb.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper) + System.HasAddon(script.trakt)">plugin://plugin.video.themoviedb.helper/?info=trakt_mostplayed&amp;type=tv</shortcut>
 				<shortcut widget="tmdbhelpertvshows" label="$LOCALIZE[31546]" icon="shelves/themoviedb.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper) + System.HasAddon(script.trakt)">plugin://plugin.video.themoviedb.helper/?info=trakt_anticipated&amp;type=tv</shortcut>
 				<shortcut widget="tmdbhelpertvshows" label="$LOCALIZE[31548]" icon="shelves/themoviedb.helper.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper) + System.HasAddon(script.trakt)">plugin://plugin.video.themoviedb.helper/?info=trakt_myairing&amp;type=tv</shortcut>
+			</node>
+			<!-- Episodes -->
+			<node label="$LOCALIZE[20360]" icon="DefaultTVShows.png">
+			    <shortcut widget="tmdbhelperepisodes" label="$LOCALIZE[31564]" icon="shelves/themoviedb.helper.png" widgetType="episodes" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=library_nextaired&amp;days=365&amp;startdate=0&amp;type=episode&amp;widget=true&amp;localdb=true</shortcut>
+				<shortcut widget="tmdbhelperepisodes" label="$LOCALIZE[31565]" icon="shelves/themoviedb.helper.png" widgetType="episodes" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=library_nextaired&amp;days=7&amp;startdate=0&amp;type=episode&amp;widget=true&amp;localdb=true</shortcut>
+				<shortcut widget="tmdbhelperepisodes" label="$LOCALIZE[31566]" icon="shelves/themoviedb.helper.png" widgetType="episodes" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(plugin.video.themoviedb.helper)">plugin://plugin.video.themoviedb.helper/?info=library_nextaired&amp;startdate=0&amp;type=episode&amp;widget=true&amp;localdb=true</shortcut>	
 			</node>
 			<!-- People -->
 			<node label="$LOCALIZE[31534]" icon="DefaultActor.png">
