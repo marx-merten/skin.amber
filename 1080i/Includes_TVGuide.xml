@@ -4,7 +4,7 @@
 	<!-- Custom TV Guide Includes - Uses TMDb Helper Script or Embuary Info Script -->
 
     <!-- Use landscape if available for thumb, if not, use fanart -->
-	<variable name="TVGuideArt">
+	<variable name="NextAiredTVGuideArt">
 		<value condition="!String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
@@ -114,7 +114,7 @@
 				<width>445</width>
 				<height>237</height>
 				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true">$VAR[TVGuideArt]</texture>
+				<texture background="true">$VAR[NextAiredTVGuideArt]</texture>
 			</control>
 			<control type="label">
 				<top>260</top>
@@ -211,7 +211,7 @@
 				<width>445</width>
 				<height>237</height>
 				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true">$VAR[TVGuideArt]</texture>
+				<texture background="true">$VAR[NextAiredTVGuideArt]</texture>
 			</control>
 			<control type="label">
 				<top>260</top>
@@ -317,7 +317,7 @@
 				<width>445</width>
 				<height>237</height>
 				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true">$VAR[TVGuideArt]</texture>
+				<texture background="true">$VAR[NextAiredTVGuideArt]</texture>
 			</control>
 			<control type="label">
 				<top>260</top>
@@ -414,7 +414,7 @@
 				<width>445</width>
 				<height>237</height>
 				<aspectratio aligny="top">keep</aspectratio>
-				<texture background="true">$VAR[TVGuideArt]</texture>
+				<texture background="true">$VAR[NextAiredTVGuideArt]</texture>
 			</control>
 			<control type="label">
 				<top>260</top>

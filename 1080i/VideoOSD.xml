@@ -43,7 +43,7 @@
 					<include content="OSDButtons">
 						<param name="icon">OSD/OSDSubtitlesNF.png</param>
 					</include>
-					<onup condition="Skin.HasSetting(SubtitleOpensSettings)">1110</onup>
+					<onup condition="!Skin.HasSetting(SubtitleOpensSettings)">1110</onup>
 					<ondown>101</ondown>
 					<onclick condition="Skin.HasSetting(SubtitleOpensSettings)">ActivateWindow(osdsubtitlesettings)</onclick>
 					<onclick condition="!Skin.HasSetting(SubtitleOpensSettings)">ShowSubtitles</onclick>
