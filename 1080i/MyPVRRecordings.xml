@@ -102,13 +102,14 @@
         </control>
         <include content="PanelTemplate">
             <param name="top">445</param>
-            <param name="height">265</param>
+            <param name="height">280</param>
             <param name="heading">$VAR[panelheading]</param>
             <param name="subheading">$VAR[panelsubheading]</param>
             <param name="plot">$VAR[Plots]</param>
             <param name="footer">$VAR[panelfooter]</param>
             <param name="visibility">true</param>
             <param name="showflags">false</param>
+			<param name="footertop">920</param>
         </include>
         <control type="group" description="REC group">
             <include>VisibleFadeEffect</include>
@@ -156,7 +157,7 @@
                 </control>
                 <control type="label">
                     <description>Disk usage text</description>
-                    <top>440</top>
+                    <top>470</top>
                     <width>860</width>
                     <height>20</height>
                     <label>$INFO[PVR.backenddiskspace]</label>
@@ -164,7 +165,7 @@
                 </control>
                 <control type="progress">
                     <description>Disk usage bar</description>
-                    <top>475</top>
+                    <top>505</top>
                     <width>860</width>
                     <height>6</height>
                     <info>PVR.backenddiskspaceprogr</info>

@@ -25,6 +25,7 @@
 			<param name="width">619</param>
 			<param name="height">960</param>
 			<param name="shadowoffset">16</param>
+			<param name="texture">$INFO[ListItem.Icon]</param>
 		</include>
 		<control type="group" description="Media Info">
 			<control type="group" description="top">

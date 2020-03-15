@@ -46,6 +46,7 @@
 							<param name="width">100</param>
 							<param name="height">100</param>
 							<param name="shadowoffset">4</param>
+							<param name="texture">$INFO[ListItem.Icon]</param>
 						</include>
 						<control type="label">
 							<posx>132</posx>
@@ -86,6 +87,7 @@
 							<param name="width">100</param>
 							<param name="height">100</param>
 							<param name="shadowoffset">4</param>
+							<param name="texture">$INFO[ListItem.Icon]</param>
 						</include>
 						<control type="label">
 							<visible>Control.HasFocus(6)</visible>
