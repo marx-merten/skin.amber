@@ -22,6 +22,22 @@
 	<background label="31402">Music.Fanart</background>
 	<background label="31403">Global.Fanart</background>
 	<background label="31404" condition="!String.IsEmpty(Skin.String(weatherfanartResource.path))">Weather.Fanart</background>
+	<background label="31569">special://skin/backgrounds/Default.jpg</background>
+	<background label="31570">special://skin/backgrounds/Addons.jpg</background>
+	<background label="31571">special://skin/backgrounds/Videos.jpg</background>
+	<background label="31572">special://skin/backgrounds/Movies.jpg</background>
+	<background label="31573">special://skin/backgrounds/TVShows.jpg</background>
+	<background label="31574">special://skin/backgrounds/MusicVideos.jpg</background>
+	<background label="31575">special://skin/backgrounds/Music.jpg</background>
+	<background label="31576">special://skin/backgrounds/Pictures.jpg</background>
+	<background label="31577">special://skin/backgrounds/Weather.jpg</background>
+	<background label="31578">special://skin/backgrounds/Games.jpg</background>
+	<background label="31579">special://skin/backgrounds/Favourites.jpg</background>
+	<background label="31580">special://skin/backgrounds/Search.jpg</background>
+	<background label="31581">special://skin/backgrounds/Quit.jpg</background>
+	<background label="31582">special://skin/backgrounds/TV.jpg</background>
+	<background label="31583">special://skin/backgrounds/Radio.jpg</background>
+	<background label="31584">special://skin/backgrounds/Settings.jpg</background>
 
 	<backgrounddefault defaultID="videos">$VAR[Videos.Art]</backgrounddefault>
 	<backgrounddefault defaultID="movies">$VAR[Movies.Art]</backgrounddefault>

@@ -1361,6 +1361,70 @@ msgctxt "#31568"
 msgid "Embuary Info - Next Aired: Today"
 msgstr ""
 
+msgctxt "#31569"
+msgid "Default Amber Background"
+msgstr ""
+
+msgctxt "#31570"
+msgid "Default Addons Background"
+msgstr ""
+
+msgctxt "#31571"
+msgid "Default Videos Background"
+msgstr ""
+
+msgctxt "#31572"
+msgid "Default Movies Background"
+msgstr ""
+
+msgctxt "#31573"
+msgid "Default TV Shows Background"
+msgstr ""
+
+msgctxt "#31574"
+msgid "Default Music Videos Background"
+msgstr ""
+
+msgctxt "#31575"
+msgid "Default Music Background"
+msgstr ""
+
+msgctxt "#31576"
+msgid "Default Pictures Background"
+msgstr ""
+
+msgctxt "#31577"
+msgid "Default Weather Background"
+msgstr ""
+
+msgctxt "#31578"
+msgid "Default Games Background"
+msgstr ""
+
+msgctxt "#31579"
+msgid "Default Favourites Background"
+msgstr ""
+
+msgctxt "#31580"
+msgid "Default Search Background"
+msgstr ""
+
+msgctxt "#31581"
+msgid "Default Power Background"
+msgstr ""
+
+msgctxt "#31582"
+msgid "Default PVR Background"
+msgstr ""
+
+msgctxt "#31583"
+msgid "Default PVR Radio Background"
+msgstr ""
+
+msgctxt "#31584"
+msgid "Default Settings Background"
+msgstr ""
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""
