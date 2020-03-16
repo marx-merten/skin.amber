@@ -301,7 +301,20 @@
 					<include content="ShadowedImage">
 						<param name="width">560</param>
 						<param name="height">890</param>
-						<param name="texture">$VAR[ThumbType]</param>
+						<param name="texture">$VAR[Poster]</param>
+						<param name="visibility">Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</param>
+					</include>
+					<include content="ShadowedImage">
+						<param name="width">560</param>
+						<param name="height">890</param>
+						<param name="texture">$VAR[Episode]</param>
+						<param name="visibility">Container.Content(episodes)</param>
+					</include>
+					<include content="ShadowedImage">
+						<param name="width">560</param>
+						<param name="height">890</param>
+						<param name="texture">$VAR[Square]</param>
+						<param name="visibility">![Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons) | Container.Content(episodes)]</param>
 					</include>
 					<control type="label">
 						<top>780</top>

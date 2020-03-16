@@ -298,29 +298,34 @@
 						<param name="top">-11</param>
 						<param name="width">295</param>
 						<param name="height">450</param>
-						<param name="texture">$VAR[ThumbType]</param>
-						<param name="visibility">[$EXP[PanelShouldShow] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | 
-				         Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]] | 
-						 [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | 
-						 Container.Content(images) | Container.Content(games)]</param>
+						<param name="texture">$VAR[Poster]</param>
+						<param name="visibility">[$EXP[PanelShouldShow] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)]]</param>
+					</include>
+					<include content="ShadowedImage">
+						<param name="top">-11</param>
+						<param name="width">295</param>
+						<param name="height">450</param>
+						<param name="texture">$VAR[Episode]</param>
+						<param name="visibility">[$EXP[PanelShouldShow] + Container.Content(episodes)]</param>
+					</include>
+					<include content="ShadowedImage">
+						<param name="top">-11</param>
+						<param name="width">295</param>
+						<param name="height">450</param>
+						<param name="texture">$VAR[Square]</param>
+						<param name="visibility">[$EXP[PanelShouldShow] + [Container.Content(files) | Container.Content(videos) | Container.Content() | 
+				         Container.Content(musicvideos)] | [Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | 
+						 Container.Content(images) | Container.Content(games)]]</param>
 					</include>
 					<include content="ShadowedImage">
 						<param name="top">75</param>
 						<param name="left">25</param>
 						<param name="width">560</param>
 						<param name="height">320</param>
-						<param name="texture">$VAR[ThumbType]</param>
+						<param name="texture">$VAR[Square]</param>
 						<param name="visibility">[![$EXP[PanelShouldShow]] + !ListItem.IsParentFolder + !Container.Content(addons) + !Container.Content(albums) + !Container.Content(artists) + 
 						                          !Container.Content(games) + !Container.Content(images)] | Container.Content(songs)</param>
 					</include>
-<!--					<control type="label">
-						<top>405</top>
-						<height>45</height>
-						<align>left</align>
-						<label>$VAR[listmediafooter]</label>
-						<textcolor>$VAR[HighlightColor]</textcolor>
-						<visible>!Container.Content(songs)</visible>
-					</control> -->
 					<control type="label">
 						<top>405</top>
 						<left>35</left>
