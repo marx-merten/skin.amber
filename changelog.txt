@@ -1,3 +1,10 @@
+3.2.47 (16-03-2020)
+- Fix for posters not changing in List views
+- Fix for subtitle popup in Video OSD. Fix for Next Aired images
+- Fix for icons in different dialogs
+- Fix for TV Shows with no duration
+- Make Amber default backgrounds available as background options
+- Misc. fixes in PVR
 3.2.46 (09-03-2020)
 - Add language/subtitle info to media views
 - Make info panel optional in list views
