@@ -1,3 +1,6 @@
+3.2.48 (17-03-2020)
+- Fix for color of labels in player process info
+- Fix for pvr recording widgets in horizontal menu
 3.2.47 (16-03-2020)
 - Fix for posters not changing in List views
 - Fix for subtitle popup in Video OSD. Fix for Next Aired images

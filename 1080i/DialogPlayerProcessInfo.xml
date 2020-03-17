@@ -19,42 +19,42 @@
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamServiceName,[COLOR $VAR[HighlightColor]]$LOCALIZE[19099]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19099]:[/COLOR] $INFO[PVR.ActStreamServiceName]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamProviderName,[COLOR $VAR[HighlightColor]]$LOCALIZE[19101]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19101]: [/COLOR]$INFO[PVR.ActStreamProviderName]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamClient,[COLOR $VAR[HighlightColor]]$LOCALIZE[19012]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19012]: [/COLOR]$INFO[PVR.ActStreamClient]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamDevice,[COLOR $VAR[HighlightColor]]$LOCALIZE[19006]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19006]: [/COLOR]$INFO[PVR.ActStreamDevice]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamStatus,[COLOR $VAR[HighlightColor]]$LOCALIZE[19007]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19007]: [/COLOR]$INFO[PVR.ActStreamStatus]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>1200</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamEncryptionName,[COLOR $VAR[HighlightColor]]$LOCALIZE[19015]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19015]: [/COLOR]$INFO[PVR.ActStreamEncryptionName]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>
@@ -67,28 +67,28 @@
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamBer,[COLOR $VAR[HighlightColor]]$LOCALIZE[19010]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19010]: [/COLOR]$INFO[PVR.ActStreamBer]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamUnc,[COLOR $VAR[HighlightColor]]$LOCALIZE[19011]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19011]: [/COLOR]$INFO[PVR.ActStreamUnc]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamMux,[COLOR $VAR[HighlightColor]]$LOCALIZE[19100]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19100]: [/COLOR]$INFO[PVR.ActStreamMux]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<width>600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSignal,[COLOR $VAR[HighlightColor]]$LOCALIZE[19008]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19008]: [/COLOR]$INFO[PVR.ActStreamSignal]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="progress">
@@ -105,7 +105,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[PVR.ActStreamSNR,[COLOR $VAR[HighlightColor]]$LOCALIZE[19009]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[19009]: [/COLOR]$INFO[PVR.ActStreamSNR]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="progress">
@@ -125,7 +125,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videodecoder),[COLOR $VAR[HighlightColor]]$LOCALIZE[31139]:[/COLOR] ]$VAR[VideoHWDecoder, (,)]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[31139]:[/COLOR] $INFO[Player.Process(videodecoder)]$VAR[VideoHWDecoder, (,)]</label>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>          
 				</control>
@@ -133,7 +133,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(pixformat),[COLOR $VAR[HighlightColor]]$LOCALIZE[31140]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[31140]:[/COLOR] $INFO[Player.Process(pixformat)]</label>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>          
 				</control>
@@ -141,7 +141,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(deintmethod),[COLOR $VAR[HighlightColor]]$LOCALIZE[16038]:[/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[16038]:[/COLOR] $INFO[Player.Process(deintmethod)]</label>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>          
 				</control>
@@ -149,7 +149,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[Player.Process(videowidth),[COLOR $VAR[HighlightColor]]$LOCALIZE[38031]:[/COLOR] ,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[38031]:[/COLOR] $INFO[Player.Process(videowidth),,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
 					<shadowcolor>black</shadowcolor>
 					<visible>Player.HasVideo</visible>          
 				</control>
@@ -164,7 +164,7 @@
 					<width>1600</width>
 					<height>50</height>
 					<aligny>bottom</aligny>
-					<label>$INFO[System.Memory(used.percent),[COLOR $VAR[HighlightColor]]$LOCALIZE[31309]:[/COLOR] ,       ]$INFO[System.CpuUsage,[COLOR $VAR[HighlightColor]]$LOCALIZE[13271][/COLOR] ]</label>
+					<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[31309]:[/COLOR] $INFO[System.Memory(used.percent),,       ][COLOR $VAR[HighlightColor]]$LOCALIZE[13271][/COLOR] $INFO[System.CpuUsage]</label>
 					<shadowcolor>black</shadowcolor>
 				</control>
 			</control>

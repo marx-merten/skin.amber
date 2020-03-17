@@ -394,7 +394,7 @@
 				</control>
 				<control type="radiobutton" id="900">
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + String.IsEmpty(Container(211).ListItem.Property(widgetRecordingRadio))</visible>
 					<description>Enable PVR TV Recording widget</description>
 					<label>$LOCALIZE[31485]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetRecordingTV))">SetProperty(customProperty,widgetRecordingTV)</onclick>
@@ -409,7 +409,7 @@
 				</control>
 				<control type="radiobutton" id="901">
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-					<visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</visible>
+					<visible>!String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True) + String.IsEmpty(Container(211).ListItem.Property(widgetRecordingTV))</visible>
 					<description>Enable PVR Radio Recording widget</description>
 					<label>$LOCALIZE[31486]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetRecordingRadio))">SetProperty(customProperty,widgetRecordingRadio)</onclick>

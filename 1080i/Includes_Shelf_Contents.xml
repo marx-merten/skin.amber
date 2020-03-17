@@ -637,7 +637,7 @@
     <!-- PVR Recording widgets -->
     <include name="PVRRecordingWidgets">
 		<control type="group">
-			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingTV)) + PVR.IsRecordingTV</visible>
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingTV)) + PVR.IsRecordingTV + ![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
 			<animation effect="slide" start="0,0" end="430,0" time="0" condition="Skin.HasSetting(VerticalHome)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
 			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
@@ -660,7 +660,30 @@
 			</include>
 		</control>
 		<control type="group">
-			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingTV)) + PVR.HasNonRecordingTVTimer</visible>
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingTV)) + PVR.IsRecordingTV + [Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
+			<animation effect="slide" start="0,0" end="430,0" time="0" condition="Skin.HasSetting(VerticalHome)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
+			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatusSmall">
+				<param name="top">47</param>
+				<param name="left">0</param>
+				<param name="headerlabel">$LOCALIZE[19158]:</param>
+				<param name="timelabel">Pvr.TVNowRecordingDateTime</param>
+				<param name="channellabel">Pvr.TVNowRecordingChannel</param>
+				<param name="titlelabel">Pvr.TVNowRecordingTitle</param>
+				<param name="channelicon">Pvr.TVNowRecordingChannelIcon</param>
+			</include>
+            <include condition="Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
+				<param name="top">-35</param>
+				<param name="left">-160</param>
+				<param name="headerlabel">$LOCALIZE[19158]:</param>
+				<param name="timelabel">Pvr.TVNowRecordingDateTime</param>
+				<param name="channellabel">Pvr.TVNowRecordingChannel</param>
+				<param name="titlelabel">Pvr.TVNowRecordingTitle</param>
+				<param name="channelicon">Pvr.TVNowRecordingChannelIcon</param>
+			</include>
+		</control>
+		<control type="group">
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingTV)) + PVR.HasNonRecordingTVTimer + ![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
 			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
 				<param name="top">60</param>
@@ -682,7 +705,29 @@
 			</include>
 		</control>
 		<control type="group">
-			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingRadio)) + PVR.IsRecordingRadio</visible>
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingTV)) + PVR.HasNonRecordingTVTimer + [Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
+			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
+			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatusSmall">
+				<param name="top">47</param>
+				<param name="left">1320</param>
+				<param name="headerlabel">$LOCALIZE[19157]:</param>
+				<param name="timelabel">Pvr.TVNextRecordingDateTime</param>
+				<param name="channellabel">Pvr.TVNextRecordingChannel</param>
+				<param name="titlelabel">Pvr.TVNextRecordingTitle</param>
+				<param name="channelicon">Pvr.TVNextRecordingChannelIcon</param>
+			</include>
+            <include condition="Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
+				<param name="top">-35</param>
+				<param name="left">890</param>
+				<param name="headerlabel">$LOCALIZE[19157]:</param>
+				<param name="timelabel">Pvr.TVNextRecordingDateTime</param>
+				<param name="channellabel">Pvr.TVNextRecordingChannel</param>
+				<param name="titlelabel">Pvr.TVNextRecordingTitle</param>
+				<param name="channelicon">Pvr.TVNextRecordingChannelIcon</param>
+			</include>
+		</control>
+		<control type="group">
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingRadio)) + PVR.IsRecordingRadio + ![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
 			<animation effect="slide" start="0,0" end="430,0" time="0" condition="Skin.HasSetting(VerticalHome)">conditional</animation>
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![String.IsEqual(Container(300).ListItem.Property(WidgetTwoShelves),true) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
 			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
@@ -705,7 +750,30 @@
 			</include>
 		</control>
 		<control type="group">
-			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingRadio)) + PVR.HasNonRecordingRadioTimer</visible>
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingRadio)) + PVR.IsRecordingRadio + [Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
+			<animation effect="slide" start="0,0" end="430,0" time="0" condition="Skin.HasSetting(VerticalHome)">conditional</animation>
+			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![String.IsEqual(Container(300).ListItem.Property(WidgetTwoShelves),true) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
+			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatusSmall">
+				<param name="top">47</param>
+				<param name="left">0</param>
+				<param name="headerlabel">$LOCALIZE[19158]</param>
+				<param name="timelabel">Pvr.RadioNowRecordingDateTime</param>
+				<param name="channellabel">Pvr.RadioNowRecordingChannel</param>
+				<param name="titlelabel">Pvr.RadioNowRecordingTitle</param>
+				<param name="channelicon">Pvr.RadioNowRecordingChannelIcon</param>
+			</include>
+            <include condition="Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
+				<param name="top">-35</param>
+				<param name="left">-160</param>
+				<param name="headerlabel">$LOCALIZE[19158]</param>
+				<param name="timelabel">Pvr.RadioNowRecordingDateTime</param>
+				<param name="channellabel">Pvr.RadioNowRecordingChannel</param>
+				<param name="titlelabel">Pvr.RadioNowRecordingTitle</param>
+				<param name="channelicon">Pvr.RadioNowRecordingChannelIcon</param>
+			</include>
+		</control>
+		<control type="group">
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingRadio)) + PVR.HasNonRecordingRadioTimer + ![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
 			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
 			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
 				<param name="top">60</param>
@@ -725,10 +793,96 @@
 				<param name="titlelabel">Pvr.RadioNextRecordingTitle</param>
 				<param name="channelicon">Pvr.RadioNextRecordingChannelIcon</param>
 			</include>
-		</control>    
+		</control>
+        <control type="group">
+			<visible>!String.IsEmpty(Container(300).ListItem.Property(widgetRecordingRadio)) + PVR.HasNonRecordingRadioTimer + [Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]</visible>
+			<animation effect="slide" start="0,0" end="0,50" time="0" condition="![Container(300).ListItem.Property(WidgetTwoShelves) | Container(300).ListItem.Property(WidgetDouble)]">conditional</animation>
+			<include condition="!Skin.HasSetting(VerticalHome)" content="CurrentPVRStatusSmall">
+				<param name="top">47</param>
+				<param name="left">1320</param>
+				<param name="headerlabel">$LOCALIZE[19157]</param>
+				<param name="timelabel">Pvr.RadioNextRecordingDateTime</param>
+				<param name="channellabel">Pvr.RadioNextRecordingChannel</param>
+				<param name="titlelabel">Pvr.RadioNextRecordingTitle</param>
+				<param name="channelicon">Pvr.RadioNextRecordingChannelIcon</param>
+			</include>
+            <include condition="Skin.HasSetting(VerticalHome)" content="CurrentPVRStatus">
+				<param name="top">-35</param>
+				<param name="left">890</param>
+				<param name="headerlabel">$LOCALIZE[19157]</param>
+				<param name="timelabel">Pvr.RadioNextRecordingDateTime</param>
+				<param name="channellabel">Pvr.RadioNextRecordingChannel</param>
+				<param name="titlelabel">Pvr.RadioNextRecordingTitle</param>
+				<param name="channelicon">Pvr.RadioNextRecordingChannelIcon</param>
+			</include>
+		</control>		
     </include>
 
-	<include name="CurrentPVRStatus">
+	<include name="CurrentPVRStatusSmall">
+		<param name="top"></param>
+		<param name="left"></param>
+		<param name="headerlabel"></param>
+		<param name="timelabel"></param>
+		<param name="channellabel"></param>
+		<param name="titlelabel"></param>
+		<param name="channelicon"></param>
+		<definition>
+			<top>$PARAM[top]</top>
+			<left>$PARAM[left]</left>
+			<control type="image">
+				<include>VisibleFadeEffect</include>
+				<width>600</width>
+				<height>70</height>
+				<texture border="4">home/ShelfBackground.png</texture>
+				<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
+<!--				<texture border="4" colordiffuse="FF1c1c1c">img/WhiteRoundedST2.png</texture> -->
+			</control>
+			<control type="label">
+				<description>Next Timer Header label</description>
+				<left>16</left>
+				<height>20</height>
+				<width>310</width>
+				<label>$PARAM[headerlabel]</label>
+				<textcolor>$VAR[HighlightColor]</textcolor>
+				<font>ListDetailsSmall</font>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" description="next recording time">
+				<description>NextRecordingDateTime</description>
+				<left>16</left>
+				<top>22</top>
+				<width>420</width>
+				<height>20</height>
+				<font>ListDetailsSmall</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[$PARAM[titlelabel]][/B] ($INFO[$PARAM[channellabel]])</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label" description="Next Recording title Channel">
+				<left>16</left>
+				<top>44</top>
+				<width>800 </width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>ListDetailsSmall</font>
+				<textcolor>$VAR[LabelTextColor]</textcolor>
+				<label>$INFO[$PARAM[timelabel],$LOCALIZE[19126] - ]</label>
+			</control>
+			<include content="ShadowedImage">
+				<param name="top">4</param>
+				<param name="left">440</param>
+				<param name="width">155</param>
+				<param name="height">88</param>
+				<param name="shadowoffset">4</param>
+				<param name="texture">$INFO[$PARAM[channelicon]]</param>
+			</include>
+		</definition>
+	</include>
+
+    <include name="CurrentPVRStatus">
 		<param name="top"></param>
 		<param name="left"></param>
 		<param name="headerlabel"></param>
