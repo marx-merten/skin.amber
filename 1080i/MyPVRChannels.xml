@@ -275,7 +275,7 @@
 		</control>
 		<include content="PanelTemplate">
 			<param name="top">445</param>
-			<param name="height">385</param>
+			<param name="height">320</param>
 			<param name="heading">$VAR[panelheading]</param>
 			<param name="subheading">$VAR[panelsubheading]</param>
 			<param name="plot">$VAR[Plots]</param>

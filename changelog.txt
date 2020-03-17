@@ -1,3 +1,5 @@
+3.2.49 (17-03-2020)
+- More PVR fixes
 3.2.48 (17-03-2020)
 - Fix for color of labels in player process info
 - Fix for pvr recording widgets in horizontal menu

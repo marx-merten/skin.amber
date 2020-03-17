@@ -51,7 +51,7 @@
 					<include>VisibleFadeEffectDelay</include>
 					<posy>35</posy>
 					<width>610</width>
-					<height>420</height>
+					<height>400</height>
 					<align>justify</align>
 					<font>InfoPlot</font>
 					<label>$INFO[ListItem.Season, S]$INFO[ListItem.Episode, E,: ]$VAR[Plots]</label>
