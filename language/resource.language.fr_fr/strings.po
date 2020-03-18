@@ -514,7 +514,7 @@ msgid "CoreELEC Settings"
 msgstr "Paramètres de CoreELEC"
 
 msgctxt "#31309"
-msgid "Memory Used:"
+msgid "Memory Used"
 msgstr "Mémoire utilisée"
 
 msgctxt "#31322"
