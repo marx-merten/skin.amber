@@ -189,7 +189,7 @@
                 <width>320</width>
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>
-                <visible>!String.IsEmpty(ListItem.Rating(imdb)) | !String.IsEmpty(ListItem.Rating)</visible>
+                <visible>[!String.IsEmpty(ListItem.Rating(imdb)) | !String.IsEmpty(ListItem.Rating)] + [Skin.HasSetting(ShowRatingIMDb) | Skin.HasSetting(ShowRatingMain)]</visible>
                 <control type="image" description="IMDb logo">
                     <height>40</height>
                     <width>83</width>
@@ -205,7 +205,7 @@
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating(imdb)]$INFO[ListItem.Votes(imdb), (, $LOCALIZE[205])]</label>
-                    <visible>!String.IsEmpty(ListItem.Rating(imdb))</visible>
+                    <visible>!String.IsEmpty(ListItem.Rating(imdb)) + Skin.HasSetting(ShowRatingIMDb)</visible>
                 </control>
                 <control type="label" description="Main Rating and Votes">
                     <width>auto</width>
@@ -214,7 +214,7 @@
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]$INFO[ListItem.Votes, (, $LOCALIZE[205])]</label>
-                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !String.IsEqual(ListItem.Votes,0)</visible>
+                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !String.IsEqual(ListItem.Votes,0) + Skin.HasSetting(ShowRatingMain)</visible>
                 </control>
                 <control type="label" description="Main Rating No Votes">
                     <width>auto</width>
@@ -223,13 +223,14 @@
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]</label>
-                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + [String.IsEmpty(ListItem.Votes) | String.IsEqual(ListItem.Votes,0)]</visible>
+                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + [String.IsEmpty(ListItem.Votes) | String.IsEqual(ListItem.Votes,0)] + Skin.HasSetting(ShowRatingMain)</visible>
                 </control>                
             </control>
             <control type="grouplist" description="IMDb Top 250 rank">
                 <width>100</width>
                 <orientation>horizontal</orientation>
                 <itemgap>3</itemgap>
+				<visible>Skin.HasSetting(ShowRatingTop250)</visible>
                 <control type="label" description="IMDb Top 250">
                     <width>auto</width>
                     <height>40</height>
@@ -240,7 +241,7 @@
                 </control>
             </control>
             <control type="grouplist" description="RT Critics rating">
-                <visible>!String.IsEmpty(ListItem.Rating(tomatometerallcritics))</visible>
+                <visible>!String.IsEmpty(ListItem.Rating(tomatometerallcritics)) + Skin.HasSetting(ShowRatingRT)</visible>
                 <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
@@ -260,7 +261,7 @@
                 </control>
             </control>
             <control type="grouplist" description="RT Audience rating">
-                <visible>!String.IsEmpty(ListItem.Rating(tomatometerallaudience))</visible>
+                <visible>!String.IsEmpty(ListItem.Rating(tomatometerallaudience)) + Skin.HasSetting(ShowRatingRT)</visible>
                 <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
@@ -280,7 +281,7 @@
                 </control>
             </control>
             <control type="grouplist" description="Metacritic rating">
-                <visible>!String.IsEmpty(ListItem.Rating(metacritic))</visible>
+                <visible>!String.IsEmpty(ListItem.Rating(metacritic)) + Skin.HasSetting(ShowRatingMC)</visible>
                 <width>90</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
@@ -300,7 +301,7 @@
                 </control>
             </control>
             <control type="grouplist" description="TMDB rating">
-                <visible>!String.IsEmpty(ListItem.Rating(themoviedb))</visible>
+                <visible>!String.IsEmpty(ListItem.Rating(themoviedb)) + Skin.HasSetting(ShowRatingTMDb)</visible>
                 <width>115</width>
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>  
@@ -320,7 +321,7 @@
                 </control>
             </control>
             <control type="grouplist" description="TVDB rating and votes">
-                <visible>!String.IsEmpty(ListItem.Rating(tvdb))</visible>
+                <visible>!String.IsEmpty(ListItem.Rating(tvdb)) + Skin.HasSetting(ShowRatingTVDB)</visible>
                 <width>300</width>
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>
@@ -342,7 +343,7 @@
                 </control>
             </control>
             <control type="grouplist" description="User rating">
-                <visible>!String.IsEmpty(ListItem.UserRating)</visible>
+                <visible>!String.IsEmpty(ListItem.UserRating) + Skin.HasSetting(ShowRatingUser)</visible>
                 <width>80</width>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
@@ -377,7 +378,7 @@
                 <width>320</width>
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>
-                <visible>!String.IsEmpty(ListItem.Rating)</visible>
+                <visible>!String.IsEmpty(ListItem.Rating) + Skin.HasSetting(ShowRatingTMDb)</visible>
                 <control type="image" description="TMDB logo">
                     <height>40</height>
                     <width>45</width>
@@ -407,6 +408,7 @@
             </control>
             <control type="grouplist" description="RT Critics rating">
                 <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_rating)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_rating),N/A)</visible>
+				<visible>Skin.HasSetting(ShowRatingRT)</visible>
                 <width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
@@ -427,7 +429,8 @@
             </control>
             <control type="grouplist" description="RT Audience rating">
                 <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_usermeter)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_usermeter),N/A)</visible>
-                <width>130</width>
+                <visible>Skin.HasSetting(ShowRatingRT)</visible>
+				<width>130</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>3</itemgap>            
@@ -447,7 +450,8 @@
             </control>
             <control type="grouplist" description="Metacritic rating">
                 <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.metacritic_rating)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.metacritic_rating),N/A)</visible>
-                <width>90</width>
+                <visible>Skin.HasSetting(ShowRatingMC)</visible>
+				<width>90</width>
                 <orientation>horizontal</orientation>
                 <align>left</align>
                 <itemgap>5</itemgap>            
@@ -470,6 +474,7 @@
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>
                 <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.imdb_rating)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.imdb_rating),N/A)</visible>
+				<visible>Skin.HasSetting(ShowRatingIMDb)</visible>
                 <control type="image" description="IMDb logo">
                     <height>40</height>
                     <width>83</width>
@@ -500,7 +505,7 @@
 
         <!-- Certification Flag for local items -->        
         <control type="group">
-            <visible>!String.IsEmpty(ListItem.MPAA)</visible>
+            <visible>!String.IsEmpty(ListItem.MPAA) + Skin.HasSetting(ShowMPAA)</visible>
             <control type="image" description="Certification flag USA">
                 <top>70</top>
                 <left>1738</left>
@@ -541,6 +546,7 @@
         <!-- Certification Flag for tmdb helper items -->        
         <control type="group">
             <visible>String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MPAA))</visible>
+			<visible>Skin.HasSetting(ShowMPAA)</visible>
             <control type="image" description="Certification flag USA">
                 <top>70</top>
                 <left>1738</left>
@@ -581,7 +587,8 @@
         <!-- Certification Flag for sets, flag for first movie MPAA only -->        
         <control type="group">
             <visible>String.IsEqual(ListItem.DBType,set) + String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA))</visible>
-            <control type="image" description="Certification flag USA">
+            <visible>Skin.HasSetting(ShowMPAA)</visible>
+			<control type="image" description="Certification flag USA">
                 <top>70</top>
                 <left>1738</left>
                 <height>65</height>
@@ -1328,12 +1335,14 @@
                             <label2>$INFO[ListItem.MPAA]</label2>
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(ListItem.MPAA)</visible>
+							<visible>Skin.HasSetting(ShowMPAA)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31037]:</label>
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.MPAA)]</label2>
                             <onclick>noop</onclick>
                             <visible>String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MPAA))</visible>
+							<visible>Skin.HasSetting(ShowMPAA)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[292]:</label>
@@ -1402,18 +1411,21 @@
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewtotal)]</label2>
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewtotal)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewtotal),N/A)</visible>
+							<visible>Skin.HasSetting(ShowRatingRT)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32078]:</label>
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewsfresh)]</label2>
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewsfresh)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewsfresh),N/A)</visible>
+							<visible>Skin.HasSetting(ShowRatingRT)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32079]:</label>
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewsrotten)]</label2>
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewsrotten)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_reviewsrotten),N/A)</visible>
+							<visible>Skin.HasSetting(ShowRatingRT)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[32080]:</label>
@@ -1423,12 +1435,14 @@
                             <onclick>SetProperty(TextViewerContent,$ESCINFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_consensus)],Home)</onclick>
                             <onclick>ActivateWindow(1124)</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_consensus)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_consensus),N/A)</visible>
+							<visible>Skin.HasSetting(ShowRatingRT)</visible>
                         </item>                        
                         <item>
                             <label>$LOCALIZE[32081]:</label>
                             <label2>$INFO[Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_userreviews)]</label2>
                             <onclick>noop</onclick>
                             <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_userreviews)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.rottentomatoes_userreviews),N/A)</visible>
+							<visible>Skin.HasSetting(ShowRatingRT)</visible>
                         </item>                        
                         <item>
                             <label>$LOCALIZE[573]:</label>
@@ -1444,6 +1458,7 @@
                             <label2 fallback="-">$INFO[ListItem.UserRating]</label2>
                             <onclick>SendClick(7)</onclick>
                             <visible>!String.IsEqual(ListItem.DBType,set) + String.IsEmpty(ListItem.Property(tmdb_id))</visible>
+							<visible>Skin.HasSetting(ShowRatingUser)</visible>
                         </item>
                     </content>
                 </control>

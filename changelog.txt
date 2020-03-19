@@ -1,3 +1,10 @@
+3.2.51 (19-03-2020)
+- Fix cutoff text in list view when audio/subs not shown
+- Add option to show/hide main rating and MPAA in media views
+- Add option to select which ratings are shown in video info
+- Add option to show/hide user rating
+3.2.50 (18-03-2020)
+- Fix label in French
 3.2.49 (17-03-2020)
 - More PVR fixes
 3.2.48 (17-03-2020)

@@ -166,7 +166,7 @@
 				<texture>$INFO[$PARAM[type].AudioChannels,badges/audiochannels/channels,.png]</texture>
 			</control>
 			<control type="image" description="Stars">
-				<visible>$PARAM[showratingbadge] + String.IsEmpty(Container.PluginName)</visible>
+				<visible>$PARAM[showratingbadge] + String.IsEmpty(Container.PluginName) + Skin.HasSetting(ShowRatingUser)</visible>
 				<height>$PARAM[itemheight]</height>
 				<width>$PARAM[itemwidth]</width>
 				<bordersize>3</bordersize>
