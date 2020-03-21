@@ -1373,7 +1373,7 @@
                     <!-- Plot when there is no next episode info or audio/sub info being displayed -->
 					<control type="textbox">
                         <top>5</top>
-						<visible>[!Skin.HasSetting(ShowAudioSub) + [Container.Content(movies) | Container.Content(episodes)]] | [ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)] | 
+						<visible>[!Skin.HasSetting(ShowAudioSub) + [[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(episodes)]] | [ListItem.IsCollection + !String.IsEmpty(ListItem.Plot)] | 
 						         [Skin.HasSetting(ShowAudioSub) + [String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + [Container.Content(movies) | Container.Content(episodes)]] | 
 								 [String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 						<align>justify</align>
