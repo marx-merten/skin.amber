@@ -1,3 +1,5 @@
+3.2.52 (23-03-2020)
+- More fixes for cutoff text in list views
 3.2.51 (19-03-2020)
 - Fix cutoff text in list view when audio/subs not shown
 - Add option to show/hide main rating and MPAA in media views

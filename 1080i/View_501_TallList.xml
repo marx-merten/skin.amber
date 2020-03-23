@@ -220,7 +220,7 @@
 					<param name="subheading">$VAR[panelsubheading]</param>
 					<param name="plot">$VAR[Plots]</param>
 					<param name="footer">$VAR[panelfooter]</param>
-					<param name="visibility">Container.Content(images)</param>
+					<param name="visibility">!Skin.HasSetting(DisableListPanel) + Container.Content(images)</param>
 				</include>
 
 				<include content="PanelTemplateTall">
@@ -253,7 +253,7 @@
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">555</param>
+					<param name="height">630</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
 					<param name="footertop">845</param>
@@ -270,7 +270,7 @@
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">555</param>
+					<param name="height">630</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
 					<param name="footertop">845</param>
