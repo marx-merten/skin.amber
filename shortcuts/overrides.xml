@@ -4,6 +4,7 @@
 	<doNotShareMenu />
 
 	<widgetPlaylists>True</widgetPlaylists>
+	<thumbnailBrowseDefault>special://skin/media/</thumbnailBrowseDefault>
 
 	<!-- Set widget to false if there is no path -->
 	<propertyfallback property="widgetTarget">false</propertyfallback>
@@ -451,6 +452,8 @@
 			<shortcut widget="static" label="$LOCALIZE[130]" icon="thumbs/systeminfo/square/system.png" widgetType="system" condition="true">$INCLUDE[skinshortcuts-template-SystemContent]</shortcut>
 			<!-- Favourite Addons -->
 			<shortcut widget="static" label="$LOCALIZE[31487]" icon="DefaultAddon.png" widgetType="favouriteaddons" condition="!String.IsEmpty(Skin.String(ShelfAddons.1.Label))">$INCLUDE[skinshortcuts-template-FavouriteAddonsContent]</shortcut>
+			<!-- Submenu -->
+			<shortcut widget="mysubmenu" label="$LOCALIZE[1034]" icon="DefaultAddon.png" widgetType="addons" widgetTarget="programs">$INCLUDE[skinshortcuts-submenu]</shortcut>
 		</node>
         <!-- Embuary Helper Widgets -->
 		<node label="$LOCALIZE[31495]" icon="DefaultFolder.png">
