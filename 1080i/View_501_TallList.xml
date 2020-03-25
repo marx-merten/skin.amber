@@ -194,7 +194,7 @@
 				<include content="PanelTemplateTall">
 					<param name="top">118</param>
 					<param name="left">605</param>
-					<param name="height">675</param>
+					<param name="height">670</param>
 					<param name="width">610</param>
 					<param name="plotgrouptop">150</param>
 					<param name="footertop">845</param>
