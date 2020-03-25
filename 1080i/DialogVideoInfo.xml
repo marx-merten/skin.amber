@@ -1695,8 +1695,8 @@
                 <param name="content">$VAR[VideoInfoFromGenre]</param>
                 <param name="visibility1">!Skin.HasSetting(DisableInfoListGenre)</param>
             </include>                                                  
-            <!-- Movies from Studio -->
-            <include content="VideoInfoPosterWidget" condition="String.IsEqual(ListItem.DBType,movie) + [!String.IsEmpty(ListItem.Studio) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Studio))]">
+            <!-- From Studio/Network -->
+            <include content="VideoInfoPosterWidget" condition="!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.Studio.1.TMDB_ID))">
                 <param name="id">91008</param>
 				<param name="labelid">910081</param>
                 <param name="headinglabel">$VAR[InfoListStudioHeader,$LOCALIZE[32100] ,]</param>

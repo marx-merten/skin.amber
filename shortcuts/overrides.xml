@@ -447,7 +447,6 @@
 			</node>
 			<!-- Favourites -->
 			<shortcut widget="allfavorites" label="$LOCALIZE[1036]" icon="DefaultFavourites.png" widgetType="favourite" condition="System.HasAddon(script.favourites)">favourites://</shortcut>
-<!--			<shortcut widget="static" label="$LOCALIZE[1036]" icon="DefaultFavourites.png" widgetType="favourite" condition="System.HasAddon(script.favourites)">$INCLUDE[skinshortcuts-template-FavouriteContent]</shortcut> -->
 			<!-- System -->
 			<shortcut widget="static" label="$LOCALIZE[130]" icon="thumbs/systeminfo/square/system.png" widgetType="system" condition="true">$INCLUDE[skinshortcuts-template-SystemContent]</shortcut>
 			<!-- Favourite Addons -->
@@ -465,19 +464,19 @@
 		<node label="$LOCALIZE[31553]" icon="DefaultFolder.png">
 			<!-- Movies -->
 			<node label="$LOCALIZE[342]" icon="DefaultMovies.png">
-				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31554]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=popular</shortcut>
-				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31555]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=top_rated</shortcut>
-				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31556]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=upcoming</shortcut>
-				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31557]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=movies&amp;call=now_playing</shortcut>
-				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31558]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=trending&amp;call=movie&amp;get=week</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31554]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/movie/popular</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31555]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/movie/top_rated</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31556]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/movie/upcoming</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31557]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/movie/now_playing</shortcut>
+				<shortcut widget="embuaryinfomovies" label="$LOCALIZE[31558]" icon="shelves/embuary.info.png" widgetType="movies" widgetTarget="video" condition="Library.HasContent(movies) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/movie/trending</shortcut>
 			</node>
 			<!-- TV Shows -->
 			<node label="$LOCALIZE[31432]" icon="DefaultTVShows.png">
-				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31559]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=popular</shortcut>
-				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31560]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=top_rated</shortcut>
-				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31561]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=airing_today</shortcut>
-				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31562]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=tvshows&amp;call=on_the_air</shortcut>
-				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31563]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/?info=trending&amp;call=tv&amp;get=week</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31559]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/tv/popular</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31560]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/tv/top_rated</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31561]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/tv/airing_today</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31562]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/tv/on_the_air</shortcut>
+				<shortcut widget="embuaryinfotvshows" label="$LOCALIZE[31563]" icon="shelves/embuary.info.png" widgetType="tvshows" widgetTarget="video" condition="Library.HasContent(tvshows) + System.HasAddon(script.embuary.info)">plugin://script.embuary.info/tv/trending</shortcut>
 			</node>
 			<!-- Episodes -->
 			<node label="$LOCALIZE[20360]" icon="DefaultTVShows.png">
