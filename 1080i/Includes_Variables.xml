@@ -623,7 +623,7 @@
         <value condition="String.IsEqual(ListItem.DBType,musicvideo) + !Window.IsActive(script-globalsearch.xml) + Skin.HasSetting(Hide.Label2.Lists) + Skin.HasSetting(ShowRatingandMPAA)">[CR]$INFO[Listitem.Title]$INFO[ListItem.MPAA, • ]$INFO[ListItem.DateAdded, • $LOCALIZE[32021] ]$INFO[ListItem.PlayCount, • $LOCALIZE[32022] ]</value>
 		<value condition="String.IsEqual(ListItem.DBType,musicvideo) + !Window.IsActive(script-globalsearch.xml) + Skin.HasSetting(Hide.Label2.Lists) + !Skin.HasSetting(ShowRatingandMPAA)">[CR]$INFO[Listitem.Title]$INFO[ListItem.DateAdded, • $LOCALIZE[32021] ]$INFO[ListItem.PlayCount, • $LOCALIZE[32022] ]</value>
         <value condition="!String.IsEmpty(ListItem.Year) + !Control.IsVisible(52)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year]</value>
-		<value condition="!String.IsEmpty(ListItem.Year) + Control.IsVisible(52)">[COLOR=$VAR[SelectedColor]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year]</value>
+		<value condition="!String.IsEmpty(ListItem.Year) + Control.IsVisible(52)">[COLOR=$VAR[SelectedTextColor]]$LOCALIZE[345]: [/COLOR]$INFO[ListItem.Year]</value>
 		<value condition="!String.IsEqual(ListItem.Title,ListItem.Label)">$INFO[Listitem.Title]</value>
     </variable>
 	

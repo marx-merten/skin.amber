@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	
+	<!-- Establish list as default view if no default view is set -->
+	<onload condition="!Skin.HasSetting(FirstRunDone)">Skin.SetBool(UseListDefault)</onload>
+	<onload condition="!Skin.HasSetting(FirstRunDone)">Skin.SetBool(FirstRunDone)</onload>
+	
 	<include condition="Skin.HasSetting(UseListDefault)">DefaultViews</include>
     <include condition="Skin.HasSetting(UseTallListDefault)">TallListDefaultView</include>
 	<include condition="Skin.HasSetting(UseLowListDefault)">LowListDefaultView</include>
