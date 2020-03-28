@@ -906,8 +906,9 @@
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),Global.Fanart)">$INFO[Container(12344).ListItem.Art(fanart)]</value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(background),Weather.Fanart)">$INFO[Skin.String(weatherfanartResource.path)]$INFO[Window(Weather).Property(Current.FanartCode)]$VAR[WeatherBackgroundExt]</value>
         <value condition="!String.IsEmpty(Container(300).ListItem.Property(background)) + String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">$INFO[Container(300).ListItem.Property(background)]</value>
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(background)) + !String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">$INFO[Container(9988).ListItem.Art(fanart)]</value>
-    </variable>
+<!--        <value condition="!String.IsEmpty(Container(300).ListItem.Property(background)) + !String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">$INFO[Container(9988).ListItem.Art(fanart)]</value> -->
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(background)) + !String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">$INFO[Control.GetLabel(398045)]</value>
+	</variable>
 
     <variable name="FanartTitleVar">
         <value condition="ControlGroup(700).HasFocus + !String.IsEmpty(ListItem.Artist) + $EXP[WidgetFanartVisible]">$INFO[ListItem.Artist]</value>

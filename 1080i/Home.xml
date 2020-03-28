@@ -12,6 +12,7 @@
 	<onunload condition="System.HasAddon(plugin.video.themoviedb.helper)">ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
 	<defaultcontrol always="true">300</defaultcontrol>
 	<controls>
+		
 		<control type="list" id="9988">
 			<description>hidden container for playlist background</description>
 			<posx>-20</posx>
@@ -19,13 +20,27 @@
 			<width>1</width>
 			<height>1</height>
 			<include>AutoscrollTime</include>
-			<itemlayout width="1" height="1">
-			</itemlayout>
-			<focusedlayout height="1" width="1">
-			</focusedlayout>
-			<content sortby="random">$INFO[Container(300).ListItem.Property(backgroundPlaylist)]</content>
+			<itemlayout />
+	        <focusedlayout />
+			<content sortby="random" limit="50">$INFO[Container(300).ListItem.Property(backgroundPlaylist)]</content>
 		</control>
         
+		<control type="fadelabel" id="398045">
+	        <description>Randomizer for playlist fanart</description>
+	        <top>-1000</top>
+	        <width>1</width>
+	        <height>1</height>
+	        <info>Container(9988).ListItem.Art(fanart)</info>
+	        <info>Container(9988).ListItem.Art(fanart1)</info>
+	        <info>Container(9988).ListItem.Art(fanart2)</info>
+	        <randomize>true</randomize>
+	        <pauseatend>15000</pauseatend> <!-- Time to show each image, in milliseconds -->
+	        <scroll>false</scroll>
+	        <scrollout>false</scrollout>
+	        <resetonlabelchange>true</resetonlabelchange>
+        </control>
+		
+		
         <control type="list" id="9980">
 			<description>hidden container for video addons, for addon count infoline</description>
 			<posx>-20</posx>
