@@ -567,7 +567,7 @@
 				<content>addon-image</content>
 			</node>
 			<node label="32009">
-				<content>addon-program-plugin</content>
+				<content>addon-program</content>
 			</node>
 			<shortcut label="$LOCALIZE[1043]" widget="addon" icon="DefaultAddonProgram.png" widgetType="addons" widgetTarget="programs">addons://sources/executable/</shortcut>
 			<shortcut label="$LOCALIZE[20244]" widget="addon" icon="DefaultAddonProgram.png" widgetType="addons" widgetTarget="programs" condition="System.Platform.Android">androidapp://sources/apps/</shortcut>
