@@ -6,7 +6,7 @@
     <onload condition="System.HasAddon(script.skin.info.service) + String.IsEmpty(Window(home).Property(skininfos_daemon_running))">RunScript(script.skin.info.service)</onload>
     <!-- Establish list as default view if no default view is set -->
 	<onload condition="!Skin.HasSetting(UseListDefault) + !Skin.HasSetting(UseTallListDefault) + !Skin.HasSetting(UseLowListDefault) + !Skin.HasSetting(UseBigListDefault) + !Skin.HasSetting(UsePanelDefault) + 
-	                   !Skin.HasSetting(UseBigPanelDefault) + !Skin.HasSetting(UseIconsDefault) + !Skin.HasSetting(UseFanartDefault)">Skin.SetBool(UseListDefault)</onload>
+	                   !Skin.HasSetting(UsePanel2Default) + !Skin.HasSetting(UseBigPanelDefault) + !Skin.HasSetting(UseBigPanel2Default) + !Skin.HasSetting(UseIconsDefault) + !Skin.HasSetting(UseFanartDefault)">Skin.SetBool(UseListDefault)</onload>
 	<onunload condition="!String.IsEmpty(Container(300).ListItem.Property(Background))">Skin.SetString(FocusedMenu.Background,$INFO[Container(300).ListItem.Property(Background)])</onunload>
     <onunload condition="!String.IsEmpty(Container(300).ListItem.Property(backgroundPlaylist))">Skin.SetString(FocusedMenu.BackgroundPlaylist,$INFO[Container(300).ListItem.Property(backgroundPlaylist)])</onunload>
 	<onunload condition="System.HasAddon(plugin.video.themoviedb.helper)">ClearProperty(TMDbHelper.WidgetContainer,home)</onunload>
