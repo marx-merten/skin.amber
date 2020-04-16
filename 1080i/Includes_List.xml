@@ -340,8 +340,8 @@
 			
 			<itemlayout condition="![$EXP[ListPanelIsDisabled]] + $EXP[ListPanelIsSwapped] + [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
-    				<posy>10</posy>
-				    <posx>0</posx>
+    				<posy>0</posy>
+				    <posx>10</posx>
 				    <width>640</width>
 				    <height>$PARAM[itemheight]</height>
 				    <texture flipy="true" border="3">list/ListNF.png</texture>
@@ -443,7 +443,7 @@
 		    
 			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + $EXP[ListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
-    				<posy>-20</posy>
+    				<posy>0</posy>
 				    <posx>0</posx>
 				    <width>680</width>
 				    <height>$PARAM[itemheight]</height>
@@ -1351,7 +1351,7 @@
 			
 			<itemlayout condition="![$EXP[LowListPanelIsDisabled]] + $EXP[LowListPanelIsSwapped] + [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
-    				<posy>10</posy>
+    				<posy>0</posy>
 				    <posx>0</posx>
 				    <width>640</width>
 				    <height>$PARAM[itemheight]</height>
@@ -1454,7 +1454,7 @@
 		    
 			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + $EXP[LowListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
-    				<posy>-20</posy>
+    				<posy>0</posy>
 				    <posx>0</posx>
 				    <width>680</width>
 				    <height>$PARAM[itemheight]</height>
@@ -2313,8 +2313,8 @@
 			
 			<itemlayout condition="![$EXP[TallListPanelIsDisabled]] + $EXP[TallListPanelIsSwapped] + [Container.Content(sets) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(images) | Container.Content(games)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
-    				<posy>80</posy>
-				    <posx>0</posx>
+    				<posy>0</posy>
+				    <posx>80</posx>
 				    <width>640</width>
 				    <height>$PARAM[itemheight]</height>
 				    <texture flipy="true" border="3">list/ListNF.png</texture>
@@ -2444,8 +2444,8 @@
 		    
 			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + $EXP[TallListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
-    				<posy>80</posy>
-				    <posx>0</posx>
+    				<posy>0</posy>
+				    <posx>80</posx>
 				    <width>640</width>
 				    <height>$PARAM[itemheight]</height>
 				    <texture flipy="true" border="3">list/ListNF.png</texture>

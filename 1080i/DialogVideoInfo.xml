@@ -189,7 +189,7 @@
                 <width>320</width>
                 <orientation>horizontal</orientation>
                 <itemgap>5</itemgap>
-                <visible>[!String.IsEmpty(ListItem.Rating(imdb)) | !String.IsEmpty(ListItem.Rating)] + [Skin.HasSetting(ShowRatingIMDb) | Skin.HasSetting(ShowRatingMain)]</visible>
+                <visible>[!String.IsEmpty(ListItem.Rating(imdb)) | !String.IsEmpty(ListItem.Rating)] + [Skin.HasSetting(ShowRatingIMDb) | Skin.HasSetting(ShowRatingMainVideoInfo)]</visible>
                 <control type="image" description="IMDb logo">
                     <height>40</height>
                     <width>83</width>
@@ -214,7 +214,7 @@
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]$INFO[ListItem.Votes, (, $LOCALIZE[205])]</label>
-                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !String.IsEqual(ListItem.Votes,0) + Skin.HasSetting(ShowRatingMain)</visible>
+                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + !String.IsEmpty(ListItem.Votes) + !String.IsEqual(ListItem.Votes,0) + Skin.HasSetting(ShowRatingMainVideoInfo)</visible>
                 </control>
                 <control type="label" description="Main Rating No Votes">
                     <width>auto</width>
@@ -223,7 +223,7 @@
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <align>left</align>
                     <label>$INFO[ListItem.Rating]</label>
-                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + [String.IsEmpty(ListItem.Votes) | String.IsEqual(ListItem.Votes,0)] + Skin.HasSetting(ShowRatingMain)</visible>
+                    <visible>String.IsEmpty(ListItem.Rating(imdb)) + !String.IsEmpty(ListItem.Rating) + [String.IsEmpty(ListItem.Votes) | String.IsEqual(ListItem.Votes,0)] + Skin.HasSetting(ShowRatingMainVideoInfo)</visible>
                 </control>                
             </control>
             <control type="grouplist" description="IMDb Top 250 rank">
@@ -343,7 +343,7 @@
                 </control>
             </control>
             <control type="grouplist" description="User rating">
-                <visible>!String.IsEmpty(ListItem.UserRating) + Skin.HasSetting(ShowRatingUser)</visible>
+                <visible>!String.IsEmpty(ListItem.UserRating) + Skin.HasSetting(ShowRatingUserVideoInfo)</visible>
                 <width>80</width>
                 <orientation>horizontal</orientation>
                 <itemgap>0</itemgap>
@@ -505,7 +505,7 @@
 
         <!-- Certification Flag for local items -->        
         <control type="group">
-            <visible>!String.IsEmpty(ListItem.MPAA) + Skin.HasSetting(ShowMPAA)</visible>
+            <visible>!String.IsEmpty(ListItem.MPAA) + Skin.HasSetting(ShowMPAAVideoInfo)</visible>
             <control type="image" description="Certification flag USA">
                 <top>70</top>
                 <left>1738</left>
@@ -546,7 +546,7 @@
         <!-- Certification Flag for tmdb helper items -->        
         <control type="group">
             <visible>String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.MPAA))</visible>
-			<visible>Skin.HasSetting(ShowMPAA)</visible>
+			<visible>Skin.HasSetting(ShowMPAAVideoInfo)</visible>
             <control type="image" description="Certification flag USA">
                 <top>70</top>
                 <left>1738</left>
@@ -587,7 +587,7 @@
         <!-- Certification Flag for sets, flag for first movie MPAA only -->        
         <control type="group">
             <visible>String.IsEqual(ListItem.DBType,set) + String.IsEmpty(ListItem.MPAA) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movie.1.MPAA))</visible>
-            <visible>Skin.HasSetting(ShowMPAA)</visible>
+            <visible>Skin.HasSetting(ShowMPAAVideoInfo)</visible>
 			<control type="image" description="Certification flag USA">
                 <top>70</top>
                 <left>1738</left>

@@ -164,13 +164,13 @@
 	
 	<variable name="TopRightOverlay" description="Overlay image">
         <value condition="String.StartsWith(ListItem.FolderPath,plugin://) + !String.IsEmpty(ListItem.DBID)">Library.png</value>
-		<value condition="!Skin.HasSetting(Hide_Collection_Marks) + ListItem.IsCollection">overlays/Collections-white.png</value>
+		<value condition="!Skin.HasSetting(Hide_Collection_Marks) + ListItem.IsCollection">overlays/collections-white2.png</value>
         <value condition="ListItem.IsRecording">img/PVR-IsRecording.png</value>
-        <value condition="!Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(ListItem.Overlay) + ListItem.IsResumable">overlays/TopRightOverlayInProgress.png</value>
+        <value condition="!Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(ListItem.Overlay) + ListItem.IsResumable">overlays/toprightoverlayinprogress2.png</value>
         <value condition="Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(ListItem.Overlay) + ListItem.IsResumable"></value>
-        <value condition="!Skin.HasSetting(Hide_Watched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/TopRightOverlayWatched.png</value>
-        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + [Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]">overlays/TopRightOverlayUnwatched.png</value>
-        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)">overlays/TopRightOverlayUnWatched.png</value>
+        <value condition="!Skin.HasSetting(Hide_Watched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/toprightoverlaywatched2.png</value>
+        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + [Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)]">overlays/toprightoverlayunwatched2.png</value>
+        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(ListItem.Overlay) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)">overlays/toprightoverlayunwatched2.png</value>
         <value></value>
     </variable>
 

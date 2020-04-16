@@ -1205,8 +1205,7 @@
                 <posy>603</posy>
                 <width>670</width>
                 <height>90</height>
-                <texture flipx="true" border="100,0,0,0">common/TimePanel.png</texture>
-				<colordiffuse>$VAR[GlowBarsColor]</colordiffuse>
+                <texture flipx="true" colordiffuse="$VAR[GlowBarsColor]" border="100,0,0,0">common/TimePanel.png</texture>
 				<visible>!Skin.HasSetting(VerticalHome) + ![String.IsEqual(Container(300).ListItem.Property(InfoLine),movieplaylist) | String.IsEqual(Container(300).ListItem.Property(InfoLine),musicvideoplaylist)]</visible>
             </control>
             <control type="label">
@@ -1225,8 +1224,7 @@
                 <posy>603</posy>
                 <width>910</width>
                 <height>90</height>
-                <texture flipx="true" border="100,0,0,0">common/TimePanel.png</texture>
-				<colordiffuse>$VAR[GlowBarsColor]</colordiffuse>
+                <texture flipx="true" colordiffuse="$VAR[GlowBarsColor]" border="100,0,0,0">common/TimePanel.png</texture>
 				<visible>!Skin.HasSetting(VerticalHome) + [String.IsEqual(Container(300).ListItem.Property(InfoLine),movieplaylist) | String.IsEqual(Container(300).ListItem.Property(InfoLine),musicvideoplaylist)]</visible>
             </control>
             <control type="label">
@@ -1245,8 +1243,7 @@
                 <posy>40</posy>
                 <width>670</width>
                 <height>90</height>
-                <texture flipx="true" flipy="true" border="100,0,0,0">common/TimePanel.png</texture>
-				<colordiffuse>$VAR[GlowBarsColor]</colordiffuse>
+                <texture flipx="true" flipy="true" colordiffuse="$VAR[GlowBarsColor]" border="100,0,0,0">common/TimePanel.png</texture>
 				<visible>Skin.HasSetting(VerticalHome) + ![String.IsEqual(Container(300).ListItem.Property(InfoLine),movieplaylist) | String.IsEqual(Container(300).ListItem.Property(InfoLine),musicvideoplaylist)]</visible>
             </control>
             <control type="label">
@@ -1265,8 +1262,7 @@
                 <posy>40</posy>
                 <width>910</width>
                 <height>90</height>
-                <texture flipx="true" flipy="true" border="100,0,0,0">common/TimePanel.png</texture>
-				<colordiffuse>$VAR[GlowBarsColor]</colordiffuse>
+                <texture flipx="true" flipy="true" colordiffuse="$VAR[GlowBarsColor]" border="100,0,0,0">common/TimePanel.png</texture>
 				<visible>Skin.HasSetting(VerticalHome) + [String.IsEqual(Container(300).ListItem.Property(InfoLine),movieplaylist) | String.IsEqual(Container(300).ListItem.Property(InfoLine),musicvideoplaylist)]</visible>
             </control>
             <control type="label">
