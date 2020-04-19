@@ -3027,7 +3027,10 @@
 
     <!-- List layout for BigList -->
 	<include name="52_layout">
-		<param name="left">20</param>
+		<param name="left">845</param>
+		<param name="thumbleft">845</param>
+		<param name="labelsleft">925</param>
+		<param name="overlayleft">1820</param>
 		<param name="width"></param>
 		<param name="imgalign">center</param>
 		<param name="imgwidth">233</param>
@@ -3037,12 +3040,14 @@
 		<definition>
 			<control type="image">
 				<visible>$PARAM[isfocused]</visible>
+				<posx>$PARAM[left]</posx>
 				<width>1010</width>
 				<height>104</height>
 				<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 				<animation effect="fade" start="105" end="50" time="105" condition="!Control.HasFocus(52)">Conditional</animation>
 			</control>
 			<control type="image">
+				<posx>$PARAM[left]</posx>
 				<visible>!$PARAM[isfocused]</visible>
 				<height>104</height>
 				<width>1010</width>
@@ -3050,7 +3055,7 @@
 			</control>
 			<include content="ShadowedImage">
 				<param name="top">5</param>
-				<param name="left">5</param>
+				<param name="left">$PARAM[thumbleft]</param>
 				<param name="width">$PARAM[imgwidth]</param>
 				<param name="height">90</param>
 				<param name="shadowoffset">4</param>
@@ -3060,7 +3065,7 @@
 			</include>
            <control type="label">
 		        <visible>$PARAM[isfocused]</visible>
-		        <posx>$PARAM[left]</posx>
+		        <posx>$PARAM[labelsleft]</posx>
 		        <posy>10</posy>
 		        <height>40</height>
 		        <width>860</width>
@@ -3073,7 +3078,7 @@
 	        </control>
 	        <control type="label">
 		        <visible>!$PARAM[isfocused]</visible>
-		        <posx>$PARAM[left]</posx>
+		        <posx>$PARAM[labelsleft]</posx>
 		        <posy>10</posy>
 		        <height>40</height>
 		        <width>860</width>
@@ -3084,7 +3089,7 @@
 	        </control>
 	        <control type="label">
 		        <visible>!$PARAM[isfocused]</visible>
-		        <posx>$PARAM[left]</posx>
+		        <posx>$PARAM[labelsleft]</posx>
 		        <posy>53</posy>
 		        <height>40</height>
 		        <width>$PARAM[width]</width>
@@ -3096,7 +3101,7 @@
 	        </control>
 	        <control type="label">
 		        <visible>$PARAM[isfocused]</visible>
-		        <posx>$PARAM[left]</posx>
+		        <posx>$PARAM[labelsleft]</posx>
 		        <posy>53</posy>
 		        <height>40</height>
 		        <width>$PARAM[width]</width>
@@ -3111,7 +3116,7 @@
 		    <control type="group">
     			<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			    <control type="image">
-    				<posx>45r</posx>
+    				<posx>$PARAM[overlayleft]</posx>
 				    <posy>-5</posy>
 				    <width>30</width>
 				    <height>100</height>
