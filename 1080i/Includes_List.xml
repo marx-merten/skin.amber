@@ -159,7 +159,7 @@
 				</include>
 			</focusedlayout>
 		    
-		    <itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + ![$EXP[ListPanelIsSwapped]] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + ![$EXP[ListPanelIsSwapped]] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>670</posx>
@@ -238,7 +238,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + ![$EXP[ListPanelIsSwapped]] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + ![$EXP[ListPanelIsSwapped]] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>679</posx>
 					<posy>0</posy>
@@ -441,7 +441,7 @@
 				</include>
 			</focusedlayout>
 		    
-			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + $EXP[ListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + $EXP[ListPanelIsSwapped] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>0</posx>
@@ -520,7 +520,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + $EXP[ListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[ListPanelIsDisabled]] + $EXP[ListPanelIsSwapped] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>-20</posx>
 					<posy>0</posy>
@@ -1170,7 +1170,7 @@
 				</include>
 			</focusedlayout>
 		    
-		    <itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + ![$EXP[LowListPanelIsSwapped]] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + ![$EXP[LowListPanelIsSwapped]] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>870</posx>
@@ -1249,7 +1249,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + ![$EXP[LowListPanelIsSwapped]] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + ![$EXP[LowListPanelIsSwapped]] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>879</posx>
 					<posy>0</posy>
@@ -1452,7 +1452,7 @@
 				</include>
 			</focusedlayout>
 		    
-			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + $EXP[LowListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + $EXP[LowListPanelIsSwapped] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>0</posx>
@@ -1511,7 +1511,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + $EXP[LowListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[LowListPanelIsDisabled]] + $EXP[LowListPanelIsSwapped] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>-20</posx>
 					<posy>0</posy>
@@ -2132,7 +2132,7 @@
 				</include>
 			</focusedlayout>
 		    
-		    <itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + ![$EXP[TallListPanelIsSwapped]] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + ![$EXP[TallListPanelIsSwapped]] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>670</posx>
@@ -2211,7 +2211,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + ![$EXP[TallListPanelIsSwapped]] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + ![$EXP[TallListPanelIsSwapped]] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>679</posx>
 					<posy>0</posy>
@@ -2442,7 +2442,7 @@
 				</include>
 			</focusedlayout>
 		    
-			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + $EXP[TallListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+			<itemlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + $EXP[TallListPanelIsSwapped] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posy>0</posy>
 				    <posx>80</posx>
@@ -2521,7 +2521,7 @@
                     <param name="BGposy">$PARAM[BGposy]</param>
                 </include>
 		    </itemlayout>
-		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + $EXP[TallListPanelIsSwapped] + [Container.Content(files) | Container.Content(videos) | Container.Content() | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
+		    <focusedlayout condition="$EXP[PanelShouldShow] + ![$EXP[TallListPanelIsDisabled]] + $EXP[TallListPanelIsSwapped] + [$EXP[isSpecialContent] | Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(seasons)]" height="$PARAM[itemheight]" width="1210">
 			    <control type="image" description="BG">
     				<posx>80</posx>
 					<posy>0</posy>
@@ -3114,13 +3114,24 @@
 		        <label>$VAR[panelsubheading]</label>
 	        </control>
 		    <control type="group">
-    			<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+    			<visible>[Container.Content(videos) | Container.Content(sets) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			    <control type="image">
     				<posx>$PARAM[overlayleft]</posx>
 				    <posy>-5</posy>
 				    <width>30</width>
 				    <height>100</height>
 				    <texture>$VAR[Overlay]</texture>
+				    <aspectratio aligny="center">keep</aspectratio>
+			    </control>
+		    </control>
+			<control type="group">
+    			<visible>[Container.Content(addons)</visible>
+			    <control type="image">
+    				<posx>$PARAM[overlayleft]</posx>
+				    <posy>-5</posy>
+				    <width>30</width>
+				    <height>100</height>
+				    <texture>$VAR[AddonOverlay]</texture>
 				    <aspectratio aligny="center">keep</aspectratio>
 			    </control>
 		    </control>
