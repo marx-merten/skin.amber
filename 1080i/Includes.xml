@@ -1619,7 +1619,7 @@
 		<param name="plotheightlow">200</param>
         <param name="subcontent_label1">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
         <param name="subcontent_label2">$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</param>
-        <param name="subcontent_path">$INFO[ListItem.Path]</param>
+        <param name="subcontent_path">videodb://movies/sets/$INFO[ListItem.DBID]/?setid=$INFO[ListItem.DBID]</param>
         <param name="subcontent_sortby">year</param>
         <param name="subcontent_sortorder">descending</param>
         <param name="subcontent_visible">[ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</param>
