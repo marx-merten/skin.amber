@@ -899,7 +899,9 @@
         <value condition="!Skin.HasSetting(Sub_FanArtBG)">$VAR[SubDefaultBackground]</value>
         <value condition="!String.IsEmpty(Control.GetLabel(4411)) + Skin.HasSetting(SkinHelper.EnableExtraFanart)">$INFO[Control.GetLabel(4411)]</value>
 		<value condition="!String.IsEmpty(Control.GetLabel(4410)) + Skin.HasSetting(SkinHelper.EnableExtraFanart)">$INFO[Control.GetLabel(4410)]</value>
-        <value>$VAR[Fanart.Art]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + [Container.Content(actors) | Container.Content(directors) | Container.Content(years) | Container.Content(countries) | 
+		                                                      Container.Content(tags) | Container.Content(genres) | Container.Content(studios)] + !String.IsEmpty(Container(4451).ListItem.Art(fanart))">$INFO[Container(4451).ListItem.Art(fanart)]</value>
+		<value>$VAR[Fanart.Art]</value>
     </variable>
 
     <variable name="SubDefaultBackground">
@@ -1305,6 +1307,11 @@
 	<variable name="LongLabelScroll">
 	    <value condition="Skin.HasSetting(ScrollLongLabels)">true</value>
 		<value>false</value>
+	</variable>
+	
+	<variable name="UnwatchedEpisodes">
+	    <value condition="!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)">$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
+		<value>99+</value>
 	</variable>
 	
     <expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | [[container.content(MusicVideos) | container.content(movies) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
