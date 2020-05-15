@@ -140,7 +140,16 @@
 	
 	<!-- Use EH for Playlist Backgrounds is false by default -->
 	<propertyfallback property="EHPlaylistFanart">false</propertyfallback>
-	
+		
+	<!-- Number of Playlist Backgrounds to use -->
+	<property property="playlistFanartLimit" label="1 ">$NUMBER[1]</property>
+	<property property="playlistFanartLimit" label="2 ">$NUMBER[2]</property>
+	<property property="playlistFanartLimit" label="3 ">$NUMBER[3]</property>
+	<property property="playlistFanartLimit" label="5 ">$NUMBER[5]</property>
+	<property property="playlistFanartLimit" label="10 ">$NUMBER[10]</property>
+	<property property="playlistFanartLimit" label="25 ">$NUMBER[25]</property>
+	<property property="playlistFanartLimit" label="50 ">$NUMBER[50]</property>
+	<propertySettings property="playlistFanartLimit" buttonID="808" showNone="false" title="$LOCALIZE[31604]"/>
 	
 	<!-- Widget (Shelf) Properties -->
 
