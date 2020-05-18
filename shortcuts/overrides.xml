@@ -23,12 +23,12 @@
 	<background label="31599">Kodi.Video.Fanart</background>
 	<background label="31600">Kodi.Music.Fanart</background>
 	<background label="31601">Kodi.Global.Fanart</background>
-	<background label="31399" condition="System.HasAddon(script.embuary.helper)">Movie.Fanart</background>
-	<background label="31400" condition="System.HasAddon(script.embuary.helper)">TV.Fanart</background>
-	<background label="31401" condition="System.HasAddon(script.embuary.helper)">Video.Fanart</background>
-	<background label="31589" condition="System.HasAddon(script.embuary.helper)">MusicVideo.Fanart</background>
-	<background label="31402" condition="System.HasAddon(script.embuary.helper)">Music.Fanart</background>
-	<background label="31403" condition="System.HasAddon(script.embuary.helper)">Global.Fanart</background>
+	<background label="31399" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">Movie.Fanart</background>
+	<background label="31400" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">TV.Fanart</background>
+	<background label="31401" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">Video.Fanart</background>
+	<background label="31589" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">MusicVideo.Fanart</background>
+	<background label="31402" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">Music.Fanart</background>
+	<background label="31403" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">Global.Fanart</background>
 	<background label="31590">nodeBackground</background>
 	<background label="31404" condition="!String.IsEmpty(Skin.String(weatherfanartResource.path))">Weather.Fanart</background>
 	<background label="31569">special://skin/backgrounds/Default.jpg</background>
@@ -127,10 +127,10 @@
 	<property property="InfoLine" label="$LOCALIZE[1036]" condition="System.HasAddon(script.favourites)">favourites</property>
 	<property property="InfoLine" label="$LOCALIZE[427]">disc</property>
 	<property property="InfoLine" label="$LOCALIZE[130]">systeminfo</property>
-	<property property="InfoLine" label="$LOCALIZE[31410]" condition="System.HasAddon(script.embuary.helper)">movieplaylist</property>
-	<property property="InfoLine" label="$LOCALIZE[31411]" condition="System.HasAddon(script.embuary.helper)">tvshowplaylist</property>
-	<property property="InfoLine" label="$LOCALIZE[31412]" condition="System.HasAddon(script.embuary.helper)">musicvideoplaylist</property>
-	<property property="InfoLine" label="$LOCALIZE[31418]" condition="System.HasAddon(script.embuary.helper)">episodeplaylist</property>
+	<property property="InfoLine" label="$LOCALIZE[31410]" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHInfoLine)">movieplaylist</property>
+	<property property="InfoLine" label="$LOCALIZE[31411]" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHInfoLine)">tvshowplaylist</property>
+	<property property="InfoLine" label="$LOCALIZE[31412]" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHInfoLine)">musicvideoplaylist</property>
+	<property property="InfoLine" label="$LOCALIZE[31418]" condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHInfoLine)">episodeplaylist</property>
     <property property="InfoLine" label="$LOCALIZE[31591]">movienode</property>
 	<property property="InfoLine" label="$LOCALIZE[31592]">tvshownode</property>
 	<property property="InfoLine" label="$LOCALIZE[31593]">musicvideonode</property>

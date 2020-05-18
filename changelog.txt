@@ -1,3 +1,8 @@
+3.2.82 (18-05-2020)
+- Make optional settings for backgrounds and info lines
+- Fixes for fanart view
+- Show play count for songs in media views
+- More French language fixes
 3.2.80 (15-05-2020)
 - Add banners for movies in icon media views
 - Allow Embuary Helper for backgrounds for nodes
