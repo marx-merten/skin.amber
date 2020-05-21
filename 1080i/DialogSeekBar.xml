@@ -66,7 +66,8 @@
 				        <visible>Player.SeekEnabled</visible>
 			        </control>
 		        </control>
-		        <control type="group">
+		        
+				<control type="group">
 			        <visible>VideoPlayer.Content(livetv) + Player.ChannelPreviewActive</visible>
 			        <control type="progress">
 					    <posx>30</posx>
@@ -79,6 +80,7 @@
 				        <info>PVR.EpgEventProgress</info>
 			        </control>
 		        </control>
+				
 				<control type="slider" id="403">
 					<description>Seek Slider PVR</description>
 					<posx>30</posx>
@@ -146,6 +148,7 @@
 					<shadowcolor>Black</shadowcolor>
                     <visible>VideoPlayer.Content(livetv) + VideoPlayer.HasEPG</visible>
 				</control>
+				
 				<control type="label" description="Timeshift label">
 					<left>30</left>
 					<top>70</top>
@@ -222,6 +225,7 @@
 					<font>InfoTitle</font>
 					<shadowcolor>Black</shadowcolor>
 				</control>
+				
 				<!-- Currently recording indicator -->
                 <control type="group">
 					<visible>[PVR.IsRecordingPlayingChannel + !Player.ChannelPreviewActive]</visible>
