@@ -1505,6 +1505,10 @@ msgctxt "#31604"
 msgid "Playlist/Node Fanart Background Limit"
 msgstr ""
 
+msgctxt "#31605"
+msgid "Custom Shelf"
+msgstr ""
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""
@@ -2806,4 +2810,16 @@ msgstr ""
 
 msgctxt "#32267"
 msgid "Go To"
+msgstr ""
+
+msgctxt "#32268"
+msgid "Show Three Shelves Together"
+msgstr ""
+
+msgctxt "#32269"
+msgid "Configure Custom Shelf"
+msgstr ""
+
+msgctxt "#32270"
+msgid "Custom Shelf"
 msgstr ""

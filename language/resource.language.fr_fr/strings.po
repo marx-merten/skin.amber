@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2020-05-21 16:51-0400\n"
+"PO-Revision-Date: 2020-05-23 18:36-0400\n"
 "Last-Translator: Kodi Translation Team\n"
 "Language-Team: French (France) (http://www.transifex.com/projects/p/kodi-"
 "skins/language/fr_FR/)\n"
@@ -1508,6 +1508,13 @@ msgctxt "#31604"
 msgid "Playlist/Node Fanart Background Limit"
 msgstr "Limite d'arrière-plan fanart playlist/noeud"
 
+#, fuzzy
+#| msgctxt "#31976"
+#| msgid "Home shelf"
+msgctxt "#31605"
+msgid "Custom Shelf"
+msgstr "Étagère accueil"
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "Prévisions sur 36 heures"
@@ -2320,75 +2327,75 @@ msgstr "Connu pour"
 
 msgctxt "#32137"
 msgid "Retail Release"
-msgstr ""
+msgstr "Sortie commerciale"
 
 msgctxt "#32138"
 msgid "Region Release"
-msgstr ""
+msgstr "Sortie régionale"
 
 msgctxt "#32139"
 msgid "Ended"
-msgstr ""
+msgstr "Fini(e)"
 
 msgctxt "#32140"
 msgid "Rumored"
-msgstr ""
+msgstr "Rumeur"
 
 msgctxt "#32141"
 msgid "Planned"
-msgstr ""
+msgstr "Prévu(e)"
 
 msgctxt "#32142"
 msgid "In Production"
-msgstr ""
+msgstr "En production"
 
 msgctxt "#32143"
 msgid "Post Production"
-msgstr ""
+msgstr "Postproduction"
 
 msgctxt "#32144"
 msgid "Released"
-msgstr ""
+msgstr "Sorti(e)"
 
 msgctxt "#32145"
 msgid "Canceled"
-msgstr ""
+msgstr "Annulé(e)"
 
 msgctxt "#32146"
 msgid "Returning Series"
-msgstr ""
+msgstr "Séries TV de retour"
 
 msgctxt "#32147"
 msgid "Acting"
-msgstr ""
+msgstr "Jeu d'acteur"
 
 msgctxt "#32148"
 msgid "Directing"
-msgstr ""
+msgstr "Réalisation"
 
 msgctxt "#32149"
 msgid "Writing"
-msgstr ""
+msgstr "Écriture"
 
 msgctxt "#32150"
 msgid "Production"
-msgstr ""
+msgstr "Production"
 
 msgctxt "#32151"
 msgid "Sound"
-msgstr ""
+msgstr "Son"
 
 msgctxt "#32152"
 msgid "Creator"
-msgstr ""
+msgstr "Créateur"
 
 msgctxt "#32153"
 msgid "Died at Age"
-msgstr ""
+msgstr "Mort(e) à l'âge de"
 
 msgctxt "#32154"
 msgid "Collection"
-msgstr ""
+msgstr "Saga"
 
 msgctxt "#32155"
 msgid "TMDb Helper Settings"
@@ -2400,7 +2407,7 @@ msgstr "Brouiller l'arrière-plan"
 
 msgctxt "#32165"
 msgid "Use Poster for Blur"
-msgstr ""
+msgstr "Utiliser l'affiche pour le flou"
 
 msgctxt "#32166"
 msgid "Customize Power Menu"
@@ -2408,27 +2415,27 @@ msgstr "Personnaliser le menu Alimentation"
 
 msgctxt "#32167"
 msgid "Edit Library Data"
-msgstr ""
+msgstr "Modifier les données de la bibliothèque"
 
 msgctxt "#32168"
 msgid "Select Search Categories"
-msgstr ""
+msgstr "Sélectionner les catégories de recherche"
 
 msgctxt "#32169"
 msgid "Select Search Categories to Enable"
-msgstr ""
+msgstr "Sélectionner les catégories de recherche à activer"
 
 msgctxt "#32170"
 msgid "By Title"
-msgstr ""
+msgstr "Par titre"
 
 msgctxt "#32171"
 msgid "With Genre"
-msgstr ""
+msgstr "Avec le genre"
 
 msgctxt "#32172"
 msgid "From Year"
-msgstr ""
+msgstr "De l'année"
 
 msgctxt "#32173"
 msgid "From Studio"
@@ -2816,7 +2823,28 @@ msgstr ""
 
 msgctxt "#32267"
 msgid "Go To"
-msgstr ""
+msgstr "Aller à"
+
+#, fuzzy
+#| msgctxt "#32053"
+#| msgid "Show Two Shelves Together"
+msgctxt "#32268"
+msgid "Show Three Shelves Together"
+msgstr "Afficher deux étagères ensemble"
+
+#, fuzzy
+#| msgctxt "#31964"
+#| msgid "Configure shelf items"
+msgctxt "#32269"
+msgid "Configure Custom Shelf"
+msgstr "Configurer les éléments de l'étagère"
+
+#, fuzzy
+#| msgctxt "#31976"
+#| msgid "Home shelf"
+msgctxt "#32270"
+msgid "Custom Shelf"
+msgstr "Étagère accueil"
 
 #~ msgctxt "#31363"
 #~ msgid "Static Vertical Menu"
