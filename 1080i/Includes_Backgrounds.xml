@@ -317,6 +317,18 @@
 			<aligny>center</aligny>
             <visible>$EXP[isDoubleShelf] +  Skin.HasSetting(VerticalHome) + ![Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar)]</visible>
         </control>
+		<!-- Logo when triple shelf and fanart title in top bar -->
+		<control type="image">
+            <posy>40</posy>
+		    <posx>1480</posx>
+            <width>420</width>
+            <height>115</height>
+            <texture  background="true">$VAR[HomeClearLogo]</texture>
+		    <aspectratio>keep</aspectratio>
+			<align>center</align>
+			<aligny>center</aligny>
+            <visible>[ControlGroup(700).HasFocus + Container(300).ListItem.Property(widgetThreeShelves)] +  Skin.HasSetting(VerticalHome) + ![Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar)]</visible>
+        </control>
 		<!-- Logo when double shelf and fanart title below top bar -->
 		<control type="image">
             <posy>50</posy>
@@ -361,7 +373,7 @@
 		    <aspectratio>keep</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
-            <visible>![$EXP[isDoubleShelf]] + Skin.HasSetting(VerticalHome)</visible>
+            <visible>![$EXP[isDoubleShelf]] + [!Container(300).ListItem.Property(widgetThreeShelves) | [Container(300).ListItem.Property(widgetThreeShelves) + !ControlGroup(700).HasFocus]] + Skin.HasSetting(VerticalHome)</visible>
         </control>
 		<!-- Logo for horiz. menu single shelf -->
 		<control type="image">

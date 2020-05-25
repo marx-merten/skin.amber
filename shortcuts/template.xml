@@ -165,6 +165,7 @@
 		<!-- Widget conditions: a path is needed, single shelf, dynamic content -->
 		<condition tag="property" attribute="name|widgetPath" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent">default</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
@@ -186,6 +187,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -236,6 +239,7 @@
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont1]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -254,7 +258,8 @@
 		<condition tag="property" attribute="name|widgetPath" />
         <condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent.2">default</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>
+		<condition tag="property" attribute="name|widgetContent.2">default</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -275,6 +280,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.2" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -327,6 +334,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont2]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -346,7 +354,8 @@
 		<condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetPath.3" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent.3">default</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>
+		<condition tag="property" attribute="name|widgetContent.3">default</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -367,6 +376,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.3" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -419,6 +430,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont3]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont3]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -439,7 +451,8 @@
 		<condition tag="property" attribute="name|widgetPath.3" />
 		<condition tag="property" attribute="name|widgetPath.4" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent.4">default</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>
+		<condition tag="property" attribute="name|widgetContent.4">default</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -460,6 +473,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.4" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -512,6 +527,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect4]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont4]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont4]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -533,7 +549,8 @@
 		<condition tag="property" attribute="name|widgetPath.4" />
 		<condition tag="property" attribute="name|widgetPath.5" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent.5">default</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>
+		<condition tag="property" attribute="name|widgetContent.5">default</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -554,6 +571,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.5" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -606,6 +625,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect5]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont5]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont5]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -628,7 +648,8 @@
 		<condition tag="property" attribute="name|widgetPath.5" />
 		<condition tag="property" attribute="name|widgetPath.6" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent.6">default</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>
+		<condition tag="property" attribute="name|widgetContent.6">default</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -646,6 +667,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.6" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -696,6 +719,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect6]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont6]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont6]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -716,7 +740,8 @@
 		<!-- Widget conditions: a path is needed, single shelf, static content -->
 		<condition tag="property" attribute="name|widgetPath" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent">static</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>
+		<condition tag="property" attribute="name|widgetContent">static</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -737,6 +762,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -782,7 +809,8 @@
                         <param name="iconheight">$SKINSHORTCUTS[iconheight1]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
-                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>                        
+                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
+                        <param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>                        
 					</include>
                     <content>
 						<item>
@@ -801,7 +829,8 @@
 		<condition tag="property" attribute="name|widgetPath" />
         <condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
-        <condition tag="property" attribute="name|widgetContent.2">static</condition>
+        <condition tag="property" attribute="name|widgetThreeShelves">false</condition>    
+	    <condition tag="property" attribute="name|widgetContent.2">static</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
 		<!-- Retrieve properties -->
@@ -822,6 +851,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.2" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -869,6 +900,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -888,6 +920,7 @@
         <condition tag="property" attribute="name|widgetPath.2" />
         <condition tag="property" attribute="name|widgetPath.3" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.3">static</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
@@ -909,6 +942,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.3" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -955,7 +990,8 @@
                         <param name="iconheight">$SKINSHORTCUTS[iconheight3]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility3]</param>
-                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>                        
+                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param> 
+                        <param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>						
 					</include>
                     <content>
 						<item>
@@ -976,6 +1012,7 @@
         <condition tag="property" attribute="name|widgetPath.3" />
         <condition tag="property" attribute="name|widgetPath.4" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.4">static</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
@@ -997,6 +1034,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.4" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -1043,7 +1082,8 @@
                         <param name="iconheight">$SKINSHORTCUTS[iconheight4]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect4]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility4]</param>
-                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility4]</param>                        
+                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility4]</param>
+                        <param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>                        
 					</include>
                     <content>
 						<item>
@@ -1065,6 +1105,7 @@
         <condition tag="property" attribute="name|widgetPath.4" />
         <condition tag="property" attribute="name|widgetPath.5" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.5">static</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
@@ -1086,6 +1127,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.5" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -1132,7 +1175,8 @@
                         <param name="iconheight">$SKINSHORTCUTS[iconheight5]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect5]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility5]</param>
-                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility5]</param>                        
+                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility5]</param>
+                        <param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>						
 					</include>
                     <content>
 						<item>
@@ -1155,6 +1199,7 @@
         <condition tag="property" attribute="name|widgetPath.5" />
         <condition tag="property" attribute="name|widgetPath.6" />
 		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.6">static</condition>
 		<!-- Common values -->
 		<propertyGroup>widgetCommon</propertyGroup>
@@ -1173,6 +1218,8 @@
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.6" value="true">630</property>
 		<property name="height">315</property>
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
 		<property name="backgroundheight">375</property>
@@ -1217,7 +1264,8 @@
                         <param name="iconheight">$SKINSHORTCUTS[iconheight6]</param>
                         <param name="aspect">$SKINSHORTCUTS[aspect6]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility6]</param>
-                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility6]</param>                        
+                        <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility6]</param>
+                        <param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>						
 					</include>
                     <content>
 						<item>
@@ -1237,6 +1285,7 @@
 	<other include="shelfgroup2shelvesbackground">
 		<!-- Widget condition -->
 		<condition tag="property" attribute="name|widgetTwoShelves">true</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
 		<property name="label1" tag="property" attribute="name|widgetName" />
@@ -1259,6 +1308,7 @@
 		<!-- Widget conditions: a path is needed, two shelves together and dynamic content -->
 		<condition tag="property" attribute="name|widgetPath" />
 		<condition tag="property" attribute="name|widgetTwoShelves">true</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent">default</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1270,7 +1320,9 @@
 		<property name="sortby1" tag="property" attribute="name|widgetSortBy" />
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
-        <!-- Content -->
+        <!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
+		<!-- Content -->
         <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes|people">true</property>
         <property name="labelvisibility1">false</property>
 		<property name="labelfont1" tag="property" attribute="name|widgetType" value="episodes|people">ListDetailsSmall</property>
@@ -1311,6 +1363,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont1]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -1328,6 +1381,7 @@
 		<!-- Widget conditions: a path is needed, two shelves together and dynamic content -->
 		<condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetTwoShelves">true</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.2">default</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1339,7 +1393,9 @@
 		<property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
-        <!-- Content -->
+        <!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
+		<!-- Content -->
         <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes|people">true</property>
         <property name="labelvisibility2">false</property>
 		<property name="labelfont2" tag="property" attribute="name|widgetType.2" value="episodes|people">ListDetailsSmall</property>
@@ -1381,6 +1437,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont2]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -1400,6 +1457,7 @@
 		<!-- Widget conditions: a path is needed, two shelves together and static -->
 		<condition tag="property" attribute="name|widgetPath" />
 		<condition tag="property" attribute="name|widgetTwoShelves">true</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent">static</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1411,6 +1469,8 @@
 		<property name="sortby1" tag="property" attribute="name|widgetSortBy" />
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Content -->
 		<property name="iconheight1" tag="property" attribute="name|widgetType" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight1">228</property>
@@ -1447,6 +1507,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -1464,6 +1525,7 @@
 		<!-- Widget conditions: a path is needed, two shelves together and static -->
 		<condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetTwoShelves">true</condition>
+		<condition tag="property" attribute="name|widgetThreeShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.2">static</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1475,6 +1537,8 @@
 		<property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
+		<!-- Itemlayout/Focusedlayout Height -->
+		<property name="layoutheight">315</property>
 		<!-- Content -->
 		<property name="iconheight2" tag="property" attribute="name|widgetType.2" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight2">228</property>
@@ -1511,6 +1575,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -1529,6 +1594,7 @@
 	<other include="shelfgroup3shelvesbackground">
 		<!-- Widget condition -->
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
 		<property name="label1" tag="property" attribute="name|widgetName" />
@@ -1540,10 +1606,10 @@
 				<include content="WidgetBackground3">
 					<param name="id1">1600$SKINSHORTCUTS[id]1</param>
 					<param name="id2">1600$SKINSHORTCUTS[id]2</param>
-					<param name="id3">1600$SKINSHORTCUTS[id]2</param>
+					<param name="id3">1600$SKINSHORTCUTS[id]3</param>
 					<param name="label1">$SKINSHORTCUTS[label1]</param>
 					<param name="label2">$SKINSHORTCUTS[label2]</param>
-					<param name="label3">$SKINSHORTCUTS[label2]</param>
+					<param name="label3">$SKINSHORTCUTS[label3]</param>
 				</include>
 			</control>
 		</controls>
@@ -1554,6 +1620,7 @@
 		<!-- Widget conditions: a path is needed, three shelves together and dynamic content -->
 		<condition tag="property" attribute="name|widgetPath" />
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent">default</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1561,11 +1628,22 @@
 		<property name="path1" tag="property" attribute="name|widgetPath" />
 		<property name="target1" tag="property" attribute="name|widgetTarget" />
 		<property name="type1" tag="property" attribute="name|widgetType" />
+		<property name="type2" tag="property" attribute="name|widgetType.2" />
+		<property name="type3" tag="property" attribute="name|widgetType.3" />
 		<property name="widget1" tag="property" attribute="name|widget" />
 		<property name="sortby1" tag="property" attribute="name|widgetSortBy" />
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
-        <!-- Content -->
+        <!-- Itemlayout/Focusedlayout Height/Width -->
+		<property name="layoutheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
+		<property name="layoutheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
+		<property name="layoutheight">220</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.2" value="none">228</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.3" value="none">228</property>
+		<property name="layoutwidth">159</property>
+		<!-- Panel top -->
+		<property name="paneltop">'327' if (type2 in 'none' and type3 in 'none') else '485' if (type2 in 'none' or type3 in 'none') else '610'</property>
+		<!-- Content -->
         <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes|people">true</property>
         <property name="labelvisibility1">false</property>
 		<property name="labelfont1" tag="property" attribute="name|widgetType" value="episodes|people">ListDetailsSmall</property>
@@ -1582,16 +1660,17 @@
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="slide" end="0,-158" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">conditional</animation>
+<!--				<animation effect="slide" end="0,-158" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">conditional</animation> -->
 				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>485</top>
+					<top>$PYTHON[$SKINSHORTCUTS[paneltop]]</top>
 					<left>32</left>
 					<right>0</right>
-					<height>315</height>
+					<height>$SKINSHORTCUTS[layoutheight]</height>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onup condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
+					<onup condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0) + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]3).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]3)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
 					<onback>300</onback>
@@ -1606,6 +1685,8 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont1]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont1]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
+						<param name="layoutwidth">$SKINSHORTCUTS[layoutwidth]</param>
 					</include>
                     <content>
 						<item>
@@ -1623,6 +1704,7 @@
 		<!-- Widget conditions: a path is needed, three shelves together and dynamic content -->
 		<condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.2">default</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1634,13 +1716,36 @@
 		<property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
-        <!-- Content -->
+        <!-- Itemlayout/Focusedlayout Height/Width -->
+		<property name="layoutheight" tag="property" attribute="name|widgetType" value="none">315</property>
+		<property name="layoutheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
+		<property name="layoutheight">220</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType" value="none">228</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.3" value="none">228</property>
+		<property name="layoutwidth">159</property>
+		<!-- Panel top -->
+		<property name="paneltop" tag="property" attribute="name|widgetType.3" value="none">170</property>
+		<property name="paneltop" tag="property" attribute="name|widgetType" value="none">485</property>
+		<property name="paneltop">385</property>
+		<!-- Content -->
         <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes|people">true</property>
         <property name="labelvisibility2">false</property>
 		<property name="labelfont2" tag="property" attribute="name|widgetType.2" value="episodes|people">ListDetailsSmall</property>
 		<property name="labelfont2">Shelf_Label</property>
-		<property name="textboxfont2" tag="property" attribute="name|widgetType.2" value="favourite">ListDetailsSmall</property>
-		<property name="textboxfont2">Shelf_Label</property>		
+<!--		<property name="textboxfont2" tag="property" attribute="name|widgetType.2" value="favourite">ListDetailsSmall</property> -->
+		<property name="textboxfont2">ListDetailsSmall</property>
+        <!-- Below textbox width -->
+		<property name="textboxwidth2" tag="property" attribute="name|widgetType.3" value="none">204</property>
+		<property name="textboxwidth2" tag="property" attribute="name|widgetType" value="none">204</property>
+		<property name="textboxwidth2">135</property>
+		<!-- Below textbox height -->
+		<property name="textboxheight2" tag="property" attribute="name|widgetType.3" value="none">64</property>
+		<property name="textboxheight2" tag="property" attribute="name|widgetType" value="none">64</property>
+		<property name="textboxheight2">34</property>
+		<!-- Below textbox background height -->
+		<property name="textbackheight2" tag="property" attribute="name|widgetType.3" value="none">74</property>
+		<property name="textbackheight2" tag="property" attribute="name|widgetType" value="none">74</property>
+		<property name="textbackheight2">44</property>
         <property name="aspect2" tag="property" attribute="name|widgetType.2" value="musicvideos">scale</property>
         <property name="aspect2">keep</property>        
         <property name="isYear2">'true' if path2 in 'years' else 'false'</property>
@@ -1652,12 +1757,12 @@
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="slide" end="0,157" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">conditional</animation>
+<!--				<animation effect="slide" end="0,157" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">conditional</animation> -->
 				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
-					<top>170</top>
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
-					<height>315</height>
+					<height>$SKINSHORTCUTS[layoutheight]</height>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -1677,6 +1782,11 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont2]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont2]</param>
+						<param name="textboxwidth">$SKINSHORTCUTS[textboxwidth2]</param>
+						<param name="textboxheight">$SKINSHORTCUTS[textboxheight2]</param>
+						<param name="textbackheight">$SKINSHORTCUTS[textbackheight2]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
+						<param name="layoutwidth">$SKINSHORTCUTS[layoutwidth]</param>
 					</include>
                     <content>
 						<item>
@@ -1694,6 +1804,7 @@
 		<!-- Widget conditions: a path is needed, three shelves together and dynamic content -->
 		<condition tag="property" attribute="name|widgetPath.3" />
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.3">default</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1705,7 +1816,18 @@
 		<property name="sortby3" tag="property" attribute="name|widgetSortBy.3" />
 		<property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
 		<property name="limit3" tag="property" attribute="name|widgetLimit.3" />
-        <!-- Content -->
+        <!-- Itemlayout/Focusedlayout Height/Width -->
+		<property name="layoutheight" tag="property" attribute="name|widgetType" value="none">315</property>
+		<property name="layoutheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
+		<property name="layoutheight">220</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType" value="none">228</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.2" value="none">228</property>
+		<property name="layoutwidth">159</property>
+		<!-- Panel top -->
+		<property name="paneltop" tag="property" attribute="name|widgetType.2" value="none">170</property>
+		<property name="paneltop" tag="property" attribute="name|widgetType" value="none">170</property>
+		<property name="paneltop">110</property>
+		<!-- Content -->
         <property name="labelvisibility3" tag="property" attribute="name|widgetType.3" value="episodes|people">true</property>
         <property name="labelvisibility3">false</property>
 		<property name="labelfont3" tag="property" attribute="name|widgetType.3" value="episodes|people">ListDetailsSmall</property>
@@ -1723,12 +1845,12 @@
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<animation effect="slide" end="0,157" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">conditional</animation>
+<!--				<animation effect="slide" end="0,157" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">conditional</animation> -->
 				<control type="panel" id="1600$SKINSHORTCUTS[id]3">
-					<top>170</top>
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
-					<height>315</height>
+					<height>$SKINSHORTCUTS[layoutheight]</height>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]3,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -1748,6 +1870,8 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
 						<param name="labelfont">$SKINSHORTCUTS[labelfont3]</param>
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont3]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
+						<param name="layoutwidth">$SKINSHORTCUTS[layoutwidth]</param>
 					</include>
                     <content>
 						<item>
@@ -1767,6 +1891,7 @@
 		<!-- Widget conditions: a path is needed, three shelves together and static -->
 		<condition tag="property" attribute="name|widgetPath" />
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent">static</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1774,10 +1899,21 @@
 		<property name="path1" tag="property" attribute="name|widgetPath" />
 		<property name="target1" tag="property" attribute="name|widgetTarget" />
 		<property name="type1" tag="property" attribute="name|widgetType" />
+		<property name="type2" tag="property" attribute="name|widgetType.2" />
+		<property name="type3" tag="property" attribute="name|widgetType.3" />
 		<property name="widget1" tag="property" attribute="name|widget" />
 		<property name="sortby1" tag="property" attribute="name|widgetSortBy" />
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
+        <!-- Itemlayout/Focusedlayout Height/Width -->
+		<property name="layoutheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
+		<property name="layoutheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
+		<property name="layoutheight">220</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.2" value="none">228</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.3" value="none">228</property>
+		<property name="layoutwidth">159</property>
+		<!-- Panel top -->
+		<property name="paneltop">'327' if (type2 in 'none' and type3 in 'none') else '485' if (type2 in 'none' or type3 in 'none') else '610'</property>
 		<!-- Content -->
 		<property name="iconheight1" tag="property" attribute="name|widgetType" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight1">228</property>
@@ -1796,13 +1932,14 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<animation effect="slide" end="0,-158" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">conditional</animation>
 				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>485</top>
+					<top>$PYTHON[$SKINSHORTCUTS[paneltop]]</top>
 					<left>32</left>
 					<right>0</right>
-					<height>315</height>
+					<height>$SKINSHORTCUTS[layoutheight]</height>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onup condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
+					<onup condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0) + Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]3).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]3)</onup>
 					<ondown>300</ondown>
 					<onleft condition="Skin.HasSetting(VerticalHome)">300</onleft>
 					<onback>300</onback>
@@ -1814,6 +1951,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect1]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -1831,6 +1969,7 @@
 		<!-- Widget conditions: a path is needed, three shelves together and static -->
 		<condition tag="property" attribute="name|widgetPath.2" />
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.2">static</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1842,6 +1981,17 @@
 		<property name="sortby2" tag="property" attribute="name|widgetSortBy.2" />
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
+		<!-- Itemlayout/Focusedlayout Height/Width -->
+		<property name="layoutheight" tag="property" attribute="name|widgetType" value="none">315</property>
+		<property name="layoutheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
+		<property name="layoutheight">220</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType" value="none">228</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.3" value="none">228</property>
+		<property name="layoutwidth">159</property>
+		<!-- Panel top -->
+		<property name="paneltop" tag="property" attribute="name|widgetType.3" value="none">170</property>
+		<property name="paneltop" tag="property" attribute="name|widgetType" value="none">485</property>
+		<property name="paneltop">385</property>
 		<!-- Content -->
 		<property name="iconheight2" tag="property" attribute="name|widgetType.2" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight2">228</property>
@@ -1860,10 +2010,10 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<animation effect="slide" end="0,157" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">conditional</animation>
 				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
-					<top>170</top>
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
-					<height>315</height>
+					<height>$SKINSHORTCUTS[layoutheight]</height>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onup condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]3).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]3)</onup>
@@ -1879,6 +2029,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect2]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>
@@ -1896,6 +2047,7 @@
 		<!-- Widget conditions: a path is needed, three shelves together and static -->
 		<condition tag="property" attribute="name|widgetPath.3" />
 		<condition tag="property" attribute="name|widgetThreeShelves">true</condition>
+		<condition tag="property" attribute="name|widgetTwoShelves">false</condition>
         <condition tag="property" attribute="name|widgetContent.3">static</condition>
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
@@ -1907,6 +2059,17 @@
 		<property name="sortby3" tag="property" attribute="name|widgetSortBy.3" />
 		<property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
 		<property name="limit3" tag="property" attribute="name|widgetLimit.3" />
+		<!-- Itemlayout/Focusedlayout Height/Width -->
+		<property name="layoutheight" tag="property" attribute="name|widgetType" value="none">315</property>
+		<property name="layoutheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
+		<property name="layoutheight">220</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType" value="none">228</property>
+		<property name="layoutwidth" tag="property" attribute="name|widgetType.2" value="none">228</property>
+		<property name="layoutwidth">159</property>
+		<!-- Panel top -->
+		<property name="paneltop" tag="property" attribute="name|widgetType.2" value="none">170</property>
+		<property name="paneltop" tag="property" attribute="name|widgetType" value="none">170</property>
+		<property name="paneltop">110</property>
 		<!-- Content -->
 		<property name="iconheight3" tag="property" attribute="name|widgetType.3" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight3">228</property>
@@ -1925,10 +2088,10 @@
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<animation effect="slide" end="0,157" condition="!Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">conditional</animation>
 				<control type="panel" id="1600$SKINSHORTCUTS[id]3">
-					<top>170</top>
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
-					<height>315</height>
+					<height>$SKINSHORTCUTS[layoutheight]</height>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]3,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<ondown condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]2)</ondown>
@@ -1944,6 +2107,7 @@
                         <param name="aspect">$SKINSHORTCUTS[aspect3]</param>
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility3]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>
+						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 					</include>
                     <content>
 						<item>

@@ -808,6 +808,8 @@
 		<param name="belowtextboxalign">center</param>
         <param name="belowtextboxfont">Shelf_Label</param>
 		<param name="belowtextboxwidth"></param>
+		<param name="belowtextboxheight"></param>
+		<param name="belowtextboxbackheight"></param>
 		<definition>
 			<control type="image">
 				<left>$PARAM[shadowoffset]</left>
@@ -890,6 +892,8 @@
 					<param name="textboxwidth">$PARAM[belowtextboxwidth]</param>
 					<param name="bordersize">$PARAM[bordersizeLT]</param>
                     <param name="belowtextboxfont">$PARAM[belowtextboxfont]</param>
+					<param name="textboxheight">$PARAM[belowtextboxheight]</param>
+					<param name="backgroundheight">$PARAM[belowtextboxbackheight]</param>
 				</include>
 				<control type="image" description="Watched Overlay">
 					<visible>!$PARAM[isFocused] + [!Skin.HasSetting(ShowTopRightOverlays) | [Skin.HasSetting(ShowTopRightOverlays) + ![$EXP[IsIconView]]]]</visible>
@@ -1583,6 +1587,8 @@
 		<param name="textboxwidth"/>
 		<param name="bordersize"/>
         <param name="belowtextboxfont">Shelf_Label</param>
+		<param name="backgroundheight">74</param>
+		<param name="textboxheight">64</param>
 		<definition>
 			<control type="group">
 				<visible>$PARAM[labelvisibility]</visible>
@@ -1591,7 +1597,7 @@
 				<control type="image">
 					<visible>!$PARAM[isFocused]</visible>
 					<width>$PARAM[labelwidth]</width>
-					<height>74</height>
+					<height>$PARAM[backgroundheight]</height>
 					<texture border="4">img/WhiteRoundedT.png</texture>
 					<bordersize>4,0,4,0</bordersize>
 					<aspectratio>stretch</aspectratio>
@@ -1599,7 +1605,7 @@
 				<control type="image">
 					<visible>$PARAM[isFocused]</visible>
 					<width>$PARAM[labelwidth]</width>
-					<height>74</height>
+					<height>$PARAM[backgroundheight]</height>
 					<texture border="4">img/WhiteRoundedST2.png</texture>
 					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 					<bordersize>4,0,4,0</bordersize>
@@ -1610,7 +1616,7 @@
 					<top>4</top>
 					<left>$PARAM[bordersize]</left>
 					<width>$PARAM[textboxwidth]</width>
-					<height>64</height>
+					<height>$PARAM[textboxheight]</height>
 					<label>$PARAM[labeltext]</label>
 					<align>$PARAM[labelalign]</align>
                     <font>$PARAM[belowtextboxfont]</font>
@@ -1622,7 +1628,7 @@
 					<top>4</top>
 					<left>$PARAM[bordersize]</left>
 					<width>$PARAM[textboxwidth]</width>
-					<height>64</height>
+					<height>$PARAM[textboxheight]</height>
 					<textcolor>$VAR[FocusedTextColor]</textcolor>
 					<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 					<shadowcolor></shadowcolor>
