@@ -185,7 +185,11 @@ msgctxt "#31041"
 msgid "Repository"
 msgstr ""
 
-# empty strings from id 31042 to 31045
+# empty strings from id 31042 to 31044
+msgctxt "#31045"
+msgid "Show Triple Row Shelf"
+msgstr ""
+
 msgctxt "#31046"
 msgid "Show Double Row Shelf"
 msgstr ""
@@ -2818,8 +2822,4 @@ msgstr ""
 
 msgctxt "#32269"
 msgid "Configure Custom Shelf"
-msgstr ""
-
-msgctxt "#32270"
-msgid "Custom Shelf"
 msgstr ""

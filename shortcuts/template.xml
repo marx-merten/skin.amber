@@ -183,14 +183,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple" value="true">1005</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
         <property name="labelvisibility1" tag="property" attribute="name|widgetType" value="episodes|people">true</property>
@@ -276,14 +279,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.2" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.2" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.2" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.2" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.2" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
         <property name="labelvisibility2" tag="property" attribute="name|widgetType.2" value="episodes|people">true</property>
@@ -314,7 +320,7 @@
 					<right>0</right>
 					<height>$SKINSHORTCUTS[height]</height>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
-                    <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],3,home)</onup>
 					<onup condition="$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]3)</onup>
@@ -372,14 +378,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.3" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.3" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.3" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.3" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.3" value="true">1005</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
         <property name="labelvisibility3" tag="property" attribute="name|widgetType.3" value="episodes|people">true</property>
@@ -410,7 +419,7 @@
 					<right>0</right>
 					<height>$SKINSHORTCUTS[height]</height>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]3,Home)</onfocus>
-                    <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],4,home)</onup>
 					<onup condition="$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]4)</onup>
@@ -469,14 +478,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.4" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.4" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.4" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.4" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.4" value="true">1005</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
         <property name="labelvisibility4" tag="property" attribute="name|widgetType.4" value="episodes|people">true</property>
@@ -507,7 +519,7 @@
 					<right>0</right>
 					<height>$SKINSHORTCUTS[height]</height>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]4,Home)</onfocus>
-                    <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],5,home)</onup>
 					<onup condition="$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]5)</onup>
@@ -567,14 +579,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.5" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.5" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.5" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.5" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.5" value="true">1005</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
         <property name="labelvisibility5" tag="property" attribute="name|widgetType.5" value="episodes|people">true</property>
@@ -605,7 +620,7 @@
 					<right>0</right>
 					<height>$SKINSHORTCUTS[height]</height>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]5,Home)</onfocus>
-                    <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],6,home)</onup>
 					<onup condition="$SKINSHORTCUTS[onup]">SetFocus(1600$SKINSHORTCUTS[id]6)</onup>
@@ -663,14 +678,17 @@
 		<property name="limit6" tag="property" attribute="name|widgetLimit.6" />
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.6" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.6" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.6" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.6" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.6" value="true">1005</property>
 		<property name="backgroundheight">375</property>
         <!-- Content -->
         <property name="labelvisibility6" tag="property" attribute="name|widgetType.6" value="episodes|people">true</property>
@@ -758,14 +776,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Icon Properties -->
 		<property name="iconheight1" tag="property" attribute="name|widgetType" value="nextaired|swrecommendedeps">315</property>
@@ -847,14 +868,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.2" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.2" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.2" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.2" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.2" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
 		<property name="iconheight2" tag="property" attribute="name|widgetType.2" value="nextaired|swrecommendedeps">315</property>
@@ -938,14 +962,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.3" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.3" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.3" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.3" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.3" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
 		<property name="iconheight3" tag="property" attribute="name|widgetType.3" value="nextaired|swrecommendedeps">315</property>
@@ -1030,14 +1057,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.4" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.4" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.4" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.4" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.4" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
 		<property name="iconheight4" tag="property" attribute="name|widgetType.4" value="nextaired|swrecommendedeps">315</property>
@@ -1123,14 +1153,17 @@
 		<property name="onup">true</property>
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.5" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.5" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.5" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.5" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.5" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
 		<property name="iconheight5" tag="property" attribute="name|widgetType.5" value="nextaired|swrecommendedeps">315</property>
@@ -1214,14 +1247,17 @@
 		<property name="limit6" tag="property" attribute="name|widgetLimit.6" />
 		<!-- Top -->
 		<property name="top" tag="property" attribute="name|widgetDouble.6" value="true">170</property>
+		<property name="top" tag="property" attribute="name|widgetTriple.6" value="true">10</property>
 		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height" tag="property" attribute="name|widgetDouble.6" value="true">630</property>
+		<property name="height" tag="property" attribute="name|widgetTriple.6" value="true">945</property>
 		<property name="height">315</property>
 		<!-- Itemlayout/Focusedlayout Height -->
 		<property name="layoutheight">315</property>
 		<!-- Background Height -->
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetTriple.6" value="true">1005</property>
 		<property name="backgroundheight">375</property>
 		<!-- Content -->
 		<property name="iconheight6" tag="property" attribute="name|widgetType.6" value="nextaired|swrecommendedeps">315</property>
@@ -1687,6 +1723,7 @@
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont1]</param>
 						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 						<param name="layoutwidth">$SKINSHORTCUTS[layoutwidth]</param>
+						<param name="isTripleRow">true</param>
 					</include>
                     <content>
 						<item>
@@ -1787,6 +1824,7 @@
 						<param name="textbackheight">$SKINSHORTCUTS[textbackheight2]</param>
 						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 						<param name="layoutwidth">$SKINSHORTCUTS[layoutwidth]</param>
+						<param name="isTripleRow">true</param>
 					</include>
                     <content>
 						<item>
@@ -1872,6 +1910,7 @@
 						<param name="textboxfont">$SKINSHORTCUTS[textboxfont3]</param>
 						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
 						<param name="layoutwidth">$SKINSHORTCUTS[layoutwidth]</param>
+						<param name="isTripleRow">true</param>
 					</include>
                     <content>
 						<item>
@@ -1952,6 +1991,7 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
 						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
+						<param name="isTripleRow">true</param>
 					</include>
                     <content>
 						<item>
@@ -2030,6 +2070,7 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility2]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
 						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
+						<param name="isTripleRow">true</param>
 					</include>
                     <content>
 						<item>
@@ -2108,6 +2149,7 @@
                         <param name="labelvisibility">$SKINSHORTCUTS[labelvisibility3]</param>
                         <param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>
 						<param name="layoutheight">$SKINSHORTCUTS[layoutheight]</param>
+						<param name="isTripleRow">true</param>
 					</include>
                     <content>
 						<item>

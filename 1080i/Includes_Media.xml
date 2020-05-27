@@ -779,6 +779,7 @@
 		<param name="isSmallIcon">false</param>
 		<param name="isBanner">false</param>
 		<param name="isSearch">false</param>
+		<param name="isTripleRow">false</param>
 		<param name="iconwidth"/>
 		<param name="iconheight"/>
 		<param name="iconoffset"/>
@@ -845,6 +846,7 @@
 					<param name="isSmallIcon">$PARAM[isSmallIcon]</param>
 					<param name="isSearch">$PARAM[isSearch]</param>
 					<param name="isBanner">$PARAM[isBanner]</param>
+					<param name="isTripleRow">$PARAM[isTripleRow]</param>
 				</include>	
 				<include content="GenericThumbLabelTemplate">
 					<param name="isFocused">$PARAM[isFocused]</param>
@@ -923,6 +925,7 @@
 		<param name="isSmallIcon">false</param>
 		<param name="isSearch">false</param>
 		<param name="isBanner">false</param>
+		<param name="isTripleRow">false</param>
 		<definition>
 		    <!-- Overlay for search results -->
 			<control type="image">
@@ -1207,8 +1210,9 @@
 					<textcolor>White2</textcolor>
 				</control>
 				<!-- Poster in widgets -->
+				<!-- Normal widgets, single or double row -->
 				<control type="label" description="l2">
-					<visible>$PARAM[isFocused] + !$PARAM[isBanner] + String.IsEmpty(Container.Viewmode) + !Window.IsActive(DialogVideoInfo.xml)</visible>
+					<visible>$PARAM[isFocused] + !$PARAM[isBanner] + !$PARAM[isTripleRow] + String.IsEmpty(Container.Viewmode) + !Window.IsActive(DialogVideoInfo.xml)</visible>
 					<posx>94r</posx>
 				    <posy>-244</posy>
 					<height>$PARAM[itemheight]</height>
@@ -1221,9 +1225,34 @@
 					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 				</control>
 				<control type="label" description="l2">
-					<visible>!$PARAM[isFocused] + !$PARAM[isBanner] + String.IsEmpty(Container.Viewmode) + !Window.IsActive(DialogVideoInfo.xml)</visible>
+					<visible>!$PARAM[isFocused] + !$PARAM[isBanner] + !$PARAM[isTripleRow] + String.IsEmpty(Container.Viewmode) + !Window.IsActive(DialogVideoInfo.xml)</visible>
 					<posx>94r</posx>
 				    <posy>-244</posy>
+					<height>$PARAM[itemheight]</height>
+					<width>100</width>
+					<font>ListDetailsSmall</font>
+					<align>center</align>
+					<label>$VAR[UnwatchedEpisodes]</label>
+					<textcolor>White2</textcolor>
+				</control>
+				<!-- Smaller widgets, triple row -->
+				<control type="label" description="l2">
+					<visible>$PARAM[isFocused] + !$PARAM[isBanner] + $PARAM[isTripleRow] + String.IsEmpty(Container.Viewmode) + !Window.IsActive(DialogVideoInfo.xml)</visible>
+					<posx>94r</posx>
+				    <posy>-150</posy>
+					<height>$PARAM[itemheight]</height>
+					<width>100</width>
+					<font>ListDetailsSmall</font>
+					<align>center</align>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[UnwatchedEpisodes]</label>
+					<textcolor>$VAR[HighlightColor]</textcolor>
+					<colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				</control>
+				<control type="label" description="l2">
+					<visible>!$PARAM[isFocused] + !$PARAM[isBanner] + $PARAM[isTripleRow] + String.IsEmpty(Container.Viewmode) + !Window.IsActive(DialogVideoInfo.xml)</visible>
+					<posx>94r</posx>
+				    <posy>-150</posy>
 					<height>$PARAM[itemheight]</height>
 					<width>100</width>
 					<font>ListDetailsSmall</font>

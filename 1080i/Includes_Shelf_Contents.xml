@@ -978,11 +978,13 @@
 		<param name="textboxfont">Shelf_Label</param>
 		<param name="layoutheight">315</param>
 		<param name="layoutwidth">228</param>
+		<param name="isTripleRow">false</param>
 		<definition>  
 			<itemlayout height="$PARAM[layoutheight]" width="$PARAM[layoutwidth]">
 			    <include content="GenericThumbIconTemplate">
 				    <param name="isFocused">false</param>
 					<param name="isSmallIcon">true</param>
+					<param name="isTripleRow">$PARAM[isTripleRow]</param>
                     <param name="iconimage">$VAR[Poster]</param>
                     <param name="aspect">scale</param>
                     <param name="fallbackicon">$VAR[Poster]</param>
@@ -1005,6 +1007,7 @@
 			    <include content="GenericThumbIconTemplate">
 				    <param name="isFocused">Control.HasFocus($PARAM[id1])</param>
                     <param name="isSmallIcon">true</param>
+					<param name="isTripleRow">$PARAM[isTripleRow]</param>
 					<param name="iconimage">$VAR[Poster]</param>
                     <param name="aspect">scale</param>
                     <param name="fallbackicon">$VAR[Poster]</param>
