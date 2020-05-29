@@ -718,7 +718,10 @@
 		<param name="belowtextbox"></param>
 		<param name="belowtextboxvisibility">false</param>
 		<param name="belowtextboxalign">center</param>
+        <param name="belowtextboxfont">Shelf_Label</param>
 		<param name="belowtextboxwidth"></param>
+		<param name="belowtextboxheight"></param>
+		<param name="belowtextboxbackheight"></param>
 		<definition>
 			<control type="multiimage">
 				<left>$PARAM[shadowoffset]</left>
@@ -769,6 +772,9 @@
 					<param name="labelalign">$PARAM[belowtextboxalign]</param>
 					<param name="textboxwidth">$PARAM[belowtextboxwidth]</param>
 					<param name="bordersize">$PARAM[bordersizeLT]</param>
+					<param name="belowtextboxfont">$PARAM[belowtextboxfont]</param>
+					<param name="textboxheight">$PARAM[belowtextboxheight]</param>
+					<param name="backgroundheight">$PARAM[belowtextboxbackheight]</param>
 				</include>
 			</control>
 		</definition>
@@ -1613,7 +1619,7 @@
 		<param name="labelvisibility">false</param>
 		<param name="labeltext"/>
 		<param name="labelalign">center</param>
-		<param name="textboxwidth"/>
+		<param name="textboxwidth">204</param>
 		<param name="bordersize"/>
         <param name="belowtextboxfont">Shelf_Label</param>
 		<param name="backgroundheight">74</param>
@@ -1642,7 +1648,7 @@
 				</control>
 				<control type="textbox">
 					<visible>!$PARAM[isFocused]</visible>
-					<top>4</top>
+					<top>2</top>
 					<left>$PARAM[bordersize]</left>
 					<width>$PARAM[textboxwidth]</width>
 					<height>$PARAM[textboxheight]</height>
@@ -1654,7 +1660,7 @@
 				</control>
 				<control type="textbox">
 					<visible>$PARAM[isFocused]</visible>
-					<top>4</top>
+					<top>2</top>
 					<left>$PARAM[bordersize]</left>
 					<width>$PARAM[textboxwidth]</width>
 					<height>$PARAM[textboxheight]</height>
@@ -1815,6 +1821,9 @@
 				<param name="belowtextboxvisibility">true</param>
 				<param name="belowtextbox">$INFO[ListItem.Label]</param>
 				<param name="belowtextboxwidth">272</param>
+				<param name="belowtextboxfont">Shelf_Label</param>
+		        <param name="belowtextboxheight">64</param>
+		        <param name="belowtextboxbackheight">74</param>
 				<param name="aspect">keep</param>
 			</include>
 		</definition>
@@ -1837,6 +1846,9 @@
 				<param name="belowtextboxvisibility">true</param>
 				<param name="belowtextbox">$INFO[ListItem.Label]</param>
 				<param name="belowtextboxwidth">208</param>
+				<param name="belowtextboxfont">ListDetailsSmall</param>
+		        <param name="belowtextboxheight">64</param>
+		        <param name="belowtextboxbackheight">74</param>
 				<param name="aspect">keep</param>
 			</include>
 		</definition>
@@ -1857,6 +1869,9 @@
 				<param name="belowtextboxvisibility">true</param>
 				<param name="belowtextbox">$INFO[ListItem.Label]</param>
 				<param name="belowtextboxwidth">272</param>
+				<param name="belowtextboxfont">Shelf_Label</param>
+		        <param name="belowtextboxheight">64</param>
+		        <param name="belowtextboxbackheight">74</param>
 			</include>
 		</definition>
 	</include>
@@ -1876,6 +1891,9 @@
 				<param name="belowtextboxvisibility">true</param>
 				<param name="belowtextbox">$INFO[ListItem.Label]</param>
 				<param name="belowtextboxwidth">208</param>
+				<param name="belowtextboxfont">ListDetailsSmall</param>
+		        <param name="belowtextboxheight">64</param>
+		        <param name="belowtextboxbackheight">74</param>
 			</include>
 		</definition>
 	</include>
@@ -1936,6 +1954,8 @@
 				<param name="belowtextbox">$INFO[ListItem.Label][CR]$INFO[ListItem.Year]</param>
 				<param name="belowtextboxwidth">286</param>
                 <param name="belowtextboxfont">ListDetailsSmall</param>
+		        <param name="belowtextboxheight">64</param>
+		        <param name="belowtextboxbackheight">74</param>
 			</include>
 		</definition>
 	</include>

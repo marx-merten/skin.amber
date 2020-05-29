@@ -334,7 +334,7 @@
 					<pagecontrol>66</pagecontrol>
 					<orientation>horizontal</orientation>
 					<scrolltime>250</scrolltime>
-					<focusposition>2</focusposition>
+					<focusposition>4</focusposition>
 					<movement>0</movement>
 					<preloaditems>4</preloaditems>
 					<itemlayout height="339" width="240" condition="container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)">
