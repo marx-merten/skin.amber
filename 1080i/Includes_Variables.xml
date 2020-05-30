@@ -1217,18 +1217,24 @@
 	<expression name="IsIconView">String.IsEmpty(Container.ViewMode) | String.IsEqual(Container.ViewMode,$LOCALIZE[536]) | String.IsEqual(Container.ViewMode,$LOCALIZE[20445]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31958]) | 
 	                              String.IsEqual(Container.ViewMode,$LOCALIZE[31963]) | String.IsEqual(Container.ViewMode,$LOCALIZE[32245]) | String.IsEqual(Container.ViewMode,$LOCALIZE[32246])</expression>
 	<expression name="widgetsAreShowing">ControlGroup(700).HasFocus | [Control.HasFocus(300) + !Container(300).ListItem.Property(widgetsHide)]</expression>
-	<expression name="doubleWidgetRowShowing">Container(300).ListItem.Property(widgetTwoShelves) | [ControlGroup(700).HasFocus + [[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),1) + Container(300).ListItem.Property(widgetDouble)] | 
+	<expression name="doubleWidgetRowShowing">[Container(300).ListItem.Property(widgetTwoShelves) + !String.IsEqual(Container(300).ListItem.Property(widgetType.2),none)] | 
+	                                          [!Container(300).ListItem.Property(widgetThreeShelves) + ControlGroup(700).HasFocus + [[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),1) + Container(300).ListItem.Property(widgetDouble)] | 
 	                                                                        [String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),2) + Container(300).ListItem.Property(widgetDouble.2)] | 
 																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),3) + Container(300).ListItem.Property(widgetDouble.3)] | 
 																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),4) + Container(300).ListItem.Property(widgetDouble.4)] | 
 																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),5) + Container(300).ListItem.Property(widgetDouble.5)] | 
-																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),6) + Container(300).ListItem.Property(widgetDouble.6)]]]</expression>
-	<expression name="tripleWidgetRowShowing">Container(300).ListItem.Property(widgetThreeShelves) | [ControlGroup(700).HasFocus + [[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),1) + Container(300).ListItem.Property(widgetTriple)] | 
+																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),6) + Container(300).ListItem.Property(widgetDouble.6)]]] | 
+											  [[Control.HasFocus(300) + !Container(300).ListItem.Property(widgetsHide)] + !Container(300).ListItem.Property(widgetThreeShelves) + !Container(300).ListItem.Property(widgetDouble)] | 
+											  [Container(300).ListItem.Property(widgetThreeShelves) + [String.IsEqual(Container(300).ListItem.Property(widgetType.2),none) + !String.IsEqual(Container(300).ListItem.Property(widgetType.3),none)] | 
+											                                                          [!String.IsEqual(Container(300).ListItem.Property(widgetType.2),none) + String.IsEqual(Container(300).ListItem.Property(widgetType.3),none)]]</expression>
+	<expression name="tripleWidgetRowShowing">[Container(300).ListItem.Property(widgetThreeShelves) + ![String.IsEqual(Container(300).ListItem.Property(widgetType.2),none) | String.IsEqual(Container(300).ListItem.Property(widgetType.3),none)]] | 
+	                                          [ControlGroup(700).HasFocus + [[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),1) + Container(300).ListItem.Property(widgetTriple)] | 
 	                                                                        [String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),2) + Container(300).ListItem.Property(widgetTriple.2)] | 
 																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),3) + Container(300).ListItem.Property(widgetTriple.3)] | 
 																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),4) + Container(300).ListItem.Property(widgetTriple.4)] | 
 																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),5) + Container(300).ListItem.Property(widgetTriple.5)] | 
-																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),6) + Container(300).ListItem.Property(widgetTriple.6)]]]</expression>																		
+																			[String.EndsWith(Window(Home).Property(TMDbHelper.WidgetContainer),6) + Container(300).ListItem.Property(widgetTriple.6)]]] | 
+											  [[Control.HasFocus(300) + !Container(300).ListItem.Property(widgetsHide)] + Container(300).ListItem.Property(widgetTriple)]</expression>																		
 	<expression name="isSpecialContent">[Container.Content() | Container.Content(videos) | Container.Content(files) | Container.Content(playlists) | Container.Content(Tags) | Container.Content(Actors) | 
 	                                     Container.Content(Directors) | Container.Content(Years) | Container.Content(Countries) | Container.Content(roles) | Container.Content(genres) | Container.Content(studios)]</expression>
 
