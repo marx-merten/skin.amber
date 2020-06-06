@@ -165,16 +165,6 @@
 				    <shadowcolor>Black</shadowcolor>
 				    <label>$INFO[ListItem.Genre]</label>
 			    </control>
-<!--			    <control type="textbox" description="Plot shadow">
-				    <posx>-1</posx>
-				    <posy>257</posy>
-				    <width>1500</width>
-				    <height>55</height>
-				    <align>left</align>
-				    <textcolor>$VAR[FocusedTextColor]</textcolor>
-				    <shadowcolor></shadowcolor>
-				    <label>$VAR[Plots]</label>
-			    </control> -->
 			    <control type="textbox" description="Plot itself">
 				    <posy>256</posy>
 				    <width>1500</width>
