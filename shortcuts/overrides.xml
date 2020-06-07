@@ -362,6 +362,8 @@
 	<propertyfallback property="widgetTwoShelves">false</propertyfallback>
 	<!-- Show Three Shelves together is false by default -->
 	<propertyfallback property="widgetThreeShelves">false</propertyfallback>
+	<!-- Show Three Shelves together, larger poster is false by default -->
+	<propertyfallback property="widgetThreeShelvesLarge">false</propertyfallback>
 	<!-- Show Double Row Shelf is false by default -->
 	<propertyfallback property="widgetDouble">false</propertyfallback>
 	<propertyfallback property="widgetDouble.2">false</propertyfallback>
