@@ -847,7 +847,7 @@
 					    <left>490</left>
 					    <width>480</width>
 					    <height>45</height>
-					    <align>right</align>
+					    <align>center</align>
 					    <font>Shelf_Title</font>
 					    <textcolor>$VAR[HighlightColor]</textcolor>
 					    <label>$PARAM[label2]</label>
@@ -858,7 +858,7 @@
 					    <left>490</left>
 					    <width>480</width>
 					    <height>45</height>
-					    <align>right</align>
+					    <align>center</align>
 					    <font>Shelf_Title</font>
 					    <textcolor>$VAR[HighlightColor]</textcolor>
 					    <label>$INFO[Container($PARAM[id2]).ListItem.Property(searchstring),$LOCALIZE[31497] ,]</label>
@@ -869,7 +869,7 @@
 					    <left>490</left>
 					    <width>480</width>
 					    <height>45</height>
-					    <align>right</align>
+					    <align>center</align>
 					    <font>Shelf_Title</font>
 					    <textcolor>$VAR[HighlightColor]</textcolor>
 					    <label>$INFO[Container($PARAM[id2]).ListItem.Property(searchstring),$LOCALIZE[31517] ,]</label>
@@ -1528,12 +1528,14 @@
 		<param name="layoutheight">315</param>
 		<param name="layoutwidth">228</param>
 		<param name="isTripleRow">false</param>
+		<param name="isTripleRowMedium">false</param>
 		<definition>  
 			<itemlayout height="$PARAM[layoutheight]" width="$PARAM[layoutwidth]">
 			    <include content="GenericThumbIconTemplate">
 				    <param name="isFocused">false</param>
 					<param name="isSmallIcon">true</param>
 					<param name="isTripleRow">$PARAM[isTripleRow]</param>
+					<param name="isTripleRowMedium">$PARAM[isTripleRowMedium]</param>
                     <param name="iconimage">$VAR[Poster]</param>
                     <param name="aspect">scale</param>
                     <param name="fallbackicon">$VAR[Poster]</param>
@@ -1557,6 +1559,7 @@
 				    <param name="isFocused">Control.HasFocus($PARAM[id1])</param>
                     <param name="isSmallIcon">true</param>
 					<param name="isTripleRow">$PARAM[isTripleRow]</param>
+					<param name="isTripleRowMedium">$PARAM[isTripleRowMedium]</param>
 					<param name="iconimage">$VAR[Poster]</param>
                     <param name="aspect">scale</param>
                     <param name="fallbackicon">$VAR[Poster]</param>

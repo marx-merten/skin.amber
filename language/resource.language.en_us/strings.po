@@ -2831,3 +2831,27 @@ msgstr ""
 msgctxt "#32271"
 msgid "Mouse/Touch-Friendly Alphabet Strip"
 msgstr ""
+
+msgctxt "#32272"
+msgid "Use New Media Views Selector"
+msgstr ""
+
+msgctxt "#32273"
+msgid "Skin Variables"
+msgstr ""
+
+msgctxt "#32274"
+msgid "To enable this functionality, you need to install a very recent version of the add-on script.skinvariables.[CR][CR]You can find it at https://github.com/jurialmunkey/script.skinvariables."
+msgstr ""
+
+msgctxt "#32275"
+msgid "Configure Media Views"
+msgstr ""
+
+msgctxt "#32276"
+msgid "Show Shelves Closer to Main Menu"
+msgstr ""
+
+msgctxt "#32277"
+msgid "Three Rows with Larger Icons"
+msgstr ""

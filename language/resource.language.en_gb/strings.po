@@ -2853,5 +2853,5 @@ msgid "Show Shelves Closer to Main Menu"
 msgstr ""
 
 msgctxt "#32277"
-msgid "Three Shelves Together with Larger Posters"
+msgid "Three Rows with Larger Icons"
 msgstr ""

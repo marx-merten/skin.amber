@@ -341,7 +341,7 @@
 		    <aspectratio>keep</aspectratio>
 			<align>center</align>
 			<aligny>center</aligny>
-            <visible>$EXP[widgetsAreShowing] + $EXP[singleWidgetRowShowing] + ![$EXP[doubleWidgetRowShowing]] + ![$EXP[tripleWidgetRowSmallShowing]] + Skin.HasSetting(VerticalHome)</visible>
+            <visible>$EXP[widgetsAreShowing] + $EXP[singleWidgetRowShowing] + ![$EXP[doubleWidgetRowShowing]] + ![$EXP[tripleWidgetRowSmallShowing]] + ![$EXP[tripleWidgetRowLargeShowing]] + Skin.HasSetting(VerticalHome)</visible>
         </control>
 		<!-- Logo for horiz. menu, single-row widget -->
 		<control type="image">
