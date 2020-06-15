@@ -7,7 +7,6 @@
     <onload condition="String.IsEqual(ListItem.DBTYPE,movie) + System.HasAddon(script.embuary.helper)">RunScript(script.embuary.helper,action=encode,string='"$INFO[ListItem.Title]"',prop=EncodedTitle)</onload>
     <onload condition="System.HasAddon(script.embuary.helper)">RunScript(script.embuary.helper,action=resetposition,container=9000||90050||9009||91001||910001||91002||91003||91004||91005||91006||91007||91008||91009||910010)</onload>
     <onunload condition="System.HasAddon(script.embuary.helper)">ClearProperty(EncodedTitle,home)</onunload>
-	<onunload>Container.Update(path)</onunload>
 
     <controls>
 
@@ -16,7 +15,7 @@
                             !String.IsEmpty(ListItem.DBID)">EmbuaryHelperTVShowDetails</include>
 
         <!-- Hide default cast list 50, using a custom cast -->
-        <include>HiddenCast</include>
+       <include>HiddenCast</include>
 
         <!-- Hide some of the default video info buttons, we are using custom ones -->
 		<control type="button" id="13" description="Director">
@@ -1609,8 +1608,50 @@
             <usecontrolcoords>true</usecontrolcoords>
             <onup>9000</onup>
 			<scrolltime tween="quadratic">400</scrolltime>
-			<defaultcontrol always="true">90050</defaultcontrol>
+			<defaultcontrol always="true">50</defaultcontrol>
 			<control type="group" id="89000"></control>
+			
+<!--			<control type="group" id="5200">
+				<height>454</height>
+                <visible>Integer.IsGreater(Container(50).NumItems,0) | Container(50).IsUpdating</visible>
+                <control type="button" id="5000">
+                    <texturefocus />
+                    <texturenofocus />
+                    <font />
+                    <textcolor />
+                    <onclick condition="Skin.HasSetting(Disable.ExtendedInfo)">SetFocus(50)</onclick>
+                    <onclick condition="Skin.HasSetting(Disable.ExtendedInfo)">Action(Select)</onclick>
+                    <onclick condition="!Skin.HasSetting(Disable.ExtendedInfo)">SetFocus(5000)</onclick>
+                    <onclick condition="!Skin.HasSetting(Disable.ExtendedInfo)">SetFocus(9000)</onclick>
+                    <onclick condition="!Skin.HasSetting(Disable.ExtendedInfo)">RunScript(plugin.video.themoviedb.helper,add_query=$INFO[Container(50).ListItem.Label],type=person,call_auto=1134)</onclick>
+                    <onback>9000</onback>
+                    <onup>9000</onup>
+                    <ondown>90050</ondown>
+                    <onleft>SetFocus(50)</onleft>
+                    <onleft>Left</onleft>
+                    <onright>SetFocus(50)</onright>
+                    <onright>Right</onright>
+                </control>
+            </control> -->
+
+<!--			<include>DefaultCast2</include>
+			
+			<include content="VideoInfoPosterWidget">
+                <param name="id">90050</param>
+				<param name="labelid">900501</param>
+                <param name="headinglabel">[COLOR=$VAR[HighlightColor]]$LOCALIZE[206][/COLOR]</param>
+                <param name="belowdoublelabel1">$INFO[Container(90050).ListItem.Label]</param>
+                <param name="belowdoublelabel2">[I]$INFO[Container(90050).ListItem.Property(Role)][/I]</param>
+                <param name="onclickinclude">InfoList_OnClickCast</param>
+				<param name="content">$VAR[TMDb_Cast]</param>
+                <param name="sortby">name</param>
+                <param name="sortorder">ascending</param>
+                <param name="minnumitems">0</param>
+                <param name="visibility1">!Integer.IsGreater(Container(50).NumAllItems,0)</param>
+            </include> -->
+			
+			
+			
 			<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))">DefaultCast</include>
 			<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEmpty(ListItem.Property(tmdb_id))">CustomCast</include>
             <!-- Movies in Set -->
