@@ -15,7 +15,7 @@
                             !String.IsEmpty(ListItem.DBID)">EmbuaryHelperTVShowDetails</include>
 
         <!-- Hide default cast list 50, using a custom cast -->
-       <include>HiddenCast</include>
+       <include condition="!Skin.HasSetting(Disable.ExtendedInfo)">HiddenCast</include>
 
         <!-- Hide some of the default video info buttons, we are using custom ones -->
 		<control type="button" id="13" description="Director">
@@ -1651,9 +1651,9 @@
             </include> -->
 			
 			
-			
-			<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))">DefaultCast</include>
-			<include condition="!String.IsEqual(ListItem.DBTYPE,set) + !String.IsEmpty(ListItem.Property(tmdb_id))">CustomCast</include>
+			<include condition="Skin.HasSetting(Disable.ExtendedInfo)">DefaultCast2</include>
+			<include condition="!Skin.HasSetting(Disable.ExtendedInfo) + !String.IsEqual(ListItem.DBTYPE,set) + !String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Property(tmdb_id))">DefaultCast</include>
+			<include condition="!Skin.HasSetting(Disable.ExtendedInfo) + !String.IsEqual(ListItem.DBTYPE,set) + !String.IsEmpty(ListItem.Property(tmdb_id))">CustomCast</include>
             <!-- Movies in Set -->
             <include content="VideoInfoPosterWidget" condition="!String.IsEmpty(ListItem.Set) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Set)) | ListItem.IsCollection">
                 <param name="id">9100001</param>

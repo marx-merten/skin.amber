@@ -1513,6 +1513,18 @@ msgctxt "#31605"
 msgid "Custom Shelf"
 msgstr ""
 
+msgctxt "#31606"
+msgid "Tall List"
+msgstr ""
+
+msgctxt "#31607"
+msgid "Panel 2"
+msgstr ""
+
+msgctxt "#31608"
+msgid "Big Panel 2"
+msgstr ""
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""
