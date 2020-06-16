@@ -356,6 +356,53 @@
                     <textcolor>$VAR[HighlightColor]</textcolor>
                     <label>$INFO[ListItem.UserRating]</label>
                 </control>
+            </control>
+            <control type="grouplist" description="Awards">
+                <width>115</width>
+                <orientation>horizontal</orientation>
+                <itemgap>1</itemgap>
+				<align>left</align>
+                <visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),N/A)] | 
+				         [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins),N/A)]</visible>
+				<visible>Skin.HasSetting(ShowRatingAwards)</visible>
+                <control type="image" description="Oscars logo">
+                    <height>40</height>
+                    <width>30</width>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <aspectratio>keep</aspectratio>
+                    <texture>badges/ratings/oscars.png</texture>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),N/A)]</visible>
+                </control>
+                <control type="label" description="Oscar wins">
+                    <width>30</width>
+                    <height>40</height>
+                    <font>ListDetails</font>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
+                    <align>left</align>
+					<aligny>center</aligny>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)]</label>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),N/A)]</visible>
+                </control>
+				<control type="image" description="Golden Globes logo">
+                    <height>40</height>
+                    <width>30</width>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <aspectratio>keep</aspectratio>
+                    <texture>badges/ratings/goldenglobes.png</texture>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins),N/A)]</visible>
+                </control>
+                <control type="label" description="Golden Globe wins">
+                    <width>20</width>
+                    <height>40</height>
+                    <font>ListDetails</font>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
+                    <align>left</align>
+					<aligny>center</aligny>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)]</label>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins),N/A)]</visible>
+                </control>
             </control>            
         </control>
 
@@ -495,7 +542,54 @@
                     <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.imdb_rating)]</label>
                     <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.imdb_rating)) + [String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.imdb_votes)) | String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.imdb_votes),0)]</visible>
                 </control>                
-            </control>            
+            </control>
+            <control type="grouplist" description="Awards">
+                <width>115</width>
+                <orientation>horizontal</orientation>
+                <itemgap>1</itemgap>
+				<align>left</align>
+                <visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),N/A)] | 
+				         [!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins),N/A)]</visible>
+				<visible>Skin.HasSetting(ShowRatingAwards)</visible>
+                <control type="image" description="Oscars logo">
+                    <height>40</height>
+                    <width>30</width>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <aspectratio>keep</aspectratio>
+                    <texture>badges/ratings/oscars.png</texture>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),N/A)]</visible>
+                </control>
+                <control type="label" description="Oscar wins">
+                    <width>30</width>
+                    <height>40</height>
+                    <font>ListDetails</font>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
+                    <align>left</align>
+					<aligny>center</aligny>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)]</label>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Oscar_Wins),N/A)]</visible>
+                </control>
+				<control type="image" description="Golden Globes logo">
+                    <height>40</height>
+                    <width>30</width>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <aspectratio>keep</aspectratio>
+                    <texture>badges/ratings/goldenglobes.png</texture>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins),N/A)]</visible>
+                </control>
+                <control type="label" description="Golden Globe wins">
+                    <width>20</width>
+                    <height>40</height>
+                    <font>ListDetails</font>
+                    <textcolor>$VAR[HighlightColor]</textcolor>
+                    <align>left</align>
+					<aligny>center</aligny>
+                    <label>$INFO[Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)]</label>
+					<visible>[!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins)) + !String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.GoldenGlobe_Wins),N/A)]</visible>
+                </control>
+            </control>
         </control>
 
         <!-- Certification Flag for local items -->        

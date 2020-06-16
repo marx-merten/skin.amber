@@ -2883,3 +2883,7 @@ msgstr ""
 msgctxt "#32281"
 msgid "Golden Globes Nominations"
 msgstr ""
+
+msgctxt "#32282"
+msgid "Awards (Oscars/Golden Globes)"
+msgstr ""
