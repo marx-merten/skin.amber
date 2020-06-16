@@ -2867,3 +2867,19 @@ msgstr ""
 msgctxt "#32277"
 msgid "Three Rows with Larger Icons"
 msgstr ""
+
+msgctxt "#32278"
+msgid "Oscars Won"
+msgstr ""
+
+msgctxt "#32279"
+msgid "Oscars Nominations"
+msgstr ""
+
+msgctxt "#32280"
+msgid "Golden Globes Won"
+msgstr ""
+
+msgctxt "#32281"
+msgid "Golden Globes Nominations"
+msgstr ""
