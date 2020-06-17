@@ -1568,7 +1568,7 @@ msgid "Weather icons"
 msgstr ""
 
 msgctxt "#31941"
-msgid "Movie Genre icons"
+msgid "Video Genre icons"
 msgstr ""
 
 msgctxt "#31942"
@@ -2873,7 +2873,7 @@ msgid "Oscars Won"
 msgstr ""
 
 msgctxt "#32279"
-msgid "Oscars Nominations"
+msgid "Oscar Nominations"
 msgstr ""
 
 msgctxt "#32280"
@@ -2881,9 +2881,29 @@ msgid "Golden Globes Won"
 msgstr ""
 
 msgctxt "#32281"
-msgid "Golden Globes Nominations"
+msgid "Golden Globe Nominations"
 msgstr ""
 
 msgctxt "#32282"
 msgid "Awards (Oscars/Golden Globes)"
+msgstr ""
+
+msgctxt "#32283"
+msgid "Video Genre Fanart"
+msgstr ""
+
+msgctxt "#32284"
+msgid "Music Genre Fanart"
+msgstr ""
+
+msgctxt "#32285"
+msgid "Custom Path"
+msgstr ""
+
+msgctxt "#32286"
+msgid "Reset Custom Path"
+msgstr ""
+
+msgctxt "#32287"
+msgid "Image Pack"
 msgstr ""
