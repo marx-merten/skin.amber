@@ -1064,7 +1064,7 @@
 							<onclick>ActivateWindow(1121)</onclick>
 						</item>
 						<item id="14" description="Set Music Genre Fanart">
-							<label>$LOCALIZE[32284]</label>
+							<label>[B]$LOCALIZE[32284][/B]</label>
 							<label2>$VAR[MusicGenreFanartLabel]</label2>
 							<onclick>SetProperty(CustomSelectMusicGenreFanart,True)</onclick>
 							<onclick>ActivateWindow(1121)</onclick>
