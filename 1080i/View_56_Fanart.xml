@@ -737,6 +737,16 @@
 						    <font>Details</font>
 						    <scroll>false</scroll>
 						    <label>$VAR[panelsubheading]</label>
+							<visible>!Container.Content(Artists)</visible>
+					    </control>
+						<control type="label" description="Details">
+						    <posy>154</posy>
+						    <height>66</height>
+						    <width>900</width>
+						    <font>Details</font>
+						    <scroll>false</scroll>
+						    <label>$VAR[panelsubheading]</label>
+							<visible>Container.Content(Artists)</visible>
 					    </control>
 					    <control type="label" description="Next Episode">
 						    <posy>195</posy>
@@ -764,6 +774,16 @@
 						    <align>justify</align>
 						    <label>$VAR[Plots]</label>
                             <autoscroll delay="3000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<visible>!Container.Content(Artists)</visible>
+					    </control>
+						<control type="textbox" description="Plot">
+						    <posy>230</posy>
+						    <width>900</width>
+						    <height>240</height>
+						    <align>justify</align>
+						    <label>$VAR[Plots]</label>
+                            <autoscroll delay="3000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<visible>Container.Content(Artists)</visible>
 					    </control>
 						<!-- Movies in collection when the plot is empty -->
 						<control type="panel">
