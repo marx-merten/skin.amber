@@ -410,6 +410,7 @@
 	
 	<include name="View_56_Fanart">
 	    <param name="focusposition">2</param>
+		<param name="listposy">609</param>
 		<definition>
 		    <control type="group">
 			    <visible>Control.IsVisible(56)</visible>
@@ -447,7 +448,7 @@
     					<animation effect="slide" easing="out" start="0,0" end="0,800" time="350" delay="0" center="120,350" reversible="true" condition="!String.IsEmpty(Window.Property(gallery))">Conditional</animation>
 				    <!--	<animation effect="slide" easing="out" start="0,0" end="0,36" time="0" reversible="true" condition="$EXP[56_FanartViewInfo]">Conditional</animation> -->
 					    <visible>[$EXP[Exp_View_56] + Skin.HasSetting(Enable.NewViewSelector)] | [!Skin.HasSetting(hide.fanartview) + !Skin.HasSetting(Enable.NewViewSelector)]</visible>
-	    				<posy>609</posy>
+						<posy>$PARAM[listposy]</posy>
 		    			<width>1920</width>
 			    		<height>471</height>
 				    	<onleft>56</onleft>
