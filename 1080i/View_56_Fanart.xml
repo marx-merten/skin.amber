@@ -750,6 +750,7 @@
 						    <width>900</width>
 						    <font>Details</font>
 						    <scroll>false</scroll>
+							<aligny>center</aligny>
 						    <label>$VAR[panelsubheading]</label>
 							<visible>Container.Content(Artists)</visible>
 					    </control>
