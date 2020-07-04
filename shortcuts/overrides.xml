@@ -218,8 +218,8 @@
 	<propertySettings property="widgetSortBy.2" buttonID="4003" title="$LOCALIZE[31616]" templateonly="true"/>
 
 	<!-- Widget 2 Sort Direction -->
-	<property property="widgetSortOrder.2">ascending</property>
-	<property property="widgetSortOrder.2">descending</property>
+	<property property="widgetSortOrder.2" label="$LOCALIZE[584]">ascending</property>
+	<property property="widgetSortOrder.2" label="$LOCALIZE[585]">descending</property>
 	<propertySettings property="widgetSortOrder.2" buttonID="4004" title="$LOCALIZE[31617]" templateonly="true"/>
 
 	<!-- Widget 2 Limit -->
@@ -256,8 +256,8 @@
 	<propertySettings property="widgetSortBy.3" buttonID="5003" title="$LOCALIZE[31616]" templateonly="true"/>
 
 	<!-- Widget 3 Sort Direction -->
-	<property property="widgetSortOrder.3">ascending</property>
-	<property property="widgetSortOrder.3">descending</property>
+	<property property="widgetSortOrder.3" label="$LOCALIZE[584]">ascending</property>
+	<property property="widgetSortOrder.3" label="$LOCALIZE[585]">descending</property>
 	<propertySettings property="widgetSortOrder.3" buttonID="5004" title="$LOCALIZE[31617]" templateonly="true"/>
 
 	<!-- Widget 3 Limit -->
@@ -294,9 +294,8 @@
 	<propertySettings property="widgetSortBy.4" buttonID="6003" title="$LOCALIZE[31616]" templateonly="true"/>
 
 	<!-- Widget 4 Sort Direction -->
-	<property property="widgetSortOrder.4">ascending</property>
-	<property property="widgetSortOrder.4">descending</property>
-
+	<property property="widgetSortOrder.4" label="$LOCALIZE[584]">ascending</property>
+	<property property="widgetSortOrder.4" label="$LOCALIZE[585]">descending</property>
 	<propertySettings property="widgetSortOrder.4" buttonID="6004" title="$LOCALIZE[31617]" templateonly="true"/>
 
 	<!-- Widget 4 Limit -->
@@ -334,9 +333,8 @@
 	<propertySettings property="widgetSortBy.5" buttonID="7003" title="$LOCALIZE[31616]" templateonly="true"/>
 
 	<!-- Widget 5 Sort Direction -->
-	<property property="widgetSortOrder.5">ascending</property>
-	<property property="widgetSortOrder.5">descending</property>
-
+	<property property="widgetSortOrder.5" label="$LOCALIZE[584]">ascending</property>
+	<property property="widgetSortOrder.5" label="$LOCALIZE[585]">descending</property>
 	<propertySettings property="widgetSortOrder.5" buttonID="7004" title="$LOCALIZE[31617]" templateonly="true"/>
 
 	<!-- Widget 5 Limit -->
@@ -374,9 +372,8 @@
 	<propertySettings property="widgetSortBy.6" buttonID="8003" title="$LOCALIZE[31616]" templateonly="true"/>
 
 	<!-- Widget 6 Sort Direction -->
-	<property property="widgetSortOrder.6">ascending</property>
-	<property property="widgetSortOrder.6">descending</property>
-
+	<property property="widgetSortOrder.6" label="$LOCALIZE[584]">ascending</property>
+	<property property="widgetSortOrder.6" label="$LOCALIZE[585]">descending</property>
 	<propertySettings property="widgetSortOrder.6" buttonID="8004" title="$LOCALIZE[31617]" templateonly="true"/>
 
 	<!-- Widget 6 Limit -->
