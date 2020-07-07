@@ -157,6 +157,7 @@
     <!-- Widget 1 Artwork -->
 	<property property="widgetArtwork" label="$LOCALIZE[31611]">Poster</property>
 	<property property="widgetArtwork" label="$LOCALIZE[31612]">Square</property>
+	<property property="widgetArtwork" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes)">Banner</property>
 	<propertySettings property="widgetArtwork" buttonID="3001" title="$LOCALIZE[31610]" showNone="false" />
 
 	<!-- Widget 1 Sort -->
@@ -194,6 +195,7 @@
 	<!-- Widget 2 Artwork -->
 	<property property="widgetArtwork.2" label="$LOCALIZE[31611]">Poster</property>
 	<property property="widgetArtwork.2" label="$LOCALIZE[31612]">Square</property>
+	<property property="widgetArtwork.2" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.2),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),episodes)">Banner</property>
 	<propertySettings property="widgetArtwork.2" buttonID="4001" title="$LOCALIZE[31610]" showNone="false" />
 
 	<!-- Widget 2 Sort -->
@@ -232,6 +234,7 @@
 	<!-- Widget 3 Artwork -->
 	<property property="widgetArtwork.3" label="$LOCALIZE[31611]">Poster</property>
 	<property property="widgetArtwork.3" label="$LOCALIZE[31612]">Square</property>
+	<property property="widgetArtwork.3" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.3),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),episodes)">Banner</property>
 	<propertySettings property="widgetArtwork.3" buttonID="5001" title="$LOCALIZE[31610]" showNone="false" />
 
 	<!-- Widget 3 Sort -->
@@ -270,6 +273,7 @@
 	<!-- Widget 4 Artwork -->
 	<property property="widgetArtwork.4" label="$LOCALIZE[31611]">Poster</property>
 	<property property="widgetArtwork.4" label="$LOCALIZE[31612]">Square</property>
+	<property property="widgetArtwork.4" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.4),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),episodes)">Banner</property>
 	<propertySettings property="widgetArtwork.4" buttonID="6001" title="$LOCALIZE[31610]" showNone="false" />
 
 	<!-- Widget 4 Sort -->
@@ -309,6 +313,7 @@
 	<!-- Widget 5 Artwork -->
 	<property property="widgetArtwork.5" label="$LOCALIZE[31611]">Poster</property>
 	<property property="widgetArtwork.5" label="$LOCALIZE[31612]">Square</property>
+	<property property="widgetArtwork.5" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.5),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),episodes)">Banner</property>
 	<propertySettings property="widgetArtwork.5" buttonID="7001" title="$LOCALIZE[31610]" showNone="false" />
 	
 	<!-- Widget 5 Sort -->
@@ -348,6 +353,7 @@
 	<!-- Widget 6 Artwork -->
 	<property property="widgetArtwork.6" label="$LOCALIZE[31611]">Poster</property>
 	<property property="widgetArtwork.6" label="$LOCALIZE[31612]">Square</property>
+	<property property="widgetArtwork.6" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.6),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),episodes)">Banner</property>
 	<propertySettings property="widgetArtwork.6" buttonID="8001" title="$LOCALIZE[31610]" showNone="false" />
 
 	<!-- Widget 6 Sort -->
