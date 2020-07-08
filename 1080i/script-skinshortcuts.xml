@@ -614,7 +614,7 @@
 					<font>ListDetails</font>
 				</control>
 				<control type="radiobutton" id="3007">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + String.IsEqual(Container(211).ListItem.Property(widgetContent),default) + String.IsEqual(Container(211).ListItem.Property(widgetArtwork),Poster)</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + String.IsEqual(Container(211).ListItem.Property(widgetContent),default) + !String.IsEqual(Container(211).ListItem.Property(widgetArtwork),Square)</visible>
 					<label>$LOCALIZE[31615]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPosterLabel))">SetProperty(customProperty,widgetPosterLabel)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel),true)">SetProperty(customProperty,widgetPosterLabel)</onclick>
@@ -737,7 +737,7 @@
 				    <font>ListDetails</font>
 			    </control>
 				<control type="radiobutton" id="4007">
-				    <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.2),default) + String.IsEqual(Container(211).ListItem.Property(widgetArtwork.2),Poster)</visible>
+				    <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.2),default) + !String.IsEqual(Container(211).ListItem.Property(widgetArtwork.2),Square)</visible>
 				    <label>$LOCALIZE[31615]</label>
 				    <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPosterLabel.2))">SetProperty(customProperty,widgetPosterLabel.2)</onclick>
 				    <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.2),true)">SetProperty(customProperty,widgetPosterLabel.2)</onclick>
@@ -860,7 +860,7 @@
 			        <font>ListDetails</font>
 		        </control>
 				<control type="radiobutton" id="5007">
-			        <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.3)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.3),default) + String.IsEqual(Container(211).ListItem.Property(widgetArtwork.3),Poster)</visible>
+			        <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.3)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.3),default) + !String.IsEqual(Container(211).ListItem.Property(widgetArtwork.3),Square)</visible>
 			        <label>$LOCALIZE[31615]</label>
 			        <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPosterLabel.3))">SetProperty(customProperty,widgetPosterLabel.3)</onclick>
 			        <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.3),true)">SetProperty(customProperty,widgetPosterLabel.3)</onclick>
@@ -982,7 +982,7 @@
 		            <font>ListDetails</font>
 		        </control>
 				<control type="radiobutton" id="6007">
-			        <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.4)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.4),default) + String.IsEqual(Container(211).ListItem.Property(widgetArtwork.4),Poster)</visible>
+			        <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.4)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.4),default) + !String.IsEqual(Container(211).ListItem.Property(widgetArtwork.4),Square)</visible>
 			        <label>$LOCALIZE[31615]</label>
 			        <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPosterLabel.4))">SetProperty(customProperty,widgetPosterLabel.4)</onclick>
 			        <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.4),true)">SetProperty(customProperty,widgetPosterLabel.4)</onclick>
@@ -1100,7 +1100,7 @@
 		            <font>ListDetails</font>
 		        </control>
 			    <control type="radiobutton" id="7007">
-		            <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.5)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.5),default) + String.IsEqual(Container(211).ListItem.Property(widgetArtwork.5),Poster)</visible>
+		            <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.5)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.5),default) + !String.IsEqual(Container(211).ListItem.Property(widgetArtwork.5),Square)</visible>
 		            <label>$LOCALIZE[31615]</label>
 		            <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPosterLabel.5))">SetProperty(customProperty,widgetPosterLabel.5)</onclick>
 		            <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.5),true)">SetProperty(customProperty,widgetPosterLabel.5)</onclick>
@@ -1219,7 +1219,7 @@
 				    <font>ListDetails</font>
 				</control>
 				<control type="radiobutton" id="8007">
-				    <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.6)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.6),default) + String.IsEqual(Container(211).ListItem.Property(widgetArtwork.6),Poster)</visible>
+				    <visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.6)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.6),default) + !String.IsEqual(Container(211).ListItem.Property(widgetArtwork.6),Square)</visible>
 				    <label>$LOCALIZE[31615]</label>
 				    <onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetPosterLabel.6))">SetProperty(customProperty,widgetPosterLabel.6)</onclick>
 				    <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.6),true)">SetProperty(customProperty,widgetPosterLabel.6)</onclick>

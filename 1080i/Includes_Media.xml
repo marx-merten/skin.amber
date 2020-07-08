@@ -2021,7 +2021,7 @@
 				<left>$PARAM[xoffset]</left>
 				<control type="image">
 					<width>$PARAM[labelwidth]</width>
-					<height>45</height>
+					<height>$PARAM[labelheight]</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>img/OverlayStripe.png</texture>
 					<bordersize>$PARAM[bordersize]</bordersize>
