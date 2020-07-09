@@ -791,6 +791,7 @@
 		<param name="isTripleRowMedium">false</param>
 		<param name="isTripleRowLarge">false</param>
 		<param name="isTripleShelvesTogether">false</param>
+		<param name="showTopRightMarks">true</param>
 		<param name="isLowWidget">false</param>
 		<param name="iconwidth"/>
 		<param name="iconheight"/>
@@ -857,7 +858,7 @@
 					<aspectratio align="$PARAM[align]" aligny="$PARAM[aligny]">$PARAM[aspect]</aspectratio>
 					<colordiffuse>eeeeeeee</colordiffuse>
 				</control>
-				<include condition="Skin.HasSetting(ShowTopRightOverlays) + !ListItem.IsRecording + !String.StartsWith(ListItem.FolderPath,pvr)" content="TopRightOverlayTemplate">
+				<include condition="Skin.HasSetting(ShowTopRightOverlays) + !ListItem.IsRecording + !String.StartsWith(ListItem.FolderPath,pvr) + $PARAM[showTopRightMarks]" content="TopRightOverlayTemplate">
 				    <param name="isFocused">$PARAM[isFocused]</param>
 					<param name="isSmallIcon">$PARAM[isSmallIcon]</param>
 					<param name="isSearch">$PARAM[isSearch]</param>
