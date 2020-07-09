@@ -256,41 +256,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork1" tag="property" attribute="name|widgetArtwork" value="Poster">$VAR[Poster]</property>
@@ -440,41 +440,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork2" tag="property" attribute="name|widgetArtwork.2" value="Poster">$VAR[Poster]</property>
@@ -627,41 +627,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork3" tag="property" attribute="name|widgetArtwork.3" value="Poster">$VAR[Poster]</property>
@@ -815,41 +815,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.4" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.4" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.4" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.4" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.4" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.4" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.4" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.4" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.4" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.4" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.4" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.4" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork4" tag="property" attribute="name|widgetArtwork.4" value="Poster">$VAR[Poster]</property>
@@ -1004,41 +1004,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.5" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.5" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.5" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.5" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.5" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.5" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.5" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.5" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.5" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.5" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.5" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.5" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork5" tag="property" attribute="name|widgetArtwork.5" value="Poster">$VAR[Poster]</property>
@@ -1191,41 +1191,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.6" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.6" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.6" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.6" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.6" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.6" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.6" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.6" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.6" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.6" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.6" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.6" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork6" tag="property" attribute="name|widgetArtwork.6" value="Poster">$VAR[Poster]</property>
@@ -2045,41 +2045,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork1" tag="property" attribute="name|widgetArtwork" value="Poster">$VAR[Poster]</property>
@@ -2205,41 +2205,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork2" tag="property" attribute="name|widgetArtwork.2" value="Poster">$VAR[Poster]</property>
@@ -2622,41 +2622,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork1" tag="property" attribute="name|widgetArtwork" value="Poster">$VAR[Poster]</property>
@@ -2845,41 +2845,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork2" tag="property" attribute="name|widgetArtwork.2" value="Poster">$VAR[Poster]</property>
@@ -3068,41 +3068,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork3" tag="property" attribute="name|widgetArtwork.3" value="Poster">$VAR[Poster]</property>
@@ -3628,41 +3628,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork1" tag="property" attribute="name|widgetArtwork" value="Poster">$VAR[Poster]</property>
@@ -3815,41 +3815,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.2" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.2" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork2" tag="property" attribute="name|widgetArtwork.2" value="Poster">$VAR[Poster]</property>
@@ -4002,41 +4002,41 @@
 		
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">315</property>
 		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">157</property>
-		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">295</property>
+		<property name="artworkheightbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">252</property>
 		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">151</property>
-		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">245</property>
+		<property name="artworkheightmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb">220</property>
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">109</property>
-		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">215</property>
+		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">500</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">228</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">385</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">295</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">358</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">182</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">360</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">245</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">159</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">251</property>
-		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">215</property>
+		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightbig]</property>
-		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthbig]</property>
+		<property name="iconheightbig" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthbig]</property>
 		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightmed]</property>
-		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthmed]</property>
+		<property name="iconheightmed" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthmed]</property>
 		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|FanArt|Landscape|ClearArt|Thumb|ClearLogo">$SKINSHORTCUTS[artworkheightsmall]</property>
-		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
+		<property name="iconheightsmall" tag="property" attribute="name|widgetArtwork.3" value="Square|DiscArt|CharacterArt">$SKINSHORTCUTS[artworkwidthsmall]</property>
 		
 		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">right</property>
-		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|ClearLogo|DiscArt">center</property>
+		<property name="align" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|ClearLogo|DiscArt|CharacterArt">center</property>
 		
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">[String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(album.discart))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">[String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
 		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="ClearArt">[String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(ListItem.Art(artist.clearart)) + String.IsEmpty(ListItem.Art(artist.clearlogo))]</property>
-		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="CharacterArt">[String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
+		<property name="showLabelFallback" tag="property" attribute="name|widgetArtwork.3" value="CharacterArt">[String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart)) + String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(tvshow.clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))]</property>
 		<property name="showLabelFallback">false</property>
 		
 		<property name="contentartwork3" tag="property" attribute="name|widgetArtwork.3" value="Poster">$VAR[Poster]</property>
