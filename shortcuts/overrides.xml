@@ -156,9 +156,9 @@
 
     <!-- Widget 1 Artwork -->
 	<property property="widgetArtwork" label="$LOCALIZE[31611]">Poster</property>
-	<property property="widgetArtwork" label="$LOCALIZE[31612]">Square</property>
-	<property property="widgetArtwork" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes)">Banner</property>
-	<property property="widgetArtwork" label="$LOCALIZE[20445]">FanArt</property>
+	<property property="widgetArtwork" label="$LOCALIZE[31612]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType),people)">Square</property>
+	<property property="widgetArtwork" label="$LOCALIZE[20020]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes)]">Banner</property>
+	<property property="widgetArtwork" label="$LOCALIZE[20445]" condition="![String.IsEqual(Container(211).ListItem.Property(widget),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widgetType),people)]">FanArt</property>
 	<property property="widgetArtwork" label="$LOCALIZE[31620]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows)]">Landscape</property>
 	<property property="widgetArtwork" label="$LOCALIZE[31619]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),episodes)">Thumb</property>
 	<property property="widgetArtwork" label="$LOCALIZE[31622]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType),musicvideos) | String.IsEqual(Container(211).ListItem.Property(widgetType),artists)]">ClearArt</property>
@@ -213,9 +213,9 @@
 	
 	<!-- Widget 2 Artwork -->
 	<property property="widgetArtwork.2" label="$LOCALIZE[31611]">Poster</property>
-	<property property="widgetArtwork.2" label="$LOCALIZE[31612]">Square</property>
-	<property property="widgetArtwork.2" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.2),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),episodes)">Banner</property>
-	<property property="widgetArtwork.2" label="$LOCALIZE[20445]">FanArt</property>
+	<property property="widgetArtwork.2" label="$LOCALIZE[31612]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType.2),people)">Square</property>
+	<property property="widgetArtwork.2" label="$LOCALIZE[20020]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.2),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),episodes)]">Banner</property>
+	<property property="widgetArtwork.2" label="$LOCALIZE[20445]" condition="![String.IsEqual(Container(211).ListItem.Property(widget.2),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),people)]">FanArt</property>
 	<property property="widgetArtwork.2" label="$LOCALIZE[31620]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.2),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),tvshows)]">Landscape</property>
 	<property property="widgetArtwork.2" label="$LOCALIZE[31619]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.2),episodes)">Thumb</property>
 	<property property="widgetArtwork.2" label="$LOCALIZE[31622]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.2),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),musicvideos) | String.IsEqual(Container(211).ListItem.Property(widgetType.2),artists)]">ClearArt</property>
@@ -270,9 +270,9 @@
 
 	<!-- Widget 3 Artwork -->
 	<property property="widgetArtwork.3" label="$LOCALIZE[31611]">Poster</property>
-	<property property="widgetArtwork.3" label="$LOCALIZE[31612]">Square</property>
-	<property property="widgetArtwork.3" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.3),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),episodes)">Banner</property>
-	<property property="widgetArtwork.3" label="$LOCALIZE[20445]">FanArt</property>
+	<property property="widgetArtwork.3" label="$LOCALIZE[31612]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType.3),people)">Square</property>
+	<property property="widgetArtwork.3" label="$LOCALIZE[20020]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.3),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),episodes)]">Banner</property>
+	<property property="widgetArtwork.3" label="$LOCALIZE[20445]" condition="![String.IsEqual(Container(211).ListItem.Property(widget.3),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),people)]">FanArt</property>
 	<property property="widgetArtwork.3" label="$LOCALIZE[31620]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.3),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),tvshows)]">Landscape</property>
 	<property property="widgetArtwork.3" label="$LOCALIZE[31619]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.3),episodes)">Thumb</property>
 	<property property="widgetArtwork.3" label="$LOCALIZE[31622]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.3),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),musicvideos) | String.IsEqual(Container(211).ListItem.Property(widgetType.3),artists)]">ClearArt</property>
@@ -327,9 +327,9 @@
 
 	<!-- Widget 4 Artwork -->
 	<property property="widgetArtwork.4" label="$LOCALIZE[31611]">Poster</property>
-	<property property="widgetArtwork.4" label="$LOCALIZE[31612]">Square</property>
-	<property property="widgetArtwork.4" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.4),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),episodes)">Banner</property>
-	<property property="widgetArtwork.4" label="$LOCALIZE[20445]">FanArt</property>
+	<property property="widgetArtwork.4" label="$LOCALIZE[31612]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType.4),people)">Square</property>
+	<property property="widgetArtwork.4" label="$LOCALIZE[20020]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.4),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),episodes)]">Banner</property>
+	<property property="widgetArtwork.4" label="$LOCALIZE[20445]" condition="![String.IsEqual(Container(211).ListItem.Property(widget.4),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),people)]">FanArt</property>
 	<property property="widgetArtwork.4" label="$LOCALIZE[31620]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.4),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),tvshows)]">Landscape</property>
 	<property property="widgetArtwork.4" label="$LOCALIZE[31619]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.4),episodes)">Thumb</property>
 	<property property="widgetArtwork.4" label="$LOCALIZE[31622]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.4),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),musicvideos) | String.IsEqual(Container(211).ListItem.Property(widgetType.4),artists)]">ClearArt</property>
@@ -385,9 +385,9 @@
 
 	<!-- Widget 5 Artwork -->
 	<property property="widgetArtwork.5" label="$LOCALIZE[31611]">Poster</property>
-	<property property="widgetArtwork.5" label="$LOCALIZE[31612]">Square</property>
-	<property property="widgetArtwork.5" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.5),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),episodes)">Banner</property>
-	<property property="widgetArtwork.5" label="$LOCALIZE[20445]">FanArt</property>
+	<property property="widgetArtwork.5" label="$LOCALIZE[31612]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType.5),people)">Square</property>
+	<property property="widgetArtwork.5" label="$LOCALIZE[20020]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.5),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),episodes)]">Banner</property>
+	<property property="widgetArtwork.5" label="$LOCALIZE[20445]" condition="![String.IsEqual(Container(211).ListItem.Property(widget.5),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),people)]">FanArt</property>
 	<property property="widgetArtwork.5" label="$LOCALIZE[31620]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.5),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),tvshows)]">Landscape</property>
 	<property property="widgetArtwork.5" label="$LOCALIZE[31619]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.5),episodes)">Thumb</property>
 	<property property="widgetArtwork.5" label="$LOCALIZE[31622]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.5),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),musicvideos) | String.IsEqual(Container(211).ListItem.Property(widgetType.5),artists)]">ClearArt</property>
@@ -443,9 +443,9 @@
 
 	<!-- Widget 6 Artwork -->
 	<property property="widgetArtwork.6" label="$LOCALIZE[31611]">Poster</property>
-	<property property="widgetArtwork.6" label="$LOCALIZE[31612]">Square</property>
-	<property property="widgetArtwork.6" label="$LOCALIZE[20020]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.6),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),episodes)">Banner</property>
-	<property property="widgetArtwork.6" label="$LOCALIZE[20445]">FanArt</property>
+	<property property="widgetArtwork.6" label="$LOCALIZE[31612]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType.6),people)">Square</property>
+	<property property="widgetArtwork.6" label="$LOCALIZE[20020]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.6),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),episodes)]">Banner</property>
+	<property property="widgetArtwork.6" label="$LOCALIZE[20445]" condition="![String.IsEqual(Container(211).ListItem.Property(widget.6),mysubmenu) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),people)]">FanArt</property>
 	<property property="widgetArtwork.6" label="$LOCALIZE[31620]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.6),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),tvshows)]">Landscape</property>
 	<property property="widgetArtwork.6" label="$LOCALIZE[31619]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType.6),episodes)">Thumb</property>
 	<property property="widgetArtwork.6" label="$LOCALIZE[31622]" condition="[String.IsEqual(Container(211).ListItem.Property(widgetType.6),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),musicvideos) | String.IsEqual(Container(211).ListItem.Property(widgetType.6),artists)]">ClearArt</property>

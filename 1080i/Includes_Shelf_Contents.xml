@@ -1387,7 +1387,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
 						<param name="aligny">$PARAM[aligny]</param>
-                        <param name="fallbackicon">$VAR[iconimage]</param>
+                        <param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthsmall]</param>
 				        <param name="iconheight">$PARAM[iconheightsmall]</param>
 				        <param name="iconoffset">0</param>
@@ -1435,7 +1435,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthsmall]</param>
 				        <param name="iconheight">$PARAM[iconheightsmall]</param>
 				        <param name="iconoffset">0</param>
@@ -1465,7 +1465,7 @@
                 <control type="group">
 				    <visible>$PARAM[showLabelFallback]</visible>
 					<control type="image">
-					    <texture background="true" fallback="$PARAM[fallbackicon]">thumbs/labelback.png</texture>
+					    <texture background="true">thumbs/labelback.png</texture>
 					    <bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
 					    <bordersize>$PARAM[bordersizeLT],$PARAM[bordersizeLT],$PARAM[bordersizeRB],$PARAM[bordersizeRB]</bordersize>
 					    <aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1493,7 +1493,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthmed]</param>
 				        <param name="iconheight">$PARAM[iconheightmed]</param>
 				        <param name="iconoffset">0</param>
@@ -1540,7 +1540,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthmed]</param>
 				        <param name="iconheight">$PARAM[iconheightmed]</param>
 				        <param name="iconoffset">0</param>
@@ -1569,7 +1569,7 @@
                 <control type="group">
 				    <visible>$PARAM[showLabelFallback]</visible>
 					<control type="image">
-					    <texture background="true" fallback="$PARAM[fallbackicon]">thumbs/labelback.png</texture>
+					    <texture background="true">thumbs/labelback.png</texture>
 					    <bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
 					    <bordersize>$PARAM[bordersizeLT],$PARAM[bordersizeLT],$PARAM[bordersizeRB],$PARAM[bordersizeRB]</bordersize>
 					    <aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1597,7 +1597,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthbig]</param>
 				        <param name="iconheight">$PARAM[iconheightbig]</param>
 				        <param name="iconoffset">0</param>
@@ -1644,7 +1644,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthbig]</param>
 				        <param name="iconheight">$PARAM[iconheightbig]</param>
 				        <param name="iconoffset">0</param>
@@ -1673,7 +1673,7 @@
                 <control type="group">
 				    <visible>$PARAM[showLabelFallback]</visible>
 					<control type="image">
-					    <texture background="true" fallback="$PARAM[fallbackicon]">thumbs/labelback.png</texture>
+					    <texture background="true">thumbs/labelback.png</texture>
 					    <bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
 					    <bordersize>$PARAM[bordersizeLT],$PARAM[bordersizeLT],$PARAM[bordersizeRB],$PARAM[bordersizeRB]</bordersize>
 					    <aspectratio align="center" aligny="center">stretch</aspectratio>
@@ -1738,7 +1738,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
 						<param name="aligny">$PARAM[aligny]</param>
-                        <param name="fallbackicon">$VAR[iconimage]</param>
+                        <param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthsmall]</param>
 				        <param name="iconheight">$PARAM[iconheightsmall]</param>
 				        <param name="iconoffset">0</param>
@@ -1779,7 +1779,7 @@
 						<height>180</height>
 						<width>180</width>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultMovies.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultNoPreview.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
 						<top>17</top>
@@ -1800,7 +1800,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthsmall]</param>
 				        <param name="iconheight">$PARAM[iconheightsmall]</param>
 				        <param name="iconoffset">0</param>
@@ -1843,7 +1843,7 @@
 						<height>180</height>
 						<width>180</width>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultMovies.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultNoPreview.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
 						<top>17</top>
@@ -1865,7 +1865,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthmed]</param>
 				        <param name="iconheight">$PARAM[iconheightmed]</param>
 				        <param name="iconoffset">0</param>
@@ -1905,7 +1905,7 @@
 						<height>215</height>
 						<width>215</width>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultMovies.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultNoPreview.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
 						<top>17</top>
@@ -1926,7 +1926,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthmed]</param>
 				        <param name="iconheight">$PARAM[iconheightmed]</param>
 				        <param name="iconoffset">0</param>
@@ -1968,7 +1968,7 @@
 						<height>215</height>
 						<width>215</width>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultMovies.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultNoPreview.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
 						<top>17</top>
@@ -1990,7 +1990,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthbig]</param>
 				        <param name="iconheight">$PARAM[iconheightbig]</param>
 				        <param name="iconoffset">0</param>
@@ -2030,7 +2030,7 @@
 						<height>260</height>
 						<width>260</width>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultMovies.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultNoPreview.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
 						<top>17</top>
@@ -2051,7 +2051,7 @@
                         <param name="aspect">$PARAM[aspect]</param>
 					    <param name="align">$PARAM[align]</param>
                         <param name="aligny">$PARAM[aligny]</param>
-						<param name="fallbackicon">$VAR[iconimage]</param>
+						<param name="fallbackicon">DefaultNoPreview.png</param>
 				        <param name="iconwidth">$PARAM[artworkwidthbig]</param>
 				        <param name="iconheight">$PARAM[iconheightbig]</param>
 				        <param name="iconoffset">0</param>
@@ -2093,7 +2093,7 @@
 						<height>260</height>
 						<width>260</width>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultMovies.png">$INFO[ListItem.Art(thumb)]</texture>
+						<texture diffuse="thumbs/discartbottom.png" fallback="DefaultNoPreview.png">$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
 						<top>17</top>
@@ -2142,7 +2142,7 @@
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
 						<param name="align">right</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">425</param>
 				        <param name="iconheight">109</param>
 				        <param name="iconoffset">0</param>
@@ -2172,7 +2172,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">425</param>
 				        <param name="iconheight">109</param>
 				        <param name="iconoffset">0</param>
@@ -2213,7 +2213,7 @@
 					    <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
 						<param name="align">right</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">425</param>
 				        <param name="iconheight">109</param>
 				        <param name="iconoffset">0</param>
@@ -2243,7 +2243,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">425</param>
 				        <param name="iconheight">109</param>
 				        <param name="iconoffset">0</param>
@@ -2283,7 +2283,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">668</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2312,7 +2312,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">668</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2351,7 +2351,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
 					    <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">668</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2380,7 +2380,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">668</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2420,7 +2420,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">684</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2449,7 +2449,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">684</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2488,7 +2488,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
 					    <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">684</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2517,7 +2517,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">684</param>
 				        <param name="iconheight">157</param>
 				        <param name="iconoffset">0</param>
@@ -2557,7 +2557,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">634</param>
 				        <param name="iconheight">151</param>
 				        <param name="iconoffset">0</param>
@@ -2586,7 +2586,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">634</param>
 				        <param name="iconheight">151</param>
 				        <param name="iconoffset">0</param>
@@ -2625,7 +2625,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
 					    <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">keep</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">634</param>
 				        <param name="iconheight">151</param>
 				        <param name="iconoffset">0</param>
@@ -2654,7 +2654,7 @@
 					    <param name="isLowWidget">$PARAM[isLowWidget]</param>
                         <param name="iconimage">$VAR[Banner]</param>
                         <param name="aspect">scale</param>
-                        <param name="fallbackicon">$VAR[Banner]</param>
+                        <param name="fallbackicon">DefaultBanner.png</param>
 				        <param name="iconwidth">634</param>
 				        <param name="iconheight">151</param>
 				        <param name="iconoffset">0</param>
