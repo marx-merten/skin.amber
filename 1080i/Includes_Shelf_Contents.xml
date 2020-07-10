@@ -1350,6 +1350,7 @@
 		<param name="labelheight">45</param>
 		<param name="labelalign">center</param>
 		<param name="labelfont">Shelf_Label</param>
+		<param name="labelscroll">false</param>
 		<param name="textboxvisibility">false</param>
 		<param name="textboxfont">Shelf_Label</param>
         <param name="aspect">keep</param>
@@ -1399,6 +1400,7 @@
 					    <param name="overlaylabelalign">$PARAM[labelalign]</param>
 					    <param name="overlaylabelfont">$PARAM[labelfont]</param>
                         <param name="overlaylabelheight">$PARAM[labelheight]</param>
+						<param name="overlaylabelscroll">$PARAM[labelscroll]</param>
 					    <param name="overlaylabelyoffset">55r</param>
 					    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				        <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
@@ -1448,7 +1450,8 @@
 					    <param name="overlaylabelfont">$PARAM[labelfont]</param>
                         <param name="overlaylabelheight">$PARAM[labelheight]</param>
 					    <param name="overlaylabelyoffset">55r</param>
-					    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+					    <param name="overlaylabelscroll">$PARAM[labelscroll]</param>
+						<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				        <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				        <param name="belowtextboxwidth">$PARAM[textboxwidth]</param>
 					    <param name="belowtextboxfont">$PARAM[textboxfont]</param>
@@ -1505,7 +1508,8 @@
 					    <param name="overlaylabelalign">$PARAM[labelalign]</param>
 					    <param name="overlaylabelfont">$PARAM[labelfont]</param>
                         <param name="overlaylabelheight">$PARAM[labelheight]</param>
-					    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+					    <param name="overlaylabelscroll">$PARAM[labelscroll]</param>
+						<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				        <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				        <param name="belowtextboxwidth">$PARAM[textboxwidth]</param>
 					    <param name="belowtextboxfont">$PARAM[textboxfont]</param>
@@ -1552,7 +1556,8 @@
 					    <param name="overlaylabelfont">$PARAM[labelfont]</param>
                         <param name="overlaylabelheight">$PARAM[labelheight]</param>
 					    <param name="overlaylabelalign">$PARAM[labelalign]</param>
-					    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+					    <param name="overlaylabelscroll">$PARAM[labelscroll]</param>
+						<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				        <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				        <param name="belowtextboxwidth">$PARAM[textboxwidth]</param>
 					    <param name="belowtextboxfont">$PARAM[textboxfont]</param>
@@ -1609,7 +1614,8 @@
 					    <param name="overlaylabelfont">$PARAM[labelfont]</param>
                         <param name="overlaylabelheight">$PARAM[labelheight]</param>
 					    <param name="overlaylabelalign">$PARAM[labelalign]</param>
-					    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+					    <param name="overlaylabelscroll">$PARAM[labelscroll]</param>
+						<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				        <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				        <param name="belowtextboxwidth">$PARAM[textboxwidth]</param>
 					    <param name="belowtextboxfont">$PARAM[textboxfont]</param>
@@ -1656,7 +1662,8 @@
 					    <param name="overlaylabelfont">$PARAM[labelfont]</param>
                         <param name="overlaylabelheight">$PARAM[labelheight]</param>
 					    <param name="overlaylabelalign">$PARAM[labelalign]</param>
-					    <param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
+					    <param name="overlaylabelscroll">$PARAM[labelscroll]</param>
+						<param name="belowtextboxvisibility">[$PARAM[textboxvisibility] + !String.IsEqual(ListItem.Icon,DefaultAddonNone.png)]</param>
 				        <param name="belowtextbox">$VAR[WidgetItemLabel]</param>
 				        <param name="belowtextboxwidth">$PARAM[textboxwidth]</param>
 					    <param name="belowtextboxfont">$PARAM[textboxfont]</param>

@@ -1601,6 +1601,14 @@ msgctxt "#31627"
 msgid "Number of Watched Episodes"
 msgstr ""
 
+msgctxt "#31628"
+msgid "Enable Label Scrolling"
+msgstr ""
+
+msgctxt "#31629"
+msgid "Show Text under artwork"
+msgstr ""
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr ""

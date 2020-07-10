@@ -205,6 +205,7 @@
 		<property name="double1" tag="property" attribute="name|widgetDouble" />
 		<property name="widgetlow1" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="artwork1" tag="property" attribute="name|widgetArtwork" />
+		<property name="labelscroll1" tag="property" attribute="name|widgetLabelScroll" />
         <!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.2" value="none">false</property>
 		<property name="onup">true</property>
@@ -230,7 +231,11 @@
 		<property name="labelvisibility1" propertyValue="true">
 	        <rule tag="property" attribute="name|widgetType" value="episodes" />
 	        <rule tag="property" attribute="name|widgetType" value="people" />
+        </property>
+		<property name="labelvisibility1" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Poster|FanArt|Thumb" />
 			<rule tag="property" attribute="name|widgetPosterLabel" value="true" />
+			<match>all</match>
         </property>
 		<property name="labelvisibility1">false</property>
 		
@@ -241,7 +246,11 @@
         </property>
 		<property name="labelfont1">Shelf_Label</property>
 		
-		<property name="textboxvisibility1" tag="property" attribute="name|widgetArtwork" value="Square">true</property>
+		<property name="textboxvisibility1" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility1">false</property>
 		
         <property name="isTripleMedium1">'true'if (triple1 in 'true' and triplelarge in 'false') else 'false'</property>
@@ -265,15 +274,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
@@ -337,6 +378,7 @@
 						<param name="id1">1600$SKINSHORTCUTS[id]1</param>
                         <param name="iconimage">$SKINSHORTCUTS[contentartwork1]</param>
 						<param name="labelvisibility">$SKINSHORTCUTS[labelvisibility1]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll1]</param>
 						<param name="textboxfont">$PYTHON[$SKINSHORTCUTS[textboxfont1]]</param>
                         <param name="textboxwidth">$PYTHON[$SKINSHORTCUTS[textboxwidth1]]</param>
 						<param name="textboxheight">$PYTHON[$SKINSHORTCUTS[textboxheight1]]</param>
@@ -395,6 +437,7 @@
 		<property name="double2" tag="property" attribute="name|widgetDouble.2" />
 		<property name="artwork2" tag="property" attribute="name|widgetArtwork.2" />
 		<property name="widgetlow2" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />
 		<!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.3" value="none">false</property>
 		<property name="onup">true</property>
@@ -427,7 +470,11 @@
 		<property name="labelfont2">Shelf_Label</property>
         <property name="isTripleMedium2">'true'if (triple2 in 'true' and triplelarge in 'false') else 'false'</property>
 		
-		<property name="textboxvisibility2" tag="property" attribute="name|widgetArtwork.2" value="Square">true</property>
+		<property name="textboxvisibility2" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility2">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -449,15 +496,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
@@ -545,6 +624,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll2]</param>
 					</include>
                     <content>
 						<item>
@@ -582,6 +662,7 @@
 		<property name="double3" tag="property" attribute="name|widgetDouble.3" />
 		<property name="artwork3" tag="property" attribute="name|widgetArtwork.3" />
 		<property name="widgetlow3" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="labelscroll3" tag="property" attribute="name|widgetLabelScroll.3" />
 		<!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.4" value="none">false</property>
 		<property name="onup">true</property>
@@ -614,7 +695,11 @@
 		<property name="labelfont3">Shelf_Label</property>
         <property name="isTripleMedium3">'true'if (triple3 in 'true' and triplelarge in 'false') else 'false'</property>
 		
-		<property name="textboxvisibility3" tag="property" attribute="name|widgetArtwork.3" value="Square">true</property>
+		<property name="textboxvisibility3" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility3">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -636,15 +721,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
@@ -732,6 +849,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll3]</param>
 					</include>
                     <content>
 						<item>
@@ -770,6 +888,7 @@
 		<property name="double4" tag="property" attribute="name|widgetDouble.4" />
 		<property name="artwork4" tag="property" attribute="name|widgetArtwork.4" />
 		<property name="widgetlow4" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="labelscroll4" tag="property" attribute="name|widgetLabelScroll.4" />
 		<!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.5" value="none">false</property>
 		<property name="onup">true</property>
@@ -802,7 +921,11 @@
 		<property name="labelfont4">Shelf_Label</property>
         <property name="isTripleMedium4">'true'if (triple4 in 'true' and triplelarge in 'false') else 'false'</property>
 		
-		<property name="textboxvisibility4" tag="property" attribute="name|widgetArtwork.4" value="Square">true</property>
+		<property name="textboxvisibility4" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility4">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -824,15 +947,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.4" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.4" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.4" value="DiscArt|CharacterArt">215</property>
 		
@@ -920,6 +1075,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility4]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll4]</param>
 					</include>
                     <content>
 						<item>
@@ -959,6 +1115,7 @@
 		<property name="double5" tag="property" attribute="name|widgetDouble.5" />
 		<property name="artwork5" tag="property" attribute="name|widgetArtwork.5" />
 		<property name="widgetlow5" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="labelscroll5" tag="property" attribute="name|widgetLabelScroll.5" />
 		<!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.6" value="none">false</property>
 		<property name="onup">true</property>
@@ -991,7 +1148,11 @@
 		<property name="labelfont5">Shelf_Label</property>
         <property name="isTripleMedium5">'true'if (triple5 in 'true' and triplelarge in 'false') else 'false'</property>
 		
-		<property name="textboxvisibility5" tag="property" attribute="name|widgetArtwork.5" value="Square">true</property>
+		<property name="textboxvisibility5" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility5">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -1013,15 +1174,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.5" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.5" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.5" value="DiscArt|CharacterArt">215</property>
 		
@@ -1109,6 +1302,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility5]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll5]</param>
 					</include>
                     <content>
 						<item>
@@ -1149,6 +1343,7 @@
 		<property name="double6" tag="property" attribute="name|widgetDouble.6" />
 		<property name="artwork6" tag="property" attribute="name|widgetArtwork.6" />
 		<property name="widgetlow6" tag="property" attribute="name|horizontalWidgetPos" />
+		<property name="labelscroll6" tag="property" attribute="name|widgetLabelScroll.6" />
 		<!-- Top -->
 		<property name="top">'10' if (triplelarge in 'true' and triple6 in 'true') else '110' if (triplelarge in 'false' and triple6 in 'true') else '232' if (double6 in 'true' and widgetlow6 in 'Low') else '170' if (double6 in 'true')  else '547' if (double6 in 'false' and widgetlow6 in 'Low') else '327'</property>
 		<!-- Height -->
@@ -1178,7 +1373,11 @@
 		<property name="labelfont6">Shelf_Label</property>
         <property name="isTripleMedium6">'true'if (triple6 in 'true' and triplelarge in 'false') else 'false'</property>
 		
-		<property name="textboxvisibility6" tag="property" attribute="name|widgetArtwork.6" value="Square">true</property>
+		<property name="textboxvisibility6" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility6">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -1200,15 +1399,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.6" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.6" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.6" value="DiscArt|CharacterArt">215</property>
 		
@@ -1294,6 +1525,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility6]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll6]</param>
 					</include>
                     <content>
 						<item>
@@ -2004,6 +2236,7 @@
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
 		<property name="widgetlow1" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="artwork1" tag="property" attribute="name|widgetArtwork" />
+		<property name="labelscroll1" tag="property" attribute="name|widgetLabelScroll" />
 		<property name="top" propertyValue="703">
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -2032,7 +2265,11 @@
 		
 		<property name="aspect1">'keep' if (artwork1 in 'Banner' or artwork1 in 'Landscape' or artwork1 in 'ClearArt' or artwork1 in 'ClearLogo' or artwork1 in 'CharacterArt' or artwork1 in 'DiscArt') else 'scale' if (artwork1 in 'FanArt' or artwork1 in 'Thumb') else 'keep' if (path1 in 'tags' or path1 in 'genres' or path1 in 'studios' or path1 in 'actors' or path1 in 'directors' or path1 in 'country' or path1 in 'years') else 'keep' if (target1 in 'pvr' or target1 in 'radioguide' or target1 in 'tvguide') else 'scale'</property>        
 		
-		<property name="textboxvisibility1" tag="property" attribute="name|widgetArtwork" value="Square">true</property>
+		<property name="textboxvisibility1" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility1">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -2054,15 +2291,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
@@ -2136,6 +2405,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll1]</param>
 					</include>
                     <content>
 						<item>
@@ -2167,7 +2437,8 @@
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
 		<property name="widgetlow2" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="artwork2" tag="property" attribute="name|widgetArtwork.2" />
-        <property name="top"  tag="property" attribute="name|horizontalWidgetPos" value="Low">190</property>
+        <property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />
+		<property name="top"  tag="property" attribute="name|horizontalWidgetPos" value="Low">190</property>
 		<property name="top">170</property>
 		<!-- Content -->
         <property name="labelvisibility2" propertyValue="true">
@@ -2192,7 +2463,11 @@
 		
         <property name="isTripleMedium2">'true'if (triple2 in 'true' and triplelarge in 'false') else 'false'</property>
 		
-		<property name="textboxvisibility2" tag="property" attribute="name|widgetArtwork.2" value="Square">true</property>
+		<property name="textboxvisibility2" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility2">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -2214,15 +2489,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
@@ -2296,6 +2603,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll2]</param>
 					</include>
                     <content>
 						<item>
@@ -2503,7 +2811,8 @@
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
 		<property name="artwork1" tag="property" attribute="name|widgetArtwork" />
 		<property name="widgetlow" tag="property" attribute="name|horizontalWidgetPos" />
-        <!-- Panel height -->
+        <property name="labelscroll1" tag="property" attribute="name|widgetLabelScroll" />
+	   <!-- Panel height -->
 		<property name="panelheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
 		<property name="panelheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
 		<property name="panelheight">220</property>
@@ -2609,7 +2918,11 @@
 		</property>
 		<property name="isTripleRowLarge1">false</property>
 		
-		<property name="textboxvisibility1" tag="property" attribute="name|widgetArtwork" value="Square">true</property>
+		<property name="textboxvisibility1" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility1">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -2631,15 +2944,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
@@ -2721,6 +3066,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll1]</param>
 					</include>
                     <content>
 						<item>
@@ -2753,7 +3099,8 @@
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
 		<property name="artwork2" tag="property" attribute="name|widgetArtwork.2" />
-        <!-- Panel height -->
+        <property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />       
+	   <!-- Panel height -->
 		<property name="panelheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
 		<property name="panelheight">220</property>
 		<!-- Panel top -->
@@ -2832,7 +3179,11 @@
 		<property name="isTripleRowLarge2" tag="property" attribute="name|widgetType.3" value="none">true</property>
 		<property name="isTripleRowLarge2">false</property> 
 		
-		<property name="textboxvisibility2" tag="property" attribute="name|widgetArtwork.2" value="Square">true</property>
+		<property name="textboxvisibility2" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility2">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -2854,15 +3205,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
@@ -2944,6 +3327,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll2]</param>
 					</include>
                     <content>
 						<item>
@@ -2976,7 +3360,8 @@
 		<property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
 		<property name="limit3" tag="property" attribute="name|widgetLimit.3" />
 		<property name="artwork3" tag="property" attribute="name|widgetArtwork.3" />
-        <!-- Panel height -->
+        <property name="labelscroll3" tag="property" attribute="name|widgetLabelScroll.3" />
+		<!-- Panel height -->
 		<property name="panelheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
 		<property name="panelheight">220</property>
 		<!-- Panel top -->
@@ -3055,7 +3440,11 @@
 		<property name="isTripleRowLarge3" tag="property" attribute="name|widgetType.2" value="none">true</property>
 		<property name="isTripleRowLarge3">false</property> 
 		
-		<property name="textboxvisibility3" tag="property" attribute="name|widgetArtwork.3" value="Square">true</property>
+		<property name="textboxvisibility3" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility3">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -3077,15 +3466,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
@@ -3167,6 +3588,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll3]</param>
 					</include>
                     <content>
 						<item>
@@ -3570,6 +3992,7 @@
 		<property name="sortorder1" tag="property" attribute="name|widgetSortOrder" />
 		<property name="limit1" tag="property" attribute="name|widgetLimit" />
 		<property name="artwork1" tag="property" attribute="name|widgetArtwork" />
+		<property name="labelscroll1" tag="property" attribute="name|widgetLabelScroll" />
 		<!-- Panel top -->
 		<property name="paneltop">'327' if (type2 in 'none' and type3 in 'none') else '485' if (type2 in 'none' or type3 in 'none') else '640'</property>
 		<!-- Below textbox width -->
@@ -3615,7 +4038,11 @@
 		
 		<property name="aspect1">'keep' if (artwork1 in 'Banner' or artwork1 in 'Landscape' or artwork1 in 'ClearArt' or artwork1 in 'ClearLogo' or artwork1 in 'CharacterArt' or artwork1 in 'DiscArt') else 'scale' if (artwork1 in 'FanArt' or artwork1 in 'Thumb') else 'keep' if (path1 in 'tags' or path1 in 'genres' or path1 in 'studios' or path1 in 'actors' or path1 in 'directors' or path1 in 'country' or path1 in 'years') else 'keep' if (target1 in 'pvr' or target1 in 'radioguide' or target1 in 'tvguide') else 'scale'</property>
 		
-		<property name="textboxvisibility1" tag="property" attribute="name|widgetArtwork" value="Square">true</property>
+		<property name="textboxvisibility1" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility1">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -3637,15 +4064,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork" value="DiscArt|CharacterArt">215</property>
 		
@@ -3724,6 +4183,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility1]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll1]</param>
 					</include>
                     <content>
 						<item>
@@ -3756,6 +4216,7 @@
 		<property name="sortorder2" tag="property" attribute="name|widgetSortOrder.2" />
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
         <property name="artwork2" tag="property" attribute="name|widgetArtwork.2" />
+		<property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />
 		<!-- Panel top -->
 		<property name="paneltop" tag="property" attribute="name|widgetType.3" value="none">170</property>
 		<property name="paneltop">325</property>
@@ -3802,7 +4263,11 @@
 		
 		<property name="aspect2">'keep' if (artwork2 in 'Banner' or artwork2 in 'Landscape' or artwork2 in 'ClearArt' or artwork2 in 'ClearLogo' or artwork2 in 'CharacterArt' or artwork2 in 'DiscArt') else 'scale' if (artwork2 in 'FanArt' or artwork2 in 'Thumb') else 'keep' if (path2 in 'tags' or path2 in 'genres' or path2 in 'studios' or path2 in 'actors' or path2 in 'directors' or path2 in 'country' or path2 in 'years') else 'keep' if (target2 in 'pvr' or target2 in 'radioguide' or target2 in 'tvguide') else 'scale'</property>
 		
-		<property name="textboxvisibility2" tag="property" attribute="name|widgetArtwork.2" value="Square">true</property>
+		<property name="textboxvisibility2" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility2">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -3824,15 +4289,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.2" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.2" value="DiscArt|CharacterArt">215</property>
 		
@@ -3911,6 +4408,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility2]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll2]</param>
 					</include>
                     <content>
 						<item>
@@ -3943,6 +4441,7 @@
 		<property name="sortorder3" tag="property" attribute="name|widgetSortOrder.3" />
 		<property name="limit3" tag="property" attribute="name|widgetLimit.3" />
         <property name="artwork3" tag="property" attribute="name|widgetArtwork.3" />
+		<property name="labelscroll3" tag="property" attribute="name|widgetLabelScroll.3" />
 		<!-- Panel top -->
 		<property name="paneltop" tag="property" attribute="name|widgetType.2" value="none">170</property>
 		<property name="paneltop">10</property>
@@ -3989,7 +4488,11 @@
 		
 		<property name="aspect3">'keep' if (artwork3 in 'Banner' or artwork3 in 'Landscape' or artwork3 in 'ClearArt' or artwork3 in 'ClearLogo' or artwork3 in 'CharacterArt' or artwork3 in 'DiscArt') else 'scale' if (artwork3 in 'FanArt' or artwork3 in 'Thumb') else 'keep' if (path3 in 'tags' or path3 in 'genres' or path3 in 'studios' or path3 in 'actors' or path3 in 'directors' or path3 in 'country' or path3 in 'years') else 'keep' if (target3 in 'pvr' or target3 in 'radioguide' or target3 in 'tvguide') else 'scale'</property>
 		
-		<property name="textboxvisibility3" tag="property" attribute="name|widgetArtwork.3" value="Square">true</property>
+		<property name="textboxvisibility3" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
 		<property name="textboxvisibility3">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
@@ -4011,15 +4514,47 @@
 		<property name="artworkheightsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">500</property>
-		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">228</property>
+		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="Poster">228</property>
+		<property name="artworkwidthbig" propertyValue="228">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthbig" propertyValue="315">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">385</property>
 		<property name="artworkwidthbig" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">295</property>
+		
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">358</property>
-		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">182</property>
+		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="Poster">182</property>
+		<property name="artworkwidthmed" propertyValue="182">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthmed" propertyValue="252">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">360</property>
 		<property name="artworkwidthmed" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">245</property>
+		
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="FanArt|Landscape|ClearArt|Thumb">331</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="Poster|Square">159</property>
+		<property name="artworkwidthsmall" propertyValue="159">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="artworkwidthsmall" propertyValue="220">
+	        <rule tag="property" attribute="name|widgetArtwork.3" value="Square" />
+	        <rule tag="property" attribute="name|widgetShowTextbox.3" value="false" />
+			<match>all</match>
+        </property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="ClearLogo">251</property>
 		<property name="artworkwidthsmall" tag="property" attribute="name|widgetArtwork.3" value="DiscArt|CharacterArt">215</property>
 		
@@ -4098,6 +4633,7 @@
 						<param name="iconheightsmall">$SKINSHORTCUTS[iconheightsmall]</param>
 						<param name="align">$SKINSHORTCUTS[align]</param>
 						<param name="textboxvisibility">$SKINSHORTCUTS[textboxvisibility3]</param>
+						<param name="labelscroll">$SKINSHORTCUTS[labelscroll3]</param>
 					</include>
                     <content>
 						<item>
