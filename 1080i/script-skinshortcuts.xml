@@ -628,10 +628,8 @@
 					<font>ListDetails</font>
 				</control>
 				<control type="radiobutton" id="3008">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + String.IsEqual(Container(211).ListItem.Property(widgetContent),default) + 
-					         [String.IsEqual(Container(211).ListItem.Property(widgetArtwork),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork),FanArt) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork),Thumb)] + 
-							 [String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel),true)]</visible>
-					<label>    - $LOCALIZE[31628]</label>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + String.IsEqual(Container(211).ListItem.Property(widgetContent),default)</visible>
+					<label>$LOCALIZE[31628]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabelScroll))">SetProperty(customProperty,widgetLabelScroll)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll),true)">SetProperty(customProperty,widgetLabelScroll)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll),false)">SetProperty(customValue,true)</onclick>
@@ -782,9 +780,7 @@
 				    <font>ListDetails</font>
 			    </control>
 				<control type="radiobutton" id="4008">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.2),default) + 
-					         [String.IsEqual(Container(211).ListItem.Property(widgetArtwork.2),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.2),FanArt) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.2),Thumb)] + 
-							 [String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.2),true)]</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.2)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.2),default)</visible>
 					<label>    - $LOCALIZE[31628]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabelScroll.2))">SetProperty(customProperty,widgetLabelScroll.2)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll.2),true)">SetProperty(customProperty,widgetLabelScroll.2)</onclick>
@@ -937,9 +933,7 @@
 			        <font>ListDetails</font>
 		        </control>
 				<control type="radiobutton" id="5008">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.3)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.3),default) + 
-					         [String.IsEqual(Container(211).ListItem.Property(widgetArtwork.3),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.3),FanArt) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.3),Thumb)] + 
-							 [String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.3),true)]</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.3)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.3),default)</visible>
 					<label>    - $LOCALIZE[31628]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabelScroll.3))">SetProperty(customProperty,widgetLabelScroll.3)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll.3),true)">SetProperty(customProperty,widgetLabelScroll.3)</onclick>
@@ -1092,9 +1086,7 @@
 			        <font>ListDetails</font>
 			    </control>
 				<control type="radiobutton" id="6008">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.4)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.4),default) + 
-					         [String.IsEqual(Container(211).ListItem.Property(widgetArtwork.4),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.4),FanArt) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.4),Thumb)] + 
-							 [String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.4),true)]</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.4)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.4),default)</visible>
 					<label>    - $LOCALIZE[31628]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabelScroll.4))">SetProperty(customProperty,widgetLabelScroll.4)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll.4),true)">SetProperty(customProperty,widgetLabelScroll.4)</onclick>
@@ -1243,9 +1235,7 @@
 		            <font>ListDetails</font>
 		        </control>
 				<control type="radiobutton" id="7008">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.5)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.5),default) + 
-					         [String.IsEqual(Container(211).ListItem.Property(widgetArtwork.5),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.5),FanArt) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.5),Thumb)] + 
-							 [String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.5),true)]</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.5)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.5),default)</visible>
 					<label>    - $LOCALIZE[31628]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabelScroll.5))">SetProperty(customProperty,widgetLabelScroll.5)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll.5),true)">SetProperty(customProperty,widgetLabelScroll.5)</onclick>
@@ -1394,9 +1384,7 @@
 				    <font>ListDetails</font>
 				</control>
 				<control type="radiobutton" id="8008">
-					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.6)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.6),default) + 
-					         [String.IsEqual(Container(211).ListItem.Property(widgetArtwork.6),Poster) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.6),FanArt) | String.IsEqual(Container(211).ListItem.Property(widgetArtwork.6),Thumb)] + 
-							 [String.IsEqual(Container(211).ListItem.Property(widgetPosterLabel.6),true)]</visible>
+					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath.6)) + String.IsEqual(Container(211).ListItem.Property(widgetContent.6),default)</visible>
 					<label>    - $LOCALIZE[31628]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetLabelScroll.6))">SetProperty(customProperty,widgetLabelScroll.6)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetLabelScroll.6),true)">SetProperty(customProperty,widgetLabelScroll.6)</onclick>
