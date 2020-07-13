@@ -206,15 +206,81 @@
 		<property name="widgetlow1" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="artwork1" tag="property" attribute="name|widgetArtwork" />
 		<property name="labelscroll1" tag="property" attribute="name|widgetLabelScroll" />
+		
         <!-- If target is set to true for next widget navigate to next (fallback if empty set to false in overrides.xml) -->
 		<property name="onup" tag="property" attribute="name|widgetType.2" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple1 in 'true') else '110' if (triplelarge in 'false' and triple1 in 'true') else '232' if (double1 in 'true' and widgetlow1 in 'Low') else '170' if (double1 in 'true')  else '547' if (double1 in 'false' and widgetlow1 in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble" value="true" />
+        </property>
+		<property name="top" propertyValue="647">
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple1 in 'true') else '756' if (triplelarge in 'false' and triple1 in 'true') else '630' if (double1 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple1 in 'true') else '817' if (triplelarge in 'false' and triple1 in 'true') else '690' if (double1 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
+		<property name="backgroundheight" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="670">
+	        <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth1">'158' if (triple1 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -349,6 +415,22 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
 		
+		<property name="containertype1" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype1">panel</property>
+		
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -356,15 +438,16 @@
 					<param name="id">1600$SKINSHORTCUTS[id]1</param>
 					<param name="label">$SKINSHORTCUTS[label1]</param>
 					<param name="labelscroll">$SKINSHORTCUTS[labelscroll1]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEmpty(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]))</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype1]" id="1600$SKINSHORTCUTS[id]1">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll1]">!Control.HasFocus(1600$SKINSHORTCUTS[id]1)</autoscroll>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
                     <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -375,6 +458,7 @@
 					<onback>300</onback>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
+					<autoscroll time="2000">true</autoscroll>
 					<include content="$SKINSHORTCUTS[content1]">
 						<param name="id1">1600$SKINSHORTCUTS[id]1</param>
                         <param name="iconimage">$SKINSHORTCUTS[contentartwork1]</param>
@@ -442,11 +526,76 @@
 		<property name="onup" tag="property" attribute="name|widgetType.3" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple2 in 'true') else '110' if (triplelarge in 'false' and triple2 in 'true') else '232' if (double2 in 'true' and widgetlow2 in 'Low') else '170' if (double2 in 'true')  else '547' if (double2 in 'false' and widgetlow2 in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
+        </property>
+		<property name="top" propertyValue="647">
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple2 in 'true') else '756' if (triplelarge in 'false' and triple2 in 'true') else '630' if (double2 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple2 in 'true') else '817' if (triplelarge in 'false' and triple2 in 'true') else '690' if (double2 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
+		<property name="backgroundheight" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="670">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth2">'158' if (triple2 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -571,6 +720,22 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
+		<property name="containertype2" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype2">panel</property>
+		
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -578,15 +743,16 @@
 					<param name="id">1600$SKINSHORTCUTS[id]2</param>
 					<param name="label">$SKINSHORTCUTS[label2]</param>
 					<param name="labelscroll">$SKINSHORTCUTS[labelscroll2]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),2)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype2]" id="1600$SKINSHORTCUTS[id]2">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll2]">!Control.HasFocus(1600$SKINSHORTCUTS[id]2)</autoscroll>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -667,11 +833,76 @@
 		<property name="onup" tag="property" attribute="name|widgetType.4" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple3 in 'true') else '110' if (triplelarge in 'false' and triple3 in 'true') else '232' if (double3 in 'true' and widgetlow3 in 'Low') else '170' if (double3 in 'true')  else '547' if (double3 in 'false' and widgetlow3 in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
+        </property>
+		<property name="top" propertyValue="647">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple3 in 'true') else '756' if (triplelarge in 'false' and triple3 in 'true') else '630' if (double3 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple3 in 'true') else '817' if (triplelarge in 'false' and triple3 in 'true') else '690' if (double3 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
+		<property name="backgroundheight" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="670">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth3">'158' if (triple3 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -796,6 +1027,22 @@
 		<property name="content3" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content3">Shelf_Generic1</property>
 		
+		<property name="containertype3" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype3">panel</property>
+		
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -803,15 +1050,16 @@
 					<param name="id">1600$SKINSHORTCUTS[id]3</param>
 					<param name="label">$SKINSHORTCUTS[label3]</param>
 					<param name="labelscroll">$SKINSHORTCUTS[labelscroll3]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),3)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]3">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype3]" id="1600$SKINSHORTCUTS[id]3">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll3]">!Control.HasFocus(1600$SKINSHORTCUTS[id]3)</autoscroll>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]3,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -893,11 +1141,76 @@
 		<property name="onup" tag="property" attribute="name|widgetType.5" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple4 in 'true') else '110' if (triplelarge in 'false' and triple4 in 'true') else '232' if (double4 in 'true' and widgetlow4 in 'Low') else '170' if (double4 in 'true')  else '547' if (double4 in 'false' and widgetlow4 in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
+        </property>
+		<property name="top" propertyValue="647">
+			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.4" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple4 in 'true') else '756' if (triplelarge in 'false' and triple4 in 'true') else '630' if (double4 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple4 in 'true') else '817' if (triplelarge in 'false' and triple4 in 'true') else '690' if (double4 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
+		<property name="backgroundheight" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.4" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.4" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="670">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.4" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth4">'158' if (triple4 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1022,6 +1335,22 @@
 		<property name="content4" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content4">Shelf_Generic1</property>
 		
+		<property name="containertype4" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype4">panel</property>
+		
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -1029,15 +1358,16 @@
 					<param name="id">1600$SKINSHORTCUTS[id]4</param>
 					<param name="label">$SKINSHORTCUTS[label4]</param>
 					<param name="labelscroll">$SKINSHORTCUTS[labelscroll4]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),4)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]4">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype4]" id="1600$SKINSHORTCUTS[id]4">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll4]">!Control.HasFocus(1600$SKINSHORTCUTS[id]4)</autoscroll>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]4,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -1120,11 +1450,76 @@
 		<property name="onup" tag="property" attribute="name|widgetType.6" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple5 in 'true') else '110' if (triplelarge in 'false' and triple5 in 'true') else '232' if (double5 in 'true' and widgetlow5 in 'Low') else '170' if (double5 in 'true')  else '547' if (double5 in 'false' and widgetlow5 in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
+        </property>
+		<property name="top" propertyValue="647">
+			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.5" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple5 in 'true') else '756' if (triplelarge in 'false' and triple5 in 'true') else '630' if (double5 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple5 in 'true') else '817' if (triplelarge in 'false' and triple5 in 'true') else '690' if (double5 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
+		<property name="backgroundheight" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.5" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.5" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="670">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.5" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth5">'158' if (triple5 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1249,6 +1644,22 @@
 		<property name="content5" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content5">Shelf_Generic1</property>
 		
+		<property name="containertype5" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype5">panel</property>
+		
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -1256,15 +1667,16 @@
 					<param name="id">1600$SKINSHORTCUTS[id]5</param>
 					<param name="label">$SKINSHORTCUTS[label5]</param>
 					<param name="labelscroll">$SKINSHORTCUTS[labelscroll5]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),5)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]5">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype5]" id="1600$SKINSHORTCUTS[id]5">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll5]">!Control.HasFocus(1600$SKINSHORTCUTS[id]5)</autoscroll>
 					<onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]5,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -1345,11 +1757,76 @@
 		<property name="widgetlow6" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="labelscroll6" tag="property" attribute="name|widgetLabelScroll.6" />
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple6 in 'true') else '110' if (triplelarge in 'false' and triple6 in 'true') else '232' if (double6 in 'true' and widgetlow6 in 'Low') else '170' if (double6 in 'true')  else '547' if (double6 in 'false' and widgetlow6 in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
+        </property>
+		<property name="top" propertyValue="647">
+			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.6" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple6 in 'true') else '756' if (triplelarge in 'false' and triple6 in 'true') else '630' if (double6 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple6 in 'true') else '817' if (triplelarge in 'false' and triple6 in 'true') else '690' if (double6 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
+		<property name="backgroundheight" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.6" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.6" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="670">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.6" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth6">'158' if (triple6 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1474,6 +1951,22 @@
 		<property name="content6" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content6">Shelf_Generic1</property>
 		
+		<property name="containertype6" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype6">panel</property>
+		
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -1481,15 +1974,16 @@
 					<param name="id">1600$SKINSHORTCUTS[id]6</param>
 					<param name="label">$SKINSHORTCUTS[label6]</param>
 					<param name="labelscroll">$SKINSHORTCUTS[labelscroll6]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),6)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]6">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype6]" id="1600$SKINSHORTCUTS[id]6">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll6]">!Control.HasFocus(1600$SKINSHORTCUTS[id]6)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]6,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -1567,11 +2061,47 @@
 		<property name="onup" tag="property" attribute="name|widgetType.2" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple1 in 'true') else '110' if (triplelarge in 'false' and triple1 in 'true') else '232' if (double1 in 'true' and widgetlow in 'Low') else '170' if (double1 in 'true')  else '547' if (double1 in 'false' and widgetlow in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble" value="true" />
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple1 in 'true') else '756' if (triplelarge in 'false' and triple1 in 'true') else '630' if (double1 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple1 in 'true') else '817' if (triplelarge in 'false' and triple1 in 'true') else '690' if (double1 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth1">'158' if (triple1 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1597,21 +2127,39 @@
 		<!-- Panel Content -->
         <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
+		
+		<property name="containertype1" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype1">panel</property>
+		
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="WidgetBackground">
 					<param name="id">1600$SKINSHORTCUTS[id]1</param>
 					<param name="label">$SKINSHORTCUTS[label1]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEmpty(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]))</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype1]" id="1600$SKINSHORTCUTS[id]1">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll1]">!Control.HasFocus(1600$SKINSHORTCUTS[id]1)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],2,home)</onup>
@@ -1673,11 +2221,47 @@
 		<property name="onup" tag="property" attribute="name|widgetType.3" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple2 in 'true') else '110' if (triplelarge in 'false' and triple2 in 'true') else '232' if (double2 in 'true' and widgetlow in 'Low') else '170' if (double2 in 'true')  else '547' if (double2 in 'false' and widgetlow in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple2 in 'true') else '756' if (triplelarge in 'false' and triple2 in 'true') else '630' if (double2 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple2 in 'true') else '817' if (triplelarge in 'false' and triple2 in 'true') else '690' if (double2 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth2">'158' if (triple2 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1702,21 +2286,39 @@
 		<property name="labelfont2">Shelf_Label</property>        
         <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
+		
+		<property name="containertype2" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype2">panel</property>
+		
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="WidgetBackground">
 					<param name="id">1600$SKINSHORTCUTS[id]2</param>
 					<param name="label">$SKINSHORTCUTS[label2]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),2)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype2]" id="1600$SKINSHORTCUTS[id]2">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll2]">!Control.HasFocus(1600$SKINSHORTCUTS[id]2)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],3,home)</onup>
@@ -1781,11 +2383,47 @@
 		<property name="onup" tag="property" attribute="name|widgetType.4" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple3 in 'true') else '110' if (triplelarge in 'false' and triple3 in 'true') else '232' if (double3 in 'true' and widgetlow in 'Low') else '170' if (double3 in 'true')  else '547' if (double3 in 'false' and widgetlow in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple3 in 'true') else '756' if (triplelarge in 'false' and triple3 in 'true') else '630' if (double3 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple3 in 'true') else '817' if (triplelarge in 'false' and triple3 in 'true') else '690' if (double3 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth3">'158' if (triple3 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1810,21 +2448,39 @@
 		<property name="labelfont3">Shelf_Label</property>        
         <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
+		
+		<property name="containertype3" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype3">panel</property>
+		
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="WidgetBackground">
 					<param name="id">1600$SKINSHORTCUTS[id]3</param>
 					<param name="label">$SKINSHORTCUTS[label3]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),3)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]3">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype3]" id="1600$SKINSHORTCUTS[id]3">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll3]">!Control.HasFocus(1600$SKINSHORTCUTS[id]3)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]3,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],4,home)</onup>
@@ -1890,11 +2546,47 @@
 		<property name="onup" tag="property" attribute="name|widgetType.5" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple4 in 'true') else '110' if (triplelarge in 'false' and triple4 in 'true') else '232' if (double4 in 'true' and widgetlow in 'Low') else '170' if (double4 in 'true')  else '547' if (double4 in 'false' and widgetlow in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple4 in 'true') else '756' if (triplelarge in 'false' and triple4 in 'true') else '630' if (double4 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple4 in 'true') else '817' if (triplelarge in 'false' and triple4 in 'true') else '690' if (double4 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth4">'158' if (triple4 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -1919,21 +2611,39 @@
 		<property name="labelfont4">Shelf_Label</property>        
         <property name="content4" tag="property" attribute="name|widgetType.4" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content4">Shelf_GenericStatic</property>
+		
+		<property name="containertype4" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.4" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype4">panel</property>
+		
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll4" tag="property" attribute="name|widgetAutoScroll.4" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="WidgetBackground">
 					<param name="id">1600$SKINSHORTCUTS[id]4</param>
 					<param name="label">$SKINSHORTCUTS[label4]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),4)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]4">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype4]" id="1600$SKINSHORTCUTS[id]4">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll4]">!Control.HasFocus(1600$SKINSHORTCUTS[id]4)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]4,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],5,home)</onup>
@@ -2000,11 +2710,47 @@
 		<property name="onup" tag="property" attribute="name|widgetType.6" value="none">false</property>
 		<property name="onup">true</property>
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple5 in 'true') else '110' if (triplelarge in 'false' and triple5 in 'true') else '232' if (double5 in 'true' and widgetlow in 'Low') else '170' if (double5 in 'true')  else '547' if (double5 in 'false' and widgetlow in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple5 in 'true') else '756' if (triplelarge in 'false' and triple5 in 'true') else '630' if (double5 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple5 in 'true') else '817' if (triplelarge in 'false' and triple5 in 'true') else '690' if (double5 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth5">'158' if (triple5 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -2029,21 +2775,39 @@
 		<property name="labelfont5">Shelf_Label</property>        
         <property name="content5" tag="property" attribute="name|widgetType.5" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content5">Shelf_GenericStatic</property>
+		
+		<property name="containertype5" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.5" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype5">panel</property>
+		
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll5" tag="property" attribute="name|widgetAutoScroll.5" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="WidgetBackground">
 					<param name="id">1600$SKINSHORTCUTS[id]5</param>
 					<param name="label">$SKINSHORTCUTS[label5]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),5)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]5">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype5]" id="1600$SKINSHORTCUTS[id]5">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll5]">!Control.HasFocus(1600$SKINSHORTCUTS[id]5)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]5,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onup condition="$SKINSHORTCUTS[onup]">SetProperty(WidgetFocus$SKINSHORTCUTS[id],6,home)</onup>
@@ -2108,11 +2872,47 @@
 		<property name="triple6" tag="property" attribute="name|widgetTriple.6" />
 		<property name="double6" tag="property" attribute="name|widgetDouble.6" />
 		<!-- Top -->
-		<property name="top">'10' if (triplelarge in 'true' and triple6 in 'true') else '110' if (triplelarge in 'false' and triple6 in 'true') else '232' if (double6 in 'true' and widgetlow in 'Low') else '170' if (double6 in 'true')  else '547' if (double6 in 'false' and widgetlow in 'Low') else '327'</property>
+		<property name="top" propertyValue="10">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="110">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="232">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="170">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
+        </property>
+		<property name="top" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top">327</property>
 		<!-- Height -->
 		<property name="height">'945' if (triplelarge in 'true' and triple6 in 'true') else '756' if (triplelarge in 'false' and triple6 in 'true') else '630' if (double6 in 'true') else '315'</property>
 		<!-- Background Height -->
-		<property name="backgroundheight">'1005' if (triplelarge in 'true' and triple6 in 'true') else '817' if (triplelarge in 'false' and triple6 in 'true') else '690' if (double6 in 'true') else '375'</property>
+		<property name="backgroundheight" propertyValue="1005">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="true" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" propertyValue="817">
+	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+			<match>all</match>
+        </property>
+		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
+		<property name="backgroundheight">375</property>
+		<!-- Panel top -->
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Below textbox width -->
 		<property name="textboxwidth6">'158' if (triple6 in 'true' and triplelarge in 'false') else '204'</property>
 		<!-- Below textbox height -->
@@ -2137,21 +2937,39 @@
 		<property name="labelfont6">Shelf_Label</property>        
         <property name="content6" tag="property" attribute="name|widgetType.6" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content6">Shelf_GenericStatic</property>
+		
+		<property name="containertype6" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.6" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype6">panel</property>
+		
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll6" tag="property" attribute="name|widgetAutoScroll.6" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<include content="WidgetBackground">
 					<param name="id">1600$SKINSHORTCUTS[id]6</param>
 					<param name="label">$SKINSHORTCUTS[label6]</param>
-					<param name="top">$PYTHON[$SKINSHORTCUTS[top]]</param>
-					<param name="height">$PYTHON[$SKINSHORTCUTS[backgroundheight]]</param>
+					<param name="top">$SKINSHORTCUTS[top]</param>
+					<param name="height">$SKINSHORTCUTS[backgroundheight]</param>
 					<param name="visible">String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),6)</param>
 				</include>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]6">
-					<top>$PYTHON[$SKINSHORTCUTS[top]]</top>
+				<control type="$SKINSHORTCUTS[containertype6]" id="1600$SKINSHORTCUTS[id]6">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$PYTHON[$SKINSHORTCUTS[height]]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll6]">!Control.HasFocus(1600$SKINSHORTCUTS[id]6)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]6,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
                     <onup>ClearProperty(WidgetFocus$SKINSHORTCUTS[id],home)</onup>
@@ -2200,10 +3018,89 @@
 		<property name="label2" tag="property" attribute="name|widgetName.2" />
 		<property name="labelscroll1" tag="property" attribute="name|widgetLabelScroll" />
 		<property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />
+		
+		<property name="topdouble" propertyValue="290">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="topdouble" propertyValue="290">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="topdouble" propertyValue="390">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
 		<property name="topdouble" tag="property" attribute="name|horizontalWidgetPos" value="Low">190</property>
 		<property name="topdouble">170</property>
+		
+		<property name="topsingle" propertyValue="632">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
 		<property name="topsingle" tag="property" attribute="name|horizontalWidgetPos" value="Low">547</property>
 		<property name="topsingle">327</property>
+		
+		<property name="heightsingle" propertyValue="275">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<match>all</match>
+        </property>
+		<property name="heightsingle">375</property>
+		<property name="heightdouble" propertyValue="627">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heightdouble" propertyValue="627">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heightdouble" propertyValue="527">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heightdouble">727</property>
+		<property name="label1topdouble" propertyValue="536">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="label1topdouble" propertyValue="536">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="label1topdouble" propertyValue="436">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="label1topdouble">636</property>
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -2216,6 +3113,9 @@
 					<param name="labelscroll2">$SKINSHORTCUTS[labelscroll2]</param>
 					<param name="topdouble">$SKINSHORTCUTS[topdouble]</param>
 					<param name="topsingle">$SKINSHORTCUTS[topsingle]</param>
+					<param name="heightdouble">$SKINSHORTCUTS[heightdouble]</param>
+					<param name="label1topdouble">$SKINSHORTCUTS[label1topdouble]</param>
+					<param name="heightsingle">$SKINSHORTCUTS[heightsingle]</param>
 				</include>
 			</control>
 		</controls>
@@ -2248,6 +3148,65 @@
         </property>
 		<property name="top" tag="property" attribute="name|horizontalWidgetPos" value="Low">505</property>
 		<property name="top">485</property>
+		<property name="paneltop" propertyValue="355">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="325">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="425">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="525">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="385">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+	        <rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="660">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="660">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="547">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
         <!-- Content -->
         <property name="labelvisibility1" propertyValue="true">
 	        <rule tag="property" attribute="name|widgetType" value="episodes" />
@@ -2370,15 +3329,32 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
 		
+		<property name="containertype1" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype1">panel</property>
+		
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>$SKINSHORTCUTS[top]</top>
+				<control type="$SKINSHORTCUTS[containertype1]" id="1600$SKINSHORTCUTS[id]1">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>315</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll1]">!Control.HasFocus(1600$SKINSHORTCUTS[id]1)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
@@ -2441,8 +3417,33 @@
 		<property name="widgetlow2" tag="property" attribute="name|horizontalWidgetPos" />
 		<property name="artwork2" tag="property" attribute="name|widgetArtwork.2" />
         <property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />
+		
+		<property name="top" propertyValue="290">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="290">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
+		<property name="top" propertyValue="390">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<match>all</match>
+        </property>
 		<property name="top"  tag="property" attribute="name|horizontalWidgetPos" value="Low">190</property>
 		<property name="top">170</property>
+		
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
 		<!-- Content -->
         <property name="labelvisibility2" propertyValue="true">
 	        <rule tag="property" attribute="name|widgetType.2" value="episodes" />
@@ -2567,15 +3568,32 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
+		<property name="containertype2" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype2">panel</property>
+		
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
-					<top>$SKINSHORTCUTS[top]</top>
+				<control type="$SKINSHORTCUTS[containertype2]" id="1600$SKINSHORTCUTS[id]2">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>315</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll2]">!Control.HasFocus(1600$SKINSHORTCUTS[id]2)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -2644,6 +3662,7 @@
         </property>
 		<property name="top"  tag="property" attribute="name|horizontalWidgetPos" value="Low">505</property>
 		<property name="top">485</property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
 		<!-- Content -->
 		<property name="iconheight1" tag="property" attribute="name|widgetType" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight1">228</property>
@@ -2656,15 +3675,33 @@
         <property name="textboxvisibility1">true</property>        
         <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
+		
+		<property name="containertype1" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype1">panel</property>
+		
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>$SKINSHORTCUTS[top]</top>
+				<control type="$SKINSHORTCUTS[containertype1]" id="1600$SKINSHORTCUTS[id]1">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>315</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll1]">!Control.HasFocus(1600$SKINSHORTCUTS[id]1)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onup condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]2).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
@@ -2710,6 +3747,7 @@
 		<property name="limit2" tag="property" attribute="name|widgetLimit.2" />
 		<property name="top"  tag="property" attribute="name|horizontalWidgetPos" value="Low">190</property>
 		<property name="top">170</property>
+		<property name="paneltop">$SKINSHORTCUTS[top]</property>
 		<!-- Content -->
 		<property name="iconheight2" tag="property" attribute="name|widgetType.2" value="nextaired|swrecommendedeps">315</property>
         <property name="iconheight2">228</property>
@@ -2722,15 +3760,33 @@
         <property name="textboxvisibility2">true</property>        
         <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
+		
+		<property name="containertype2" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype2">panel</property>
+		
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
-					<top>$SKINSHORTCUTS[top]</top>
+				<control type="$SKINSHORTCUTS[containertype2]" id="1600$SKINSHORTCUTS[id]2">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>315</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll2]">!Control.HasFocus(1600$SKINSHORTCUTS[id]2)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<ondown condition="Integer.IsGreater(Container(1600$SKINSHORTCUTS[id]1).NumItems,0)">SetFocus(1600$SKINSHORTCUTS[id]1)</ondown>
@@ -2777,6 +3833,151 @@
 		<property name="topdouble">170</property>
 		<property name="topsingle" tag="property" attribute="name|horizontalWidgetPos" value="Low">547</property>
 		<property name="topsingle">327</property>
+		
+		<property name="heighttripletop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heighttripletop">280</property>
+		
+		<property name="toptripletop" propertyValue="52">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toptripletop">-48</property>
+		
+		<property name="toptriplebottom" propertyValue="220">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toptriplebottom">230</property>
+		
+		<property name="heighttriplebottom" propertyValue="337">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom" propertyValue="437">
+	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom" propertyValue="417">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom" propertyValue="437">
+	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom" propertyValue="447">
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom" propertyValue="477">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom" propertyValue="547">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="heighttriplebottom">537</property>
+		
+		<property name="toplabel1triple" propertyValue="515">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple" propertyValue="525">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple" propertyValue="605">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple" propertyValue="615">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple" propertyValue="625">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple" propertyValue="635">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple" propertyValue="665">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel1triple">725</property>
+		
+		<property name="toplabel2triple" propertyValue="215">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel2triple">225</property>
+		
+		<property name="toplabel3triple" propertyValue="46">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="toplabel3triple">-54</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
@@ -2792,6 +3993,13 @@
 					<param name="labelscroll3">$SKINSHORTCUTS[labelscroll3]</param>
 					<param name="topdouble">$SKINSHORTCUTS[topdouble]</param>
 					<param name="topsingle">$SKINSHORTCUTS[topsingle]</param>
+		            <param name="heighttripletop">$SKINSHORTCUTS[heighttripletop]</param>
+		            <param name="toptripletop">$SKINSHORTCUTS[toptripletop]</param>
+					<param name="toptriplebottom">$SKINSHORTCUTS[toptriplebottom]</param>
+					<param name="heighttriplebottom">$SKINSHORTCUTS[heighttriplebottom]</param>
+		            <param name="toplabel1triple">$SKINSHORTCUTS[toplabel1triple]</param>
+					<param name="toplabel2triple">$SKINSHORTCUTS[toplabel2triple]</param>
+					<param name="toplabel3triple">$SKINSHORTCUTS[toplabel3triple]</param>
 				</include>
 			</control>
 		</controls>
@@ -2824,8 +4032,96 @@
 		<property name="panelheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
 		<property name="panelheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
 		<property name="panelheight">220</property>
+		
 		<!-- Panel top -->
-		<property name="paneltop">'327' if (type2 in 'none' and type3 in 'none' and widgetlow in 'Standard') else '705' if (type2 in 'none' and type3 in 'none' and widgetlow in 'Low') else '485' if (type2 in 'none' and widgetlow in 'Standard')  else '485' if (type3 in 'none' and widgetlow in 'Standard') else '510' if (type2 in 'none' and widgetlow in 'Low')  else '510' if (type3 in 'none' and widgetlow in 'Low') else '610'</property>
+		<property name="paneltop" propertyValue="510">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="500">
+	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="520">
+	        <rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="600">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="630">
+	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="660">
+	        <rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+	        <rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="327">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+	        <rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="705">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+	        <rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="485">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+	        <rule tag="property" attribute="name|widgetType.2" value="none" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="485">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+	        <rule tag="property" attribute="name|widgetType.3" value="none" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="510">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+	        <rule tag="property" attribute="name|widgetType.2" value="none" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="510">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+	        <rule tag="property" attribute="name|widgetType.3" value="none" />
+			<match>all</match>
+        </property>
+		<property name="paneltop">610</property>
+		
 		<!-- Below textbox width -->
 		<property name="textboxwidth1" propertyValue="204">
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
@@ -3027,15 +4323,32 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
 		
+		<property name="containertype1" propertyValue="wraplist">
+		    <rule tag="property" attribute="name|widgetDouble" value="false" />
+	        <rule tag="property" attribute="name|widgetTriple" value="false" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		    <match>all</match>
+		</property>
+		<property name="containertype1">panel</property>
+		
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll1" tag="property" attribute="name|widgetAutoScroll" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]1">
-					<top>$PYTHON[$SKINSHORTCUTS[paneltop]]</top>
+				<control type="$SKINSHORTCUTS[containertype1]" id="1600$SKINSHORTCUTS[id]1">
+					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$SKINSHORTCUTS[panelheight]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll1]">!Control.HasFocus(1600$SKINSHORTCUTS[id]1)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]1,Home)</onfocus>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
                     <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
@@ -3111,6 +4424,11 @@
 		<property name="panelheight" tag="property" attribute="name|widgetType.3" value="none">315</property>
 		<property name="panelheight">220</property>
 		<!-- Panel top -->
+		<property name="paneltop" propertyValue="375">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
 		<property name="paneltop" propertyValue="190">
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetType.3" value="none" />
@@ -3287,15 +4605,29 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
+		<property name="containertype2" propertyValue="wraplist">
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		</property>
+		<property name="containertype2">panel</property>
+		
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll2" tag="property" attribute="name|widgetAutoScroll.2" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]2">
+				<control type="$SKINSHORTCUTS[containertype2]" id="1600$SKINSHORTCUTS[id]2">
 					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$SKINSHORTCUTS[panelheight]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll2]">!Control.HasFocus(1600$SKINSHORTCUTS[id]2)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]2,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
@@ -3371,6 +4703,11 @@
 		<property name="panelheight" tag="property" attribute="name|widgetType.2" value="none">315</property>
 		<property name="panelheight">220</property>
 		<!-- Panel top -->
+		<property name="paneltop" propertyValue="210">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
 		<property name="paneltop" propertyValue="190">
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetType.2" value="none" />
@@ -3547,15 +4884,29 @@
 		<property name="content3" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content3">Shelf_Generic1</property>
 		
+		<property name="containertype3" propertyValue="wraplist">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+		</property>
+		<property name="containertype3">panel</property>
+		
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]">7000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[10000]">10000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[15000]">15000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[20000]">20000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[30000]">30000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[60000]">60000</property>
+		<property name="autoscroll3" tag="property" attribute="name|widgetAutoScroll.3" value="none">200000</property>
+		
 		<controls>
 			<control type="group">
 				<skinshortcuts>visibility</skinshortcuts>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<control type="panel" id="1600$SKINSHORTCUTS[id]3">
+				<control type="$SKINSHORTCUTS[containertype3]" id="1600$SKINSHORTCUTS[id]3">
 					<top>$SKINSHORTCUTS[paneltop]</top>
 					<left>32</left>
 					<right>0</right>
 					<height>$SKINSHORTCUTS[panelheight]</height>
+					<autoscroll time="$SKINSHORTCUTS[autoscroll3]">!Control.HasFocus(1600$SKINSHORTCUTS[id]3)</autoscroll>
                     <onfocus>SetProperty(TMDbHelper.WidgetContainer,1600$SKINSHORTCUTS[id]3,Home)</onfocus>
 					<onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBType,season)">ActivateWindow(Videos,videodb://tvshows/titles/$INFO[ListItem.Property(TVShowID)]/$INFO[ListItem.Property(Season)]/?tvshowid=$INFO[ListItem.Property(TVShowID)])</onclick>
