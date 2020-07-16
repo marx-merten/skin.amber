@@ -766,16 +766,26 @@
 		<param name="labelscroll1">true</param>
 		<param name="labelscroll2">true</param>
 		<param name="labelscroll3">true</param>
+		<param name="grouptoptriple">100</param>
+		<param name="grouptopdouble">170</param>
+		<param name="grouptopsingle">327</param>
+		<param name="heighttriple">1005</param>
+		<param name="heightdouble">727</param>
+		<param name="heightsingle">375</param>
+		<param name="label3topdouble">-54</param>
+		<param name="label2topdouble">-54</param>
+		<param name="label1topdouble">636</param>
+		<param name="label1topsingle">-54</param>
 		<definition>
 			<!-- All three widgets have items -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<top>10</top>
+				<top>$PARAM[grouptoptriple]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>1005</height>
+					<height>$PARAM[heighttriple]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 				</control>
@@ -1024,16 +1034,16 @@
 			<!-- Widget 1 and 3 have items, widget 2 does not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
-				<top>170</top>
+				<top>$PARAM[grouptopdouble]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>727</height>
+					<height>$PARAM[heightdouble]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,40">home/OverlayRA2T.png</texture>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label3topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1044,7 +1054,7 @@
                     <visible>String.IsEmpty(Container($PARAM[id3]).ListItem.Property(searchstring))</visible>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label3topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1055,7 +1065,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id3]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id3]).ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label3topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1066,7 +1076,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id3]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id3]).ListItem.DBType,tvshow)</visible>
 				</control>                
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1077,7 +1087,7 @@
                     <visible>String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring))</visible>
 				</control>
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1088,7 +1098,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id1]).ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1100,7 +1110,7 @@
 				</control>                
 				<control type="label">
 					<visible>Control.HasFocus($PARAM[id3])</visible>
-					<top>-54</top>
+					<top>$PARAM[label3topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1111,7 +1121,7 @@
 				</control>
 				<control type="label">
 					<visible>Control.HasFocus($PARAM[id1])</visible>
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1123,7 +1133,7 @@
                 <!-- Info Line -->
 				<control type="label">
 					<visible>!Control.HasFocus($PARAM[id1]) + !Control.HasFocus($PARAM[id3]) + Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(ShowInfoLineShelf)</visible>
-					<top>-54</top>
+					<top>$PARAM[label3topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1136,16 +1146,16 @@
 			<!-- Widgets 1 and 2 have items, widget 3 does not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
-				<top>170</top>
+				<top>$PARAM[grouptopdouble]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>727</height>
+					<height>$PARAM[heightdouble]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,40">home/OverlayRA2T.png</texture>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label2topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1156,7 +1166,7 @@
                     <visible>String.IsEmpty(Container($PARAM[id2]).ListItem.Property(searchstring))</visible>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label2topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1167,7 +1177,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id2]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id2]).ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label2topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1178,7 +1188,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id2]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id2]).ListItem.DBType,tvshow)</visible>
 				</control>                
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1189,7 +1199,7 @@
                     <visible>String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring))</visible>
 				</control>
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1200,7 +1210,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id1]).ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1212,7 +1222,7 @@
 				</control>                
 				<control type="label">
 					<visible>Control.HasFocus($PARAM[id2])</visible>
-					<top>-54</top>
+					<top>$PARAM[label2topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1223,7 +1233,7 @@
 				</control>
 				<control type="label">
 					<visible>Control.HasFocus($PARAM[id1])</visible>
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1235,7 +1245,7 @@
                 <!-- Info Line -->
 				<control type="label">
 					<visible>!Control.HasFocus($PARAM[id1]) + !Control.HasFocus($PARAM[id2]) + Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(ShowInfoLineShelf)</visible>
-					<top>-54</top>
+					<top>$PARAM[label2topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1248,16 +1258,16 @@
 			<!-- Widget 1 has items, widget 2 and widget 3 do not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
-				<top>327</top>
+				<top>$PARAM[grouptopsingle]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>375</height>
+					<height>$PARAM[heightsingle]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label1topsingle]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1268,7 +1278,7 @@
                     <visible>String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring))</visible>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label1topsingle]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1279,7 +1289,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id1]).ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
-					<top>-54</top>
+					<top>$PARAM[label1topsingle]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -1291,7 +1301,7 @@
 				</control>                
 				<control type="label">
 					<visible>Control.HasFocus($PARAM[id1])</visible>
-					<top>-54</top>
+					<top>$PARAM[label1topsingle]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -1303,7 +1313,7 @@
                 <!-- Info Line -->
 				<control type="label">
 					<visible>!Control.HasFocus($PARAM[id1]) + Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(ShowInfoLineShelf)</visible>
-					<top>-54</top>
+					<top>$PARAM[label1topsingle]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
