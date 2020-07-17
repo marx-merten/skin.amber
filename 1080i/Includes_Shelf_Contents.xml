@@ -287,6 +287,7 @@
 		<param name="labelscroll1">true</param>
 		<param name="labelscroll2">true</param>
 		<param name="labelscroll3">true</param>
+		<param name="toptriple">110</param>
 		<param name="topdouble">170</param>
 		<param name="topsingle">327</param>
 		<param name="heighttripletop">280</param>
@@ -301,7 +302,7 @@
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<top>110</top>
+				<top>$PARAM[toptriple]</top>
 				<control type="image">
 					<top>$PARAM[toptripletop]</top>
 					<width>1920</width>
