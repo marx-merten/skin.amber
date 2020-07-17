@@ -5850,11 +5850,36 @@
 			<match>all</match>
         </property>
 		
-		<!-- Only widget 1 has items -->
+		<!-- Top when Widgets 1 and 2 have items, widget 3 does not -->
+		<!-- Widget 2 is small, widget 1 is small -->
+		<property name="grouptopdouble" propertyValue="280">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Both widgets are big -->
+		<property name="grouptopdouble">170</property>
+		
+		<!-- Top when only widget 1 has items -->
+		<!-- Widget 1 is small -->
+		<property name="grouptopsingle" propertyValue="387">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Widget 1 is big -->
+		<property name="grouptopsingle">327</property>
+		
+		<!-- Height when only widget 1 has items -->
 		<!-- Widget 1 is small -->
 		<property name="heightsingle" propertyValue="225">
-			<rule tag="property" attribute="name|widgetType.2" value="none" />
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
@@ -6020,8 +6045,8 @@
 					<param name="labelscroll2">$SKINSHORTCUTS[labelscroll2]</param>
 					<param name="labelscroll3">$SKINSHORTCUTS[labelscroll3]</param>
 					<param name="grouptoptriple">$SKINSHORTCUTS[grouptoptriple]</param>
-		            <param name="grouptopdouble">170</param>
-		            <param name="grouptopsingle">327</param>
+		            <param name="grouptopdouble">$SKINSHORTCUTS[grouptopdouble]</param>
+		            <param name="grouptopsingle">$SKINSHORTCUTS[grouptopsingle]</param>
 		            <param name="heighttriple">$SKINSHORTCUTS[heighttriple]</param>
 		            <param name="heightdouble">$SKINSHORTCUTS[heightdouble]</param>
 		            <param name="heightsingle">$SKINSHORTCUTS[heightsingle]</param>
@@ -6059,51 +6084,170 @@
 		
 		<!-- Panel top -->
 		<!-- Only widget 1 has items -->
-		<property name="paneltop" propertyValue="327">
-	        <rule tag="property" attribute="name|widgetType.2" value="none" />
+		<!-- Widget 1 is small -->
+		<property name="paneltop" propertyValue="387">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Widget 1 is big -->
+		<property name="paneltop" propertyValue="327">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="327">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
 		
 		<!-- Widgets 1 and 2 have items, widget 3 does not -->
-		<!-- Widget 2 is small -->
+		<!-- Widget 2 is small, widget 1 is small -->
+		<property name="paneltop" propertyValue="465">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Widget 2 is small, widget 1 is big -->
 		<property name="paneltop" propertyValue="355">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
-		<!-- widget 2 is big -->
+		<property name="paneltop" propertyValue="355">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<!-- widget 2 is big, widget 1 is small -->
 		<property name="paneltop" propertyValue="515">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="515">
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- widget 2 is big, widget 1 is big -->
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
 		
 		<!-- Widgets 1 and 3 have items, widget 2 does not -->
-		<!-- Widget 3 is small -->
+		<!-- Widget 3 is small, widget 1 is small -->
+		<property name="paneltop" propertyValue="465">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Widget 3 is small, widget 1 is big -->
 		<property name="paneltop" propertyValue="355">
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
-		<!-- widget 3 is big -->
+		<property name="paneltop" propertyValue="355">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<!-- widget 3 is big, widget 1 is small -->
 		<property name="paneltop" propertyValue="515">
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
 		<property name="paneltop" propertyValue="515">
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- widget 3 is big, widget 1 is big -->
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="515">
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
 		
@@ -6478,9 +6622,47 @@
 		<property name="labelscroll2" tag="property" attribute="name|widgetLabelScroll.2" />
 		
 		<!-- Panel top -->
-		<!-- There is no widget 3 -->
-		<property name="paneltop" tag="property" attribute="name|widgetType.3" value="none">170</property>
 		
+		<!-- Widgets 1 and 2 have items, widget 3 does not -->
+		<!-- Widget 2 is small, widget 1 is small -->
+		<property name="paneltop" propertyValue="280">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- widget 2 is big, widget 1 is small -->
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Widget 1 is big -->
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
+		
+		<!-- Top when all three widgets have items -->
 		<!-- All three widgets are small -->
 		<property name="paneltop" propertyValue="400">
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -6954,7 +7136,44 @@
 		<property name="labelscroll3" tag="property" attribute="name|widgetLabelScroll.3" />
 		
 		<!-- Panel top -->
-		<property name="paneltop" tag="property" attribute="name|widgetType.2" value="none">170</property>
+		<!-- Widgets 1 and 3 have items, widget 2 does not -->
+		<!-- Widget 3 is small, widget 1 is small -->
+		<property name="paneltop" propertyValue="280">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- widget 3 is big, widget 1 is small -->
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[10000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<!-- Widget 1 is big -->
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		<property name="paneltop" propertyValue="170">
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
+			<match>all</match>
+        </property>
 		
 		<!-- All three widgets have items -->
 		<!-- All three widgets are small -->
