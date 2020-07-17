@@ -213,7 +213,11 @@
 	
 	<!-- Widget 1 Autoscroll -->
 	<property property="widgetAutoScroll" label="7 ">$NUMBER[7000]</property>
+	<property property="widgetAutoScroll" label="8 ">$NUMBER[8000]</property>
+	<property property="widgetAutoScroll" label="9 ">$NUMBER[9000]</property>
 	<property property="widgetAutoScroll" label="10 ">$NUMBER[10000]</property>
+	<property property="widgetAutoScroll" label="11 ">$NUMBER[11000]</property>
+	<property property="widgetAutoScroll" label="12 ">$NUMBER[12000]</property>
 	<property property="widgetAutoScroll" label="15 ">$NUMBER[15000]</property>
 	<property property="widgetAutoScroll" label="20 ">$NUMBER[20000]</property>
 	<property property="widgetAutoScroll" label="30 ">$NUMBER[30000]</property>
@@ -279,7 +283,11 @@
 
 	<!-- Widget 2 Autoscroll -->
 	<property property="widgetAutoScroll.2" label="7 ">$NUMBER[7000]</property>
+	<property property="widgetAutoScroll.2" label="8 ">$NUMBER[8000]</property>
+	<property property="widgetAutoScroll.2" label="9 ">$NUMBER[9000]</property>
 	<property property="widgetAutoScroll.2" label="10 ">$NUMBER[10000]</property>
+	<property property="widgetAutoScroll.2" label="11 ">$NUMBER[11000]</property>
+	<property property="widgetAutoScroll.2" label="12 ">$NUMBER[12000]</property>
 	<property property="widgetAutoScroll.2" label="15 ">$NUMBER[15000]</property>
 	<property property="widgetAutoScroll.2" label="20 ">$NUMBER[20000]</property>
 	<property property="widgetAutoScroll.2" label="30 ">$NUMBER[30000]</property>
@@ -345,7 +353,11 @@
 
     <!-- Widget 3 Autoscroll -->
 	<property property="widgetAutoScroll.3" label="7 ">$NUMBER[7000]</property>
+	<property property="widgetAutoScroll.3" label="8 ">$NUMBER[8000]</property>
+	<property property="widgetAutoScroll.3" label="9 ">$NUMBER[9000]</property>
 	<property property="widgetAutoScroll.3" label="10 ">$NUMBER[10000]</property>
+	<property property="widgetAutoScroll.3" label="11 ">$NUMBER[11000]</property>
+	<property property="widgetAutoScroll.3" label="12 ">$NUMBER[12000]</property>
 	<property property="widgetAutoScroll.3" label="15 ">$NUMBER[15000]</property>
 	<property property="widgetAutoScroll.3" label="20 ">$NUMBER[20000]</property>
 	<property property="widgetAutoScroll.3" label="30 ">$NUMBER[30000]</property>
@@ -411,7 +423,11 @@
 	
 	<!-- Widget 4 Autoscroll -->
 	<property property="widgetAutoScroll.4" label="7 ">$NUMBER[7000]</property>
+	<property property="widgetAutoScroll.4" label="8 ">$NUMBER[8000]</property>
+	<property property="widgetAutoScroll.4" label="9 ">$NUMBER[9000]</property>
 	<property property="widgetAutoScroll.4" label="10 ">$NUMBER[10000]</property>
+	<property property="widgetAutoScroll.4" label="11 ">$NUMBER[11000]</property>
+	<property property="widgetAutoScroll.4" label="12 ">$NUMBER[12000]</property>
 	<property property="widgetAutoScroll.4" label="15 ">$NUMBER[15000]</property>
 	<property property="widgetAutoScroll.4" label="20 ">$NUMBER[20000]</property>
 	<property property="widgetAutoScroll.4" label="30 ">$NUMBER[30000]</property>
@@ -477,7 +493,11 @@
 	
 	<!-- Widget 5 Autoscroll -->
 	<property property="widgetAutoScroll.5" label="7 ">$NUMBER[7000]</property>
+	<property property="widgetAutoScroll.5" label="8 ">$NUMBER[8000]</property>
+	<property property="widgetAutoScroll.5" label="9 ">$NUMBER[9000]</property>
 	<property property="widgetAutoScroll.5" label="10 ">$NUMBER[10000]</property>
+	<property property="widgetAutoScroll.5" label="11 ">$NUMBER[11000]</property>
+	<property property="widgetAutoScroll.5" label="12 ">$NUMBER[12000]</property>
 	<property property="widgetAutoScroll.5" label="15 ">$NUMBER[15000]</property>
 	<property property="widgetAutoScroll.5" label="20 ">$NUMBER[20000]</property>
 	<property property="widgetAutoScroll.5" label="30 ">$NUMBER[30000]</property>
@@ -543,7 +563,11 @@
 	
 	<!-- Widget 6 Autoscroll -->
 	<property property="widgetAutoScroll.6" label="7 ">$NUMBER[7000]</property>
+	<property property="widgetAutoScroll.6" label="8 ">$NUMBER[8000]</property>
+	<property property="widgetAutoScroll.6" label="9 ">$NUMBER[9000]</property>
 	<property property="widgetAutoScroll.6" label="10 ">$NUMBER[10000]</property>
+	<property property="widgetAutoScroll.6" label="11 ">$NUMBER[11000]</property>
+	<property property="widgetAutoScroll.6" label="12 ">$NUMBER[12000]</property>
 	<property property="widgetAutoScroll.6" label="15 ">$NUMBER[15000]</property>
 	<property property="widgetAutoScroll.6" label="20 ">$NUMBER[20000]</property>
 	<property property="widgetAutoScroll.6" label="30 ">$NUMBER[30000]</property>
