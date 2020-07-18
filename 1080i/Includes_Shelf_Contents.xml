@@ -287,9 +287,9 @@
 		<param name="labelscroll1">true</param>
 		<param name="labelscroll2">true</param>
 		<param name="labelscroll3">true</param>
-		<param name="toptriple">110</param>
-		<param name="topdouble">170</param>
-		<param name="topsingle">327</param>
+		<param name="grouptoptriple">110</param>
+		<param name="grouptopdouble">170</param>
+		<param name="grouptopsingle">327</param>
 		<param name="heighttripletop">280</param>
 		<param name="toptripletop">-48</param>
 		<param name="toptriplebottom">230</param>
@@ -297,12 +297,15 @@
 		<param name="toplabel1triple">725</param>
 		<param name="toplabel2triple">225</param>
 		<param name="toplabel3triple">-54</param>
+		<param name="heightdouble">727</param>
+		<param name="label1topdouble">636</param>
+		<param name="heightsingle">375</param>
 		<definition>
 			<!-- All three widgets have items -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<top>$PARAM[toptriple]</top>
+				<top>$PARAM[grouptoptriple]</top>
 				<control type="image">
 					<top>$PARAM[toptripletop]</top>
 					<width>1920</width>
@@ -465,11 +468,11 @@
 			<!-- Widget 1 and 3 have items, widget 2 does not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
-				<top>$PARAM[topdouble]</top>
+				<top>$PARAM[grouptopdouble]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>727</height>
+					<height>$PARAM[heightdouble]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,40">home/OverlayRA2T.png</texture>
 				</control>
@@ -577,11 +580,11 @@
 			<!-- Widgets 1 and 2 have items, widget 3 does not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
-				<top>$PARAM[topdouble]</top>
+				<top>$PARAM[grouptopdouble]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>727</height>
+					<height>$PARAM[heightdouble]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,40">home/OverlayRA2T.png</texture>
 				</control>
@@ -619,7 +622,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id2]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id2]).ListItem.DBType,tvshow)</visible>
 				</control>                
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -630,7 +633,7 @@
                     <visible>String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring))</visible>
 				</control>
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -641,7 +644,7 @@
                     <visible>!String.IsEmpty(Container($PARAM[id1]).ListItem.Property(searchstring)) + String.IsEqual(Container($PARAM[id1]).ListItem.DBType,movie)</visible>
 				</control>
 				<control type="label">
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<right>32</right>
 					<width>900</width>
 					<height>45</height>
@@ -664,7 +667,7 @@
 				</control>
 				<control type="label">
 					<visible>Control.HasFocus($PARAM[id1])</visible>
-					<top>636</top>
+					<top>$PARAM[label1topdouble]</top>
 					<left>32</left>
 					<width>900</width>
 					<height>45</height>
@@ -689,11 +692,11 @@
 			<!-- Widget 1 has items, widget 2 and widget 3 do not -->
 			<control type="group">
 				<visible>Integer.IsGreater(Container($PARAM[id1]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id2]).NumItems,0) + !Integer.IsGreater(Container($PARAM[id3]).NumItems,0)</visible>
-				<top>$PARAM[topsingle]</top>
+				<top>$PARAM[grouptopsingle]</top>
 				<control type="image">
 					<top>-48</top>
 					<width>1920</width>
-					<height>375</height>
+					<height>$PARAM[heightsingle]</height>
 					<colordiffuse>$VAR[WidgetBGColor]</colordiffuse>
 					<texture border="0,40,0,0">home/ShelfBackground.png</texture>
 				</control>

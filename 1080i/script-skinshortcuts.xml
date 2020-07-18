@@ -315,7 +315,7 @@
 				</control>
 				<control type="radiobutton" id="810">
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu) + !Skin.HasSetting(Hide.AllShelves) + 
-							 [[Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(ShowInfoLineShelf)] | !Skin.HasSetting(ShowInfoLine)]</visible>
+							 [[[Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(ShowInfoLineShelf)] | !Skin.HasSetting(ShowInfoLine)] | !String.IsEmpty(Container(211).ListItem.Property(widgetThreeShelvesLarge))]</visible>
 					<label>$LOCALIZE[32277]</label>
 					<onclick condition="!String.IsEmpty(Container(211).ListItem.Property(widgetThreeShelvesLarge))">SetProperty(customProperty,widgetThreeShelvesLarge)</onclick>
 					<onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetThreeShelvesLarge),true)">SetProperty(customProperty,widgetThreeShelvesLarge)</onclick>
@@ -603,6 +603,12 @@
 					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath))">SetProperty(customProperty,widgetTriple)</onunfocus>
 					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath))">SetProperty(customValue,false)</onunfocus>
 					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath))">SetProperty(customProperty,widgetAutoScroll)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath))">SetProperty(customValue,none)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget),static)">SetProperty(customProperty,widgetArtwork)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget),static)">SetProperty(customValue,Poster)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget),static)">SendClick(404)</onunfocus>
 				</control>
 				<control type="button" id="3001">
 					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + String.IsEqual(Container(211).ListItem.Property(widgetContent),default)</visible>
@@ -760,6 +766,12 @@
 					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))">SetProperty(customProperty,widgetTriple.2)</onunfocus>
 					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))">SetProperty(customValue,false)</onunfocus>
 					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))">SetProperty(customProperty,widgetAutoScroll.2)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))">SetProperty(customValue,none)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.2))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.2),static)">SetProperty(customProperty,widgetArtwork.2)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.2),static)">SetProperty(customValue,Poster)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.2),static)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -923,6 +935,12 @@
 				    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))">SetProperty(customProperty,widgetTriple.3)</onunfocus>
 				    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))">SetProperty(customValue,false)</onunfocus>
 				    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))">SetProperty(customProperty,widgetAutoScroll.3)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))">SetProperty(customValue,none)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.3))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.3),static)">SetProperty(customProperty,widgetArtwork.3)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.3),static)">SetProperty(customValue,Poster)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.3),static)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -1086,6 +1104,12 @@
 			        <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))">SetProperty(customProperty,widgetTriple.4)</onunfocus>
 			        <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))">SetProperty(customValue,false)</onunfocus>
 			        <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))">SetProperty(customProperty,widgetAutoScroll.4)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))">SetProperty(customValue,none)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.4))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.4),static)">SetProperty(customProperty,widgetArtwork.4)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.4),static)">SetProperty(customValue,Poster)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.4),static)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -1245,6 +1269,12 @@
 		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))">SetProperty(customProperty,widgetTriple.5)</onunfocus>
 		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))">SetProperty(customValue,false)</onunfocus>
 		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))">SetProperty(customProperty,widgetAutoScroll.5)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))">SetProperty(customValue,none)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.5))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.5),static)">SetProperty(customProperty,widgetArtwork.5)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.5),static)">SetProperty(customValue,Poster)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.5),static)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -1404,6 +1434,12 @@
 		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))">SetProperty(customProperty,widgetTriple.6)</onunfocus>
 		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))">SetProperty(customValue,false)</onunfocus>
 		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))">SetProperty(customProperty,widgetAutoScroll.6)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))">SetProperty(customValue,none)</onunfocus>
+		            <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetPath.6))">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.6),static)">SetProperty(customProperty,widgetArtwork.6)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.6),static)">SetProperty(customValue,Poster)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.6),static)">SendClick(404)</onunfocus>
 		    		<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
