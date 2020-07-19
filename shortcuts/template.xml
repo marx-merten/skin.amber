@@ -444,7 +444,7 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -753,7 +753,7 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1064,7 +1064,7 @@
 		<property name="content3" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content3">Shelf_Generic1</property>
 		
-		<property name="containertype3" propertyValue="list">
+		<property name="containertype3" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1376,7 +1376,7 @@
 		<property name="content4" tag="property" attribute="name|widgetArtwork.4" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content4">Shelf_Generic1</property>
 		
-		<property name="containertype4" propertyValue="list">
+		<property name="containertype4" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1689,7 +1689,7 @@
 		<property name="content5" tag="property" attribute="name|widgetArtwork.5" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content5">Shelf_Generic1</property>
 		
-		<property name="containertype5" propertyValue="list">
+		<property name="containertype5" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2000,7 +2000,7 @@
 		<property name="content6" tag="property" attribute="name|widgetArtwork.6" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content6">Shelf_Generic1</property>
 		
-		<property name="containertype6" propertyValue="list">
+		<property name="containertype6" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2181,7 +2181,7 @@
         <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2344,7 +2344,7 @@
         <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2510,7 +2510,7 @@
         <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
 		
-		<property name="containertype3" propertyValue="list">
+		<property name="containertype3" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2677,7 +2677,7 @@
         <property name="content4" tag="property" attribute="name|widgetType.4" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content4">Shelf_GenericStatic</property>
 		
-		<property name="containertype4" propertyValue="list">
+		<property name="containertype4" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2845,7 +2845,7 @@
         <property name="content5" tag="property" attribute="name|widgetType.5" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content5">Shelf_GenericStatic</property>
 		
-		<property name="containertype5" propertyValue="list">
+		<property name="containertype5" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -3011,7 +3011,7 @@
         <property name="content6" tag="property" attribute="name|widgetType.6" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content6">Shelf_GenericStatic</property>
 		
-		<property name="containertype6" propertyValue="list">
+		<property name="containertype6" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -3406,7 +3406,7 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -3649,7 +3649,7 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -3761,7 +3761,7 @@
         <property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -3850,7 +3850,7 @@
         <property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -5514,7 +5514,7 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -5923,7 +5923,7 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 		</property>
 		<property name="containertype2">panel</property>
@@ -6224,7 +6224,7 @@
 		<property name="content3" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content3">Shelf_Generic1</property>
 		
-		<property name="containertype3" propertyValue="list">
+		<property name="containertype3" propertyValue="wraplist">
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 		</property>
 		<property name="containertype3">panel</property>
@@ -6374,7 +6374,7 @@
 		<property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -6509,7 +6509,7 @@
 		<property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -6641,7 +6641,7 @@
 		<property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
 		
-		<property name="containertype3" propertyValue="list">
+		<property name="containertype3" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -7884,7 +7884,7 @@
 		<property name="content1" tag="property" attribute="name|widgetArtwork" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content1">Shelf_Generic1</property>
         
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -8402,7 +8402,7 @@
 		<property name="content2" tag="property" attribute="name|widgetArtwork.2" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content2">Shelf_Generic1</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -8851,7 +8851,7 @@
 		<property name="content3" tag="property" attribute="name|widgetArtwork.3" value="DiscArt">Shelf_GenericDisc</property>
 		<property name="content3">Shelf_Generic1</property>
 		
-		<property name="containertype3" propertyValue="list">
+		<property name="containertype3" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -8976,7 +8976,7 @@
 		<property name="content1" tag="property" attribute="name|widgetType" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content1">Shelf_GenericStatic</property>
 		
-		<property name="containertype1" propertyValue="list">
+		<property name="containertype1" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -9086,7 +9086,7 @@
 		<property name="content2" tag="property" attribute="name|widgetType.2" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content2">Shelf_GenericStatic</property>
 		
-		<property name="containertype2" propertyValue="list">
+		<property name="containertype2" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -9196,7 +9196,7 @@
         <property name="content3" tag="property" attribute="name|widgetType.3" value="weatherdaily|weatherhourly">Shelf_GenericStaticWeather</property>
         <property name="content3">Shelf_GenericStatic</property>
 		
-		<property name="containertype3" propertyValue="list">
+		<property name="containertype3" propertyValue="wraplist">
 		    <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
