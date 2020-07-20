@@ -80,7 +80,7 @@
 		<property name="target6" tag="property" attribute="name|widgetTarget.6" value="false">false</property>
 		<property name="target6">true</property>
 		
-		<!-- Only widgets 1 and 2 have items -->
+		<!-- 3 Widgets together, only widgets 1 and 2 have items -->
 		<!-- Widget 2 is small, widget 1 is small -->
 		<!-- widgets in standard position -->
 		<property name="top" propertyValue="295">
@@ -104,24 +104,34 @@
 			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
-		
-		
-		
-		
-		<property name="top" propertyValue="535">
-	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
-	        <rule tag="property" attribute="name|widgetTwoShelves" value="false" />
-			<rule tag="property" attribute="name|widgetThreeShelves" value="false" />
-			<match>all</match>
-        </property>
-		<property name="top" propertyValue="535">
-	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
-	        <rule tag="property" attribute="name|widgetTwoShelves" value="true" />
-			<rule tag="property" attribute="name|widgetThreeShelves" value="false" />
+		<!-- 3 Widgets together, only widgets 1 and 3 have items -->
+		<!-- Widget 3 is small, widget 1 is small -->
+		<!-- widgets in standard position -->
+		<property name="top" propertyValue="295">
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="true" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="535">
+		<!-- widgets in low position -->
+		<property name="top" propertyValue="465">
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="true" />
+			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		
+		<!-- 3 Widgets together, only widget 1 has items -->
+		<!-- widgets in low position -->
+		<property name="top" propertyValue="595">
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 	        <rule tag="property" attribute="name|widgetTwoShelves" value="false" />
 			<rule tag="property" attribute="name|widgetThreeShelves" value="true" />
@@ -129,7 +139,65 @@
 			<rule tag="property" attribute="name|widgetType.3" value="none" />
 			<match>all</match>
         </property>
+		<!-- widgets in standard position -->
+		<property name="top" propertyValue="235">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+	        <rule tag="property" attribute="name|widgetTwoShelves" value="false" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="true" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<rule tag="property" attribute="name|widgetType.3" value="none" />
+			<match>all</match>
+        </property>
+		
+		<!-- 2 Widgets together -->
+		<!-- Only widget 1 has items -->
+		<!-- widgets in standard position -->
+		<property name="top" propertyValue="235">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+	        <rule tag="property" attribute="name|widgetTwoShelves" value="true" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="false" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<match>all</match>
+        </property>
+		<!-- widgets in low position -->
+		<property name="top" propertyValue="595">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+	        <rule tag="property" attribute="name|widgetTwoShelves" value="true" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="false" />
+			<rule tag="property" attribute="name|widgetType.2" value="none" />
+			<match>all</match>
+        </property>
+		<!-- Both widgets have items -->
+		<!-- widgets in low position -->
+		<property name="top" propertyValue="465">
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+			<rule tag="property" attribute="name|widgetTwoShelves" value="true" />
+			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
+			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
+			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
+			<match>all</match>
+        </property>
+		
+		<!-- Single widget -->
+		<!-- Widgets in low position -->
+		<property name="top" propertyValue="595">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
+	        <rule tag="property" attribute="name|widgetTwoShelves" value="false" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="false" />
+			<match>all</match>
+        </property>
+		<!-- Widgets in standard position -->
+		<property name="top" propertyValue="235">
+	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+	        <rule tag="property" attribute="name|widgetTwoShelves" value="false" />
+			<rule tag="property" attribute="name|widgetThreeShelves" value="false" />
+			<match>all</match>
+        </property>
+		
+		<!-- All other scenarios -->
 		<property name="top">315</property>
+		
 		<!-- Retrieve properties -->
 		<property name="id" tag="mainmenuid" />
 		<controls>
@@ -250,7 +318,7 @@
 	        <rule tag="property" attribute="name|widgetTriple" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -258,13 +326,13 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble" value="true" />
         </property>
-		<property name="top" propertyValue="647">
+		<property name="top" propertyValue="687">
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -284,7 +352,7 @@
 			<match>all</match>
         </property>
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
-		<property name="backgroundheight" propertyValue="275">
+		<property name="backgroundheight" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -293,7 +361,7 @@
         </property>
 		<property name="backgroundheight">375</property>
 		<!-- Panel top -->
-		<property name="paneltop" propertyValue="355">
+		<property name="paneltop" propertyValue="328">
 	        <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -301,7 +369,7 @@
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<match>all</match>
         </property>
-		<property name="paneltop" propertyValue="670">
+		<property name="paneltop" propertyValue="688">
 	        <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -569,7 +637,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -577,13 +645,13 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
         </property>
-		<property name="top" propertyValue="647">
+		<property name="top" propertyValue="687">
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.2" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -603,7 +671,7 @@
 			<match>all</match>
         </property>
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
-		<property name="backgroundheight" propertyValue="275">
+		<property name="backgroundheight" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -612,7 +680,7 @@
         </property>
 		<property name="backgroundheight">375</property>
 		<!-- Panel top -->
-		<property name="paneltop" propertyValue="355">
+		<property name="paneltop" propertyValue="328">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -620,7 +688,7 @@
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<match>all</match>
         </property>
-		<property name="paneltop" propertyValue="670">
+		<property name="paneltop" propertyValue="688">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.2" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -880,7 +948,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -888,13 +956,13 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
         </property>
-		<property name="top" propertyValue="647">
+		<property name="top" propertyValue="687">
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.3" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -914,7 +982,7 @@
 			<match>all</match>
         </property>
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
-		<property name="backgroundheight" propertyValue="275">
+		<property name="backgroundheight" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -923,7 +991,7 @@
         </property>
 		<property name="backgroundheight">375</property>
 		<!-- Panel top -->
-		<property name="paneltop" propertyValue="355">
+		<property name="paneltop" propertyValue="328">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -931,7 +999,7 @@
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<match>all</match>
         </property>
-		<property name="paneltop" propertyValue="670">
+		<property name="paneltop" propertyValue="688">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.3" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.3" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1192,7 +1260,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -1200,13 +1268,13 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
         </property>
-		<property name="top" propertyValue="647">
+		<property name="top" propertyValue="687">
 			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.4" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -1226,7 +1294,7 @@
 			<match>all</match>
         </property>
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
-		<property name="backgroundheight" propertyValue="275">
+		<property name="backgroundheight" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1235,7 +1303,7 @@
         </property>
 		<property name="backgroundheight">375</property>
 		<!-- Panel top -->
-		<property name="paneltop" propertyValue="355">
+		<property name="paneltop" propertyValue="328">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1243,7 +1311,7 @@
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<match>all</match>
         </property>
-		<property name="paneltop" propertyValue="670">
+		<property name="paneltop" propertyValue="688">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.4" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.4" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1505,7 +1573,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -1513,13 +1581,13 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
         </property>
-		<property name="top" propertyValue="647">
+		<property name="top" propertyValue="687">
 			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.5" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -1539,7 +1607,7 @@
 			<match>all</match>
         </property>
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
-		<property name="backgroundheight" propertyValue="275">
+		<property name="backgroundheight" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1548,7 +1616,7 @@
         </property>
 		<property name="backgroundheight">375</property>
 		<!-- Panel top -->
-		<property name="paneltop" propertyValue="355">
+		<property name="paneltop" propertyValue="328">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1556,7 +1624,7 @@
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<match>all</match>
         </property>
-		<property name="paneltop" propertyValue="670">
+		<property name="paneltop" propertyValue="688">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.5" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.5" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1816,7 +1884,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -1824,13 +1892,13 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
         </property>
-		<property name="top" propertyValue="647">
+		<property name="top" propertyValue="687">
 			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
 			<rule tag="property" attribute="name|widgetArtwork.6" value="Banner|ClearLogo" />
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -1850,7 +1918,7 @@
 			<match>all</match>
         </property>
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
-		<property name="backgroundheight" propertyValue="275">
+		<property name="backgroundheight" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1859,7 +1927,7 @@
         </property>
 		<property name="backgroundheight">375</property>
 		<!-- Panel top -->
-		<property name="paneltop" propertyValue="355">
+		<property name="paneltop" propertyValue="328">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -1867,7 +1935,7 @@
 			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
 			<match>all</match>
         </property>
-		<property name="paneltop" propertyValue="670">
+		<property name="paneltop" propertyValue="688">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|widgetTriple.6" value="false" />
 			<rule tag="property" attribute="name|widgetAutoScroll.6" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />
@@ -2124,7 +2192,7 @@
 	        <rule tag="property" attribute="name|widgetTriple" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2132,7 +2200,7 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble" value="true" />
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2288,7 +2356,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2296,7 +2364,7 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.2" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2454,7 +2522,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2462,7 +2530,7 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.3" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2621,7 +2689,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2629,7 +2697,7 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.4" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2789,7 +2857,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2797,7 +2865,7 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.5" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2955,7 +3023,7 @@
 	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
 			<match>all</match>
         </property>
-		<property name="top" propertyValue="232">
+		<property name="top" propertyValue="220">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -2963,7 +3031,7 @@
 		<property name="top" propertyValue="170">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
         </property>
-		<property name="top" propertyValue="547">
+		<property name="top" propertyValue="534">
 	        <rule tag="property" attribute="name|widgetDouble.6" value="false" />
 	        <rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
@@ -3263,7 +3331,7 @@
 		<!-- Widget 2 is big, widget 1 is big -->
 		<property name="heightdouble">727</property>
 		
-		<!-- Lable top for widget 1 (bottom widget) when both widgets have items -->
+		<!-- Label top for widget 1 (bottom widget) when both widgets have items -->
 		<!-- Both widgets are small -->
 		<property name="label1topdouble" propertyValue="355">
 	        <rule tag="property" attribute="name|widgetAutoScroll.2" value="$NUMBER[7000]|$NUMBER[8000]|$NUMBER[9000]|$NUMBER[10000]|$NUMBER[11000]|$NUMBER[12000]|$NUMBER[15000]||$NUMBER[20000]|$NUMBER[30000]|$NUMBER[60000]" />

@@ -609,6 +609,12 @@
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget),static)">SetProperty(customProperty,widgetArtwork)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget),static)">SetProperty(customValue,Poster)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget),static)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble),true)">SetProperty(customProperty,widgetAutoScroll)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble),true)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple),true)">SetProperty(customProperty,widgetAutoScroll)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple),true)">SendClick(404)</onunfocus>
 				</control>
 				<control type="button" id="3001">
 					<visible>!String.IsEmpty(Container(211).ListItem.Property(widgetPath)) + String.IsEqual(Container(211).ListItem.Property(widgetContent),default)</visible>
@@ -772,6 +778,12 @@
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.2),static)">SetProperty(customProperty,widgetArtwork.2)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.2),static)">SetProperty(customValue,Poster)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.2),static)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.2),true)">SetProperty(customProperty,widgetAutoScroll.2)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.2),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.2),true)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.2),true)">SetProperty(customProperty,widgetAutoScroll.2)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.2),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.2),true)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -941,6 +953,12 @@
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.3),static)">SetProperty(customProperty,widgetArtwork.3)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.3),static)">SetProperty(customValue,Poster)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.3),static)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.3),true)">SetProperty(customProperty,widgetAutoScroll.3)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.3),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.3),true)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.3),true)">SetProperty(customProperty,widgetAutoScroll.3)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.3),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.3),true)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -1110,6 +1128,12 @@
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.4),static)">SetProperty(customProperty,widgetArtwork.4)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.4),static)">SetProperty(customValue,Poster)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.4),static)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.4),true)">SetProperty(customProperty,widgetAutoScroll.4)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.4),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.4),true)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.4),true)">SetProperty(customProperty,widgetAutoScroll.4)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.4),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.4),true)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -1275,6 +1299,12 @@
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.5),static)">SetProperty(customProperty,widgetArtwork.5)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.5),static)">SetProperty(customValue,Poster)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.5),static)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.5),true)">SetProperty(customProperty,widgetAutoScroll.5)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.5),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.5),true)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.5),true)">SetProperty(customProperty,widgetAutoScroll.5)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.5),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.5),true)">SendClick(404)</onunfocus>
 					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -1440,7 +1470,13 @@
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.6),static)">SetProperty(customProperty,widgetArtwork.6)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.6),static)">SetProperty(customValue,Poster)</onunfocus>
 					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widget.6),static)">SendClick(404)</onunfocus>
-		    		<height>60</height>
+		    		<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.6),true)">SetProperty(customProperty,widgetAutoScroll.6)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.6),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetDouble.6),true)">SendClick(404)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.6),true)">SetProperty(customProperty,widgetAutoScroll.6)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.6),true)">SetProperty(customValue,none)</onunfocus>
+					<onunfocus condition="String.IsEqual(Container(211).ListItem.Property(widgetTriple.6),true)">SendClick(404)</onunfocus>
+					<height>60</height>
 					<width>1340</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 			    	<font>ListDetails</font>
