@@ -9,6 +9,9 @@
 		<param name="top"></param>
 		<param name="height"></param>
 		<param name="visible"></param>
+		<param name="ShowLargeLogo">false</param>
+		<param name="ShowMediumLogo">false</param>
+		<param name="ShowSmallLogo">false</param>
 		<definition>
             <visible>$PARAM[visible]</visible>
 			<control type="group">
@@ -77,6 +80,12 @@
 					<label>$VAR[LibraryStats]</label>
 				</control>                
 			</control>
+			<!-- Widget Logo -->
+			<include content="HomeWidgetLogo">
+				<param name="ShowSmallLogo">$PARAM[ShowSmallLogo]</param>
+				<param name="ShowMediumLogo">$PARAM[ShowMediumLogo]</param>
+				<param name="ShowLargeLogo">$PARAM[ShowLargeLogo]</param>
+			</include>
 		</definition>
 	</include>
 
@@ -273,6 +282,11 @@
 					<label>$VAR[LibraryStats]</label>
 				</control>                
 			</control>
+			<!-- Widget Logo -->
+			<include content="HomeWidgetLogo">
+				<param name="ShowMediumLogo">$PARAM[ShowMediumLogo]</param>
+				<param name="ShowLargeLogo">$PARAM[ShowLargeLogo]</param>
+			</include>
 		</definition>
 	</include>
 
@@ -300,6 +314,9 @@
 		<param name="heightdouble">727</param>
 		<param name="label1topdouble">636</param>
 		<param name="heightsingle">375</param>
+		<param name="ShowSmallLogo">false</param>
+		<param name="ShowMediumLogo">false</param>
+		<param name="ShowLargeLogo">false</param>
 		<definition>
 			<!-- All three widgets have items -->
 			<control type="group">
@@ -756,6 +773,11 @@
 					<label>$VAR[LibraryStats]</label>
 				</control>                
 			</control>
+			<!-- Widget Logo -->
+			<include content="HomeWidgetLogo">
+				<param name="ShowMediumLogo">$PARAM[ShowMediumLogo]</param>
+				<param name="ShowLargeLogo">$PARAM[ShowLargeLogo]</param>
+			</include>
 		</definition>
 	</include>
 
