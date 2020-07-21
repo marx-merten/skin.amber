@@ -370,7 +370,9 @@
 	<include name="HomeWidgetLogo">
 		<param name="ShowSmallLogo">false</param>
 		<param name="ShowMediumLogo">false</param>
+		<param name="ShowMedium2Logo">false</param>
 		<param name="ShowLargeLogo">false</param>
+		<param name="ShowLarge2Logo">false</param>
 	    <definition>
 		    <control type="group">
 	            <visible>Skin.HasSetting(ShowHomeLogo)</visible>
@@ -397,6 +399,18 @@
 			        <align>center</align>
 			        <aligny>center</aligny>
                     <visible>$PARAM[ShowLargeLogo] + !Skin.HasSetting(VerticalHome)</visible>
+                </control>
+				<!-- Slightly smaller large logo when double shelf and horizontal menu -->
+		        <control type="image">
+                    <posy>55</posy>
+		            <posx>1500</posx>
+                    <width>400</width>
+                    <height>160</height>
+                    <texture  background="true">$VAR[HomeClearLogo]</texture>
+		            <aspectratio>keep</aspectratio>
+			        <align>center</align>
+			        <aligny>center</aligny>
+                    <visible>$PARAM[ShowLarge2Logo] + !Skin.HasSetting(VerticalHome)</visible>
                 </control>
 		        <!-- Logo when double shelf and fanart title in top bar -->
 		        <control type="image">
@@ -448,6 +462,19 @@
 			        <aligny>center</aligny>
                     <visible>$PARAM[ShowMediumLogo] + !Skin.HasSetting(VerticalHome)</visible>
                 </control>
+				<!-- Logo when double shelf and horizontal menu -->
+		        <control type="image">
+                    <posy>50</posy>
+		            <posx>1500</posx>
+                    <width>400</width>
+                    <height>100</height>
+                    <texture  background="true">$VAR[HomeClearLogo]</texture>
+		            <aspectratio>keep</aspectratio>
+			        <align>center</align>
+			        <aligny>center</aligny>
+                    <visible>$PARAM[ShowMedium2Logo] + !Skin.HasSetting(VerticalHome)</visible>
+                </control>
+				
 		        <!-- Logo when triple shelf and fanart title in top bar -->
 		        <control type="image">
                     <posy>40</posy>

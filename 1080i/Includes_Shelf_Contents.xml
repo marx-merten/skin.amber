@@ -316,7 +316,9 @@
 		<param name="heightsingle">375</param>
 		<param name="ShowSmallLogo">false</param>
 		<param name="ShowMediumLogo">false</param>
+		<param name="ShowMedium2Logo">false</param>
 		<param name="ShowLargeLogo">false</param>
+		<param name="ShowLarge2Logo">false</param>
 		<definition>
 			<!-- All three widgets have items -->
 			<control type="group">
@@ -776,7 +778,9 @@
 			<!-- Widget Logo -->
 			<include content="HomeWidgetLogo">
 				<param name="ShowMediumLogo">$PARAM[ShowMediumLogo]</param>
+				<param name="ShowMedium2Logo">$PARAM[ShowMedium2Logo]</param>
 				<param name="ShowLargeLogo">$PARAM[ShowLargeLogo]</param>
+				<param name="ShowLarge2Logo">$PARAM[ShowLarge2Logo]</param>
 			</include>
 		</definition>
 	</include>
