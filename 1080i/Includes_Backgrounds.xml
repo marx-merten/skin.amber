@@ -378,7 +378,7 @@
 	            <visible>Skin.HasSetting(ShowHomeLogo)</visible>
 		        <!-- Logo for vert. menu, single-row widget -->
 		        <control type="image">
-                    <posy>-40</posy>
+                    <posy>-30</posy>
 		            <posx>940</posx>
                     <width>500</width>
                     <height>280</height>
@@ -386,7 +386,7 @@
 		            <aspectratio>keep</aspectratio>
 			        <align>center</align>
 			        <aligny>center</aligny>
-                    <visible>$PARAM[ShowLargeLogo] + Skin.HasSetting(VerticalHome)</visible>
+                    <visible>[$PARAM[ShowLargeLogo] | $PARAM[ShowLarge2Logo]] + Skin.HasSetting(VerticalHome)</visible>
                 </control>
 		        <!-- Logo for horiz. menu, single-row widget -->
 		        <control type="image">
@@ -414,15 +414,15 @@
                 </control>
 		        <!-- Logo when double shelf and fanart title in top bar -->
 		        <control type="image">
-                    <posy>-40</posy>
+                    <posy>-25</posy>
 		            <posx>1160</posx>
                     <width>300</width>
-                    <height>160</height>
+                    <height>100</height>
                     <texture background="true">$VAR[HomeClearLogo]</texture>
 		            <aspectratio>keep</aspectratio>
 			        <align>center</align>
 			        <aligny>center</aligny>
-                    <visible>$PARAM[ShowMediumLogo] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + Skin.HasSetting(FanartTitle.InTopBar)</visible>
+                    <visible>[$PARAM[ShowMediumLogo] | $PARAM[ShowMedium2Logo]] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + Skin.HasSetting(FanartTitle.InTopBar)</visible>
                 </control>
 		        <!-- Logo when double shelf and fanart title below top bar, info line in shelf -->
 		        <control type="image">
@@ -439,7 +439,7 @@
                 </control>
 		        <!-- Logo when double shelf and fanart title below top bar, info line below top bar -->
 		        <control type="image">
-                    <posy>90</posy>
+                    <posy>10</posy>
 		            <posx>1060</posx>
                     <width>420</width>
                     <height>100</height>
@@ -447,7 +447,7 @@
 		            <aspectratio>keep</aspectratio>
 			        <align>center</align>
 			        <aligny>center</aligny>
-                    <visible>$PARAM[ShowMediumLogo] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar) + 
+                    <visible>[$PARAM[ShowMediumLogo] | $PARAM[ShowMedium2Logo]] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar) + 
 					         Skin.HasSetting(ShowInfoLine) + !Skin.HasSetting(ShowInfoLineShelf)</visible>
                 </control>
 		        <!-- Logo when double shelf and horizontal menu -->
