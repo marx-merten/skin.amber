@@ -368,7 +368,6 @@
 	
 	<!-- Movie/TV Show Widget Logo for Home Window -->
 	<include name="HomeWidgetLogo">
-		<param name="ShowSmallLogo">false</param>
 		<param name="ShowMediumLogo">false</param>
 		<param name="ShowMedium2Logo">false</param>
 		<param name="ShowLargeLogo">false</param>
@@ -462,7 +461,7 @@
 			        <aligny>center</aligny>
                     <visible>$PARAM[ShowMediumLogo] + !Skin.HasSetting(VerticalHome)</visible>
                 </control>
-				<!-- Logo when double shelf and horizontal menu -->
+				<!-- Slightly larger logo when double shelf and horizontal menu -->
 		        <control type="image">
                     <posy>50</posy>
 		            <posx>1500</posx>
@@ -473,43 +472,6 @@
 			        <align>center</align>
 			        <aligny>center</aligny>
                     <visible>$PARAM[ShowMedium2Logo] + !Skin.HasSetting(VerticalHome)</visible>
-                </control>
-				
-		        <!-- Logo when triple shelf and fanart title in top bar -->
-		        <control type="image">
-                    <posy>40</posy>
-		            <posx>1480</posx>
-                    <width>420</width>
-                    <height>115</height>
-                    <texture  background="true">$VAR[HomeClearLogo]</texture>
-		            <aspectratio>keep</aspectratio>
-			        <align>center</align>
-			        <aligny>center</aligny>
-                    <visible>$PARAM[ShowSmallLogo] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + Skin.HasSetting(FanartTitle.InTopBar)</visible>
-                </control>
-		        <!-- Logo when triple shelf and fanart title below top bar, info line in shelf -->
-		        <control type="image">
-                    <posy>40</posy>
-		            <posx>1060</posx>
-                    <width>420</width>
-                    <height>115</height>
-                    <texture  background="true">$VAR[HomeClearLogo]</texture>
-		            <aspectratio>keep</aspectratio>
-			        <align>center</align>
-			        <aligny>center</aligny>
-                    <visible>$PARAM[ShowSmallLogo] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar) + [[Skin.HasSetting(ShowInfoLine) + Skin.HasSetting(ShowInfoLineShelf)] | !Skin.HasSetting(ShowInfoLine)]</visible>
-                </control>
-		        <!-- Logo when triple shelf and fanart title below top bar, info line below top bar -->
-		        <control type="image">
-                    <posy>50</posy>
-		            <posx>1060</posx>
-                    <width>420</width>
-                    <height>100</height>
-                    <texture  background="true">$VAR[HomeClearLogo]</texture>
-		            <aspectratio>keep</aspectratio>
-			        <align>center</align>
-			        <aligny>center</aligny>
-                    <visible>$PARAM[ShowSmallLogo] + Skin.HasSetting(VerticalHome) + Skin.HasSetting(Enable.FanartTitle) + !Skin.HasSetting(FanartTitle.InTopBar) + Skin.HasSetting(ShowInfoLine) + !Skin.HasSetting(ShowInfoLineShelf)</visible>
                 </control>
 		     </control>
 		</definition>	 

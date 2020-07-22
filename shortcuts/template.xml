@@ -2061,14 +2061,18 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		
-		<property name="ShowSmallLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
-	        <rule tag="property" attribute="name|widgetTriple" value="true" />
+		<property name="ShowMedium2Logo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="ShowSmallLogo">false</property>
+		<property name="ShowMedium2Logo">false</property>
 		
-		<property name="ShowMediumLogo" tag="property" attribute="name|widgetDouble" value="true">true</property>
+		<property name="ShowMediumLogo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
 		<property name="ShowMediumLogo">false</property>
 		
 		<property name="ShowLargeLogo" propertyValue="true">
@@ -2228,14 +2232,18 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.2" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		
-		<property name="ShowSmallLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
-	        <rule tag="property" attribute="name|widgetTriple.2" value="true" />
+		<property name="ShowMedium2Logo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="ShowSmallLogo">false</property>
+		<property name="ShowMedium2Logo">false</property>
 		
-		<property name="ShowMediumLogo" tag="property" attribute="name|widgetDouble.2" value="true">true</property>
+		<property name="ShowMediumLogo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.2" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
 		<property name="ShowMediumLogo">false</property>
 		
 		<property name="ShowLargeLogo" propertyValue="true">
@@ -2397,14 +2405,18 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.3" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		
-		<property name="ShowSmallLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
-	        <rule tag="property" attribute="name|widgetTriple.3" value="true" />
+		<property name="ShowMedium2Logo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="ShowSmallLogo">false</property>
+		<property name="ShowMedium2Logo">false</property>
 		
-		<property name="ShowMediumLogo" tag="property" attribute="name|widgetDouble.3" value="true">true</property>
+		<property name="ShowMediumLogo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.3" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
 		<property name="ShowMediumLogo">false</property>
 		
 		<property name="ShowLargeLogo" propertyValue="true">
@@ -2566,14 +2578,18 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.4" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		
-		<property name="ShowSmallLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
-	        <rule tag="property" attribute="name|widgetTriple.4" value="true" />
+		<property name="ShowMedium2Logo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="ShowSmallLogo">false</property>
+		<property name="ShowMedium2Logo">false</property>
 		
-		<property name="ShowMediumLogo" tag="property" attribute="name|widgetDouble.4" value="true">true</property>
+		<property name="ShowMediumLogo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.4" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
 		<property name="ShowMediumLogo">false</property>
 		
 		<property name="ShowLargeLogo" propertyValue="true">
@@ -2756,14 +2772,18 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.5" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		
-		<property name="ShowSmallLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
-	        <rule tag="property" attribute="name|widgetTriple.5" value="true" />
+		<property name="ShowMedium2Logo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="ShowSmallLogo">false</property>
+		<property name="ShowMedium2Logo">false</property>
 		
-		<property name="ShowMediumLogo" tag="property" attribute="name|widgetDouble.5" value="true">true</property>
+		<property name="ShowMediumLogo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.5" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
 		<property name="ShowMediumLogo">false</property>
 		
 		<property name="ShowLargeLogo" propertyValue="true">
@@ -2944,14 +2964,18 @@
 		<property name="backgroundheight" tag="property" attribute="name|widgetDouble.6" value="true">690</property>
 		<property name="backgroundheight">375</property>
 		
-		<property name="ShowSmallLogo" propertyValue="true">
-	        <rule tag="property" attribute="name|widgetThreeShelvesLarge" value="false" />
-	        <rule tag="property" attribute="name|widgetTriple.6" value="true" />
+		<property name="ShowMedium2Logo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Low" />
 			<match>all</match>
         </property>
-		<property name="ShowSmallLogo">false</property>
+		<property name="ShowMedium2Logo">false</property>
 		
-		<property name="ShowMediumLogo" tag="property" attribute="name|widgetDouble.6" value="true">true</property>
+		<property name="ShowMediumLogo" propertyValue="true">
+	        <rule tag="property" attribute="name|widgetDouble.6" value="true" />
+			<rule tag="property" attribute="name|horizontalWidgetPos" value="Standard" />
+			<match>all</match>
+        </property>
 		<property name="ShowMediumLogo">false</property>
 		
 		<property name="ShowLargeLogo" propertyValue="true">
