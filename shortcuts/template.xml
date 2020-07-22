@@ -8637,6 +8637,7 @@
 			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
+		<property name="heightdouble">727</property>
 		
 		<!-- Top when Widgets 1 and 2 have items, widget 3 does not -->
 		<!-- Widget 2 is small, widget 1 is small -->
@@ -8830,6 +8831,7 @@
 			<rule tag="property" attribute="name|widgetArtwork" value="Poster|Square|FanArt|Landscape|ClearArt|Thumb|DiscArt|CharacterArt" />
 			<match>all</match>
         </property>
+        <property name="label1topdouble">636</property>
 
         <!-- Medium  logo -->
 		
