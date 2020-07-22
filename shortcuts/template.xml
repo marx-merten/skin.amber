@@ -12306,7 +12306,7 @@
 	        <rule tag="property" attribute="name|widgetShowTextbox" value="true" />
 			<match>all</match>
         </property>
-		<property name="textboxvisibility">false</property>
+		<property name="textboxvisibility1">false</property>
 		
 		<property name="showTopRightMarks" propertyValue="false">
 	        <rule tag="property" attribute="name|widgetArtwork" value="ClearLogo" />
