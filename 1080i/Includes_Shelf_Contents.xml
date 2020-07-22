@@ -11,7 +11,7 @@
 		<param name="visible"></param>
 		<param name="ShowLargeLogo">false</param>
 		<param name="ShowMediumLogo">false</param>
-		<param name="ShowSmallLogo">false</param>
+		<param name="ShowMedium2Logo">false</param>
 		<definition>
             <visible>$PARAM[visible]</visible>
 			<control type="group">
@@ -82,8 +82,8 @@
 			</control>
 			<!-- Widget Logo -->
 			<include content="HomeWidgetLogo">
-				<param name="ShowSmallLogo">$PARAM[ShowSmallLogo]</param>
 				<param name="ShowMediumLogo">$PARAM[ShowMediumLogo]</param>
+				<param name="ShowMedium2Logo">$PARAM[ShowMedium2Logo]</param>
 				<param name="ShowLargeLogo">$PARAM[ShowLargeLogo]</param>
 			</include>
 		</definition>
@@ -102,6 +102,9 @@
 		<param name="heightdouble">727</param>
 		<param name="label1topdouble">636</param>
 		<param name="heightsingle">375</param>
+		<param name="ShowMediumLogo">false</param>
+		<param name="ShowMedium2Logo">false</param>
+		<param name="ShowLargeLogo">false</param>
 		<definition>
 			<!-- Both widgets have items -->
 			<control type="group">
@@ -285,6 +288,7 @@
 			<!-- Widget Logo -->
 			<include content="HomeWidgetLogo">
 				<param name="ShowMediumLogo">$PARAM[ShowMediumLogo]</param>
+				<param name="ShowMedium2Logo">$PARAM[ShowMedium2Logo]</param>
 				<param name="ShowLargeLogo">$PARAM[ShowLargeLogo]</param>
 			</include>
 		</definition>
