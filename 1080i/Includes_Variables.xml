@@ -821,7 +821,7 @@
     </variable>
 
     <variable name="panelsubheading2">
-        <value condition="[Container.Content(Seasons) | Container.Content(TVShows)] + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=$VAR[HighlightColor]]$LOCALIZE[32009]: [/COLOR]$INFO[Window(Home).Property(NextAired.NextNumber)] - $INFO[Window(Home).Property(NextAired.NextTitle)] - $INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value condition="[Container.Content(Seasons) | Container.Content(TVShows)] + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired))">[COLOR=$VAR[HighlightColor]]$LOCALIZE[32009]: [/COLOR]$INFO[Window(Home).Property(TMDBHelper.ListItem.Next_Aired.Season)]x$INFO[Window(Home).Property(TMDBHelper.ListItem.Next_Aired.Episode)] - $INFO[Window(Home).Property(TMDBHelper.ListItem.Next_Aired.Name)] - $INFO[Window(Home).Property(TMDBHelper.ListItem.Next_Aired)]</value>
 		<value condition="[Container.Content(Seasons) | Container.Content(TVShows)] + !String.IsEmpty(ListItem.Status)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[126]: [/COLOR]$INFO[ListItem.Status]</value>
 		<value condition="Container.Content(Seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !String.IsEmpty(ListItem(1).Status)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[126]: [/COLOR]$INFO[ListItem(1).Status]</value>
 		<value condition="[Container.Content(movies) | Container.Content(episodes)]">$VAR[AudioVar]$VAR[SubtitleVar]</value>
@@ -1177,6 +1177,11 @@
 		<value condition="String.IsEqual(Skin.CurrentColourTheme,Blue)">FF456DB8</value>
 		<value condition="String.IsEqual(Skin.CurrentColourTheme,Green)">FF45B864</value>
 		<value condition="String.IsEqual(Skin.CurrentColourTheme,White)">FFF1F1F1</value>
+	</variable>
+	
+	<variable name="MediaWidgetsHighlightColor">
+		<value condition="Skin.HasSetting(MatchPosterColors)">$INFO[Window(Home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
+		<value condition="!Skin.HasSetting(MatchPosterColors)">$VAR[HighlightColor]</value>
 	</variable>
 	
 	<variable name="GlowBarsColor">
