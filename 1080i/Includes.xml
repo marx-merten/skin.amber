@@ -577,12 +577,20 @@
                 <texture border="45">dialogs/TinyDialog.png</texture>
 				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
                 <visible>Integer.IsEqual(Container(9600).NumItems,10)</visible>
+            </control>
+            <control type="image">
+                <posy>92</posy>
+                <width>300</width>
+                <height>644</height>
+                <texture border="45">dialogs/TinyDialog.png</texture>
+				<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
+                <visible>Integer.IsEqual(Container(9600).NumItems,11)</visible>
             </control>            
             <control type="grouplist" id="9600">
                 <posx>26</posx>
                 <posy>116</posy>
                 <width>248</width>
-                <height>564</height>
+                <height>644</height>
                 <onleft>9000</onleft>
                 <onright condition="control.isvisible(52)">52</onright>
 		        <onright condition="control.isvisible(50)">50</onright>

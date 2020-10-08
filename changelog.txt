@@ -1,3 +1,6 @@
+3.2.101 (08-10-2020)
+- Fix issue of no background when trying to change viewtype
+- Add some missing French translations
 3.2.100 (06-10-2020)
 - Partial deprecation of tv show next aired
 - Added Simple List view
