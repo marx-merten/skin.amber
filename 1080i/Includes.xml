@@ -678,12 +678,12 @@
                     <onclick>Container.SetViewMode(56)</onclick>
                     <visible>!Skin.HasSetting(hide.fanartview)</visible>
                 </control>
-				<control type="button" id="9657">
+				<control type="button" id="96057">
                     <description>Set View 57</description>
                     <include>9000SysButtons</include>
                     <label>$LOCALIZE[31632]</label>
                     <onclick>Container.SetViewMode(57)</onclick>
-                    <visible>!Skin.HasSetting(hide.simplelisttview)</visible>
+                    <visible>!Skin.HasSetting(hide.simplelistview)</visible>
                 </control>
             </control>
         </control>
