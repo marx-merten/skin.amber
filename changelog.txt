@@ -1,3 +1,5 @@
+3.2.103 (09-10-2020)
+- Try another fix for not being able to switch to simple list
 3.2.102 (09-10-2020)
 - Fix issue of not being able to switch to simple list
 3.2.101 (08-10-2020)
