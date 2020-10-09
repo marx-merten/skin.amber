@@ -713,7 +713,7 @@
 							<param name="skinsetting" value="hide.fanartview"/>
 						</include>
 						<include content="YesNoSettingItem">
-							<param name="itemid" value="30"/>
+							<param name="itemid" value="34"/>
 							<param name="itemlabel" value="$LOCALIZE[31633]"/>
 							<param name="skinsetting" value="hide.simplelistview"/>
 						</include>
