@@ -1,3 +1,8 @@
+3.2.104 (12-10-2020)
+- Fix for actor images not showing when browsing 
+- Add support for Movie Director Thumbnails addon
+- Fix for top right marks not showing for video addons
+- Misc. fixes
 3.2.103 (09-10-2020)
 - Try another fix for not being able to switch to simple list
 3.2.102 (09-10-2020)
