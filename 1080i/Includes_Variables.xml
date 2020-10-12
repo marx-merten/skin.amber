@@ -156,7 +156,7 @@
 	
     <variable name="EpisodeLabel">
         <value condition="String.IsEqual(ListItem.DBType,season)">[B]$INFO[ListItem.Label][/B]</value>
-        <value condition="String.IsEqual(ListItem.DBType,episode)">[B]$LOCALIZE[31973] $INFO[ListItem.Season,,.]$INFO[ListItem.Episode][/B]</value>
+        <value condition="String.IsEqual(ListItem.DBType,episode) + [!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode)]">[B]$LOCALIZE[31973] $INFO[ListItem.Season,,.]$INFO[ListItem.Episode][/B]</value>
         <value condition="String.IsEmpty(ListItem.DBType)">$INFO[ListItem.Label]</value>
     </variable>
 

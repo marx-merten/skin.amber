@@ -1066,7 +1066,8 @@
 			    <visible>[!Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(Custom_1122_Search.xml) | Window.IsActive(Custom_1131_SingleSearch.xml)] + 
 				         [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,tvshow) | 
 				                                                  String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season) | 
-																  String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,album)] + $EXP[IsIconView]</visible>
+																  String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,album) | 
+																  String.IsEqual(ListItem.DBType,video)] + $EXP[IsIconView]</visible>
 				<!-- Normal Overlay for search results -->
 			    <control type="group">
 				    <visible>$PARAM[isSearch]</visible>
@@ -1118,7 +1119,7 @@
 				        <visible>!$PARAM[isFocused] + $PARAM[isWideIcon]</visible>
 				        <texture background="true">$VAR[TopRightOverlay]</texture>
 				        <posx>96r</posx>
-				        <posy>46</posy>
+				        <posy>16</posy>
 				        <height>72</height>
 				        <width>72</width>
 			        </control>
@@ -1126,7 +1127,7 @@
 				        <visible>$PARAM[isFocused] + $PARAM[isWideIcon]</visible>
 				        <texture background="true">$VAR[TopRightOverlay]</texture>
 				        <posx>96r</posx>
-				        <posy>46</posy>
+				        <posy>16</posy>
 				        <height>72</height>
 				        <width>72</width>
 				        <colordiffuse>$VAR[MediaWidgetsHighlightColor]</colordiffuse>
@@ -1164,7 +1165,7 @@
 				            <visible>!$PARAM[isFocused]</visible>
 				            <texture background="true">$VAR[TopRightOverlay]</texture>
 				            <posx>92r</posx>
-				            <posy>42</posy>
+				            <posy>12</posy>
 				            <height>72</height>
 				            <width>72</width>
 			            </control>
@@ -1172,7 +1173,7 @@
 				            <visible>$PARAM[isFocused]</visible>
 				            <texture background="true">$VAR[TopRightOverlay]</texture>
 				            <posx>92r</posx>
-				            <posy>42</posy>
+				            <posy>12</posy>
 				            <height>72</height>
 				            <width>72</width>
 				            <colordiffuse>$VAR[MediaWidgetsHighlightColor]</colordiffuse>
@@ -2624,7 +2625,7 @@
 				<param name="shadowoffset">8</param>
 				<param name="bordersizeLT">16</param>
 				<param name="bordersizeRB">24</param>
-				<param name="overlaylabelvisibility">!ListItem.IsParentFolder + [String.IsEqual(ListItem.DBType,episode) | String.IsEmpty(listitem.DBType)]</param>
+				<param name="overlaylabelvisibility">!ListItem.IsParentFolder + [[String.IsEqual(ListItem.DBType,episode) + [!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode)]] | String.IsEmpty(listitem.DBType)]</param>
 				<param name="overlaylabel">$VAR[EpisodeLabel]</param>
 			</include>
 		</definition>
@@ -2644,7 +2645,7 @@
 				<param name="shadowoffset">8</param>
 				<param name="bordersizeLT">12</param>
 				<param name="bordersizeRB">20</param>
-				<param name="overlaylabelvisibility">!ListItem.IsParentFolder + [String.IsEqual(ListItem.DBType,episode) | String.IsEmpty(listitem.DBType)]</param>
+				<param name="overlaylabelvisibility">!ListItem.IsParentFolder + [[String.IsEqual(ListItem.DBType,episode) + [!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode)]] | String.IsEmpty(listitem.DBType)]</param>
 				<param name="overlaylabel">$VAR[EpisodeLabel]</param>
 			</include>
 		</definition>
