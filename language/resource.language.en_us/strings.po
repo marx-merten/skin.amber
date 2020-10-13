@@ -3011,3 +3011,7 @@ msgstr ""
 msgctxt "#32289"
 msgid "Match Poster Colors"
 msgstr ""
+
+msgctxt "#32290"
+msgid "Show Seek Bar at Bottom"
+msgstr ""

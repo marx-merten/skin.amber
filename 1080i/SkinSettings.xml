@@ -172,6 +172,11 @@
 							<param name="itemlabel" value="$LOCALIZE[32052]"/>
 							<param name="skinsetting" value="Show.Info.OnPause"/>
 						</include>
+						<include content="YesNoSettingItem">
+							<param name="itemid" value="16"/>
+							<param name="itemlabel" value="$LOCALIZE[32290]"/>
+							<param name="skinsetting" value="enable.bottomseekbar"/>
+						</include>
                         <include content="YesNoSettingItem">
 							<param name="itemid" value="8"/>
 							<param name="itemlabel" value="[B]$LOCALIZE[32071][/B]"/>

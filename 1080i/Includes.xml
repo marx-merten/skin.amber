@@ -27,6 +27,7 @@
     <include file="Includes_Info.xml" />
 	<include file="Includes_TVGuide.xml" />
 	<include file="Includes_Backgrounds.xml" />
+	<include file="Includes_FullScreen.xml" />
 
     <include file="Includes_Media.xml" />
     <include file="Includes_List.xml" />
