@@ -1,3 +1,5 @@
+3.2.105 (14-10-2020)
+- Add option to show seek bar at the bottom
 3.2.104 (12-10-2020)
 - Fix for actor images not showing when browsing 
 - Add support for Movie Director Thumbnails addon
