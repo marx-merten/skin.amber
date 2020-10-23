@@ -1782,6 +1782,7 @@
                 <param name="belowdoublelabel2">[I]$INFO[ListItem.Property(job)][/I]</param>
                 <param name="content">$VAR[TMDbCrewMembers]</param>
                 <param name="visibility1">!Skin.HasSetting(DisableInfoListCrew)</param>
+				<param name="iconimage">$INFO[Container.ListItem.Icon]</param>
             </include>
             <!-- Movies from Director -->
             <include content="VideoInfoPosterWidget" condition="!String.IsEmpty(ListItem.Director) | !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Director))">
@@ -1864,10 +1865,11 @@
 				<param name="labelid">9100161</param>
                 <param name="headinglabel">$LOCALIZE[32130]</param>
                 <param name="belowdoublelabelvisibility">false</param>
-                <param name="belowlabelvisibility">true</param>
+                <param name="belowlabelvisibility">false</param>
                 <param name="onclickinclude">InfoList_OnClickPosters</param>
 				<param name="visibility1">!Skin.HasSetting(DisableInfoListPosters)</param>
                 <param name="content">$VAR[TMDbPosters]</param>
+				<param name="iconimage">$INFO[Container.ListItem.Icon]</param>
             </include>
             <!-- Person Info Widget Lists -->
 			<!-- Cast in Movies-->
@@ -1916,9 +1918,10 @@
 				<param name="labelid">9100151</param>
                 <param name="headinglabel">$LOCALIZE[1]</param>
                 <param name="belowdoublelabelvisibility">false</param>
-                <param name="belowlabelvisibility">true</param>
+                <param name="belowlabelvisibility">false</param>
                 <param name="onclickinclude">InfoList_OnClickPictures</param>
                 <param name="content">$VAR[InfoCastList05]</param>
+				<param name="iconimage">$INFO[Container.ListItem.Icon]</param>
             </include>
         </control>
 		

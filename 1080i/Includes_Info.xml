@@ -1992,6 +1992,8 @@
         <param name="minnumitems">1</param>
         <param name="sortby"></param>
         <param name="sortorder"></param>
+		<param name="iconimage">$INFO[Container.ListItem.Art(poster)]</param>
+		<param name="aspect">stretch</param>
         <definition>
             <control type="group" id="$PARAM[labelid]">
 			    <top>44</top>
@@ -2042,6 +2044,8 @@
                     <param name="belowlabelvisibility">$PARAM[belowlabelvisibility]</param>
                     <param name="belowlabel">$PARAM[belowlabel]</param>
                     <param name="belowlabelheight">$PARAM[belowlabelheight]</param>
+					<param name="iconimage">$PARAM[iconimage]</param>
+					<param name="aspect">$PARAM[aspect]</param>
                 </include>
                 <content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="25" target="videos">$PARAM[content]</content>                        
             </control>

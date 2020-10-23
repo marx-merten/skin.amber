@@ -2831,6 +2831,8 @@
 		<param name="belowlabel" />
         <param name="belowlabelheight">35</param>
 		<param name="isSmallIcon">true</param>
+		<param name="iconimage">$INFO[ListItem.Icon]</param>
+		<param name="aspect">scale</param>
 		<definition>
 			<itemlayout height="410" width="232.5">
 			    <include content="GenericThumbIconTemplate">
@@ -2838,7 +2840,7 @@
 				    <param name="iconwidth">232.5</param>
 				    <param name="iconheight">326</param>
 				    <param name="iconoffset">0</param>
-				    <param name="iconimage">$INFO[ListItem.Icon]</param>
+				    <param name="iconimage">$PARAM[iconimage]</param>
 				    <param name="fallbackicon">DefaultActorPoster.png</param>
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
@@ -2851,7 +2853,7 @@
                     <param name="belowdoublelabel2">$PARAM[belowdoublelabel2]</param>
                     <param name="labelfont1">ListDetailsSmall</param>
                     <param name="labelfont2">ListDetailsSmall</param>
-				    <param name="aspect">scale</param>
+				    <param name="aspect">$PARAM[aspect]</param>
 					<param name="isSmallIcon">$PARAM[isSmallIcon]</param>
 			    </include>
 			</itemlayout>
@@ -2861,7 +2863,7 @@
 				    <param name="iconwidth">232.5</param>
 				    <param name="iconheight">326</param>
 				    <param name="iconoffset">0</param>
-				    <param name="iconimage">$INFO[ListItem.Icon]</param>
+				    <param name="iconimage">$PARAM[iconimage]</param>
 				    <param name="fallbackicon">DefaultActorPoster.png</param>
 				    <param name="shadowoffset">8</param>
 				    <param name="bordersizeLT">12</param>
@@ -2874,7 +2876,7 @@
                     <param name="belowdoublelabel2">$PARAM[belowdoublelabel2]</param>
                     <param name="labelfont1">ListDetailsSmall</param>
                     <param name="labelfont2">ListDetailsSmall</param>
-				    <param name="aspect">scale</param>
+				    <param name="aspect">$PARAM[aspect]</param>
 					<param name="isSmallIcon">$PARAM[isSmallIcon]</param>
 			    </include>                
 			</focusedlayout>
