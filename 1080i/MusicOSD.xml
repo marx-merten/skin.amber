@@ -2,6 +2,7 @@
 <window>
     <defaultcontrol always="true">1015</defaultcontrol>
     <onload condition="!Player.PauseEnabled">SetFocus(1016)</onload>
+	<onunload>ClearProperty(PopupMenuActive,Home)</onunload>
     <include>OSDFade</include>
     <controls>
         <control type="slider" id="87">
@@ -40,6 +41,9 @@
                 </include>
                 <left>100</left>
                 <onup>2010</onup>
+				<onfocus>ClearProperty(PopupMenuActive,Home)</onfocus>
+				<onclick>SetProperty(PopupMenuActive,Yes,Home)</onclick>
+				<onclick>SetFocus(2010)</onclick>
                 <ondown>101</ondown>
             </control>
         </control>
@@ -179,12 +183,23 @@
         <control type="group" id="2000">
             <top>555</top>
             <left>830</left>
-            <visible>Control.HasFocus(1002) | ControlGroup(2000).HasFocus</visible>
-            <control type="image" description="Dialog BG">
+<!--            <visible>Control.HasFocus(1002) | ControlGroup(2000).HasFocus</visible> -->
+            <visible>!String.IsEmpty(Window(Home).Property(PopupMenuActive))</visible>
+			<control type="image" description="Dialog BG">
                 <height>370</height>
                 <width>535</width>
                 <texture border="45">dialogs/TinyDialog.png</texture>
             </control>
+			<control type="button">
+				<description>Hidden button to close the popup when you click outside it</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1920</width>
+				<height>960</height>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<onclick>ClearProperty(PopupMenuActive,Home)</onclick>
+			</control>
             <control type="grouplist" id="2010">
                 <left>30</left>
                 <top>30</top>

@@ -4,6 +4,8 @@
     <onload condition="!Player.PauseEnabled">SetFocus(603)</onload>
 	<onload condition="Player.PauseEnabled">SetFocus(602)</onload>
 	<onload>Dialog.Close(fullscreeninfo)</onload>
+	<onunload>ClearProperty(PopupMenuActive,Home)</onunload>
+	<onunload>ClearProperty(PopupMenu2Active,Home)</onunload>
 	<include>OSDFade</include>
 	<controls>
 		<control type="group">
@@ -56,8 +58,10 @@
 					    </include>
 					    <onup condition="!Skin.HasSetting(SubtitleOpensSettings)">1110</onup>
 					    <ondown>101</ondown>
-					    <onclick condition="Skin.HasSetting(SubtitleOpensSettings)">ActivateWindow(osdsubtitlesettings)</onclick>
-					    <onclick condition="!Skin.HasSetting(SubtitleOpensSettings)">ShowSubtitles</onclick>
+					    <onfocus>ClearProperty(PopupMenuActive,Home)</onfocus>
+						<onclick condition="Skin.HasSetting(SubtitleOpensSettings)">ActivateWindow(osdsubtitlesettings)</onclick>
+					    <onclick condition="!Skin.HasSetting(SubtitleOpensSettings)">SetProperty(PopupMenuActive,Yes,Home)</onclick>
+						<onclick condition="!Skin.HasSetting(SubtitleOpensSettings)">SetFocus(1110)</onclick>
 					    <oninfo>Skin.ToggleSetting(OSDInfo)</oninfo>
 				    </control>
 				    <control type="radiobutton" id="606">
@@ -114,6 +118,9 @@
 					    <onup>1010</onup>
 					    <ondown>101</ondown>
 					    <oninfo>Skin.ToggleSetting(OSDInfo)</oninfo>
+						<onfocus>ClearProperty(PopupMenu2Active,Home)</onfocus>
+				        <onclick>SetProperty(PopupMenu2Active,Yes,Home)</onclick>
+				        <onclick>SetFocus(1010)</onclick>
 				    </control>
 			    </control>
 			    <control type="grouplist" id="101">
@@ -247,7 +254,18 @@
 				    <height>310</height>
 				    <width>535</width>
 				    <left>840</left>
-				    <visible>Control.HasFocus(659) | ControlGroup(1010).HasFocus</visible>
+<!--					<visible>Control.HasFocus(659) | ControlGroup(1000).HasFocus</visible> -->					
+					<visible>!String.IsEmpty(Window(Home).Property(PopupMenu2Active))</visible>
+                    <control type="button">
+				        <description>Hidden button to close the popup when you click outside it</description>
+				        <posx>0</posx>
+				        <posy>0</posy>
+				        <width>1920</width>
+				        <height>960</height>
+				        <texturenofocus></texturenofocus>
+				        <texturefocus></texturefocus>
+				        <onclick>ClearProperty(PopupMenu2Active,Home)</onclick>
+			        </control>
 				    <control type="grouplist" id="1010">
 					    <left>30</left>
 					    <width>470</width>
@@ -296,8 +314,19 @@
 			    </control>
 			    <control type="group" id="1100">
 				    <left>830</left>
-				    <visible>[Control.HasFocus(656) | ControlGroup(1100).HasFocus] + !Skin.HasSetting(SubtitleOpensSettings)</visible>
-				    <control type="grouplist" id="1110">
+<!--				    <visible>[Control.HasFocus(656) | ControlGroup(1100).HasFocus] + !Skin.HasSetting(SubtitleOpensSettings)</visible> -->
+					<visible>!String.IsEmpty(Window(Home).Property(PopupMenuActive))</visible>
+                    <control type="button">
+				        <description>Hidden button to close the popup when you click outside it</description>
+				        <posx>0</posx>
+				        <posy>0</posy>
+				        <width>1920</width>
+				        <height>960</height>
+				        <texturenofocus></texturenofocus>
+				        <texturefocus></texturefocus>
+				        <onclick>ClearProperty(PopupMenuActive,Home)</onclick>
+			        </control>
+					<control type="grouplist" id="1110">
 					    <align>right</align>
 					    <left>30</left>
 					    <width>470</width>
