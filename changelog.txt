@@ -1,3 +1,9 @@
+3.2.106 (25-10-2020)
+- Fix for season posters not showing in video info dialog
+- Make Music OSD and Video OSD popup dialogs more mouse-friendly
+- Fixes for Music OSD when seek bar is at the bottom
+- Fix highlight color for trakt dialogs
+- Misc. fixes
 3.2.105 (14-10-2020)
 - Add option to show seek bar at the bottom
 3.2.104 (12-10-2020)
