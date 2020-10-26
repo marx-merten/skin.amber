@@ -15,6 +15,13 @@
 	    <top>-11</top>
 	</include>
 	
+	<include name="LowerMusicOSDSlider">
+	    <top>941</top>
+	</include>
+	<include name="RegularMusicOSDSlider">
+	    <top>-10</top>
+	</include>
+	
 	<include name="LowerOSDButtons">
 	    <top>800</top>
 	</include>
