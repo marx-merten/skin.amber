@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
+	<defaultcontrol always="true">110</defaultcontrol>
+	<zorder>0</zorder>
 	<include>OpenClose</include>
 	<controls>
 		<control type="group">
@@ -106,7 +108,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>40</height>
-            <texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
+						<texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
 					</control>
 					<control type="label">
 						<posx>10</posx>
@@ -114,8 +116,8 @@
 						<height>40</height>
 						<align>left</align>
 						<aligny>center</aligny>
-            <textcolor>$VAR[FocusedTextColor]</textcolor>
-            <shadowcolor></shadowcolor>
+						<textcolor>$VAR[FocusedTextColor]</textcolor>
+						<shadowcolor></shadowcolor>
 						<selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
