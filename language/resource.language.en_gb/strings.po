@@ -3019,3 +3019,7 @@ msgstr ""
 msgctxt "#32291"
 msgid "Show HDR/SDR and Bit Depth Flags"
 msgstr ""
+
+msgctxt "#32292"
+msgid "File Name Instead of Title"
+msgstr ""

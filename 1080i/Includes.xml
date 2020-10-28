@@ -1078,6 +1078,17 @@
             <label>- $LOCALIZE[31970]</label>
         </control>
     </include>
+	
+	<include name="IconViewTitleSwitch">
+	    <control type="radiobutton" id="9131" description="Icon View: Swap Title with File name">
+            <visible>Control.IsVisible(53)</visible>
+            <font>ListDetails</font>
+            <include>9000SysButtons</include>
+            <onclick>Skin.ToggleSetting(53_FileNameNotTitle)</onclick>
+            <selected>Skin.HasSetting(53_FileNameNotTitle)</selected>
+            <label>- $LOCALIZE[32292]</label>
+        </control>
+    </include>
 
 
     <variable name="ViewModeSwitch">
@@ -1170,10 +1181,12 @@
         </include>
         
 		<include content="ViewSettingsSwapPanel">
-			    <param name="viewid">52</param>
+			<param name="viewid">52</param>
 		</include>
 			
         <include>FanartViewSwitches</include>
+		
+		<include>IconViewTitleSwitch</include>
 
         <control type="button" id="6053">
             <include>9000SysButtons</include>
