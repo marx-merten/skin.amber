@@ -1718,6 +1718,16 @@
 												  
 	<expression name="isSpecialContent">[Container.Content() | Container.Content(videos) | Container.Content(files) | Container.Content(playlists) | Container.Content(Tags) | Container.Content(Actors) | 
 	                                     Container.Content(Directors) | Container.Content(Years) | Container.Content(Countries) | Container.Content(roles) | Container.Content(genres) | Container.Content(studios)]</expression>
+										 
+										 
+	<expression name="ContainerIsHDR">[String.Contains(Container.ListItem.Filename,hdr) | String.Contains(Container.ListItem.Filename,sdr)] | 
+	                                  [[String.Contains(Container.ListItem.Filename,8bit) | String.Contains(Container.ListItem.Filename,8-bit)] | 
+									   [String.Contains(Container.ListItem.Filename,10bit) | String.Contains(Container.ListItem.Filename,10-bit)] | 
+									   [String.Contains(Container.ListItem.Filename,12bit) | String.Contains(Container.ListItem.Filename,12-bit)]]</expression>
+									   
+	<expression name="ListItemIsHDR">[String.Contains(ListItem.Filename,hdr) | String.Contains(ListItem.Filename,sdr)] | 
+	                                  [[String.Contains(ListItem.Filename,8bit) | String.Contains(ListItem.Filename,8-bit)] | 
+									   [String.Contains(ListItem.Filename,10bit) | String.Contains(ListItem.Filename,10-bit)] | 
+									   [String.Contains(ListItem.Filename,12bit) | String.Contains(ListItem.Filename,12-bit)]]</expression>
 	
-
 </includes>

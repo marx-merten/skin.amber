@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <variable name="VideoResolutionFlagVar">
+		<value condition="String.Contains(Container.ListItem.filename,uhd) | String.Contains(Container.ListItem.filename,4k)">badges/videoresolution/4k.png</value>
+		<value condition="String.Contains(Container.ListItem.filename,8k)">badges/videoresolution/8k.png</value>
+		<value>$INFO[Container.ListItem.VideoResolution,badges/videoresolution/,.png]</value>
+	</variable>
+	
+	<variable name="MediaInfoVideoResolutionFlagVar">
+		<value condition="String.Contains(ListItem.filename,uhd) | String.Contains(ListItem.filename,4k)">badges/videoresolution/4k.png</value>
+		<value condition="String.Contains(ListItem.filename,8k)">badges/videoresolution/8k.png</value>
+		<value>$INFO[ListItem.VideoResolution,badges/videoresolution/,.png]</value>
+	</variable>
+	
+	<variable name="VideoCodecFlagVar">
+		<value condition="[String.Contains(Container.ListItem.filename,pdtv) | String.Contains(Container.ListItem.filename,sdtv) | String.Contains(ListItem.filename,sd-tv)]">badges/videocodec/sdtv.png</value>
+		<value condition="[String.Contains(Container.ListItem.Filename,hdtv) | String.Contains(Container.ListItem.Filename,hd-tv)]">badges/videocodec/hdtv.png</value>
+		<value condition="[String.Contains(Container.ListItem.Filename,hddvd) | String.Contains(Container.ListItem.Filename,hd-dvd)]">badges/videocodec/hddvd.png</value>
+		<value condition="[String.Contains(Container.ListItem.Filename,bluray) | String.Contains(Container.ListItem.Filename,blu-ray) | String.Contains(Container.ListItem.Filename,bdrip) | String.Contains(Container.ListItem.Filename,brrip) | String.IsEqual(Container.ListItem.FileExtension,bdmv)]">badges/videocodec/bluray.png</value>
+		<value condition="String.Contains(Container.ListItem.Filename,web-dl) | String.Contains(Container.ListItem.Filename,webdl) | String.Contains(Container.ListItem.Filename,webrip)">badges/videocodec/webdl.png</value>
+		<value condition="String.Contains(Container.ListItem.Filename,dvd) | String.IsEqual(Container.ListItem.FileExtension,iso) | String.IsEqual(Container.ListItem.FileExtension,ifo)">badges/videocodec/dvd.png</value>
+		<value>$INFO[Container.ListItem.VideoCodec,badges/videocodec/,.png]</value>
+	</variable>
+	
+	<variable name="MediaInfoVideoCodecFlagVar">
+		<value condition="[String.Contains(ListItem.filename,pdtv) | String.Contains(ListItem.filename,sdtv) | String.Contains(ListItem.filename,sd-tv)]">badges/videocodec/sdtv.png</value>
+		<value condition="[String.Contains(ListItem.Filename,hdtv) | String.Contains(ListItem.Filename,hd-tv)]">badges/videocodec/hdtv.png</value>
+		<value condition="[String.Contains(ListItem.Filename,hddvd) | String.Contains(ListItem.Filename,hd-dvd)]">badges/videocodec/hddvd.png</value>
+		<value condition="[String.Contains(ListItem.Filename,bluray) | String.Contains(ListItem.Filename,blu-ray) | String.Contains(ListItem.Filename,bdrip) | String.Contains(ListItem.Filename,brrip) | String.IsEqual(ListItem.FileExtension,bdmv)]">badges/videocodec/bluray.png</value>
+		<value condition="String.Contains(ListItem.Filename,web-dl) | String.Contains(ListItem.Filename,webdl) | String.Contains(ListItem.Filename,webrip)">badges/videocodec/webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename,dvd) | String.IsEqual(ListItem.FileExtension,iso) | String.IsEqual(ListItem.FileExtension,ifo)">badges/videocodec/dvd.png</value>
+		<value>$INFO[ListItem.VideoCodec,badges/videocodec/,.png]</value>
+	</variable>
+	
+	<variable name="AudioCodecFlagVar">
+		<value condition="String.Contains(Container.ListItem.Filename,atmos)">badges/audiocodec/atmos.png</value>
+		<value condition="String.Contains(Container.ListItem.Filename,dtsx) | String.Contains(Container.ListItem.Filename,dts-x)">badges/audiocodec/dtsx.png</value>
+		<value>$INFO[Container.ListItem.AudioCodec,badges/audiocodec/,.png]</value>
+	</variable>
+	
+	<variable name="MediaInfoAudioCodecFlagVar">
+		<value condition="String.Contains(ListItem.Filename,atmos)">badges/audiocodec/atmos.png</value>
+		<value condition="String.Contains(ListItem.Filename,dtsx) | String.Contains(ListItem.Filename,dts-x)">badges/audiocodec/dtsx.png</value>
+		<value>$INFO[ListItem.AudioCodec,badges/audiocodec/,.png]</value>
+	</variable>
+	
+	<variable name="HDRFlagVar">
+		<value condition="String.Contains(Container.ListItem.Filename,hdr)">badges/colorrange/hdr.png</value>
+		<value condition="String.Contains(Container.ListItem.Filename,sdr)">badges/colorrange/sdr.png</value>
+	</variable>
+	
+	<variable name="MediaInfoHDRFlagVar">
+		<value condition="String.Contains(ListItem.Filename,hdr)">badges/colorrange/hdr.png</value>
+		<value condition="String.Contains(ListItem.Filename,sdr)">badges/colorrange/sdr.png</value>
+	</variable>
+	
+	<variable name="BitDepthFlagVar">
+		<value condition="String.Contains(Container.ListItem.Filename,8bit) | String.Contains(Container.ListItem.Filename,8-bit)">badges/colorrange/8bit.png</value>
+		<value condition="String.Contains(Container.ListItem.Filename,10bit) | String.Contains(Container.ListItem.Filename,10-bit)">badges/colorrange/10bit.png</value>
+		<value condition="String.Contains(Container.ListItem.Filename,12bit) | String.Contains(Container.ListItem.Filename,12-bit)">badges/colorrange/12bit.png</value>
+	</variable>
+	
+	<variable name="MediaInfoBitDepthFlagVar">
+		<value condition="String.Contains(ListItem.Filename,8bit) | String.Contains(ListItem.Filename,8-bit)">badges/colorrange/8bit.png</value>
+		<value condition="String.Contains(ListItem.Filename,10bit) | String.Contains(ListItem.Filename,10-bit)">badges/colorrange/10bit.png</value>
+		<value condition="String.Contains(ListItem.Filename,12bit) | String.Contains(ListItem.Filename,12-bit)">badges/colorrange/12bit.png</value>
+	</variable>
+
 	<include name="ListWatchedOverlay">
 		<param name="isFocused">false</param>
         <param name="itemheight">72</param>
@@ -687,7 +753,7 @@
 		<param name="showvideobadge">true</param>
 		<param name="showaudiobadge">true</param>
 		<param name="showratingbadge">true</param>
-		<param name="type">ListItem</param>
+		<param name="type">Container.ListItem</param>
 		<definition>
 			<control type="image" id="89001">
 				<visible>!String.IsEmpty($PARAM[type].VideoResolution)</visible>
@@ -698,7 +764,7 @@
 				<bordersize>3</bordersize>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>$PARAM[diffuse]</colordiffuse>
-				<texture>$INFO[$PARAM[type].VideoResolution,badges/videoresolution/,.png]</texture>
+				<texture>$VAR[VideoResolutionFlagVar]</texture>
 			</control>
 			<control type="image" id="89002">
 				<visible>!String.IsEmpty($PARAM[type].VideoCodec)</visible>
@@ -709,7 +775,7 @@
 				<bordersize>3</bordersize>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>$PARAM[diffuse]</colordiffuse>
-				<texture>$INFO[$PARAM[type].VideoCodec,badges/videocodec/,.png]</texture>
+				<texture>$VAR[VideoCodecFlagVar]</texture>
 			</control>
 			<control type="image" id="89003">
 				<visible>!String.IsEmpty($PARAM[type].VideoAspect)</visible>
@@ -742,7 +808,7 @@
 				<bordersize>3</bordersize>
 				<aspectratio>keep</aspectratio>
 				<colordiffuse>$PARAM[diffuse]</colordiffuse>
-				<texture>$INFO[$PARAM[type].AudioCodec,badges/audiocodec/,.png]</texture>
+				<texture>$VAR[AudioCodecFlagVar]</texture>
 			</control>
 			<control type="image" id="89005">
 				<visible>!String.IsEmpty($PARAM[type].FileExtension)</visible>
@@ -775,6 +841,148 @@
 				<aspectratio>keep</aspectratio>
 				<texture>$VAR[$PARAM[type].ratingbadge]</texture>
 				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+			</control>
+			<control type="image" id="89007">
+				<visible>!String.IsEmpty($PARAM[type].VideoResolution)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo) + Skin.HasSetting(Show.ColorRangeFlags) + [$EXP[ContainerIsHDR] | $EXP[ListItemIsHDR]]</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[HDRFlagVar]</texture>
+			</control>
+			<control type="image" id="89008">
+				<visible>!String.IsEmpty($PARAM[type].VideoResolution)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo) + Skin.HasSetting(Show.ColorRangeFlags) + [$EXP[ContainerIsHDR] | $EXP[ListItemIsHDR]]</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[BitDepthFlagVar]</texture>
+			</control>
+		</definition>
+	</include>
+	
+	<include name="MediaInfoMediaFlagItems">
+		<param name="itemwidth" default="90"/>
+		<param name="itemheight" default="45"/>
+		<param name="diffuse">Silver</param>
+		<param name="showvideobadge">true</param>
+		<param name="showaudiobadge">true</param>
+		<param name="showratingbadge">true</param>
+		<definition>
+			<control type="image" id="89001">
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[MediaInfoVideoResolutionFlagVar]</texture>
+			</control>
+			<control type="image" id="89002">
+				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[MediaInfoVideoCodecFlagVar]</texture>
+			</control>
+			<control type="image" id="89003">
+				<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$INFO[ListItem.VideoAspect,badges/aspectratio/,.png]</texture>
+			</control>
+			<control type="image">
+				<visible>ListItem.IsStereoscopic</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>badges/3D.png</texture>
+			</control>            
+			<control type="image" id="89004">
+				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+				<visible>$PARAM[showaudiobadge]</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[MediaInfoAudioCodecFlagVar]</texture>
+			</control>
+			<control type="image" id="89005">
+				<visible>!String.IsEmpty(ListItem.FileExtension)</visible>
+				<visible>Container.Content(songs)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<visible>$PARAM[showaudiobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$INFO[ListItem.FileExtension,badges/audiocodec/,.png]</texture>
+			</control>
+			<control type="image" id="89006">
+				<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo)</visible>
+				<visible>$PARAM[showaudiobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$INFO[ListItem.AudioChannels,badges/audiochannels/channels,.png]</texture>
+			</control>
+			<control type="image" description="Stars">
+				<visible>$PARAM[showratingbadge] + String.IsEmpty(Container.PluginName) + Skin.HasSetting(ShowRatingUser)</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[ListItem.ratingbadge]</texture>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+			</control>
+			<control type="image" id="89007">
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo) + Skin.HasSetting(Show.ColorRangeFlags) + $EXP[ListItemIsHDR]</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[MediaInfoHDRFlagVar]</texture>
+			</control>
+			<control type="image" id="89008">
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+				<visible>!Skin.HasSetting(Hide.MediaFlagsVideo) + Skin.HasSetting(Show.ColorRangeFlags) + $EXP[ListItemIsHDR]</visible>
+				<visible>$PARAM[showvideobadge]</visible>
+				<height>$PARAM[itemheight]</height>
+				<width>$PARAM[itemwidth]</width>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$PARAM[diffuse]</colordiffuse>
+				<texture>$VAR[MediaInfoBitDepthFlagVar]</texture>
 			</control>
 		</definition>
 	</include>

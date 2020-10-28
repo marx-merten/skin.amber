@@ -1902,7 +1902,11 @@
                     <itemgap>20</itemgap>
                     <orientation>horizontal</orientation>
                     <align>left</align>
-                    <include content="MediaFlagItems">
+                    <include condition="Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
+                        <param name="diffuse">$VAR[LabelTextColor]</param>
+						<param name="itemwidth">70</param>
+                    </include>
+					<include condition="!Skin.HasSetting(Show.ColorRangeFlags)" content="MediaFlagItems">
                         <param name="diffuse">$VAR[LabelTextColor]</param>
                     </include>
                 </control>
@@ -2261,6 +2265,7 @@
         <param name="width"></param>
         <param name="visibility">true</param>
         <param name="showratingbadge">true</param>
+		<param name="itemwidth">90</param>
         <definition>
             <control type="grouplist" description="Flags">
                 <posy>$PARAM[top]</posy>
@@ -2275,6 +2280,7 @@
                 <include content="MediaFlagItems">
                     <param name="diffuse">$VAR[LabelTextColor]</param>
                     <param name="showratingbadge">$PARAM[showratingbadge]</param>
+					<param name="itemwidth">$PARAM[itemwidth]</param>
                 </include>
             </control>
         </definition>

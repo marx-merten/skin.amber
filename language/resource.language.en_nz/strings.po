@@ -3015,3 +3015,7 @@ msgstr ""
 msgctxt "#32290"
 msgid "Show Seek Bar at Bottom"
 msgstr ""
+
+msgctxt "#32291"
+msgid "Show HDR/SDR and Bit Depth Flags"
+msgstr ""
