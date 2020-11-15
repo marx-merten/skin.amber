@@ -172,6 +172,14 @@
         <value></value>
     </variable>
 	
+	<variable name="TripleEpisodeOverlay" description="Overlay image">
+        <value condition="!Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(Container(6002).ListItem.Overlay) + Container(6002).ListItem.IsResumable">$VAR[TripleEpisodeSoloInProgress]</value>
+        <value condition="Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(Container(6002).ListItem.Overlay) + Container(6002).ListItem.IsResumable"></value>
+        <value condition="!Skin.HasSetting(Hide_Watched_Marks) + !String.IsEmpty(Container(6002).ListItem.Overlay) + String.IsEqual(Container(6002).ListItem.Overlay,OverlayWatched.png)">$INFO[Container(6002).ListItem.Overlay]</value>
+        <value condition="!Skin.HasSetting(Hide_Unwatched_Marks) + !String.IsEmpty(Container(6002).ListItem.Overlay) + String.IsEqual(Container(6002).ListItem.Overlay,OverlayUnWatched.png)">$INFO[Container(6002).ListItem.Overlay]</value>
+        <value></value>
+    </variable>
+	
 	<variable name="SoloInProgress" description="Overlay image">
         <value condition="Integer.IsLess(ListItem.PercentPlayed,20)">OverlayInProgress10.png</value>
 		<value condition="Integer.IsGreaterOrEqual(ListItem.PercentPlayed,20) + Integer.IsLess(ListItem.PercentPlayed,30)">OverlayInProgress20.png</value>
@@ -182,6 +190,18 @@
 		<value condition="Integer.IsGreaterOrEqual(ListItem.PercentPlayed,70) + Integer.IsLess(ListItem.PercentPlayed,80)">OverlayInProgress70.png</value>
 		<value condition="Integer.IsGreaterOrEqual(ListItem.PercentPlayed,80) + Integer.IsLess(ListItem.PercentPlayed,90)">OverlayInProgress80.png</value>
 		<value condition="Integer.IsGreaterOrEqual(ListItem.PercentPlayed,90) + Integer.IsLess(ListItem.PercentPlayed,100)">OverlayInProgress90.png</value>
+    </variable>
+	
+	<variable name="TripleEpisodeSoloInProgress" description="Overlay image">
+        <value condition="Integer.IsLess(Container(6002).ListItem.PercentPlayed,20)">OverlayInProgress10.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,20) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,30)">OverlayInProgress20.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,30) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,40)">OverlayInProgress30.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,40) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,50)">OverlayInProgress40.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,50) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,60)">OverlayInProgress50.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,60) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,70)">OverlayInProgress60.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,70) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,80)">OverlayInProgress70.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,80) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,90)">OverlayInProgress80.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(6002).ListItem.PercentPlayed,90) + Integer.IsLess(Container(6002).ListItem.PercentPlayed,100)">OverlayInProgress90.png</value>
     </variable>
 	
 	<variable name="TopRightOverlay" description="Overlay image">
@@ -1258,6 +1278,11 @@
 		<value>99+</value>
 	</variable>
 	
+	<variable name="TripleSeasonUnwatchedEpisodes">
+	    <value condition="!Integer.IsGreater(Container(6001).ListItem.Property(UnWatchedEpisodes),99)">$INFO[Container(6001).ListItem.Property(UnWatchedEpisodes)]</value>
+		<value>99+</value>
+	</variable>
+	
 	<variable name="numPlaylistBackgrounds">
 	    <value>2</value>
 	</variable>
@@ -1718,8 +1743,8 @@
 	                              String.IsEqual(Container.ViewMode,$LOCALIZE[31963]) | String.IsEqual(Container.ViewMode,$LOCALIZE[32245]) | String.IsEqual(Container.ViewMode,$LOCALIZE[32246])</expression>
 	<expression name="widgetsAreShowing">ControlGroup(700).HasFocus | [Control.HasFocus(300) + !Container(300).ListItem.Property(widgetsHide) + !String.IsEmpty(Container(300).ListItem.Property(widgetPath))]</expression>
 												  
-	<expression name="isSpecialContent">[Container.Content() | Container.Content(videos) | Container.Content(files) | Container.Content(playlists) | Container.Content(Tags) | Container.Content(Actors) | 
-	                                     Container.Content(Directors) | Container.Content(Years) | Container.Content(Countries) | Container.Content(roles) | Container.Content(genres) | Container.Content(studios)]</expression>
+	<expression name="isSpecialContent">[Container.Content() | Container.Content(videos) | Container.Content(files) | Container.Content(playlists) | Container.Content(tags) | Container.Content(actors) | 
+	                                     Container.Content(directors) | Container.Content(years) | Container.Content(countries) | Container.Content(roles) | Container.Content(genres) | Container.Content(studios)]</expression>
 										 
 										 
 	<expression name="ContainerIsHDR">[String.Contains(Container.ListItem.Filename,hdr) | String.Contains(Container.ListItem.Filename,sdr)] | 
