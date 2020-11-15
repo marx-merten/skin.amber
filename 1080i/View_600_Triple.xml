@@ -99,6 +99,16 @@
                 <height>1000</height>
                 <texture>img/LineL.png</texture>
                 <aspectratio>stretch</aspectratio>
+				<visible>Container.Content(tvshows)</visible>
+            </control>
+			<control type="image" description="Line Split">
+                <posy>60</posy>
+                <left>1130</left>
+                <width>1</width>
+                <height>1000</height>
+                <texture>img/LineL.png</texture>
+                <aspectratio>stretch</aspectratio>
+				<visible>Container.Content(artists)</visible>
             </control>
 			
 			<!-- Left third of triple view: TV Shows or Artists -->
@@ -144,7 +154,7 @@
 				                    <param name="height">228</param>
 				                    <param name="texture">$VAR[Landscape]</param>
 				                    <param name="aspect">keep</param>
-								    <param name="visibility">!ListItem.IsParentFolder</param>
+								    <param name="visibility">!ListItem.IsParentFolder + Container.Content(tvshows)</param>
 			                    </include>
 							    <include content="ShadowedImage">
 				                    <param name="top">0</param>
@@ -153,7 +163,27 @@
 				                    <param name="height">228</param>
 				                    <param name="texture">defaultepisodeback.png</param>
 				                    <param name="aspect">keep</param>
-								    <param name="visibility">ListItem.IsParentFolder</param>
+								    <param name="visibility">ListItem.IsParentFolder + Container.Content(tvshows)</param>
+			                    </include>
+						    </control>
+							<control type="group">
+						        <include content="ShadowedImage">
+				                    <param name="top">0</param>
+				                    <param name="left">0</param>
+				                    <param name="width">406</param>
+				                    <param name="height">228</param>
+				                    <param name="texture">$VAR[Landscape]</param>
+				                    <param name="aspect">scale</param>
+								    <param name="visibility">!ListItem.IsParentFolder + Container.Content(artists)</param>
+			                    </include>
+							    <include content="ShadowedImage">
+				                    <param name="top">0</param>
+				                    <param name="left">0</param>
+				                    <param name="width">406</param>
+				                    <param name="height">228</param>
+				                    <param name="texture">defaultepisodeback.png</param>
+				                    <param name="aspect">scale</param>
+								    <param name="visibility">ListItem.IsParentFolder + Container.Content(artists)</param>
 			                    </include>
 						    </control>
 							<control type="image">
@@ -164,6 +194,17 @@
 								<height>236</height>
 								<texture diffuse="img/mask_cover3.png">img/solid_bg.png</texture>
 								<aspectratio align="center">scale</aspectratio>
+								<visible>Container.Content(tvshows)</visible>
+							</control>
+							<control type="image">
+								<visible>!Control.HasFocus(600)</visible>
+								<colordiffuse>65000000</colordiffuse>
+								<left>-2</left>
+								<width>410</width>
+								<height>228</height>
+								<texture diffuse="img/mask_cover3.png">img/solid_bg.png</texture>
+								<aspectratio align="center">scale</aspectratio>
+								<visible>Container.Content(artists)</visible>
 							</control>
 					    </control>
 						<include>TripleTopRightOverlay</include>
@@ -188,7 +229,7 @@
 				                    <param name="height">228</param>
 				                    <param name="texture">$VAR[Landscape]</param>
 				                    <param name="aspect">keep</param>
-								    <param name="visibility">!ListItem.IsParentFolder</param>
+								    <param name="visibility">!ListItem.IsParentFolder + Container.Content(tvshows)</param>
 			                    </include>
 							    <include content="ShadowedImage">
 				                    <param name="top">0</param>
@@ -197,7 +238,27 @@
 				                    <param name="height">228</param>
 				                    <param name="texture">defaultepisodeback.png</param>
 				                    <param name="aspect">keep</param>
-								    <param name="visibility">ListItem.IsParentFolder</param>
+								    <param name="visibility">ListItem.IsParentFolder + Container.Content(tvshows)</param>
+			                    </include>
+						    </control>
+							<control type="group">
+						        <include content="ShadowedImage">
+				                    <param name="top">0</param>
+				                    <param name="left">0</param>
+				                    <param name="width">406</param>
+				                    <param name="height">228</param>
+				                    <param name="texture">$VAR[Landscape]</param>
+				                    <param name="aspect">scale</param>
+								    <param name="visibility">!ListItem.IsParentFolder + Container.Content(artists)</param>
+			                    </include>
+							    <include content="ShadowedImage">
+				                    <param name="top">0</param>
+				                    <param name="left">0</param>
+				                    <param name="width">406</param>
+				                    <param name="height">228</param>
+				                    <param name="texture">defaultepisodeback.png</param>
+				                    <param name="aspect">scale</param>
+								    <param name="visibility">ListItem.IsParentFolder + Container.Content(artists)</param>
 			                    </include>
 						    </control>
 					    </control>
@@ -352,6 +413,145 @@
 						</control>
 					</focusedlayout>
 					<content target="video" sortby="year" sortorder="ascending">$INFO[Container(600).ListItem.FolderPath]</content>
+				</control>
+			</control>
+			
+			<!-- Middle third of triple view: Albums -->
+			<control type="group">
+				<visible>Control.IsVisible(600) + Container.Content(artists)</visible>
+				<control type="fixedlist" id="6003">
+					<animation effect="fade" start="100" end="70" condition="!Control.HasFocus(6003) + !Control.HasFocus(6004)">Conditional</animation>
+					<width>600</width>
+					<height>1020</height>
+					<top>60</top>
+					<left>510</left>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>vertical</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>3</movement>
+					<focusposition>0</focusposition>
+					<onleft>600</onleft>
+					<onright>6004</onright>
+					<onup>6003</onup>
+					<ondown>6003</ondown>
+					<viewtype label="Triple">list</viewtype>
+					<visible>Container.Content(artists)</visible>
+					<itemlayout height="255">
+						<control type="image">
+							<left>-80</left>
+							<top>-2</top>
+							<width>600</width>
+							<height>255</height>
+				            <texture flipy="true" border="3">list/ListNF.png</texture>
+						</control>
+						<control type="group">
+							<left>10</left>
+							<top>13</top>
+							<include content="ShadowedImage">
+				                <param name="top">0</param>
+				                <param name="left">10</param>
+				                <param name="width">224</param>
+				                <param name="height">224</param>
+				                <param name="texture">$VAR[Thumb]</param>
+				                <param name="aspect">scale</param>
+			                </include>
+							<control type="image">
+								<width>160</width>
+								<height>45</height>
+								<left>440</left>
+								<top>175</top>
+								<aspectratio>keep</aspectratio>
+								<colordiffuse>65FFFFFF</colordiffuse>
+								<texture>$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</texture>
+							</control>
+							<control type="textbox">
+								<visible>Control.HasFocus(6003)</visible>
+								<left>240</left>
+								<top>5</top>
+								<height>210</height>
+								<right>30</right>
+								<width>330</width>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>white</textcolor>
+								<font>ListDetails</font>
+								<label>[B]$INFO[ListItem.Label][/B] $INFO[ListItem.Year,(,)]</label>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<control type="textbox">
+								<visible>!Control.HasFocus(6003)</visible>
+								<left>240</left>
+								<top>5</top>
+								<height>210</height>
+								<right>30</right>
+								<width>330</width>
+								<align>left</align>
+								<aligny>center</aligny>
+								<font>ListDetails</font>
+								<textcolor>ff696967</textcolor>
+								<label>[B]$INFO[ListItem.Label][/B] $INFO[ListItem.Year,(,)]</label>
+								<shadowcolor>black</shadowcolor>
+							</control>
+							<control type="image">
+								<visible>!Control.HasFocus(6003)</visible>
+								<colordiffuse>65000000</colordiffuse>
+								<left>9</left>
+								<top>-1</top>
+								<width>226</width>
+								<height>226</height>
+								<texture diffuse="img/mask_cover3.png">img/solid_bg.png</texture>
+								<aspectratio align="center">scale</aspectratio>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="255">
+						<control type="group">
+							<control type="image">
+					            <texture background="true">thumbs/labelback.png</texture>
+					            <bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
+					            <bordersize>12,12,20,20</bordersize>
+					            <aspectratio align="center" aligny="center">stretch</aspectratio>
+						        <height>255</height>
+						        <width>600</width>
+				            </control>
+						</control>
+						<control type="group">
+							<left>10</left>
+							<top>13</top>
+							<include content="ShadowedImage">
+				                <param name="top">0</param>
+				                <param name="left">10</param>
+				                <param name="width">224</param>
+				                <param name="height">224</param>
+				                <param name="texture">$VAR[Thumb]</param>
+				                <param name="aspect">scale</param>
+			                </include>
+							<control type="image">
+								<width>160</width>
+								<height>45</height>
+								<left>440</left>
+								<top>175</top>
+								<aspectratio>keep</aspectratio>
+<!--								<colordiffuse>eeFFFFFF</colordiffuse> -->
+								<colordiffuse>$VAR[HighlightColor]</colordiffuse>
+								<texture>$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</texture>
+							</control>
+							<control type="textbox">
+								<left>240</left>
+								<top>5</top>
+								<height>210</height>
+								<right>30</right>
+								<width>330</width>
+								<align>left</align>
+								<aligny>center</aligny>
+								<font>ListDetails</font>
+								<textcolor>$VAR[HighlightColor]</textcolor>
+								<label>[B]$INFO[ListItem.Label][/B] $INFO[ListItem.Year,(,)]</label>
+								<shadowcolor>black</shadowcolor>
+							</control>
+						</control>
+					</focusedlayout>
+					<content target="music" sortby="year" sortorder="ascending">$INFO[Container(600).ListItem.FolderPath]</content>
 				</control>
 			</control>
 			
@@ -525,6 +725,72 @@
 						</control>
 					</focusedlayout> -->
 					<content target="video" sortby="episode" sortorder="ascending">$INFO[Container(6001).ListItem.FolderPath]</content>
+				</control>
+			</control>
+			
+			<!-- Right third of triple view: Tracks -->
+			<control type="group">
+				<visible>Control.IsVisible(600) + Container.Content(artists)</visible>
+				<control type="fixedlist" id="6004">
+					<animation effect="fade" start="100" end="70" condition="!Control.HasFocus(6003) + !Control.HasFocus(6004)">Conditional</animation>
+					<width>830</width>
+					<height>809</height>
+					<top>60</top>
+					<left>1150</left>
+					<preloaditems>2</preloaditems>
+					<onleft>6003</onleft>
+					<onup>6004</onup>
+					<ondown>6004</ondown>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>vertical</orientation>
+					<movement>10</movement>
+					<focusposition>0</focusposition>
+					<viewtype label="Triple">list</viewtype>
+					
+					<itemlayout height="67.5" condition="Container.Content(artists)">
+						<control type="image">
+							<left>-80</left>
+							<top>-2</top>
+							<width>830</width>
+							<height>67.5</height>
+				            <texture flipy="true" border="3">list/ListNF.png</texture>
+						</control>
+						<control type="label">
+							<top>1</top>
+							<left>20</left>
+							<height>58</height>
+							<width>660</width>
+							<align>left</align>
+							<font>font13</font>
+							<shadowcolor></shadowcolor>
+							<label>$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label] $INFO[ListItem.Duration,(,)]</label>
+						</control>
+					</itemlayout>
+					
+					<focusedlayout height="67.5" condition="Container.Content(artists)">
+						<control type="image">
+							<left>-80</left>
+							<top>-2</top>
+							<width>830</width>
+							<height>67.5</height>
+				            <texture border="4" colordiffuse="$VAR[HighlightColor]">img/WhiteRoundedST2.png</texture>
+				            <animation effect="fade" start="100" end="50" time="100" condition="!Control.HasFocus(6004)">Conditional</animation>
+						</control>
+						<control type="label">
+							<top>1</top>
+							<left>20</left>
+							<height>58</height>
+							<width>660</width>
+							<align>left</align>
+							<scroll>true</scroll>
+							<label>[B]$INFO[ListItem.TrackNumber,, - ]$INFO[ListItem.Label][/B] $INFO[ListItem.Duration,(,)]</label>
+							<textcolor>$VAR[FocusedTextColor]</textcolor>
+					        <selectedcolor>$VAR[FocusedTextColor]</selectedcolor>
+							<font>font13</font>
+							<shadowcolor></shadowcolor>
+						</control>
+					</focusedlayout>
+					<content target="music" sortby="track" sortorder="ascending">$INFO[Container(6003).ListItem.FolderPath]</content>
 				</control>
 			</control>
 			

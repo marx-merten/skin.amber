@@ -3266,10 +3266,10 @@
 				<texturenofocus />
 			</control>
 			<control type="group">
-			    <left>0</left>
+			    <left>-40</left>
 			    <height>1040</height>
 			    <animation type="Conditional" condition="[Control.HasFocus(617) | Control.HasFocus(61701)] + !System.HasActiveModalDialog" reversible="true">
-    				<effect type="slide" start="-40" end="0" time="480" tween="cubic" easing="out" />
+    				<effect type="slide" start="0" end="40" time="480" tween="cubic" easing="out" />
 			    </animation>
 			    <control type="image" description="background overlay">
                     <visible>Control.IsVisible(617)</visible>
