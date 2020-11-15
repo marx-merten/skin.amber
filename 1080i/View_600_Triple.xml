@@ -437,7 +437,6 @@
 					<viewtype label="Triple">list</viewtype>
 					<visible>Container.Content(artists)</visible>
 					<onclick condition="System.HasAddon(script.playalbum)">RunScript(script.playalbum,albumid=$INFO[Container(6003).ListItem.DBID])</onclick>
-                    <onclick condition="System.HasAddon(script.playalbum)">Action(close)</onclick>
 					<itemlayout height="255">
 						<control type="image">
 							<left>-80</left>
