@@ -701,7 +701,7 @@
                     <include>9000SysButtons</include>
                     <label>$LOCALIZE[31157]</label>
                     <onclick>Container.SetViewMode(600)</onclick>
-                    <visible>!Skin.HasSetting(hide.tripleview)</visible>
+                    <visible>!Skin.HasSetting(hide.tripleview) + [Container.Content(tvshows) | Container.Content(artists)]</visible>
                 </control>
             </control>
         </control>
@@ -3131,9 +3131,10 @@
 
 	<include name="ScriptJumpToLetter">
 		<control type="group">
-			<visible>System.HasAddon(script.embuary.helper)</visible>
-			<visible>!String.IsEqual(Container.Viewmode,$LOCALIZE[31157])</visible>
-			<visible>[Container.HasNext | Container.HasPrevious] + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
+			<visible>System.HasAddon(script.embuary.helper) + !String.IsEqual(Container.Viewmode,$LOCALIZE[31157]) + 
+			         [Container.HasNext | Container.HasPrevious] + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | 
+					                                                String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | 
+																	String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
 			<control type="button" id="61501">
 				<visible>!Control.IsVisible(56)</visible>
 				<label />
@@ -3167,7 +3168,10 @@
                     <texture border="0,30,0,0">common/viewmenu.png</texture> 
                 </control>
 			    <control type="list" id="615">
-				    <top>43</top>
+				    <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | 
+					          String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | 
+							  String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
+					<top>43</top>
 				    <width>40</width>
 				    <height>1040</height>
                     <onleft>SetFocus(50)</onleft>
@@ -3215,7 +3219,10 @@
 					<effect type="slide" start="0" end="0,-40" time="480" tween="cubic" easing="out" />
 				</animation>
 				<control type="list" id="616">
-				    <left>430</left>
+				    <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | 
+					          String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | 
+							  String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
+					<left>430</left>
 				    <width>1080</width>
 				    <height>40</height>
 				    <onup>SetFocus(50)</onup>
@@ -3254,9 +3261,10 @@
 		</control>
 		<!-- Jump to letter for Triple view -->
 		<control type="group">
-			<visible>System.HasAddon(script.embuary.helper)</visible>
-			<visible>String.IsEqual(Container.Viewmode,$LOCALIZE[31157])</visible>
-			<visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
+			<visible>System.HasAddon(script.embuary.helper) + String.IsEqual(Container.Viewmode,$LOCALIZE[31157]) + 
+			         [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | 
+					  String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | 
+					  String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
 			<control type="button" id="61701">
 				<label />
 				<left>1</left>
@@ -3280,7 +3288,10 @@
                     <texture border="0,30,0,0">common/viewmenu.png</texture> 
                 </control>
 			    <control type="list" id="617">
-				    <top>43</top>
+				    <visible>[String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | 
+					          String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | 
+							  String.IsEqual(Container.SortMethod,$LOCALIZE[561])]</visible>
+					<top>43</top>
 				    <width>40</width>
 				    <height>1040</height>
                     <onleft condition="!Skin.HasSetting(KioskMode.Enabled)">9000</onleft>
