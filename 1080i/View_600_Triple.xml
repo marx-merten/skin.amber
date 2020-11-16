@@ -603,7 +603,6 @@
 								<left>440</left>
 								<top>175</top>
 								<aspectratio>keep</aspectratio>
-<!--								<colordiffuse>eeFFFFFF</colordiffuse> -->
 								<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 								<texture>$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</texture>
 							</control>
@@ -672,7 +671,7 @@
 			            </control>
 					</itemlayout>
 					
-					<focusedlayout height="67.5" condition="Container.Content(tvshows)">
+					<focusedlayout height="67.5" condition="Container.Content(tvshows) + !System.IdleTime(2)">
 						<control type="image">
 							<left>-80</left>
 							<top>-2</top>
@@ -702,12 +701,12 @@
 				            <aspectratio aligny="center">keep</aspectratio>
 			            </control>
 					</focusedlayout>
-<!--					<focusedlayout height="270" condition="Container.Content(tvshows) + System.IdleTime(2) + Control.HasFocus(6002)">
+					<focusedlayout height="270" condition="Container.Content(tvshows) + System.IdleTime(2) + Control.HasFocus(6002)">
 						<control type="group">
 							<control type="image">
 								<top>-0.5</top>
 								<visible>Control.HasFocus(6002)</visible>
-								<width>836</width>
+								<width>950</width>
 								<height>269.5</height>
 								<texture background="true">thumbs/labelback.png</texture>
 					            <bordertexture colordiffuse="$VAR[HighlightColor]" border="8">thumbs/IconBorder_FO.png</bordertexture>
@@ -721,40 +720,26 @@
 							<left>30</left>
 							<include content="ShadowedImage">
 				                <param name="top">43</param>
-				                <param name="left">2</param>
-				                <param name="width">300</param>
-				                <param name="height">170</param>
+				                <param name="left">-8</param>
+				                <param name="width">306</param>
+				                <param name="height">174</param>
 				                <param name="texture">$VAR[Thumb]</param>
 				                <param name="aspect">scale</param>
 			                </include>
 							<control type="label">
 								<top>-18</top>
-								<left>20</left>
+								<left>-12</left>
 								<height>58</height>
 								<width>770</width>
 								<align>left</align>
 								<scroll>true</scroll>
-								<label>[B]$INFO[ListItem.Label][/B]  ($INFO[ListItem.Duration])</label>
+								<label>[B]$INFO[ListItem.Label][/B]  ($INFO[ListItem.Premiered])</label>
 								<textcolor>$VAR[HighlightColor]</textcolor>
 								<selectedcolor>white</selectedcolor>
 								<shadowcolor>black</shadowcolor>
-								<visible>!Skin.HasSetting(Enable.HourMinutes)</visible>
 							</control>
 							<control type="label">
-								<top>-18</top>
-								<left>20</left>
-								<height>58</height>
-								<width>770</width>
-								<align>left</align>
-								<scroll>true</scroll>
-								<label>[B]$INFO[ListItem.Label][/B]  ($VAR[ItemDurationHrMins])</label>
-								<textcolor>$VAR[HighlightColor]</textcolor>
-								<selectedcolor>white</selectedcolor>
-								<shadowcolor>black</shadowcolor>
-								<visible>Skin.HasSetting(Enable.HourMinutes)</visible>
-							</control>
-							<control type="label">
-								<top>19</top>
+								<top>24</top>
 								<left>317</left>
 								<height>58</height>
 								<width>785</width>
@@ -766,27 +751,11 @@
 								<selectedcolor>white</selectedcolor>
 								<shadowcolor>black</shadowcolor>
 							</control>
-							<control type="group">
-								<left>515</left>
-								<top>23</top>
-								<width>450</width>
-								<height>50</height>
-								<control type="label">
-									<width>70</width>
-									<visible>!String.IsEmpty(ListItem.Rating)</visible>
-									<align>left</align>
-									<aligny>center</aligny>
-									<label>[COLOR=white][B]$INFO[ListItem.Rating][/B][/COLOR]</label>
-									<textcolor>white</textcolor>
-									<shadowcolor>black</shadowcolor>
-								</control>
-							</control>
 							<control type="textbox">
 								<left>317</left>
 								<top>71</top>
-								<width>468</width>
-								<height>149</height>
-								<font>ListDetails</font>
+								<width>578</width>
+								<height>160</height>
 								<align>justify</align>
 								<aligny>top</aligny>
 								<textcolor>white</textcolor>
@@ -794,7 +763,7 @@
 								<label>$VAR[Plots]</label>
 							</control>
 						</control>
-					</focusedlayout> -->
+					</focusedlayout>
 					<content target="video" sortby="episode" sortorder="ascending">$INFO[Container(6001).ListItem.FolderPath]</content>
 				</control>
 			</control>
