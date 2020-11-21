@@ -325,19 +325,26 @@
 										  !String.IsEmpty(ListItem.Art(artist.fanart1)) | !String.IsEmpty(Container.ListItem.Art(artist.fanart1)) | 
 										  !String.IsEmpty(ListItem.Art(albumartist.fanart1)) | !String.IsEmpty(Container.ListItem.Art(albumartist.fanart1))</expression>
 										  
-	<expression name="ShowExtraFanartOnInfo">[Container.Content(episodes) + Skin.HasSetting(56_Episodes_Info_ExtraFanart)] | 
-	                                         [[Container.Content(albums) | Container.Content(artists)] + Skin.HasSetting(56_Music_Info_ExtraFanart)] | 
-											 [[Container.Content(musicvideos) | Container.Content(movies) | container.content(sets) | Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(56_Posters_Info_ExtraFanart)]</expression>
-
-
-
     <include name="DefaultBackground">
         <control type="multiimage">
             <visible>![Player.HasVideo + Skin.HasSetting(Show_Player)]</visible>
+			<visible>[!Control.IsVisible(56) | [Control.IsVisible(56) + ![$EXP[56_FanartViewNetflix]]]]</visible>
             <include>Dimensions_Fullscreen</include>
             <timeperimage>8000</timeperimage>
             <fadetime>400</fadetime>
             <imagepath background="true">$VAR[SubBackground]</imagepath>
+            <randomize>true</randomize>
+            <aspectratio>scale</aspectratio>
+        </control>
+		<control type="multiimage">
+            <visible>![Player.HasVideo + Skin.HasSetting(Show_Player)]</visible>
+			<visible>Control.IsVisible(56) + $EXP[56_FanartViewNetflix]</visible>
+            <left>450</left>
+			<width>1536</width>
+			<height>864</height>
+            <timeperimage>8000</timeperimage>
+            <fadetime>400</fadetime>
+            <imagepath background="true" diffuse="img/fanart_diffuse.png">$VAR[SubBackground]</imagepath>
             <randomize>true</randomize>
             <aspectratio>scale</aspectratio>
         </control>

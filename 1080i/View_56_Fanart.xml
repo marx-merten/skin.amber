@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<variable name="AmberFlixDimmerLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(AmberFlix.Dimmer))">$INFO[Skin.String(AmberFlix.Dimmer)]</value>
+		<value>60%</value>
+	</variable>
+	
+	<variable name="AmberFlixTitleLabelVar">
+		<value condition="Container.Content(tvshows) | Container.Content(episodes)">$INFO[ListItem.TVShowTitle]</value>
+		<value>$INFO[ListItem.Title]</value>
+	</variable>
+	
+	<variable name="AmberFlixDimmerVar">
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),100%)">FFFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),90%)">E6FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),80%)">CCFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),70%)">B3FFFFFF</value>
+		<value condition="String.IsEmpty(Skin.String(AmberFlix.Dimmer))">99FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),50%)">80FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),40%)">66FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),30%)">4DFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),20%)">33FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),10%)">1AFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),0%)">00FFFFFF</value>
+	</variable>
+	
+	<variable name="TMDbHelperNextAiredLabelVar">
+		<value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired))">[COLOR $VAR[HighlightColor]]$LOCALIZE[32009]:[/COLOR] $INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired),, • ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Season),S]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Episode),E, - ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Next_Aired.Name)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Last_Aired))">[COLOR $VAR[HighlightColor]]$LOCALIZE[32010]:[/COLOR] $INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired),, • ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Season),S]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Episode),E, - ]$INFO[Window(Home).Property(TMDbHelper.ListItem.Last_Aired.Name)]</value>
+	</variable>
+	
+	<variable name="AmberFlixSeasonLabelVar">
+	    <value condition="String.IsEmpty(ListItem.Season)"></value>
+		<value condition="Integer.IsGreater(ListItem.Season,1)">$LOCALIZE[33054]</value>
+		<value condition="!Integer.IsGreater(ListItem.Season,1)">$LOCALIZE[20373]</value>
+	</variable>
+	
+	<variable name="AmberFlixEpisodesLabelVar">
+		<value condition="Integer.IsGreater(ListItem.Episode,1)">$LOCALIZE[20360]</value>
+		<value condition="!Integer.IsGreater(ListItem.Episode,1)">$LOCALIZE[20359]</value>
+	</variable>
+	
 	<expression name="56_FanartViewInfo">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Info)] | 
 	                                      [container.content(episodes) + Skin.HasSetting(56_Episodes_Info)] | 
-										  [[container.content(MusicVideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
+										  [[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Info)]</expression>
 
     <expression name="56_FanartViewGallery">[[container.content(albums) | container.content(artists)] + Skin.HasSetting(56_Music_Gallery)] | 
 	                                         [container.content(episodes) + Skin.HasSetting(56_Episodes_Gallery)] | 
-											 [[container.content(MusicVideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Gallery)]</expression>
+											 [[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Gallery)]</expression>
 	
 	<expression name="56_FanartIsAllItems">[String.IsEqual(ListItem.Label,$LOCALIZE[15102]) | String.IsEqual(ListItem.Label,$LOCALIZE[15103]) | String.IsEqual(ListItem.Label,$LOCALIZE[15104]) | String.IsEqual(ListItem.Label,$LOCALIZE[15105]) | 
 	                                         String.IsEqual(ListItem.Label,$LOCALIZE[20366])]</expression>
+											 
+	<expression name="ShowExtraFanartOnInfo">[Container.Content(episodes) + Skin.HasSetting(56_Episodes_Info_ExtraFanart)] | 
+	                                         [[Container.Content(albums) | Container.Content(artists)] + Skin.HasSetting(56_Music_Info_ExtraFanart)] | 
+											 [[Container.Content(musicvideos) | Container.Content(movies) | container.content(sets) | Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(56_Posters_Info_ExtraFanart)]</expression>
+	
+	<expression name="56_FanartViewNetflix">[[container.content(episodes) + Skin.HasSetting(56_Episodes_Netflix)] | 
+										  [[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix)]]</expression>
+
 	
 	<include name="FocusSquare">
 	    <focusposition>2</focusposition>
@@ -411,6 +459,486 @@
 		</definition>
 	</include>
 	
+	<include name="Fanart_Info">
+	    <definition>
+		    <!-- Info panel details -->
+			<control type="group" description="item details">
+			    <include>ContentFade</include>
+			    <visible>!Window.IsActive(MyPics.xml) + String.IsEmpty(Window.Property(gallery)) + [$EXP[56_FanartViewInfo]]</visible>
+			    <animation effect="fade" delay="200" time="300">Visible</animation>
+			    <animation effect="fade" time="100">Hidden</animation>
+			    <control type="group" description="Media info">
+				    <posx>135</posx>
+				    <posy>99</posy>
+				    <control type="label" description="Title Label">
+					    <posy>87</posy>
+					    <width>900</width>
+					    <height>60</height>
+					    <textcolor>$VAR[HighlightColor]</textcolor>
+					    <font>InfoTitle</font>
+					    <scroll>false</scroll>
+					    <label>$VAR[panelheading]</label>
+				    </control>
+				    <control type="label" description="Details">
+					    <posy>150</posy>
+					    <height>33</height>
+					    <width>900</width>
+					    <font>Details</font>
+					    <scroll>false</scroll>
+					    <label>$VAR[panelsubheading]</label>
+						<visible>!Container.Content(Artists)</visible>
+				    </control>
+					<control type="label" description="Details">
+					    <posy>154</posy>
+					    <height>66</height>
+					    <width>900</width>
+					    <font>Details</font>
+					    <scroll>false</scroll>
+						<aligny>center</aligny>
+					    <label>$VAR[panelsubheading]</label>
+						<visible>Container.Content(Artists)</visible>
+				    </control>
+				    <control type="label" description="Next Episode">
+					    <posy>187</posy>
+					    <height>33</height>
+					    <width>900</width>
+					    <font>Details</font>
+					    <scroll>false</scroll>
+					    <label>$VAR[panelsubheading2]</label>
+                        <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) | 
+							[[Container.Content(movies) | Container.Content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]]</visible>
+				    </control>                    
+				    <control type="label" description="Genre">
+					    <posy>220</posy>
+					    <visible>![Container.Content(Artists) | Container.Content(albums)] + !ListItem.IsParentFolder + ![$EXP[56_FanartIsAllItems]] + !String.IsEmpty(ListItem.Genre)</visible>
+					    <height>33</height>
+					    <width>900</width>
+					    <font>Details</font>
+					    <scroll>false</scroll>
+					    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+				    </control>
+					<control type="label" description="Genre">
+					    <posy>187</posy>
+					    <visible>Container.Content(albums) + !ListItem.IsParentFolder + ![$EXP[56_FanartIsAllItems]] + !String.IsEmpty(ListItem.Genre)</visible>
+					    <height>33</height>
+					    <width>900</width>
+					    <font>Details</font>
+					    <scroll>false</scroll>
+					    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
+				    </control>
+				    <control type="textbox" description="Plot">
+					    <posy>260</posy>
+					    <width>900</width>
+					    <height>194</height>
+					    <align>justify</align>
+					    <label>$VAR[Plots]</label>
+                        <autoscroll delay="3000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>![Container.Content(Artists) | Container.Content(albums)]</visible>
+				    </control>
+					<control type="textbox" description="Plot">
+					    <posy>230</posy>
+					    <width>900</width>
+					    <height>240</height>
+					    <align>justify</align>
+					    <label>$VAR[Plots]</label>
+                        <autoscroll delay="3000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>[Container.Content(Artists) | Container.Content(albums)]</visible>
+				    </control>
+					<!-- Movies in collection when the plot is empty -->
+					<control type="panel">
+                        <posy>290</posy>
+					    <width>900</width>
+					    <height>164</height>
+						<visible>[ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
+                        <visible>!ListItem.IsParentFolder</visible>
+                        <orientation>vertical</orientation>
+                        <focusedlayout height="40" width="900">
+                        </focusedlayout>
+                        <itemlayout height="40" width="900">
+                            <control type="image">
+                                <top>5</top>
+                                <width>30</width>
+                                <height>30</height>
+                                <texture>$VAR[Overlay]</texture>
+                            </control>
+                            <control type="label">
+                                <left>40</left>
+                                <height>40</height>
+                                <width>900</width>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</label>
+                                <font>ListDetails</font>
+                                <scrollspeed>25</scrollspeed>
+                            </control>
+                        </itemlayout>
+                        <content sortby="year" sortorder="ascending">videodb://movies/sets/$INFO[ListItem.DBID]/?setid=$INFO[ListItem.DBID]</content>
+                    </control>
+				    <control type="group" description="Info with Fanart">
+					    <visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
+					    <control type="image" description="BG">
+						    <posx>1017</posx>
+						    <posy>99</posy>
+						    <width>640</width>
+						    <height>360</height>
+						    <texture border="8">img/WhiteRoundedST2.png</texture>
+						    <aspectratio>stretch</aspectratio>
+					    </control>
+						<control type="image" description="Single Fanart">
+						    <posx>1023</posx>
+						    <posy>105</posy>
+						    <width>628</width>
+						    <height>348</height>
+						    <texture>$VAR[Fanart.Art]</texture>
+						    <aspectratio aligny="top">scale</aspectratio>
+							<visible>![$EXP[ShowExtraFanartOnInfo]] | ![$EXP[ExtraFanartPresent]]</visible>
+					    </control>
+					    <control type="multiimage" description="Extra Fanart">
+						    <posx>1023</posx>
+						    <posy>105</posy>
+						    <width>628</width>
+						    <height>348</height>
+							<timeperimage>8000</timeperimage>
+                            <fadetime>400</fadetime>
+							<randomize>true</randomize>
+						    <imagepath background="true">$VAR[ExtraFanart.Art]</imagepath>
+						    <aspectratio aligny="top">scale</aspectratio>
+							<visible>$EXP[ShowExtraFanartOnInfo] + $EXP[ExtraFanartPresent]</visible>
+					    </control>
+				    </control>
+				</control>
+			</control>
+		</definition>
+	</include>
+	
+	<include name="Fanart_Netflix_Info">
+	    <definition>
+		    <control type="group" description="item details">
+			    <include>ContentFade</include>
+			    <visible>!Window.IsActive(MyPics.xml) + String.IsEmpty(Window.Property(gallery)) + [$EXP[56_FanartViewNetflix]]</visible>
+				<!-- Logo or title -->
+				<control type="group">
+				    <control type="image" id="56888">
+					    <left>22</left>
+					    <top>50</top>
+					    <width>526</width>
+					    <height>204</height>
+					    <aspectratio align="left" aligny="bottom">keep</aspectratio>
+					    <texture background="true">$VAR[ClearLogo]</texture>
+						<visible>[!Container.Content(episodes) + Skin.HasSetting(56_Posters_Netflix_Logo)] | [Container.Content(episodes) + Skin.HasSetting(56_Episodes_Netflix_Logo)]</visible>
+				    </control>
+				    <control type="group">
+					    <top>70</top>
+					    <animation effect="slide" start="0" end="0,60" condition="![[!Container.Content(episodes) + Skin.HasSetting(56_Posters_Netflix_Logo)] | [Container.Content(episodes) + Skin.HasSetting(56_Episodes_Netflix_Logo)]]">Conditional</animation>
+					    <control type="group">
+						    <visible>!Control.IsVisible(56888) | String.IsEmpty(Control.GetLabel(56888))</visible>
+						    <left>25</left>
+							<control type="group">
+							    <visible>![Container.Content(seasons) | Container.Content(episodes)]</visible>
+							    <control type="label" description="Title shadow">
+				                    <left>4</left>
+				                    <top>4</top>
+            				        <width>700</width>
+								    <height>124</height>
+				                    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>Black</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>$VAR[panelheading]</label>
+			                    </control>
+			                    <control type="label" description="Title Label">
+				                    <height>124</height>
+				                    <width>700</width>
+								    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>$VAR[HighlightColor]</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>$VAR[panelheading]</label>
+			                    </control>
+							</control>
+                            <control type="group">
+							    <visible>Container.Content(seasons) + !String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !ListItem.IsParentFolder</visible>
+							    <control type="label" description="Title shadow">
+				                    <left>4</left>
+				                    <top>4</top>
+            				        <width>700</width>
+								    <height>124</height>
+				                    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>Black</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>[B]$INFO[ListItem.TVShowTitle][/B] - $INFO[ListItem.Label]</label>
+			                    </control>
+			                    <control type="label" description="Title Label">
+				                    <height>124</height>
+				                    <width>700</width>
+								    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>$VAR[HighlightColor]</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>[B]$INFO[ListItem.TVShowTitle][/B] - $INFO[ListItem.Label]</label>
+			                    </control>
+							</control>
+                            <control type="group">
+							    <visible>Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+							    <control type="label" description="Title shadow">
+				                    <left>4</left>
+				                    <top>4</top>
+            				        <width>700</width>
+								    <height>124</height>
+				                    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>Black</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>[B]$INFO[ListItem(1).TVShowTitle][/B] - $INFO[ListItem.Label]</label>
+			                    </control>
+			                    <control type="label" description="Title Label">
+				                    <height>124</height>
+				                    <width>700</width>
+								    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>$VAR[HighlightColor]</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>[B]$INFO[ListItem(1).TVShowTitle][/B] - $INFO[ListItem.Label]</label>
+			                    </control>
+							</control>
+							<control type="group">
+							    <visible>Container.Content(episodes)</visible>
+							    <control type="label" description="Title shadow">
+				                    <left>4</left>
+				                    <top>4</top>
+            				        <width>700</width>
+								    <height>124</height>
+				                    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>Black</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
+			                    </control>
+			                    <control type="label" description="Title Label">
+				                    <height>124</height>
+				                    <width>700</width>
+								    <wrapmultiline>true</wrapmultiline>
+								    <textcolor>$VAR[HighlightColor]</textcolor>
+				                    <shadowcolor></shadowcolor>
+				                    <font>MainLabelBigTitle</font>
+				                    <scroll>false</scroll>
+				                    <label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
+			                    </control>
+							</control>
+					    </control>
+				    </control>
+				</control>
+				<control type="group">
+					<left>30</left>
+					<top>258</top>
+					<width>1000</width>
+					<height>270</height>
+					<!-- Info for movies -->
+					<control type="group">
+						<visible>Container.Content(movies) + !ListItem.IsCollection</visible>
+						<control type="grouplist">
+							<control type="label">
+								<width>800</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]</label>
+								<visible>!String.IsEmpty(ListItem.Director)</visible>
+							</control>
+							<control type="label">
+								<width>800</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<scroll>false</scroll>
+								<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
+								<visible>!String.IsEmpty(ListItem.Genre)</visible>
+							</control>
+							<control type="label">
+								<width>1000</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.RatingAndVotes,, • ][/COLOR]$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Duration(mins),,$LOCALIZE[31297]]$INFO[ListItem.EndTime, ($LOCALIZE[32294]: ,)]</label>
+								<visible>!Skin.HasSetting(Enable.HourMinutes)</visible>
+							</control>
+							<control type="label">
+								<width>1000</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.RatingAndVotes,, • ][/COLOR]$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$VAR[ItemDurationHrMins]$INFO[ListItem.EndTime, ($LOCALIZE[32294]: ,)]</label>
+								<visible>Skin.HasSetting(Enable.HourMinutes)</visible>
+							</control>
+						</control>
+						<control type="textbox">
+							<top>150</top>
+							<width>800</width>
+							<height>160</height>
+							<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.Tagline,,[CR]][/COLOR]$VAR[Plots]</label>
+							<autoscroll delay="3000" time="3000" repeat="4000">true</autoscroll>
+						</control>
+					</control>
+					<!-- Info for sets -->
+					<control type="group">
+						<visible>ListItem.IsCollection + ![Container.OnNext | Container.OnPrevious]</visible>
+						<animation effect="fade" time="140" delay="100">Visible</animation>
+						<control type="grouplist">
+							<control type="label">
+								<width>800</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<scroll>false</scroll>
+								<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[20339](s): [/COLOR]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)]</label>
+								<visible>!String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Director))</visible>
+							</control>
+							<control type="label">
+								<width>800</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<scroll>false</scroll>
+								<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[515](s): [/COLOR]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Genre)]</label>
+								<visible>!String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Genre))</visible>
+							</control>
+							<control type="label">
+								<width>1000</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.RatingAndVotes,, • ][/COLOR]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Years),, • ]$INFO[Window(Home).Property(SkinInfo.Set.Movie.1.MPAA),, • ]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
+								<visible>!String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Years))</visible>
+							</control>
+						</control>
+						<control type="textbox">
+							<top>150</top>
+							<width>800</width>
+							<height>160</height>
+							<label>$VAR[Plots]</label>
+							<autoscroll delay="3000" time="3000" repeat="4000">true</autoscroll>
+						</control>
+					</control>
+					<!-- Info for tvshows or seasons -->
+					<control type="grouplist">
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+						<control type="label">
+							<width>800</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[32144]: [/COLOR]$INFO[ListItem.Premiered]</label>
+							<visible>!String.IsEmpty(ListItem.Premiered)</visible>
+						</control>
+						<control type="label">
+							<width>800</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
+							<visible>!String.IsEmpty(ListItem.Genre)</visible>
+						</control>
+						<control type="label">
+							<width>1000</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.RatingAndVotes,, • ][/COLOR]$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Season] $VAR[AmberFlixSeasonLabelVar]</label>
+							<visible>Container.Content(tvshows)</visible>
+						</control>
+						<control type="label">
+							<width>1000</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.Label,, • ][/COLOR]$INFO[ListItem.Year,, • ]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Episode] $VAR[AmberFlixEpisodesLabelVar]</label>
+							<visible>Container.Content(seasons) + !String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<width>1000</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.Label,, • ][/COLOR]$INFO[ListItem(1).Year,, • ]$INFO[ListItem(1).MPAA,, • ]$INFO[ListItem.Episode] $VAR[AmberFlixEpisodesLabelVar]</label>
+							<visible>Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+						</control>
+					</control>
+					<!-- Info for episodes -->
+					<control type="grouplist">
+						<visible>Container.Content(episodes)</visible>
+						<control type="label">
+							<width>800</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[20359]: [/COLOR]$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<height>45</height>
+							<width>650</width>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[2050]: [/COLOR]$INFO[ListItem.Duration(mins),, $LOCALIZE[12391]]</label>
+							<visible>!String.IsEmpty(ListItem.Duration)</visible>
+						</control>
+						<control type="label">
+							<width>1000</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$INFO[ListItem.RatingAndVotes,, • ][/COLOR]$INFO[ListItem.MPAA,, • ]$INFO[ListItem.Premiered]</label>
+							<visible>![String.IsEmpty(ListItem.RatingAndVotes) + String.IsEmpty(ListItem.MPAA)]</visible>
+						</control>
+						<control type="label">
+							<height>45</height>
+							<width>650</width>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[32144]: [/COLOR]$INFO[ListItem.Premiered]</label>
+							<visible>!String.IsEmpty(ListItem.Premiered) + [String.IsEmpty(ListItem.RatingAndVotes) + String.IsEmpty(ListItem.MPAA)]</visible>
+						</control>
+					</control>
+					<!-- Info for musicvideos -->
+					<control type="group">
+						<visible>Container.Content(musicvideos)</visible>
+						<control type="grouplist">
+							<control type="label">
+								<width>800</width>
+								<height>45</height>
+								<font>font20_title</font>
+								<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[557]: [/COLOR]$INFO[ListItem.Artist]</label>
+								<visible>!String.IsEmpty(ListItem.Artist)</visible>
+							</control>
+							<control type="label">
+							    <height>45</height>
+							    <width>650</width>
+							    <font>font20_title</font>
+							    <label>[COLOR $VAR[HighlightColor]]$LOCALIZE[2050]: [/COLOR]$INFO[ListItem.Duration(mins),,$LOCALIZE[31297]]$INFO[ListItem.EndTime, ($LOCALIZE[32294]: ,)]</label>
+							    <visible>!String.IsEmpty(ListItem.Duration)</visible>
+						    </control>
+							<control type="label">
+							<width>800</width>
+							<height>45</height>
+							<font>font20_title</font>
+							<label>[COLOR $VAR[HighlightColor]]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
+							<visible>!String.IsEmpty(ListItem.Genre)</visible>
+						</control>
+						</control>
+						<control type="textbox">
+							<top>150</top>
+							<width>800</width>
+							<height>160</height>
+							<label>$VAR[Plots]</label>
+							<autoscroll delay="3000" time="3000" repeat="4000">true</autoscroll>
+						</control>
+					</control>
+					<control type="textbox">
+						<top>100</top>
+						<width>800</width>
+						<height>160</height>
+						<label>$VAR[Plots]</label>
+						<autoscroll delay="3000" time="2500" repeat="4000">true</autoscroll>
+						<animation effect="slide" start="0" end="0,45" condition="Container.Content(tvshows)">Conditional</animation>
+						<animation effect="slide" start="0" end="0,60" condition="Container.Content(episodes)">Conditional</animation>
+						<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+					</control>
+				</control>
+			</control>	
+		</definition>
+	</include>
+	
 	<include name="View_56_Fanart">
 	    <param name="focusposition">2</param>
 		<param name="listposy">609</param>
@@ -449,7 +977,6 @@
 				     <include>ContentFade</include>
 				    <control type="fixedlist" id="56">
     					<animation effect="slide" easing="out" start="0,0" end="0,800" time="350" delay="0" center="120,350" reversible="true" condition="!String.IsEmpty(Window.Property(gallery))">Conditional</animation>
-				    <!--	<animation effect="slide" easing="out" start="0,0" end="0,36" time="0" reversible="true" condition="$EXP[56_FanartViewInfo]">Conditional</animation> -->
 					    <visible>[$EXP[Exp_View_56] + Skin.HasSetting(Enable.NewViewSelector)] | [!Skin.HasSetting(hide.fanartview) + !Skin.HasSetting(Enable.NewViewSelector)]</visible>
 						<posy>$PARAM[listposy]</posy>
 		    			<width>1920</width>
@@ -626,8 +1153,8 @@
 						    </control>
 					    </focusedlayout>
 				    </control>
-                
-				    <include>Fanart_Gallery</include>
+					
+					<include>Fanart_Gallery</include>
 				
 				    <control type="scrollbar" id="66">
 					    <animation effect="slide" start="0,0" end="0,-3" time="150">Focus</animation>
@@ -718,152 +1245,10 @@
                 
 			    </control>
 				
-			    <!-- Info panel details -->
-				<control type="group" description="item details">
-				    <include>ContentFade</include>
-				    <visible>!Window.IsActive(MyPics.xml) + String.IsEmpty(Window.Property(gallery)) + [$EXP[56_FanartViewInfo]]</visible>
-				    <animation effect="fade" delay="200" time="300">Visible</animation>
-				    <animation effect="fade" time="100">Hidden</animation>
-				    <control type="group" description="Media info">
-					    <posx>135</posx>
-					    <posy>99</posy>
-					    <control type="label" description="Title Label">
-						    <posy>87</posy>
-						    <width>900</width>
-						    <height>60</height>
-						    <textcolor>$VAR[HighlightColor]</textcolor>
-						    <font>InfoTitle</font>
-						    <scroll>false</scroll>
-						    <label>$VAR[panelheading]</label>
-					    </control>
-					    <control type="label" description="Details">
-						    <posy>150</posy>
-						    <height>33</height>
-						    <width>900</width>
-						    <font>Details</font>
-						    <scroll>false</scroll>
-						    <label>$VAR[panelsubheading]</label>
-							<visible>!Container.Content(Artists)</visible>
-					    </control>
-						<control type="label" description="Details">
-						    <posy>154</posy>
-						    <height>66</height>
-						    <width>900</width>
-						    <font>Details</font>
-						    <scroll>false</scroll>
-							<aligny>center</aligny>
-						    <label>$VAR[panelsubheading]</label>
-							<visible>Container.Content(Artists)</visible>
-					    </control>
-					    <control type="label" description="Next Episode">
-						    <posy>187</posy>
-						    <height>33</height>
-						    <width>900</width>
-						    <font>Details</font>
-						    <scroll>false</scroll>
-						    <label>$VAR[panelsubheading2]</label>
-                            <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Next_Aired)) | 
-							[[Container.Content(movies) | Container.Content(episodes)] + [Skin.HasSetting(ShowAudioSub) + ![String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))]]]</visible>
-					    </control>                    
-					    <control type="label" description="Genre">
-						    <posy>220</posy>
-						    <visible>![Container.Content(Artists) | Container.Content(albums)] + !ListItem.IsParentFolder + ![$EXP[56_FanartIsAllItems]] + !String.IsEmpty(ListItem.Genre)</visible>
-						    <height>33</height>
-						    <width>900</width>
-						    <font>Details</font>
-						    <scroll>false</scroll>
-						    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
-					    </control>
-						<control type="label" description="Genre">
-						    <posy>187</posy>
-						    <visible>Container.Content(albums) + !ListItem.IsParentFolder + ![$EXP[56_FanartIsAllItems]] + !String.IsEmpty(ListItem.Genre)</visible>
-						    <height>33</height>
-						    <width>900</width>
-						    <font>Details</font>
-						    <scroll>false</scroll>
-						    <label>[COLOR=$VAR[HighlightColor]]$LOCALIZE[515]:[/COLOR] $INFO[ListItem.Genre]</label>
-					    </control>
-					    <control type="textbox" description="Plot">
-						    <posy>260</posy>
-						    <width>900</width>
-						    <height>194</height>
-						    <align>justify</align>
-						    <label>$VAR[Plots]</label>
-                            <autoscroll delay="3000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-							<visible>![Container.Content(Artists) | Container.Content(albums)]</visible>
-					    </control>
-						<control type="textbox" description="Plot">
-						    <posy>230</posy>
-						    <width>900</width>
-						    <height>240</height>
-						    <align>justify</align>
-						    <label>$VAR[Plots]</label>
-                            <autoscroll delay="3000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-							<visible>[Container.Content(Artists) | Container.Content(albums)]</visible>
-					    </control>
-						<!-- Movies in collection when the plot is empty -->
-						<control type="panel">
-                            <posy>290</posy>
-						    <width>900</width>
-						    <height>164</height>
-							<visible>[ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
-                            <visible>!ListItem.IsParentFolder</visible>
-                            <orientation>vertical</orientation>
-                            <focusedlayout height="40" width="900">
-                            </focusedlayout>
-                            <itemlayout height="40" width="900">
-                                <control type="image">
-                                    <top>5</top>
-                                    <width>30</width>
-                                    <height>30</height>
-                                    <texture>$VAR[Overlay]</texture>
-                                </control>
-                                <control type="label">
-                                    <left>40</left>
-                                    <height>40</height>
-                                    <width>900</width>
-                                    <aligny>center</aligny>
-                                    <label>$INFO[ListItem.Label][COLOR $VAR[HighlightColor]]$INFO[ListItem.Year,  (,)][/COLOR]</label>
-                                    <font>ListDetails</font>
-                                    <scrollspeed>25</scrollspeed>
-                                </control>
-                            </itemlayout>
-                            <content sortby="year" sortorder="ascending">videodb://movies/sets/$INFO[ListItem.DBID]/?setid=$INFO[ListItem.DBID]</content>
-                        </control>
-					    <control type="group" description="Info with Fanart">
-						    <visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
-						    <control type="image" description="BG">
-							    <posx>1017</posx>
-							    <posy>99</posy>
-							    <width>640</width>
-							    <height>360</height>
-							    <texture border="8">img/WhiteRoundedST2.png</texture>
-							    <aspectratio>stretch</aspectratio>
-						    </control>
-							<control type="image" description="Single Fanart">
-							    <posx>1023</posx>
-							    <posy>105</posy>
-							    <width>628</width>
-							    <height>348</height>
-							    <texture>$VAR[Fanart.Art]</texture>
-							    <aspectratio aligny="top">scale</aspectratio>
-								<visible>![$EXP[ShowExtraFanartOnInfo]] | ![$EXP[ExtraFanartPresent]]</visible>
-						    </control>
-						    <control type="multiimage" description="Extra Fanart">
-							    <posx>1023</posx>
-							    <posy>105</posy>
-							    <width>628</width>
-							    <height>348</height>
-								<timeperimage>8000</timeperimage>
-                                <fadetime>400</fadetime>
-								<randomize>true</randomize>
-							    <imagepath background="true">$VAR[ExtraFanart.Art]</imagepath>
-							    <aspectratio aligny="top">scale</aspectratio>
-								<visible>$EXP[ShowExtraFanartOnInfo] + $EXP[ExtraFanartPresent]</visible>
-						    </control>
-					    </control>
-				    </control>
-			    </control>
+				<include>Fanart_Info</include>
+				
+				<include>Fanart_Netflix_Info</include>
+			    
 			    <control type="group" description="Footer info">
 				    <include>ContentFade</include>
 				    <visible>String.IsEmpty(Window.Property(gallery)) + Control.IsVisible(56)</visible>

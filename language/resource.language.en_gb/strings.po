@@ -3035,3 +3035,7 @@ msgstr ""
 msgctxt "#32293"
 msgid "Extra Fanart on panel"
 msgstr ""
+
+msgctxt "#32294"
+msgid "Ends at"
+msgstr ""
