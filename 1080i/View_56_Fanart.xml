@@ -85,18 +85,46 @@
 		<texture>thumbs/PosterBG_NF.png</texture>
 	</include>
 	<include name="MovieFanartThumb">
-		<texture background="true">$VAR[Poster]</texture>
-		<aspectratio aligny="top">stretch</aspectratio>
+	    <param name="aspect">stretch</param>
+		<definition>
+		    <texture background="true">$VAR[Poster]</texture>
+		    <aspectratio aligny="top">$PARAM[aspect]</aspectratio>
+		</definition>	
 	</include>
 	<include name="MovieFanartReflection">
-		<posx>15</posx>
-		<posy>330</posy>
-		<width>210</width>
-		<height>312</height>
-		<colordiffuse>229e9e9e</colordiffuse>
-		<texture background="true" flipy="true">$VAR[Poster]</texture>
-		<aspectratio aligny="top">stretch</aspectratio>
+	    <param name="aspect">stretch</param>
+		<definition>
+		    <posx>15</posx>
+		    <posy>330</posy>
+		    <width>210</width>
+		    <height>312</height>
+		    <colordiffuse>229e9e9e</colordiffuse>
+		    <texture background="true" flipy="true">$VAR[Poster]</texture>
+		    <aspectratio aligny="top">$PARAM[aspect]</aspectratio>
+		</definition>	
 	</include>
+	
+	<include name="MovieLandscapeDimensions">
+		<posx>12</posx>
+		<posy>12</posy>
+		<width>390</width>
+		<height>267</height>
+	</include>
+	<include name="MovieLandscapeReflection">
+		<posx>12</posx>
+		<posy>285</posy>
+		<width>390</width>
+		<height>267</height>
+		<colordiffuse>229e9e9e</colordiffuse>
+		<texture background="true" flipy="true">$VAR[Landscape]</texture>
+		<aspectratio aligny="top">scale</aspectratio>
+	</include>
+	<include name="MovieLandscapeThumb">
+		<texture background="true">$VAR[Landscape]</texture>
+		<aspectratio aligny="top">scale</aspectratio>
+	</include>
+	
+	
 	
 	<include name="SquareFanartThumbDimensions">
 		<posx>15</posx>
@@ -133,7 +161,6 @@
 		<aspectratio aligny="top">scale</aspectratio>
 	</include>
 	<include name="EpisodeFanartThumb">
-		
 		<texture background="true">$VAR[Episode]</texture>
 		<aspectratio aligny="top">scale</aspectratio>
 	</include>
@@ -273,13 +300,14 @@
 	
 	<include name="TopRightOverlayFanart">
 	    <param name="isFocused">false</param>
+		<param name="isLandscape">false</param>
 		<definition>
 		    <control type="group">
 			    <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | 
 				         String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
-			    <!-- Overlay for normal icons -->
+			    <!-- Overlay for normal icons, poster -->
 			    <control type="image">
-				    <visible>!$PARAM[isFocused]</visible>
+				    <visible>!$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable</visible>
 				    <texture background="true">$VAR[TopRightOverlay]</texture>
 				    <posx>86r</posx>
@@ -288,7 +316,7 @@
 				    <width>72</width>
 			    </control>
 			    <control type="image">
-				    <visible>$PARAM[isFocused]</visible>
+				    <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable</visible>
 				    <texture background="true">$VAR[TopRightOverlay]</texture>
 				    <posx>86r</posx>
@@ -297,12 +325,33 @@
 				    <width>72</width>
 				    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
 			    </control>
+				<!-- Overlay for normal icons, landscape -->
+			    <control type="image">
+				    <visible>!$PARAM[isFocused] + $PARAM[isLandscape]</visible>
+				    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable</visible>
+				    <texture background="true">$VAR[TopRightOverlay]</texture>
+				    <posx>134r</posx>
+				    <posy>12</posy>
+				    <height>72</height>
+				    <width>72</width>
+			    </control>
+			    <control type="image">
+				    <visible>$PARAM[isFocused] + $PARAM[isLandscape]</visible>
+				    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable</visible>
+				    <texture background="true">$VAR[TopRightOverlay]</texture>
+				    <posx>134r</posx>
+				    <posy>12</posy>
+				    <height>72</height>
+				    <width>72</width>
+				    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+			    </control>
 			    <!-- Unwatched episode count for normal icons -->
 			    <control type="group">
 				    <visible>!ListItem.IsParentFolder + [Container.content(tvshows) | container.content(seasons)]</visible>
 				    <visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !Skin.HasSetting(Hide_Episode_Marks)</visible>
-				    <control type="image">
-				        <visible>!$PARAM[isFocused]</visible>
+				    <!-- Poster -->
+					<control type="image">
+				        <visible>!$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true">overlays/toprightempty2.png</texture>
 				        <posx>93r</posx>
 				        <posy>15</posy>
@@ -310,7 +359,7 @@
 				        <width>82</width>
 			        </control>
 				    <control type="image">
-				        <visible>$PARAM[isFocused]</visible>
+				        <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true">overlays/toprightempty2.png</texture>
 				        <posx>93r</posx>
 				        <posy>15</posy>
@@ -319,7 +368,7 @@
 					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
 			        </control>
 				    <control type="label" description="l2">
-					    <visible>$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)</visible>
+					    <visible>$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
 					    <posx>85r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
@@ -332,7 +381,7 @@
 					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
 				    </control>
 				    <control type="label" description="l2">
-					    <visible>!$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)</visible>
+					    <visible>!$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
 					    <posx>85r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
@@ -343,7 +392,7 @@
 					    <textcolor>White2</textcolor>
 				    </control>
 				    <control type="label" description="l2">
-					    <visible>!$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)</visible>
+					    <visible>!$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
 					    <posx>86r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
@@ -354,9 +403,75 @@
 					    <textcolor>White2</textcolor>
 				    </control>
 				    <control type="label" description="l2">
-					    <visible>$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99)</visible>
+					    <visible>$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
 					    <posx>86r</posx>
 				        <posy>-262</posy>
+					    <height>$PARAM[itemheight]</height>
+					    <width>100</width>
+					    <font>ListDetailsSmall</font>
+					    <align>center</align>
+					    <shadowcolor></shadowcolor>
+					    <label>$VAR[UnwatchedEpisodes]</label>
+					    <textcolor>$VAR[HighlightColor]</textcolor>
+					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				    </control>
+					<!-- Landscape -->
+					<control type="image">
+				        <visible>!$PARAM[isFocused] + $PARAM[isLandscape]</visible>
+				        <texture background="true">overlays/toprightempty2.png</texture>
+				        <posx>144r</posx>
+				        <posy>12</posy>
+				        <height>82</height>
+				        <width>82</width>
+			        </control>
+				    <control type="image">
+				        <visible>$PARAM[isFocused] + $PARAM[isLandscape]</visible>
+				        <texture background="true">overlays/toprightempty2.png</texture>
+				        <posx>144r</posx>
+				        <posy>12</posy>
+				        <height>82</height>
+				        <width>82</width>
+					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+			        </control>
+				    <control type="label" description="l2">
+					    <visible>$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + $PARAM[isLandscape]</visible>
+					    <posx>137r</posx>
+				        <posy>-220</posy>
+					    <height>$PARAM[itemheight]</height>
+					    <width>100</width>
+					    <font>ListDetailsSmall</font>
+					    <align>center</align>
+					    <shadowcolor></shadowcolor>
+					    <label>$VAR[UnwatchedEpisodes]</label>
+					    <textcolor>$VAR[HighlightColor]</textcolor>
+					    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+				    </control>
+				    <control type="label" description="l2">
+					    <visible>!$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + $PARAM[isLandscape]</visible>
+					    <posx>137r</posx>
+				        <posy>-220</posy>
+					    <height>$PARAM[itemheight]</height>
+					    <width>100</width>
+					    <font>ListDetailsSmall</font>
+					    <align>center</align>
+					    <label>$VAR[UnwatchedEpisodes]</label>
+					    <textcolor>White2</textcolor>
+				    </control>
+				    <control type="label" description="l2">
+					    <visible>!$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + $PARAM[isLandscape]</visible>
+					    <posx>137r</posx>
+				        <posy>-220</posy>
+					    <height>$PARAM[itemheight]</height>
+					    <width>100</width>
+					    <font>ListDetailsSmall</font>
+					    <align>center</align>
+					    <label>$VAR[UnwatchedEpisodes]</label>
+					    <textcolor>White2</textcolor>
+				    </control>
+				    <control type="label" description="l2">
+					    <visible>$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + $PARAM[isLandscape]</visible>
+					    <posx>137r</posx>
+				        <posy>-220</posy>
 					    <height>$PARAM[itemheight]</height>
 					    <width>100</width>
 					    <font>ListDetailsSmall</font>
@@ -370,8 +485,9 @@
 			    <!-- In-progress percent for normal icons -->
 			    <control type="group">
 				    <visible>Integer.IsGreater(ListItem.PercentPlayed,0) + !Skin.HasSetting(Hide_InProgress_Marks)</visible>
-				    <control type="image">
-				        <visible>!$PARAM[isFocused]</visible>
+				    <!-- Poster -->
+					<control type="image">
+				        <visible>!$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true">$VAR[TopRightInProgress]</texture>
 				        <posx>86r</posx>
 				        <posy>15</posy>
@@ -379,10 +495,27 @@
 				        <width>72</width>
 			        </control>
 				    <control type="image">
-				        <visible>$PARAM[isFocused]</visible>
+				        <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true" colordiffuse="$VAR[HighlightColor]">$VAR[TopRightInProgress]</texture>
 				        <posx>86r</posx>
 				        <posy>15</posy>
+				        <height>72</height>
+				        <width>72</width>
+			        </control>
+					<!-- Landscape -->
+					<control type="image">
+				        <visible>!$PARAM[isFocused] + $PARAM[isLandscape]</visible>
+				        <texture background="true">$VAR[TopRightInProgress]</texture>
+				        <posx>134r</posx>
+				        <posy>12</posy>
+				        <height>72</height>
+				        <width>72</width>
+			        </control>
+				    <control type="image">
+				        <visible>$PARAM[isFocused] + $PARAM[isLandscape]</visible>
+				        <texture background="true" colordiffuse="$VAR[HighlightColor]">$VAR[TopRightInProgress]</texture>
+				        <posx>134r</posx>
+				        <posy>12</posy>
 				        <height>72</height>
 				        <width>72</width>
 			        </control>
@@ -997,7 +1130,8 @@
 					    <focusposition>$PARAM[focusposition]</focusposition>
 					    <movement>0</movement>
 					    <preloaditems>4</preloaditems>
-					    <itemlayout height="339" width="240" condition="container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)">
+					    <!-- Poster type items: movies, sets, tvshows, seasons -->
+						<itemlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="image">
 							    <include>MovieFanartThumbDimensions</include>
 								<include>MovieFanartThumb</include>
@@ -1017,7 +1151,7 @@
 							    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 						    </control>
 					    </itemlayout>
-					    <focusedlayout height="339" width="240" condition="container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)">
+					    <focusedlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="group">
 							    <animation effect="zoom" easing="out" start="100" end="118" time="350" delay="0" center="120,243">Focus</animation>
 							    <animation effect="zoom" easing="in" start="118" end="100" time="250" delay="0" center="120,243">UnFocus</animation>
@@ -1041,6 +1175,109 @@
 						        </include>
 						    </control>
 					    </focusedlayout>
+						<!-- Poster type items: musicvideos -->
+						<itemlayout height="339" width="240" condition="container.content(musicvideos) + !Skin.HasSetting(56_Posters_Netflix_Landscape)">
+						    <control type="image">
+							    <include>MovieFanartThumbDimensions</include>
+								<include content="MovieFanartThumb">
+								    <param name="aspect">scale</param>
+								</include>
+						    </control>
+						    <control type="image">
+    							<include content="MovieFanartReflection">
+								    <param name="aspect">scale</param>    
+								</include>
+						    </control>
+						    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
+    	                        <param name="isFocused">false</param>
+	    					</include>	
+						    <control type="image">
+							    <posx>180</posx>
+							    <posy>281</posy>
+							    <width>33</width>
+							    <height>33</height>
+							    <texture>$VAR[Overlay]</texture>
+							    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
+						    </control>
+					    </itemlayout>
+					    <focusedlayout height="339" width="240" condition="container.content(musicvideos) + !Skin.HasSetting(56_Posters_Netflix_Landscape)">
+						    <control type="group">
+							    <animation effect="zoom" easing="out" start="100" end="118" time="350" delay="0" center="120,243">Focus</animation>
+							    <animation effect="zoom" easing="in" start="118" end="100" time="250" delay="0" center="120,243">UnFocus</animation>
+							    <control type="image">
+								    <include>MovieFanartThumbDimensions</include>
+									<include content="MovieFanartThumb">
+								        <param name="aspect">scale</param>
+								    </include>
+							    </control>
+							    <control type="image">
+								    <include content="MovieFanartReflection">
+								        <param name="aspect">scale</param>    
+								    </include>
+							    </control>
+							    <control type="image">
+								    <posx>180</posx>
+								    <posy>281</posy>
+								    <width>33</width>
+								    <height>33</height>
+								    <texture>$VAR[Overlay]</texture>
+									<colordiffuse>$VAR[HighlightColor]</colordiffuse>
+								    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
+							    </control>
+							    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
+	                                <param name="isFocused">true</param>
+						        </include>
+						    </control>
+					    </focusedlayout>
+						<!-- Landscape type items in Netflix style: movies, sets, tvshows, seasons -->
+						<itemlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+						    <control type="image">
+							    <include>MovieLandscapeDimensions</include>
+								<include>MovieLandscapeThumb</include>
+						    </control>
+						    <control type="image">
+    							<include>MovieLandscapeReflection</include>
+						    </control>
+						    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
+    	                        <param name="isFocused">false</param>
+								<param name="isLandscape">true</param>
+	    					</include>	
+						    <control type="image" description="Watched Overlay">
+    							<posx>357</posx>
+							    <width>33</width>
+							    <height>70</height>
+							    <texture>$VAR[Overlay]</texture>
+							    <aspectratio>keep</aspectratio>
+							    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
+							</control>
+					    </itemlayout>
+					    <focusedlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+						    <control type="group">
+							    <animation effect="zoom" easing="out" start="100" end="118" time="350" delay="0" center="120,243">Focus</animation>
+							    <animation effect="zoom" easing="in" start="118" end="100" time="250" delay="0" center="120,243">UnFocus</animation>
+							    <control type="image">
+							        <include>MovieLandscapeDimensions</include>
+								    <include>MovieLandscapeThumb</include>
+								</control>
+						        <control type="image">
+    							    <include>MovieLandscapeReflection</include>
+						        </control>
+							    <control type="image" description="Watched Overlay">
+    							    <posx>357</posx>
+							        <width>33</width>
+							        <height>70</height>
+							        <texture>$VAR[Overlay]</texture>
+							        <aspectratio>keep</aspectratio>
+									<colordiffuse>$VAR[HighlightColor]</colordiffuse>
+							        <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
+							    </control>
+							    <include condition="Skin.HasSetting(ShowTopRightOverlays)" content="TopRightOverlayFanart">
+	                                <param name="isFocused">true</param>
+									<param name="isLandscape">true</param>
+						        </include>
+						    </control>
+					    </focusedlayout>
+						<!-- Episodes -->
 					    <itemlayout height="291" width="464" condition="container.content(episodes)">
 						    <control type="image">
     							<include>EpisodeFanartThumb</include>
@@ -1114,6 +1351,7 @@
 									    <height>70</height>
 									    <texture>$VAR[Overlay]</texture>
 									    <aspectratio>keep</aspectratio>
+										<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 									    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 								    </control>
 								    <control type="image">
@@ -1126,11 +1364,13 @@
 				                    <posy>0</posy>
 				                    <height>72</height>
 				                    <width>72</width>
+									<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 								    <visible>Skin.HasSetting(ShowTopRightOverlays)</visible>
 			                    </control>
 						    </control>
 					    </focusedlayout>
-					    <itemlayout height="344" width="344" condition="![container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]">
+						<!-- Square type items -->
+					    <itemlayout height="344" width="344" condition="![container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]">
 						    <control type="image">
 							    <include>SquareFanartThumbDimensions</include>
 								<include>SquareFanartThumb</include>
@@ -1139,7 +1379,7 @@
 							    <include>SquareFanartReflection</include>
 						    </control>
 					    </itemlayout>
-					    <focusedlayout height="344" width="344" condition="![container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]">
+					    <focusedlayout height="344" width="344" condition="![container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]">
 						    <control type="group">
 							    <animation effect="zoom" easing="out" start="100" end="110" time="350" delay="0" center="162,345">Focus</animation>
 							    <animation effect="zoom" easing="in" start="110" end="100" time="250" delay="0" center="162,345">UnFocus</animation>
