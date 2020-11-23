@@ -1050,7 +1050,7 @@
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Posters_Netflix)</onclick>
             <selected>Skin.HasSetting(56_Posters_Netflix)</selected>
-            <label>- Netflix style</label>
+            <label>- $LOCALIZE[32295]</label>
         </control>
 		<control type="radiobutton" id="915601" description="Fanart View: Netflix Show Logo for Posters">
             <visible>Control.IsVisible(56)+ [container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix)</visible>
@@ -1058,7 +1058,7 @@
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Posters_Netflix_Logo)</onclick>
             <selected>Skin.HasSetting(56_Posters_Netflix_Logo)</selected>
-            <label>   -- Show Logo</label>
+            <label>   -- $LOCALIZE[32296]</label>
         </control>
 		<control type="radiobutton" id="915602" description="Fanart View: Netflix Show Landscape for Posters">
             <visible>Control.IsVisible(56)+ [container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix)</visible>
@@ -1066,7 +1066,7 @@
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Posters_Netflix_Landscape)</onclick>
             <selected>Skin.HasSetting(56_Posters_Netflix_Landscape)</selected>
-            <label>   -- Use Landscape</label>
+            <label>   -- $LOCALIZE[32297]</label>
         </control>
 		<control type="radiobutton" id="915603" description="Fanart View: Netflix for Episodes">
             <visible>Control.IsVisible(56)+ container.content(episodes) + !Skin.HasSetting(56_Episodes_Info)</visible>
@@ -1074,7 +1074,7 @@
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Episodes_Netflix)</onclick>
             <selected>Skin.HasSetting(56_Episodes_Netflix)</selected>
-            <label>- Netflix style</label>
+            <label>- $LOCALIZE[32295]</label>
         </control>
 		<control type="radiobutton" id="915604" description="Fanart View: Netflix Show Logo for Episodes">
             <visible>Control.IsVisible(56)+ container.content(episodes) + Skin.HasSetting(56_Episodes_Netflix)</visible>
@@ -1082,7 +1082,7 @@
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Episodes_Netflix_Logo)</onclick>
             <selected>Skin.HasSetting(56_Episodes_Netflix_Logo)</selected>
-            <label>   -- Show Logo</label>
+            <label>   -- $LOCALIZE[32296]</label>
         </control>
 		<control type="radiobutton" id="91561" description="Fanart View: Show Info for Episodes">
             <visible>Control.IsVisible(56)+ container.content(episodes) + !Skin.HasSetting(56_Episodes_Netflix)</visible>
@@ -1158,6 +1158,16 @@
             <selected>Skin.HasSetting(56_Posters_Gallery)</selected>
             <label>- $LOCALIZE[31970]</label>
         </control>
+		
+		<control type="button" id="915610" description="Fanart view: Dim Level">
+            <visible>Control.IsVisible(56)</visible>
+            <font>ListDetails</font>
+            <include>9000SysButtons</include>
+			<label>- $LOCALIZE[32298]</label>
+			<label2>$VAR[AmberFlixDimLevelLabelVar]</label2>
+			<onclick>SetProperty(CustomSelectAmberFlixDimLevel,True,Home)</onclick>
+			<onclick>ActivateWindow(1121)</onclick>
+		</control>
     </include>
 	
 	<include name="IconViewTitleSwitch">

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<variable name="AmberFlixDimmerLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(AmberFlix.Dimmer))">$INFO[Skin.String(AmberFlix.Dimmer)]</value>
+	<variable name="AmberFlixDimLevelLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(AmberFlix.DimLevel))">$INFO[Skin.String(AmberFlix.DimLevel)]</value>
 		<value>60%</value>
 	</variable>
 	
@@ -11,18 +11,18 @@
 		<value>$INFO[ListItem.Title]</value>
 	</variable>
 	
-	<variable name="AmberFlixDimmerVar">
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),100%)">FFFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),90%)">E6FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),80%)">CCFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),70%)">B3FFFFFF</value>
-		<value condition="String.IsEmpty(Skin.String(AmberFlix.Dimmer))">99FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),50%)">80FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),40%)">66FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),30%)">4DFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),20%)">33FFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),10%)">1AFFFFFF</value>
-		<value condition="String.IsEqual(Skin.String(AmberFlix.Dimmer),0%)">00FFFFFF</value>
+	<variable name="AmberFlixDimLevelVar">
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),100%)">FFFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),90%)">E6FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),80%)">CCFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),70%)">B3FFFFFF</value>
+		<value condition="String.IsEmpty(Skin.String(AmberFlix.DimLevel))">99FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),50%)">80FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),40%)">66FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),30%)">4DFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),20%)">33FFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),10%)">1AFFFFFF</value>
+		<value condition="String.IsEqual(Skin.String(AmberFlix.DimLevel),0%)">00FFFFFF</value>
 	</variable>
 	
 	<variable name="TMDbHelperNextAiredLabelVar">
@@ -117,11 +117,11 @@
 		<height>267</height>
 		<colordiffuse>229e9e9e</colordiffuse>
 		<texture background="true" flipy="true">$VAR[Landscape]</texture>
-		<aspectratio aligny="top">scale</aspectratio>
+		<aspectratio aligny="top">keep</aspectratio>
 	</include>
 	<include name="MovieLandscapeThumb">
 		<texture background="true">$VAR[Landscape]</texture>
-		<aspectratio aligny="top">scale</aspectratio>
+		<aspectratio aligny="top">keep</aspectratio>
 	</include>
 	
 	
@@ -152,9 +152,18 @@
 		<height>267</height>
 	</include>
 	<include name="EpisodeFanartReflection">
-		<posx>12</posx>
-		<posy>73</posy>
-		<width>390</width>
+		<posx>-10</posx>
+		<posy>294</posy>
+		<width>486</width>
+		<height>267</height>
+		<colordiffuse>339e9e9e</colordiffuse>
+		<texture background="true" flipy="true">$VAR[Episode]</texture>
+		<aspectratio aligny="top">scale</aspectratio>
+	</include>
+	<include name="FocusedEpisodeFanartReflection">
+		<posx>0</posx>
+		<posy>299</posy>
+		<width>464</width>
 		<height>267</height>
 		<colordiffuse>339e9e9e</colordiffuse>
 		<texture background="true" flipy="true">$VAR[Episode]</texture>
@@ -314,6 +323,7 @@
 				    <posy>15</posy>
 				    <height>72</height>
 				    <width>72</width>
+					<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 			    </control>
 			    <control type="image">
 				    <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
@@ -334,6 +344,7 @@
 				    <posy>12</posy>
 				    <height>72</height>
 				    <width>72</width>
+					<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 			    </control>
 			    <control type="image">
 				    <visible>$PARAM[isFocused] + $PARAM[isLandscape]</visible>
@@ -357,6 +368,7 @@
 				        <posy>15</posy>
 				        <height>82</height>
 				        <width>82</width>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 			        </control>
 				    <control type="image">
 				        <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
@@ -390,6 +402,7 @@
 					    <align>center</align>
 					    <label>$VAR[UnwatchedEpisodes]</label>
 					    <textcolor>White2</textcolor>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>!$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
@@ -401,6 +414,7 @@
 					    <align>center</align>
 					    <label>$VAR[UnwatchedEpisodes]</label>
 					    <textcolor>White2</textcolor>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
@@ -423,6 +437,7 @@
 				        <posy>12</posy>
 				        <height>82</height>
 				        <width>82</width>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 			        </control>
 				    <control type="image">
 				        <visible>$PARAM[isFocused] + $PARAM[isLandscape]</visible>
@@ -456,6 +471,7 @@
 					    <align>center</align>
 					    <label>$VAR[UnwatchedEpisodes]</label>
 					    <textcolor>White2</textcolor>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>!$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + $PARAM[isLandscape]</visible>
@@ -467,6 +483,7 @@
 					    <align>center</align>
 					    <label>$VAR[UnwatchedEpisodes]</label>
 					    <textcolor>White2</textcolor>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + $PARAM[isLandscape]</visible>
@@ -493,6 +510,7 @@
 				        <posy>15</posy>
 				        <height>72</height>
 				        <width>72</width>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 			        </control>
 				    <control type="image">
 				        <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
@@ -510,6 +528,7 @@
 				        <posy>12</posy>
 				        <height>72</height>
 				        <width>72</width>
+						<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 			        </control>
 				    <control type="image">
 				        <visible>$PARAM[isFocused] + $PARAM[isLandscape]</visible>
@@ -1136,6 +1155,15 @@
 							    <include>MovieFanartThumbDimensions</include>
 								<include>MovieFanartThumb</include>
 						    </control>
+							<control type="image">
+						        <left>7</left>
+						        <top>7</top>
+						        <width>230</width>
+						        <height>327</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
 						    <control type="image">
     							<include>MovieFanartReflection</include>
 						    </control>
@@ -1183,6 +1211,15 @@
 								    <param name="aspect">scale</param>
 								</include>
 						    </control>
+							<control type="image">
+						        <left>7</left>
+						        <top>7</top>
+						        <width>230</width>
+						        <height>327</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
 						    <control type="image">
     							<include content="MovieFanartReflection">
 								    <param name="aspect">scale</param>    
@@ -1235,6 +1272,15 @@
 							    <include>MovieLandscapeDimensions</include>
 								<include>MovieLandscapeThumb</include>
 						    </control>
+							<control type="image">
+						        <left>4</left>
+						        <top>4</top>
+						        <width>406</width>
+						        <height>287</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
 						    <control type="image">
     							<include>MovieLandscapeReflection</include>
 						    </control>
@@ -1305,13 +1351,20 @@
 								    <height>70</height>
 								    <texture>$VAR[Overlay]</texture>
 								    <aspectratio>keep</aspectratio>
+									<colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 								    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 							    </control>
-							    <control type="image">
-								    <include>EpisodeFanartReflection</include>
-							    </control>
 						    </control>
-						    <control type="image">
+							<control type="image">
+						        <top>-9</top>
+								<left>-9</left>
+								<width>480</width>
+						        <height>308</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
+                            <control type="image">
 				                <texture background="true">$VAR[TopRightOverlay]</texture>
 				                <posx>72r</posx>
 				                <posy>0</posy>
@@ -1354,9 +1407,6 @@
 										<colordiffuse>$VAR[HighlightColor]</colordiffuse>
 									    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 								    </control>
-								    <control type="image">
-									    <include>EpisodeFanartReflection</include>
-								    </control>
 							    </control>
 							    <control type="image">
 				                    <texture background="true">$VAR[TopRightOverlay]</texture>
@@ -1376,6 +1426,15 @@
 								<include>SquareFanartThumb</include>
 						    </control>
 						    <control type="image">
+						        <left>7</left>
+						        <top>7</top>
+						        <width>230</width>
+						        <height>327</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
+							<control type="image">
 							    <include>SquareFanartReflection</include>
 						    </control>
 					    </itemlayout>
