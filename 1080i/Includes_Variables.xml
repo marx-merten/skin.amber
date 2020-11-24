@@ -347,6 +347,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(landscape))">$INFO[ListItem.Property(landscape)]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(fanart))">$INFO[ListItem.Property(fanart)]</value>
+		<value condition="Control.IsVisible(56) + ListItem.IsParentFolder">defaultepisodeback.png</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	
