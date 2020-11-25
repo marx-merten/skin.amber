@@ -325,7 +325,7 @@
 				    <visible>!$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable</visible>
 				    <texture background="true">$VAR[TopRightOverlay]</texture>
-				    <posx>86r</posx>
+				    <posx>87r</posx>
 				    <posy>15</posy>
 				    <height>72</height>
 				    <width>72</width>
@@ -335,7 +335,7 @@
 				    <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				    <visible>!Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + !ListItem.IsResumable</visible>
 				    <texture background="true">$VAR[TopRightOverlay]</texture>
-				    <posx>86r</posx>
+				    <posx>87r</posx>
 				    <posy>15</posy>
 				    <height>72</height>
 				    <width>72</width>
@@ -370,7 +370,7 @@
 					<control type="image">
 				        <visible>!$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true">overlays/toprightempty2.png</texture>
-				        <posx>93r</posx>
+				        <posx>97r</posx>
 				        <posy>15</posy>
 				        <height>82</height>
 				        <width>82</width>
@@ -379,7 +379,7 @@
 				    <control type="image">
 				        <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true">overlays/toprightempty2.png</texture>
-				        <posx>93r</posx>
+				        <posx>97r</posx>
 				        <posy>15</posy>
 				        <height>82</height>
 				        <width>82</width>
@@ -387,7 +387,7 @@
 			        </control>
 				    <control type="label" description="l2">
 					    <visible>$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
-					    <posx>85r</posx>
+					    <posx>90r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
 					    <width>100</width>
@@ -400,7 +400,7 @@
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>!$PARAM[isFocused] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
-					    <posx>85r</posx>
+					    <posx>90r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
 					    <width>100</width>
@@ -412,7 +412,7 @@
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>!$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
-					    <posx>86r</posx>
+					    <posx>89r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
 					    <width>100</width>
@@ -424,7 +424,7 @@
 				    </control>
 				    <control type="label" description="l2">
 					    <visible>$PARAM[isFocused] + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),99) + !$PARAM[isLandscape]</visible>
-					    <posx>86r</posx>
+					    <posx>89r</posx>
 				        <posy>-262</posy>
 					    <height>$PARAM[itemheight]</height>
 					    <width>100</width>
@@ -512,7 +512,7 @@
 					<control type="image">
 				        <visible>!$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true">$VAR[TopRightInProgress]</texture>
-				        <posx>86r</posx>
+				        <posx>87r</posx>
 				        <posy>15</posy>
 				        <height>72</height>
 				        <width>72</width>
@@ -521,7 +521,7 @@
 				    <control type="image">
 				        <visible>$PARAM[isFocused] + !$PARAM[isLandscape]</visible>
 				        <texture background="true" colordiffuse="$VAR[HighlightColor]">$VAR[TopRightInProgress]</texture>
-				        <posx>86r</posx>
+				        <posx>87r</posx>
 				        <posy>15</posy>
 				        <height>72</height>
 				        <width>72</width>
@@ -1161,15 +1161,6 @@
 							    <include>MovieFanartThumbDimensions</include>
 								<include>MovieFanartThumb</include>
 						    </control>
-							<control type="image">
-						        <left>7</left>
-						        <top>7</top>
-						        <width>230</width>
-						        <height>327</height>
-						        <texture border="1">img/blackdot.png</texture>
-						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
-						        <bordersize>8</bordersize>
-					        </control>
 						    <control type="image">
     							<include>MovieFanartReflection</include>
 						    </control>
@@ -1184,6 +1175,15 @@
 							    <texture>$VAR[Overlay]</texture>
 							    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 						    </control>
+							<control type="image">
+						        <left>7</left>
+						        <top>7</top>
+						        <width>226</width>
+						        <height>328</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
 					    </itemlayout>
 					    <focusedlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="group">
@@ -1217,15 +1217,6 @@
 								    <param name="aspect">scale</param>
 								</include>
 						    </control>
-							<control type="image">
-						        <left>7</left>
-						        <top>7</top>
-						        <width>230</width>
-						        <height>327</height>
-						        <texture border="1">img/blackdot.png</texture>
-						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
-						        <bordersize>8</bordersize>
-					        </control>
 						    <control type="image">
     							<include content="MovieFanartReflection">
 								    <param name="aspect">scale</param>    
@@ -1242,6 +1233,15 @@
 							    <texture>$VAR[Overlay]</texture>
 							    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 						    </control>
+							<control type="image">
+						        <left>7</left>
+						        <top>7</top>
+						        <width>226</width>
+						        <height>328</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+					        </control>
 					    </itemlayout>
 					    <focusedlayout height="339" width="240" condition="container.content(musicvideos) + !Skin.HasSetting(56_Posters_Netflix_Landscape)">
 						    <control type="group">
@@ -1273,31 +1273,11 @@
 						    </control>
 					    </focusedlayout>
 						<!-- Landscape type items in Netflix style: movies, sets, tvshows, seasons -->
-						<itemlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+						<itemlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="image">
 							    <include>MovieLandscapeDimensions</include>
 								<include>MovieLandscapeThumb</include>
 						    </control>
-							<control type="image">
-						        <left>4</left>
-						        <top>46</top>
-						        <width>406</width>
-						        <height>249</height>
-						        <texture border="1">img/blackdot.png</texture>
-						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
-						        <bordersize>8</bordersize>
-								<visible>!ListItem.IsParentFolder</visible>
-					        </control>
-							<control type="image">
-						        <left>22</left>
-						        <top>52</top>
-						        <width>370</width>
-						        <height>272</height>
-						        <texture border="1">img/blackdot.png</texture>
-						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
-						        <bordersize>8</bordersize>
-								<visible>ListItem.IsParentFolder</visible>
-					        </control>
 						    <control type="image">
     							<include>MovieLandscapeReflection</include>
 						    </control>
@@ -1313,8 +1293,18 @@
 							    <aspectratio>keep</aspectratio>
 							    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 							</control>
+							<control type="image">
+						        <left>4</left>
+						        <top>46</top>
+						        <width>406</width>
+						        <height>235</height>
+						        <texture border="1">img/blackdot.png</texture>
+						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
+						        <bordersize>8</bordersize>
+								<visible>!ListItem.IsParentFolder</visible>
+					        </control>
 					    </itemlayout>
-					    <focusedlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+					    <focusedlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="group">
 							    <animation effect="zoom" easing="out" start="100" end="130" time="350" delay="0" center="207,144">Focus</animation>
 							    <animation effect="zoom" easing="in" start="130" end="100" time="250" delay="0" center="207,124">UnFocus</animation>
@@ -1372,6 +1362,14 @@
 								    <visible>!Skin.HasSetting(ShowTopRightOverlays)</visible>
 							    </control>
 						    </control>
+                            <control type="image">
+				                <texture background="true">$VAR[TopRightOverlay]</texture>
+				                <posx>72r</posx>
+				                <posy>0</posy>
+				                <height>72</height>
+				                <width>72</width>
+							    <visible>Skin.HasSetting(ShowTopRightOverlays)</visible>
+			                </control>
 							<control type="image">
 						        <top>-9</top>
 								<left>-9</left>
@@ -1381,14 +1379,6 @@
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 					        </control>
-                            <control type="image">
-				                <texture background="true">$VAR[TopRightOverlay]</texture>
-				                <posx>72r</posx>
-				                <posy>0</posy>
-				                <height>72</height>
-				                <width>72</width>
-							    <visible>Skin.HasSetting(ShowTopRightOverlays)</visible>
-			                </control>
 					    </itemlayout>
 					    <focusedlayout height="291" width="464" condition="container.content(episodes)">
 						    <control type="group">
@@ -1442,7 +1432,10 @@
 							    <include>SquareFanartThumbDimensions</include>
 								<include>SquareFanartThumb</include>
 						    </control>
-						    <control type="image">
+							<control type="image">
+							    <include>SquareFanartReflection</include>
+						    </control>
+							<control type="image">
 						        <left>7</left>
 						        <top>7</top>
 						        <width>230</width>
@@ -1451,9 +1444,6 @@
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 					        </control>
-							<control type="image">
-							    <include>SquareFanartReflection</include>
-						    </control>
 					    </itemlayout>
 					    <focusedlayout height="344" width="344" condition="![container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons) | container.content(episodes)]">
 						    <control type="group">

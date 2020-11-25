@@ -1061,7 +1061,7 @@
             <label>   -- $LOCALIZE[32296]</label>
         </control>
 		<control type="radiobutton" id="915602" description="Fanart View: Netflix Show Landscape for Posters">
-            <visible>Control.IsVisible(56)+ [container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + Skin.HasSetting(56_Posters_Netflix)</visible>
+            <visible>Control.IsVisible(56)+ [container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + Skin.HasSetting(56_Posters_Netflix)</visible>
             <font>ListDetails</font>
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Posters_Netflix_Landscape)</onclick>
