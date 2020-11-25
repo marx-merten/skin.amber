@@ -1156,7 +1156,7 @@
 					    <movement>0</movement>
 					    <preloaditems>4</preloaditems>
 					    <!-- Poster type items: movies, sets, tvshows, seasons -->
-						<itemlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+						<itemlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + [[$EXP[56_FanartViewNetflix] + !Skin.HasSetting(56_Posters_Netflix_Landscape)] | ![$EXP[56_FanartViewNetflix]]]]">
 						    <control type="image">
 							    <include>MovieFanartThumbDimensions</include>
 								<include>MovieFanartThumb</include>
@@ -1185,7 +1185,7 @@
 						        <bordersize>8</bordersize>
 					        </control>
 					    </itemlayout>
-					    <focusedlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+					    <focusedlayout height="339" width="240" condition="[[container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + [[$EXP[56_FanartViewNetflix] + !Skin.HasSetting(56_Posters_Netflix_Landscape)] | ![$EXP[56_FanartViewNetflix]]]]">
 						    <control type="group">
 							    <animation effect="zoom" easing="out" start="100" end="118" time="350" delay="0" center="120,243">Focus</animation>
 							    <animation effect="zoom" easing="in" start="118" end="100" time="250" delay="0" center="120,243">UnFocus</animation>
@@ -1210,7 +1210,7 @@
 						    </control>
 					    </focusedlayout>
 						<!-- Poster type items: musicvideos -->
-						<itemlayout height="339" width="240" condition="container.content(musicvideos) + !Skin.HasSetting(56_Posters_Netflix_Landscape)">
+						<itemlayout height="339" width="240" condition="container.content(musicvideos) + [[$EXP[56_FanartViewNetflix] + !Skin.HasSetting(56_Posters_Netflix_Landscape)] | ![$EXP[56_FanartViewNetflix]]]">
 						    <control type="image">
 							    <include>MovieFanartThumbDimensions</include>
 								<include content="MovieFanartThumb">
@@ -1243,7 +1243,7 @@
 						        <bordersize>8</bordersize>
 					        </control>
 					    </itemlayout>
-					    <focusedlayout height="339" width="240" condition="container.content(musicvideos) + !Skin.HasSetting(56_Posters_Netflix_Landscape)">
+					    <focusedlayout height="339" width="240" condition="container.content(musicvideos) + [[$EXP[56_FanartViewNetflix] + !Skin.HasSetting(56_Posters_Netflix_Landscape)] | ![$EXP[56_FanartViewNetflix]]]">
 						    <control type="group">
 							    <animation effect="zoom" easing="out" start="100" end="118" time="350" delay="0" center="120,243">Focus</animation>
 							    <animation effect="zoom" easing="in" start="118" end="100" time="250" delay="0" center="120,243">UnFocus</animation>
@@ -1273,7 +1273,7 @@
 						    </control>
 					    </focusedlayout>
 						<!-- Landscape type items in Netflix style: movies, sets, tvshows, seasons -->
-						<itemlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+						<itemlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + $EXP[56_FanartViewNetflix] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="image">
 							    <include>MovieLandscapeDimensions</include>
 								<include>MovieLandscapeThumb</include>
@@ -1304,7 +1304,7 @@
 								<visible>!ListItem.IsParentFolder</visible>
 					        </control>
 					    </itemlayout>
-					    <focusedlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
+					    <focusedlayout height="291" width="464" condition="[[container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows)] + $EXP[56_FanartViewNetflix] + Skin.HasSetting(56_Posters_Netflix_Landscape)]">
 						    <control type="group">
 							    <animation effect="zoom" easing="out" start="100" end="130" time="350" delay="0" center="207,144">Focus</animation>
 							    <animation effect="zoom" easing="in" start="130" end="100" time="250" delay="0" center="207,124">UnFocus</animation>
@@ -1437,9 +1437,9 @@
 						    </control>
 							<control type="image">
 						        <left>7</left>
-						        <top>7</top>
-						        <width>230</width>
-						        <height>327</height>
+						        <top>-10</top>
+						        <width>313</width>
+						        <height>315</height>
 						        <texture border="1">img/blackdot.png</texture>
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
