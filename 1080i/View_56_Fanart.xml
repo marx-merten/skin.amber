@@ -1180,7 +1180,7 @@
 						        <top>7</top>
 						        <width>226</width>
 						        <height>328</height>
-						        <texture border="1">img/blackdot.png</texture>
+						        <texture border="1">img/blackdot1.png</texture>
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 					        </control>
@@ -1239,7 +1239,7 @@
 						        <top>7</top>
 						        <width>226</width>
 						        <height>328</height>
-						        <texture border="1">img/blackdot.png</texture>
+						        <texture border="1">img/blackdot1.png</texture>
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 					        </control>
@@ -1300,7 +1300,7 @@
 						        <top>46</top>
 						        <width>406</width>
 						        <height>235</height>
-						        <texture border="1">img/blackdot.png</texture>
+						        <texture border="1">img/blackdot1.png</texture>
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 								<visible>!ListItem.IsParentFolder</visible>
@@ -1378,7 +1378,7 @@
 								<left>-9</left>
 								<width>480</width>
 						        <height>308</height>
-						        <texture border="1">img/blackdot.png</texture>
+						        <texture border="1">img/blackdot1.png</texture>
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 					        </control>
@@ -1443,7 +1443,7 @@
 						        <top>-10</top>
 						        <width>313</width>
 						        <height>315</height>
-						        <texture border="1">img/blackdot.png</texture>
+						        <texture border="1">img/blackdot1.png</texture>
 						        <colordiffuse>$VAR[AmberFlixDimLevelVar]</colordiffuse>
 						        <bordersize>8</bordersize>
 					        </control>
