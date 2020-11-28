@@ -45,6 +45,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.ChannelNumberLabel</info>
+						<font>Details</font>
 					</control>
 					<control type="label" description="Main Label">
 						<posx>90</posx>
@@ -52,6 +53,7 @@
 						<width>500</width>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.Label,[B],[/B]]</label>
+						<font>Details</font>
 					</control>
 					<control type="label" description="Label2">
 						<posx>90</posx>
@@ -76,6 +78,7 @@
 						<aligny>center</aligny>
 						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
+						<font>Details</font>
 						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="label" description="Main Label">
@@ -85,6 +88,7 @@
 						<scroll>false</scroll>
 						<textcolor>$VAR[FocusedTextColor]</textcolor>
 						<shadowcolor></shadowcolor>
+						<font>Details</font>
 						<label>$INFO[ListItem.Label,[B],[/B]]</label>
 					</control>
 					<control type="label" description="Label2">
@@ -189,7 +193,7 @@
 			</control>
 		</control>
 		<control type="scrollbar" id="60">
-			<posx>45</posx>
+			<posx>5</posx>
 			<posy>180</posy>
 			<width>36</width>
 			<height>790</height>

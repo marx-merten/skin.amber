@@ -410,7 +410,7 @@ msgid "Select Default Font Size"
 msgstr ""
 
 msgctxt "#31118"
-msgid "Smaller"
+msgid "Small"
 msgstr ""
 
 msgctxt "#31119"
