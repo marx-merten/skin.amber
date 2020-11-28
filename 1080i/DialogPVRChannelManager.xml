@@ -4,9 +4,9 @@
 	<controls>
 		<include>Time</include>
 		<control type="image">
-			<posx>36</posx>
+			<posx>-10</posx>
 			<posy>60</posy>
-			<width>1849</width>
+			<width>1939</width>
 			<height>1010</height>
 			<texture flipx="true">dialogs/SettingsBG.png</texture>
 			<colordiffuse>$VAR[DialogBGColor]</colordiffuse>
@@ -164,8 +164,8 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9000" description="Right panel">
-				<posx>1533</posx>
-				<width>324</width>
+				<posx>1553</posx>
+				<width>354</width>
 				<height>900</height>
 				<onleft>9002</onleft>
 				<onright>20</onright>
@@ -173,17 +173,17 @@
 				<ondown>9000</ondown>
 				<control type="button" id="4" description="OK">
 					<label>$LOCALIZE[186]</label>
-					<width>324</width>
+					<width>354</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 				</control>
 				<control type="button" id="5" description="Apply">
-					<label>$LOCALIZE[14070]</label>
-					<width>324</width>
+					<label>$LOCALIZE[31121]</label>
+					<width>354</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 				</control>
 				<control type="button" id="6" description="Cancel">
 					<label>$LOCALIZE[222]</label>
-					<width>324</width>
+					<width>354</width>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
 				</control>
 			</control>

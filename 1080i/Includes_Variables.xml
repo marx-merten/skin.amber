@@ -1032,6 +1032,7 @@
         <value condition="!String.IsEmpty(Window(Home).Property(DoInfoExtras))">$LOCALIZE[32135]</value>
 		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectVideoGenreIcons))">$LOCALIZE[31941]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(CustomSelectAmberFlixDimLevel))">$LOCALIZE[32299]</value>
+		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectDefaultFont))">$LOCALIZE[31117]</value>
         <value>$LOCALIZE[22080]</value>
     </variable>
 
@@ -1659,6 +1660,14 @@
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetAutoScroll.6),$NUMBER[30000])">30 $LOCALIZE[32047]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetAutoScroll.6),$NUMBER[60000])">60 $LOCALIZE[32047]</value>
 	</variable>
+	
+	<variable name="DefaultFontLabel">
+	    <value condition="Skin.HasSetting(Smaller.Fonts)">$LOCALIZE[31118]</value>
+		<value condition="Skin.HasSetting(Regular.Fonts)">$LOCALIZE[31119]</value>
+		<value condition="Skin.HasSetting(Large.Fonts)">$LOCALIZE[31120]</value>
+		<value>$LOCALIZE[31119]</value>
+	</variable>
+	
 	
     <expression name="WidgetFanartVisible">String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart)) + ControlGroup(700).HasFocus</expression>
     
