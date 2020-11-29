@@ -1181,7 +1181,7 @@
 	
 	<include name="IconViewTitleSwitch">
 	    <control type="radiobutton" id="9131" description="Icon View: Swap Title with File name">
-            <visible>Control.IsVisible(53)</visible>
+            <visible>Control.IsVisible(53) + [Container.Content() | Container.Content(files) | Container.Content(movies) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images)]</visible>
             <font>ListDetails</font>
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(53_FileNameNotTitle)</onclick>

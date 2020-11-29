@@ -621,7 +621,7 @@
     </variable>
 
     <variable name="panelheading">
-        <value condition="Control.IsVisible(53) + Skin.HasSetting(53_FileNameNotTitle)">$INFO[ListItem.Filename]</value>
+        <value condition="Control.IsVisible(53) + Skin.HasSetting(53_FileNameNotTitle) + !ListItem.IsFolder + !String.StartsWith(Container.FolderPath,plugin) + [Container.Content() | Container.Content(files) | Container.Content(movies) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images)]">$INFO[ListItem.Filename]</value>
 		<value condition="[Window.IsActive(1122) | Window.IsActive(1131)] + !String.IsEqual(Container.ListItem.DBType,episode) + !Skin.HasSetting(HideTop250MediaViews)">$INFO[Container.Listitem.Title] $INFO[Container.ListItem.Year,(,)][B]$INFO[Container.ListItem.Top250, #,][/B]</value>
 		<value condition="[Window.IsActive(1122) | Window.IsActive(1131)] + !String.IsEqual(Container.ListItem.DBType,episode) + Skin.HasSetting(HideTop250MediaViews)">$INFO[Container.Listitem.Title] $INFO[Container.ListItem.Year,(,)]</value>
 		<value condition="[Window.IsActive(1122) | Window.IsActive(1131)] + String.IsEqual(Container.ListItem.DBType,episode)">$INFO[Container.ListItem.TVShowTitle,, • ]$INFO[Container.ListItem.Label]</value>
