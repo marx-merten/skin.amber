@@ -1033,6 +1033,11 @@
 		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectVideoGenreIcons))">$LOCALIZE[31941]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(CustomSelectAmberFlixDimLevel))">$LOCALIZE[32299]</value>
 		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectDefaultFont))">$LOCALIZE[31117]</value>
+		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectVideoDiscArtFallback))">$LOCALIZE[32302]</value>
+		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectMusicDiscArtFallback))">$LOCALIZE[32303]</value>
+		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectNowPlayingMovieInfo))">$LOCALIZE[32315]</value>
+		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectNowPlayingVideoInfo))">$LOCALIZE[32316]</value>
+		<value condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectNowPlayingMusicInfo))">$LOCALIZE[32317]</value>
         <value>$LOCALIZE[22080]</value>
     </variable>
 
@@ -1729,7 +1734,7 @@
 	
 	<expression name="IsIconView">[Window.IsActive(DialogVideoInfo.xml) | String.IsEmpty(Container.ViewMode)] | String.IsEqual(Container.ViewMode,$LOCALIZE[536]) | String.IsEqual(Container.ViewMode,$LOCALIZE[20445]) | String.IsEqual(Container.ViewMode,$LOCALIZE[31958]) | 
 	                              String.IsEqual(Container.ViewMode,$LOCALIZE[31963]) | String.IsEqual(Container.ViewMode,$LOCALIZE[32245]) | String.IsEqual(Container.ViewMode,$LOCALIZE[32246])</expression>
-	<expression name="widgetsAreShowing">ControlGroup(700).HasFocus | [Control.HasFocus(300) + !Container(300).ListItem.Property(widgetsHide) + !String.IsEmpty(Container(300).ListItem.Property(widgetPath))]</expression>
+	<expression name="widgetsAreShowing">ControlGroup(700).HasFocus | [Control.HasFocus(300) + !Container(300).ListItem.Property(widgetsHide) + !String.IsEmpty(Container(300).ListItem.Property(widgetPath)) + !Skin.HasSetting(Hide.AllShelves)]</expression>
 												  
 	<expression name="isSpecialContent">[Container.Content() | Container.Content(videos) | Container.Content(files) | Container.Content(playlists) | Container.Content(tags) | Container.Content(actors) | 
 	                                     Container.Content(directors) | Container.Content(years) | Container.Content(countries) | Container.Content(roles) | Container.Content(genres) | Container.Content(studios)]</expression>

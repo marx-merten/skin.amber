@@ -28,6 +28,7 @@
 	<include file="Includes_TVGuide.xml" />
 	<include file="Includes_Backgrounds.xml" />
 	<include file="Includes_FullScreen.xml" />
+	<include file="Includes_NowPlaying.xml" />
 
     <include file="Includes_Media.xml" />
     <include file="Includes_List.xml" />
@@ -345,7 +346,7 @@
                     <textcolor>$VAR[LabelTextColor]</textcolor>
                 </control>
                 <control type="grouplist">
-					<visible>Player.HasMedia</visible>
+					<visible>Player.HasMedia + [!Skin.HasSetting(Hide.TitleBarNowPlaying) | $EXP[widgetsAreShowing]]</visible>
                     <include>VisibleFadeEffect</include>
 					<orientation>horizontal</orientation>
 					<itemgap>10</itemgap>

@@ -361,7 +361,7 @@
     <!-- Movie/TV Show Logo for Home Window -->
 	<include name="HomeClearLogo">
 	    <control type="group">
-	        <visible>Control.HasFocus(300) | ControlGroup(700).HasFocus</visible>
+	        <visible>[Control.HasFocus(300) | ControlGroup(700).HasFocus] + !Control.IsVisible(350)</visible>
 		    <!-- Logo for vert. menu, no widgets -->
 		    <control type="image">
                 <posy>40</posy>
@@ -837,6 +837,7 @@
 	
 	<include name="ShowFanartTitle">
         <control type="group">
+		    <animation effect="fade" start="100" end="0" time="100" condition="[Player.Playing | Player.Paused | Player.Forwarding | Player.Rewinding] + Skin.HasSetting(FanartTitle.InTopBar) + !Skin.HasSetting(Hide.TitleBarNowPlaying)">Conditional</animation>
             <visible>[[String.IsEqual(Container(300).ListItem.Property(background),nodeBackground) | String.IsEqual(Container(300).ListItem.Property(background),playlistBackground) | String.EndsWith(Container(300).ListItem.Property(background),.Fanart)] + !String.IsEqual(Container(300).ListItem.Property(background),Weather.Fanart)] | 
 			         [ControlGroup(700).HasFocus + String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart)) + String.IsEqual(Container(300).ListItem.Property(widgetType),custom) + 
 					  [[String.IsEqual(Container.ListItem.Property(background),nodeBackground) | String.IsEqual(Container.ListItem.Property(background),playlistBackground) | String.EndsWith(Container.ListItem.Property(background),.Fanart)] + !String.IsEqual(Container(300).ListItem.Property(background),Weather.Fanart)]]</visible>
