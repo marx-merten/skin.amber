@@ -372,36 +372,6 @@
 							<param name="skinsetting" value="SkinHelper.EnableExtraFanart"/>
 						</include>
 					</content>
-					
-			<!--		<control type="button" id="411">
-							<label>$LOCALIZE[31315]</label>
-							<label2>$VAR[NowPlayingMusicBackgroundLabelVar]</label2>
-							<onclick>SetProperty(CustomSelect,$LOCALIZE[31030],home)</onclick>
-							<onclick>ActivateWindow(1110)</onclick>
-							<include>SettingsButton</include>
-						</control>
-						<control type="button" id="413">
-							<visible>Skin.String(NowPlayingMusicBackground,artistsslideshow)</visible>
-							<label>$LOCALIZE[31354]</label>
-							<onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
-							<include>SettingsButton</include>
-						</control>
-						<control type="radiobutton" id="414">
-							<label>$LOCALIZE[250]</label>
-							<onclick>Skin.ToggleSetting(NowplayingVizBackground)</onclick>
-							<selected>Skin.HasSetting(NowplayingVizBackground)</selected>
-							<include>SettingsRadioButton</include>
-						</control>
-						<control type="radiobutton" id="415">
-							<label>$LOCALIZE[31181]</label>
-							<onclick>Skin.ToggleSetting(NowplayingVideoBackground)</onclick>
-							<selected>Skin.HasSetting(NowplayingVideoBackground)</selected>
-							<include>SettingsRadioButton</include>
-						</control> -->
-					
-					
-					
-					
 				</control>
 				<!--9000 4 Media Views Options -->
 				<control type="panel" id="9104">

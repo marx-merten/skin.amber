@@ -3200,4 +3200,16 @@ msgctxt "#32329"
 msgid "Special"
 msgstr ""
 
+msgctxt "#32330"
+msgid "Next Tracks"
+msgstr ""
+
+msgctxt "#32331"
+msgid "Album Review"
+msgstr ""
+
+msgctxt "#32332"
+msgid "Artist Bio"
+msgstr ""
+
 

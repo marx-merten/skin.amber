@@ -121,6 +121,7 @@
 				<control type="fadelabel">
 					<left>50</left>
 					<height>40</height>
+					<width>900</width>
 					<bottom>29</bottom>
 					<font>InfoTitle</font>
 					<label>$INFO[MusicPlayer.TrackNumber,,. ][B]$INFO[Player.Title,, ]$INFO[VideoPlayer.Year,(,)][/B]</label>
@@ -258,329 +259,427 @@
 			</control>
 		</definition>
 	</include>
+	
 	<include name="HomeNowPlayingVideoInfo">
-		<include>AnimationSlideRightVisible</include>
-		<top>50</top>
-		<right>10</right>
-		<width>500</width>
-		<height>303</height>
-		<align>right</align>
-		<usecontrolcoords>true</usecontrolcoords>
-		<control type="label">
-			<visible>VideoPlayer.HasEpg</visible>
-			<height>40</height>
-			<align>right</align>
-			<font>InfoTitle</font>
-			<label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ]</label>
-		</control>
-		<control type="label">
-			<visible>!VideoPlayer.HasEpg</visible>
-			<height>40</height>
-			<align>right</align>
-			<font>InfoTitle</font>
-			<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-		</control>
-		<control type="label">
-			<visible>!VideoPlayer.HasEpg</visible>
-			<height>42</height>
-			<align>right</align>
-			<font>ListDetails</font>
-			<label>$INFO[Player.FinishTime,$LOCALIZE[19127] ]</label>
-		</control>
-		<control type="label">
-			<visible>VideoPlayer.HasEpg</visible>
-			<height>42</height>
-			<align>right</align>
-			<font>ListDetails</font>
-			<label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[19127] ]</label>
-		</control>
-		<control type="progress">
-			<height>20</height>
-			<texturebg border="0,0,0,0" colordiffuse="$VAR[LabelTextColor]">img/AmberDotBG.png</texturebg>
-			<midtexture border="0,0,0,0" colordiffuse="$VAR[HighlightColor]">img/AmberDot.png</midtexture>
-			<info>PVR.EpgEventProgress</info>
-			<visible>VideoPlayer.HasEpg</visible>
-		</control>
-		<control type="progress">
-			<height>20</height>
-			<texturebg border="0,0,0,0" colordiffuse="$VAR[LabelTextColor]">img/AmberDotBG.png</texturebg>
-			<midtexture border="0,0,0,0" colordiffuse="$VAR[HighlightColor]">img/AmberDot.png</midtexture>
-			<info>Player.Progress</info>
-			<visible>!VideoPlayer.HasEpg</visible>
-		</control>
+	    <param name="top">50</param>
+		<param name="left">1370</param>
+		<param name="align">right</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+		    <top>$PARAM[top]</top>
+			<left>$PARAM[left]</left>
+		    <width>500</width>
+		    <height>303</height>
+		    <align>$PARAM[align]</align>
+		    <usecontrolcoords>true</usecontrolcoords>
+		    <control type="label">
+			    <visible>VideoPlayer.HasEpg</visible>
+			    <height>40</height>
+			    <align>$PARAM[align]</align>
+			    <font>InfoTitle</font>
+			    <label>$INFO[PVR.EpgEventElapsedTime]$INFO[PVR.EpgEventDuration, / ]</label>
+		    </control>
+		    <control type="label">
+			    <visible>!VideoPlayer.HasEpg</visible>
+			    <height>40</height>
+			    <align>$PARAM[align]</align>
+			    <font>InfoTitle</font>
+			    <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+		    </control>
+		    <control type="label">
+			    <visible>!VideoPlayer.HasEpg</visible>
+			    <height>42</height>
+			    <align>$PARAM[align]</align>
+			    <font>ListDetails</font>
+			    <label>$INFO[Player.FinishTime,$LOCALIZE[19127] ]</label>
+		    </control>
+		    <control type="label">
+			    <visible>VideoPlayer.HasEpg</visible>
+			    <height>42</height>
+			    <align>$PARAM[align]</align>
+			    <font>ListDetails</font>
+			    <label>$INFO[PVR.EpgEventFinishTime,$LOCALIZE[19127] ]</label>
+		    </control>
+		    <control type="progress">
+			    <height>20</height>
+			    <texturebg border="0,0,0,0" colordiffuse="$VAR[LabelTextColor]">img/AmberDotBG.png</texturebg>
+			    <midtexture border="0,0,0,0" colordiffuse="$VAR[HighlightColor]">img/AmberDot.png</midtexture>
+			    <info>PVR.EpgEventProgress</info>
+			    <visible>VideoPlayer.HasEpg</visible>
+		    </control>
+		    <control type="progress">
+			    <height>20</height>
+			    <texturebg border="0,0,0,0" colordiffuse="$VAR[LabelTextColor]">img/AmberDotBG.png</texturebg>
+			    <midtexture border="0,0,0,0" colordiffuse="$VAR[HighlightColor]">img/AmberDot.png</midtexture>
+			    <info>Player.Progress</info>
+			    <visible>!VideoPlayer.HasEpg</visible>
+		    </control>
+		</definition>	
 	</include>
+	
 	<include name="HomeNowPlayingVideoCast">
-		<include>AnimationSlideRightVisible</include>
-		<right>10</right>
-		<width>500</width>
-		<control type="label">
-			<top>26</top>
-			<height>40</height>
-			<align>right</align>
-			<font>InfoTitle</font>
-			<label>$LOCALIZE[206]</label>
-			<textcolor>$VAR[HighlightColor]</textcolor>
-		</control>
-		<control type="image">
-			<top>72</top>
-			<right>0</right>
-			<width>388</width>
-			<height>4</height>
-			<aspectratio align="right" aligny="center">scale</aspectratio>
-			<texture flipx="true">panels/separator.png</texture>
-		</control>
-		<control type="textbox">
-			<top>84</top>
-			<right>0</right>
-			<width>600</width>
-			<height>280</height>
-			<align>right</align>
-			<include>AutoScrollPlot</include>
-			<label>$INFO[VideoPlayer.CastAndRole]</label>
-		</control>
+	    <param name="top">0</param>
+		<param name="align">right</param>
+		<param name="left"></param>
+		<param name="leftedge">1310</param>
+		<param name="flipx">true</param>
+		<param name="separatorleft">212</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+		    <width>500</width>
+		    <control type="label">
+			    <top>26</top>
+			    <height>40</height>
+			    <left>$PARAM[leftedge]</left>
+				<width>600</width>
+				<align>$PARAM[align]</align>
+			    <font>InfoTitle</font>
+			    <label>[B]$LOCALIZE[206][/B]</label>
+			    <textcolor>$VAR[HighlightColor]</textcolor>
+		    </control>
+		    <control type="image">
+			    <top>72</top>
+				<left>$PARAM[separatorleft]</left>
+			    <width>388</width>
+			    <height>4</height>
+			    <aspectratio align="$PARAM[align]" aligny="center">scale</aspectratio>
+			    <texture flipx="$PARAM[flipx]">panels/separator.png</texture>
+		    </control>
+		    <control type="textbox">
+			    <top>84</top>
+				<left>$PARAM[leftedge]</left>
+			    <width>600</width>
+			    <height>280</height>
+			    <align>$PARAM[align]</align>
+			    <include>AutoScrollPlot</include>
+			    <label>$INFO[VideoPlayer.CastAndRole]</label>
+		    </control>
+		</definition>	
 	</include>
+	
 	<include name="HomeNowPlayingPortraitPlot">
-		<include>AnimationSlideRightVisible</include>
-		<right>10</right>
-		<width>1200</width>
-		<control type="group">
-			<visible>!String.IsEmpty(MusicPlayer.Property(Album_Description)) | !String.IsEmpty(MusicPlayer.Property(Artist_Description)) | !String.IsEmpty(VideoPlayer.Plot)</visible>
-			<control type="label">
-				<top>26</top>
-				<height>40</height>
-				<align>right</align>
-				<font>InfoTitle</font>
-				<label>$VAR[NowPlayingPlotLabelVar]</label>
-				<textcolor>$VAR[HighlightColor]</textcolor>
-			</control>
-			<control type="image">
-				<top>72</top>
-				<right>0</right>
-				<width>388</width>
-				<height>4</height>
-				<aspectratio align="right" aligny="center">scale</aspectratio>
-				<texture flipx="true">panels/separator.png</texture>
-			</control>
-			<control type="textbox">
-				<top>84</top>
-				<right>0</right>
-				<width>600</width>
-				<height>280</height>
-				<align>right</align>
-				<include>AutoScrollPlot</include>
-				<label>$VAR[NowPlayingPlotVar]</label>
-			</control>
-		</control>
+	    <param name="top">0</param>
+		<param name="align">right</param>
+		<param name="left"></param>
+		<param name="leftedge">1310</param>
+		<param name="flipx">true</param>
+		<param name="separatorleft">212</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+		    <left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+		    <width>700</width>
+		    <control type="group">
+			    <visible>!String.IsEmpty(MusicPlayer.Property(Album_Description)) | !String.IsEmpty(MusicPlayer.Property(Artist_Description)) | !String.IsEmpty(VideoPlayer.Plot)</visible>
+			    <control type="label">
+				    <top>26</top>
+			        <height>40</height>
+			        <left>$PARAM[leftedge]</left>
+				    <width>600</width>
+				    <align>$PARAM[align]</align>
+			        <font>InfoTitle</font>
+				    <label>[B]$VAR[NowPlayingPlotLabelVar][/B]</label>
+				    <textcolor>$VAR[HighlightColor]</textcolor>
+			    </control>
+			    <control type="image">
+			        <top>72</top>
+				    <left>$PARAM[separatorleft]</left>
+			        <width>388</width>
+			        <height>4</height>
+			        <aspectratio align="$PARAM[align]" aligny="center">scale</aspectratio>
+			        <texture flipx="$PARAM[flipx]">panels/separator.png</texture>
+		        </control>
+			    <control type="textbox">
+			        <top>84</top>
+				    <left>$PARAM[leftedge]</left>
+			        <width>600</width>
+			        <height>280</height>
+			        <align>$PARAM[align]</align>
+			        <include>AutoScrollPlot</include>
+				    <label>$VAR[NowPlayingPlotVar]</label>
+			    </control>
+		    </control>
+		</definition>		
 	</include>
+	
 	<include name="HomeNowPlayingSquarePlot">
-		<include>AnimationSlideRightVisible</include>
-		<top>41</top>
-		<right>10</right>
-		<width>1200</width>
-		<control type="group">
-			<visible>!String.IsEmpty(MusicPlayer.Property(Album_Description)) | !String.IsEmpty(MusicPlayer.Property(Artist_Description)) | !String.IsEmpty(VideoPlayer.Plot)</visible>
-			<control type="label">
-				<top>26</top>
-				<height>40</height>
-				<align>right</align>
-				<font>InfoTitle</font>
-				<label>$VAR[NowPlayingPlotLabelVar]</label>
-				<textcolor>$VAR[HighlightColor]</textcolor>
-			</control>
-			<control type="image">
-				<top>72</top>
-				<right>0</right>
-				<width>388</width>
-				<height>4</height>
-				<aspectratio align="right" aligny="center">scale</aspectratio>
-				<texture flipx="true">panels/separator.png</texture>
-			</control>
-			<control type="textbox">
-				<top>84</top>
-				<right>0</right>
-				<width>600</width>
-				<height>228</height>
-				<align>right</align>
-				<include>AutoScrollPlot</include>
-				<label>$VAR[NowPlayingPlotVar]</label>
-			</control>
-		</control>
+	    <param name="top">41</param>
+		<param name="align">right</param>
+		<param name="left"></param>
+		<param name="leftedge">0</param>
+		<param name="flipx">true</param>
+		<param name="separatorleft">212</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+		    <left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+		    <width>700</width>
+		    <control type="group">
+			    <visible>!String.IsEmpty(MusicPlayer.Property(Album_Description)) | !String.IsEmpty(MusicPlayer.Property(Artist_Description)) | !String.IsEmpty(VideoPlayer.Plot)</visible>
+			    <control type="label">
+				    <top>26</top>
+					<left>$PARAM[leftedge]</left>
+					<width>600</width>
+				    <height>40</height>
+				    <align>$PARAM[align]</align>
+				    <font>InfoTitle</font>
+				    <label>[B]$VAR[NowPlayingPlotLabelVar][/B]</label>
+				    <textcolor>$VAR[HighlightColor]</textcolor>
+			    </control>
+			    <control type="image">
+			        <top>72</top>
+				    <left>$PARAM[separatorleft]</left>
+			        <width>388</width>
+			        <height>4</height>
+			        <aspectratio align="$PARAM[align]" aligny="center">scale</aspectratio>
+			        <texture flipx="$PARAM[flipx]">panels/separator.png</texture>
+		        </control>
+			    <control type="textbox">
+				    <top>84</top>
+				    <left>$PARAM[leftedge]</left>
+				    <width>600</width>
+				    <height>240</height>
+				    <align>$PARAM[align]</align>
+				    <include>AutoScrollPlot</include>
+				    <label>$VAR[NowPlayingPlotVar]</label>
+			    </control>
+		    </control>
+		</definition>	
 	</include>
 	<include name="HomeNowPlayingVideoPreview">
-		<control type="group">
-			<top>15</top>
-			<width>600</width>
-			<right>10</right>
-			<control type="image" description="BG">
-			    <posx>-6</posx>
-			    <posy>-6</posy>
-			    <width>612</width>
-			    <height>393</height>
-			    <texture border="8">img/WhiteRoundedST2.png</texture>
-			    <aspectratio>stretch</aspectratio>
-				<colordiffuse>$VAR[HighlightColor]</colordiffuse>
-			</control>
-			<control type="image">
-				<height>381</height>
-				<texture>colors/black.png</texture>
-			</control>
-			<control type="videowindow">
-				<height>381</height>
-			</control>
-		</control>
+		<param name="top">15</param>
+		<param name="left">1270</param>
+		<definition>
+		    <control type="group">
+			    <top>$PARAM[top]</top>
+			    <width>600</width>
+			    <left>$PARAM[left]</left>
+			    <control type="image" description="BG">
+			        <posx>-6</posx>
+			        <posy>-6</posy>
+			        <width>612</width>
+			        <height>393</height>
+			        <texture border="8">img/WhiteRoundedST2.png</texture>
+			        <aspectratio>stretch</aspectratio>
+				    <colordiffuse>$VAR[HighlightColor]</colordiffuse>
+			    </control>
+			    <control type="image">
+				    <height>381</height>
+				    <texture>colors/black.png</texture>
+			    </control>
+			    <control type="videowindow">
+				    <height>381</height>
+			    </control>
+		    </control>
+		</definition>	
 	</include>
 	<include name="NowPlayingHomeAudioInfo">
-		<include>AnimationSlideRightVisible</include>
-		<top>50</top>
-		<right>10</right>
-		<width>500</width>
-		<height>303</height>
-		<align>right</align>
-		<usecontrolcoords>true</usecontrolcoords>
-		<animation effect="slide" end="0,9" time="200" condition="String.IsEmpty(MusicPlayer.Duration)">Conditional</animation>
-		<control type="image">
-			<right>0</right>
-			<width>90</width>
-			<height>45</height>
-			<fadetime>TextureFadeTime</fadetime>
-			<aspectratio align="right" aligny="center">keep</aspectratio>
-			<texture>$INFO[MusicPlayer.Codec,badges/audiocodec/,.png]</texture>
-		</control>
-		<control type="label">
-			<height>40</height>
-			<align>right</align>
-			<font>InfoTitle</font>
-			<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
-		</control>
-		<control type="label">
-			<height>42</height>
-			<align>right</align>
-			<font>ListDetails</font>
-			<label>$INFO[MusicPlayer.BitRate,,kbps]$INFO[MusicPlayer.BitsPerSample,  ,bit]$INFO[MusicPlayer.SampleRate,  ,KHz]</label>
-		</control>
-		<control type="progress">
-			<height>20</height>
-			<texturebg border="0,0,0,0" colordiffuse="$VAR[LabelTextColor]">img/AmberDotBG.png</texturebg>
-			<midtexture border="0,0,0,0" colordiffuse="$VAR[HighlightColor]">img/AmberDot.png</midtexture>
-			<info>Player.Progress</info>
-			<visible>!String.IsEmpty(MusicPlayer.Duration)</visible>
-		</control>
+		<param name="top">50</param>
+		<param name="left">1370</param>
+		<param name="leftedge">410</param>
+		<param name="align">right</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+		    <top>$PARAM[top]</top>
+			<left>$PARAM[left]</left>
+		    <width>500</width>
+		    <height>303</height>
+		    <align>$PARAM[align]</align>
+		    <usecontrolcoords>true</usecontrolcoords>
+		    <animation effect="slide" end="0,9" time="200" condition="String.IsEmpty(MusicPlayer.Duration)">Conditional</animation>
+		    <control type="image">
+			    <left>$PARAM[leftedge]</left>
+			    <width>90</width>
+			    <height>45</height>
+			    <fadetime>TextureFadeTime</fadetime>
+			    <aspectratio align="$PARAM[align]" aligny="center">keep</aspectratio>
+			    <texture>$INFO[MusicPlayer.Codec,badges/audiocodec/,.png]</texture>
+		    </control>
+		    <control type="label">
+			    <height>40</height>
+			    <align>$PARAM[align]</align>
+			    <font>InfoTitle</font>
+			    <label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
+		    </control>
+		    <control type="label">
+			    <height>42</height>
+			    <align>$PARAM[align]</align>
+			    <font>ListDetails</font>
+			    <label>$INFO[MusicPlayer.BitRate,,kbps]$INFO[MusicPlayer.BitsPerSample,  ,bit]$INFO[MusicPlayer.SampleRate,  ,KHz]</label>
+		    </control>
+		    <control type="progress">
+			    <height>20</height>
+			    <texturebg border="0,0,0,0" colordiffuse="$VAR[LabelTextColor]">img/AmberDotBG.png</texturebg>
+			    <midtexture border="0,0,0,0" colordiffuse="$VAR[HighlightColor]">img/AmberDot.png</midtexture>
+			    <info>Player.Progress</info>
+			    <visible>!String.IsEmpty(MusicPlayer.Duration)</visible>
+		    </control>
+		</definition>	
 	</include>
+	
 	<include name="NowPlayingHomeAudioNext">
-		<include>AnimationSlideRightVisible</include>
-		<top>41</top>
-		<right>10</right>
-		<width>500</width>
-		<height>327</height>
-		<control type="label">
-			<top>26</top>
-			<height>40</height>
-			<align>right</align>
-			<label>$LOCALIZE[209]</label>
-			<font>InfoTitle</font>
-			<textcolor>$VAR[HighlightColor]</textcolor>
-		</control>
-		<control type="image">
-			<top>72</top>
-			<right>0</right>
-			<width>388</width>
-			<height>4</height>
-			<aspectratio align="right" aligny="center">scale</aspectratio>
-			<texture flipx="true">panels/separator.png</texture>
-		</control>
-		<include content="ShadowedImage">
-			<param name="top">75</param>
-			<param name="left">320</param>
-			<param name="width">179</param>
-			<param name="height">179</param>
-			<param name="shadowoffset">8</param>
-			<param name="texture">$INFO[MusicPlayer.offset(1).Cover]</param>
-		</include>
-		<control type="label">
-			<bottom>32</bottom>
-			<height>40</height>
-			<align>right</align>
-			<font>Shelf_Title</font>
-			<label>$INFO[MusicPlayer.offset(1).Artist]</label>
-			<textcolor>$VAR[HighlightColor]</textcolor>
-		</control>
-		<control type="label">
-			<height>40</height>
-			<bottom>0</bottom>
-			<align>right</align>
-			<font>ListDetails</font>
-			<label>[COLOR $VAR[HighlightColor]]$INFO[MusicPlayer.offset(1).TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.offset(1).Title]</label>
-		</control>
+	    <param name="top">41</param>
+		<param name="align">right</param>
+		<param name="left"></param>
+		<param name="leftedge">1310</param>
+		<param name="flipx">true</param>
+		<param name="separatorleft">112</param>
+		<param name="coverleft">320</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+		    <left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+		    <width>500</width>
+		    <height>327</height>
+		    <control type="label">
+			    <top>26</top>
+			    <height>40</height>
+			    <align>$PARAM[align]</align>
+			    <label>[B]$LOCALIZE[209][/B]</label>
+			    <font>InfoTitle</font>
+			    <textcolor>$VAR[HighlightColor]</textcolor>
+		    </control>
+		    <control type="image">
+			    <top>72</top>
+			    <left>$PARAM[separatorleft]</left>
+			    <width>388</width>
+			    <height>4</height>
+			    <aspectratio align="$PARAM[align]" aligny="center">scale</aspectratio>
+			    <texture flipx="$PARAM[flipx]">panels/separator.png</texture>
+		    </control>
+		    <include content="ShadowedImage">
+			    <param name="top">80</param>
+			    <param name="left">$PARAM[coverleft]</param>
+			    <param name="width">179</param>
+			    <param name="height">179</param>
+			    <param name="shadowoffset">8</param>
+			    <param name="texture">$INFO[MusicPlayer.offset(1).Cover]</param>
+		    </include>
+		    <control type="label">
+			    <bottom>22</bottom>
+			    <height>40</height>
+			    <align>$PARAM[align]</align>
+			    <font>Shelf_Title</font>
+			    <label>$INFO[MusicPlayer.offset(1).Artist]</label>
+			    <textcolor>$VAR[HighlightColor]</textcolor>
+		    </control>
+		    <control type="label">
+			    <height>40</height>
+			    <bottom>-10</bottom>
+			    <align>$PARAM[align]</align>
+			    <font>ListDetails</font>
+			    <label>[COLOR $VAR[HighlightColor]]$INFO[MusicPlayer.offset(1).TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.offset(1).Title]</label>
+		    </control>
+		</definition>	
 	</include>
+	
 	<include name="NowPlayingHomeAudioTrackList">
-		<include>AnimationSlideRightVisible</include>
-		<top>41</top>
-		<right>10</right>
-		<width>500</width>
-		<control type="label">
-			<top>26</top>
-			<height>40</height>
-			<align>right</align>
-			<font>InfoTitle</font>
-			<label>$LOCALIZE[209]</label>
-			<textcolor>$VAR[HighlightColor]</textcolor>
-		</control>
-		<control type="image">
-			<top>72</top>
-			<right>0</right>
-			<width>388</width>
-			<height>4</height>
-			<aspectratio align="right" aligny="center">scale</aspectratio>
-			<texture flipx="true">panels/separator.png</texture>
-		</control>
-		<control type="grouplist">
-			<top>76</top>
-			<height>246</height>
-			<include content="NowPlayingHomeAudioTracksContent">
-				<param name="offset">1</param>
-			</include>
-			<include content="NowPlayingHomeAudioTracksContent">
-				<param name="offset">2</param>
-			</include>
-			<include content="NowPlayingHomeAudioTracksContent">
-				<param name="offset">3</param>
-			</include>
-		</control>
+	    <param name="top">41</param>
+		<param name="align">right</param>
+		<param name="left"></param>
+		<param name="leftedge">1310</param>
+		<param name="flipx">true</param>
+		<param name="separatorleft">112</param>
+		<definition>
+		    <include>AnimationSlideRightVisible</include>
+		    <left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+		    <width>500</width>
+		    <control type="label">
+			    <top>26</top>
+			    <height>40</height>
+			    <align>$PARAM[align]</align>
+			    <font>InfoTitle</font>
+			    <label>[B]$LOCALIZE[32330][/B]</label>
+			    <textcolor>$VAR[HighlightColor]</textcolor>
+		    </control>
+		    <control type="image">
+			    <top>72</top>
+			    <left>$PARAM[separatorleft]</left>
+			    <width>388</width>
+			    <height>4</height>
+			    <aspectratio align="$PARAM[align]" aligny="center">scale</aspectratio>
+			    <texture flipx="$PARAM[flipx]">panels/separator.png</texture>
+		    </control>
+		    <control type="grouplist">
+			    <top>76</top>
+			    <height>246</height>
+			    <include content="NowPlayingHomeAudioTracksContent">
+				    <param name="offset">1</param>
+					<param name="align">$PARAM[align]</param>
+			    </include>
+			    <include content="NowPlayingHomeAudioTracksContent">
+				    <param name="offset">2</param>
+					<param name="align">$PARAM[align]</param>
+			    </include>
+			    <include content="NowPlayingHomeAudioTracksContent">
+				    <param name="offset">3</param>
+					<param name="align">$PARAM[align]</param>
+			    </include>
+		    </control>
+		</definition>	
 	</include>
+	
 	<include name="NowPlayingHomeAudioTracksContent">
-		<control type="label">
-			<height>38</height>
-			<align>right</align>
-			<font>Shelf_Title</font>
-			<label>$INFO[MusicPlayer.offset($PARAM[offset]).Artist]</label>
-			<textcolor>$VAR[HighlightColor]</textcolor>
-		</control>
-		<control type="label">
-			<height>30</height>
-			<align>right</align>
-			<font>ListDetails</font>
-			<label>[COLOR $VAR[HighlightColor]]$INFO[MusicPlayer.offset($PARAM[offset]).TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.offset($PARAM[offset]).Title]</label>
-		</control>
-		<control type="label">
-			<height>18</height>
-		</control>
+		<param name="align">right</param>
+		<definition>
+		    <control type="label">
+			    <height>38</height>
+			    <align>$PARAM[align]</align>
+			    <font>Shelf_Title</font>
+			    <label>$INFO[MusicPlayer.offset($PARAM[offset]).Artist]</label>
+			    <textcolor>$VAR[HighlightColor]</textcolor>
+		    </control>
+		    <control type="label">
+			    <height>30</height>
+			    <align>$PARAM[align]</align>
+			    <font>ListDetails</font>
+			    <label>[COLOR $VAR[HighlightColor]]$INFO[MusicPlayer.offset($PARAM[offset]).TrackNumber,,. ][/COLOR]$INFO[MusicPlayer.offset($PARAM[offset]).Title]</label>
+		    </control>
+		    <control type="label">
+			    <height>18</height>
+		    </control>
+		</definition>	
 	</include>
+	
+	<include name="NowPlayingPositionHorizontal">
+	    <top>388</top>
+		<left>30</left>
+		<right>30</right>
+	</include>
+	
+	<include name="NowPlayingPositionVertical">
+	    <top>180</top>
+		<left>450</left>
+	</include>
+	
+	<include name="GradientPositionHorizontal">
+	    <bottom>0</bottom>
+		<height>968</height>
+	</include>
+	
+	<include name="GradientPositionVertical">
+	    <height>1080</height>
+	</include>
+	
+	
 	
 	<!-- Now playing -->
 	<include name="HomeNowPlaying">
 		<control type="image">
 			<visible>![$EXP[widgetsAreShowing]]</visible>
 			<include>AnimationVisibleFade</include>
-			<bottom>0</bottom>
 			<width>1920</width>
-			<height>968</height>
+			<include condition="Skin.HasSetting(VerticalHome)">GradientPositionVertical</include>
+			<include condition="!Skin.HasSetting(VerticalHome)">GradientPositionHorizontal</include>
 			<texture colordiffuse="ff000000">panels/widget-gradient.png</texture>
 		</control>
 		<control type="group">
 			<visible>![$EXP[widgetsAreShowing]]</visible>
-			<top>388</top>
-			<left>30</left>
-			<right>30</right>
+			<include condition="Skin.HasSetting(VerticalHome)">NowPlayingPositionVertical</include>
+			<include condition="!Skin.HasSetting(VerticalHome)">NowPlayingPositionHorizontal</include>
 			<include>AnimationVisibleFade</include>
 			<!-- Video -->
 			<control type="group">
@@ -666,19 +765,60 @@
 					<include>AnimationVisibleFade</include>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingMovieInfo,info)</visible>
-						<include>HomeNowPlayingVideoInfo</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">460</param>
+						</include>						
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMovieInfo,cast)</visible>
-						<include>HomeNowPlayingVideoCast</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoCast">
+						    <param name="left">1270</param>
+							<param name="align">right</param>
+							<param name="top">0</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoCast">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMovieInfo,plot)</visible>
-						<include>HomeNowPlayingPortraitPlot</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingPortraitPlot">
+						    <param name="left">1270</param>
+							<param name="align">right</param>
+							<param name="top">0</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingPortraitPlot">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMovieInfo,preview)</visible>
-						<include>HomeNowPlayingVideoPreview</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
+						    <param name="left">1270</param>
+							<param name="top">10</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
+						    <param name="left">10</param>
+							<param name="top">460</param>
+						</include>
 					</control>
 				</control>
 				<control type="group">
@@ -686,15 +826,43 @@
 					<include>AnimationVisibleFade</include>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingVideoInfo,info)</visible>
-						<include>HomeNowPlayingVideoInfo</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
+						    <param name="right">10</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">460</param>
+						</include>						
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingVideoInfo,plot)</visible>
-						<include>HomeNowPlayingSquarePlot</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+						    <param name="left">1270</param>
+							<param name="align">right</param>
+							<param name="top">41</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingVideoInfo,preview)</visible>
-						<include>HomeNowPlayingVideoPreview</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
+						    <param name="left">1270</param>
+							<param name="top">10</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
+						    <param name="left">10</param>
+							<param name="top">460</param>
+						</include>
 					</control>
 				</control>
 			</control>
@@ -743,38 +911,124 @@
 					<visible>![Pvr.IsPlayingTv | Pvr.IsPlayingRadio | Player.IsInternetStream]</visible>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,next) + MusicPlayer.HasNext</visible>
-						<include>NowPlayingHomeAudioNext</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
+						    <param name="left">1370</param>
+							<param name="align">right</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+							<param name="coverleft">-5</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,tracks) + MusicPlayer.HasNext</visible>
-						<include>NowPlayingHomeAudioTrackList</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
+						    <param name="left">1370</param>
+							<param name="align">right</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,plot)</visible>
-						<include>HomeNowPlayingSquarePlot</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+						    <param name="left">1270</param>
+							<param name="align">right</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingMusicInfo,info)</visible>
-						<include>NowPlayingHomeAudioInfo</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
+						    <param name="left">10</param>
+							<param name="leftedge">0</param>
+							<param name="align">left</param>
+							<param name="top">460</param>
+						</include>						
 					</control>
 				</control>
 				<control type="group">
 					<visible>Pvr.IsPlayingTv | Pvr.IsPlayingRadio | Player.IsInternetStream</visible>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,next) + MusicPlayer.HasNext</visible>
-						<include>NowPlayingHomeAudioNext</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
+						    <param name="left">1370</param>
+							<param name="align">right</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+							<param name="coverleft">-5</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,tracks) + MusicPlayer.HasNext</visible>
-						<include>NowPlayingHomeAudioTrackList</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
+						    <param name="left">1370</param>
+							<param name="align">right</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,plot)</visible>
-						<include>HomeNowPlayingSquarePlot</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+						    <param name="left">1270</param>
+							<param name="align">right</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">true</param>
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+						    <param name="left">10</param>
+							<param name="align">left</param>
+							<param name="top">390</param>
+							<param name="leftedge">0</param>
+							<param name="flipx">false</param>
+							<param name="separatorleft">0</param>
+						</include>
 					</control>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingMusicInfo,info)</visible>
-						<include>NowPlayingHomeAudioInfo</include>
+						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
+						</include>
+                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
+						    <param name="left">10</param>
+							<param name="leftedge">0</param>
+							<param name="align">left</param>
+							<param name="top">460</param>
+						</include>
 					</control>
 				</control>
 			</control>
@@ -842,7 +1096,8 @@
 		<value condition="Pvr.IsPlayingTv">$INFO[VideoPlayer.StartTime,, - ]$INFO[VideoPlayer.EndTime]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Tagline)">$INFO[VideoPlayer.Tagline]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Genre)">$INFO[VideoPlayer.Genre]</value>
-		<value condition="!String.IsEmpty(MusicPlayer.Genre)">$INFO[MusicPlayer.Genre]</value>
+		<value condition="String.IsEmpty(MusicPlayer.Property(Album_Description)) + !String.IsEmpty(MusicPlayer.Property(Artist_Description))">$LOCALIZE[32332]</value>
+		<value condition="!String.IsEmpty(MusicPlayer.Property(Album_Description))">$LOCALIZE[32331]</value>
 		<value>$INFO[Player.FinishTime,$LOCALIZE[19127] ]</value>
 	</variable>
 	<variable name="NowPlayingPlotVar">
