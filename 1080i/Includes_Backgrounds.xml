@@ -361,7 +361,8 @@
     <!-- Movie/TV Show Logo for Home Window -->
 	<include name="HomeClearLogo">
 	    <control type="group">
-	        <visible>[Control.HasFocus(300) | ControlGroup(700).HasFocus] + !Control.IsVisible(350)</visible>
+	        <visible>[!Player.HasMedia + [Control.HasFocus(300) | ControlGroup(700).HasFocus]] | 
+			         [Player.HasMedia + !Skin.HasSetting(Hide.NowPlaying) + ![Control.IsVisible(70101) | Control.IsVisible(70102)]]</visible>
 		    <!-- Logo for vert. menu, no widgets -->
 		    <control type="image">
                 <posy>40</posy>

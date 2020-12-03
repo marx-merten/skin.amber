@@ -645,7 +645,7 @@
 	</include>
 	
 	<include name="NowPlayingPositionHorizontal">
-	    <top>388</top>
+	    <top>60</top>
 		<left>30</left>
 		<right>30</right>
 	</include>
@@ -672,9 +672,9 @@
 			<visible>[!Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + ![$EXP[widgetsAreShowing]]] | Skin.HasSetting(Hide.WidgetsWhenNowPlaying)</visible>
 			<include>AnimationVisibleFade</include>
 			<width>1920</width>
-			<include condition="Skin.HasSetting(VerticalHome)">GradientPositionVertical</include>
-			<include condition="!Skin.HasSetting(VerticalHome)">GradientPositionHorizontal</include>
-			<texture colordiffuse="ff000000">panels/widget-gradient.png</texture>
+			<include>GradientPositionVertical</include>
+			<texture border="0,30,0,0">OSD/FS_OSDBackground.png</texture> 
+            <colordiffuse>dfcebe9e</colordiffuse>
 		</control>
 		<control type="group" id="701">
 			<visible>[!Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + ![$EXP[widgetsAreShowing]]] | Skin.HasSetting(Hide.WidgetsWhenNowPlaying)</visible>
@@ -765,9 +765,7 @@
 					<include>AnimationVisibleFade</include>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingMovieInfo,info)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
+                        <include content="HomeNowPlayingVideoInfo">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">460</param>
@@ -775,14 +773,7 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMovieInfo,cast)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoCast">
-						    <param name="left">1270</param>
-							<param name="align">right</param>
-							<param name="top">0</param>
-							<param name="leftedge">0</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoCast">
+                        <include content="HomeNowPlayingVideoCast">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">390</param>
@@ -793,14 +784,7 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMovieInfo,plot)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingPortraitPlot">
-						    <param name="left">1270</param>
-							<param name="align">right</param>
-							<param name="top">0</param>
-							<param name="leftedge">0</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingPortraitPlot">
+                        <include content="HomeNowPlayingPortraitPlot">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">390</param>
@@ -811,14 +795,20 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMovieInfo,preview)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
-						    <param name="left">1270</param>
-							<param name="top">10</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
+						<include content="HomeNowPlayingVideoPreview">
 						    <param name="left">16</param>
-							<param name="top">460</param>
+							<param name="top">420</param>
 						</include>
+						<control type="group">
+						    <include content="HomeNowPlayingPortraitPlot">
+						        <param name="left">660</param>
+							    <param name="align">left</param>
+							    <param name="top">380</param>
+							    <param name="leftedge">0</param>
+								<param name="separatorleft">0</param>
+							    <param name="flipx">false</param>
+						    </include>
+						</control>
 					</control>
 				</control>
 				<control type="group">
@@ -826,9 +816,7 @@
 					<include>AnimationVisibleFade</include>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingVideoInfo,info)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
+                        <include content="HomeNowPlayingVideoInfo">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">460</param>
@@ -836,14 +824,7 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingVideoInfo,plot)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
-						    <param name="left">1270</param>
-							<param name="align">right</param>
-							<param name="top">41</param>
-							<param name="leftedge">0</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+                        <include content="HomeNowPlayingSquarePlot">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">390</param>
@@ -854,14 +835,20 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingVideoInfo,preview)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
-						    <param name="left">1270</param>
-							<param name="top">10</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
+						<include content="HomeNowPlayingVideoPreview">
 						    <param name="left">16</param>
-							<param name="top">460</param>
+							<param name="top">420</param>
 						</include>
+						<control type="group">
+						    <include content="HomeNowPlayingPortraitPlot">
+						        <param name="left">660</param>
+							    <param name="align">left</param>
+							    <param name="top">380</param>
+							    <param name="leftedge">0</param>
+								<param name="separatorleft">0</param>
+							    <param name="flipx">false</param>
+						    </include>
+						</control>
 					</control>
 				</control>
 			</control>
@@ -907,15 +894,9 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>![Pvr.IsPlayingTv | Pvr.IsPlayingRadio | Player.IsInternetStream]</visible>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,next) + MusicPlayer.HasNext</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
-						    <param name="left">1370</param>
-							<param name="align">right</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
+                        <include content="NowPlayingHomeAudioNext">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">390</param>
@@ -926,12 +907,7 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,tracks) + MusicPlayer.HasNext</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
-						    <param name="left">1370</param>
-							<param name="align">right</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
+                        <include content="NowPlayingHomeAudioTrackList">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">390</param>
@@ -941,13 +917,7 @@
 					</control>
 					<control type="group">
 						<visible>Skin.String(NowPlayingMusicInfo,plot)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
-						    <param name="left">1270</param>
-							<param name="align">right</param>
-							<param name="leftedge">0</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
+                        <include content="HomeNowPlayingSquarePlot">
 						    <param name="left">10</param>
 							<param name="align">left</param>
 							<param name="top">390</param>
@@ -958,76 +928,12 @@
 					</control>
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingMusicInfo,info)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
+                        <include content="NowPlayingHomeAudioInfo">
 						    <param name="left">10</param>
 							<param name="leftedge">0</param>
 							<param name="align">left</param>
 							<param name="top">460</param>
 						</include>						
-					</control>
-				</control>
-				<control type="group">
-					<visible>Pvr.IsPlayingTv | Pvr.IsPlayingRadio | Player.IsInternetStream</visible>
-					<control type="group">
-						<visible>Skin.String(NowPlayingMusicInfo,next) + MusicPlayer.HasNext</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
-						    <param name="left">1370</param>
-							<param name="align">right</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioNext">
-						    <param name="left">10</param>
-							<param name="align">left</param>
-							<param name="top">390</param>
-							<param name="flipx">false</param>
-							<param name="separatorleft">0</param>
-							<param name="coverleft">-5</param>
-						</include>
-					</control>
-					<control type="group">
-						<visible>Skin.String(NowPlayingMusicInfo,tracks) + MusicPlayer.HasNext</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
-						    <param name="left">1370</param>
-							<param name="align">right</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioTrackList">
-						    <param name="left">10</param>
-							<param name="align">left</param>
-							<param name="top">390</param>
-							<param name="flipx">false</param>
-							<param name="separatorleft">0</param>
-						</include>
-					</control>
-					<control type="group">
-						<visible>Skin.String(NowPlayingMusicInfo,plot)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
-						    <param name="left">1270</param>
-							<param name="align">right</param>
-							<param name="leftedge">0</param>
-							<param name="flipx">true</param>
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingSquarePlot">
-						    <param name="left">10</param>
-							<param name="align">left</param>
-							<param name="top">390</param>
-							<param name="leftedge">0</param>
-							<param name="flipx">false</param>
-							<param name="separatorleft">0</param>
-						</include>
-					</control>
-					<control type="grouplist">
-						<visible>Skin.String(NowPlayingMusicInfo,info)</visible>
-						<include condition="!Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
-						</include>
-                        <include condition="Skin.HasSetting(VerticalHome)" content="NowPlayingHomeAudioInfo">
-						    <param name="left">10</param>
-							<param name="leftedge">0</param>
-							<param name="align">left</param>
-							<param name="top">460</param>
-						</include>
 					</control>
 				</control>
 			</control>
