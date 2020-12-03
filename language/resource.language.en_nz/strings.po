@@ -3212,4 +3212,8 @@ msgctxt "#32332"
 msgid "Artist Bio"
 msgstr ""
 
+msgctxt "#32333"
+msgid "Hide Shelves when Now Playing is Visible"
+msgstr ""
+
 

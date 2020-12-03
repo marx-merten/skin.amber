@@ -669,7 +669,7 @@
 	<!-- Now playing -->
 	<include name="HomeNowPlaying">
 		<control type="image">
-<!--			<visible>![$EXP[widgetsAreShowing]]</visible> -->
+			<visible>[!Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + ![$EXP[widgetsAreShowing]]] | Skin.HasSetting(Hide.WidgetsWhenNowPlaying)</visible>
 			<include>AnimationVisibleFade</include>
 			<width>1920</width>
 			<include condition="Skin.HasSetting(VerticalHome)">GradientPositionVertical</include>
@@ -677,7 +677,7 @@
 			<texture colordiffuse="ff000000">panels/widget-gradient.png</texture>
 		</control>
 		<control type="group" id="701">
-<!--			<visible>![$EXP[widgetsAreShowing]]</visible> -->
+			<visible>[!Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + ![$EXP[widgetsAreShowing]]] | Skin.HasSetting(Hide.WidgetsWhenNowPlaying)</visible>
 			<include condition="Skin.HasSetting(VerticalHome)">NowPlayingPositionVertical</include>
 			<include condition="!Skin.HasSetting(VerticalHome)">NowPlayingPositionHorizontal</include>
 			<include>AnimationVisibleFade</include>
