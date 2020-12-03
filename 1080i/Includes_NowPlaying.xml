@@ -816,7 +816,7 @@
 							<param name="top">10</param>
 						</include>
                         <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
-						    <param name="left">10</param>
+						    <param name="left">16</param>
 							<param name="top">460</param>
 						</include>
 					</control>
@@ -827,7 +827,6 @@
 					<control type="grouplist">
 						<visible>Skin.String(NowPlayingVideoInfo,info)</visible>
 						<include condition="!Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
-						    <param name="right">10</param>
 						</include>
                         <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoInfo">
 						    <param name="left">10</param>
@@ -860,7 +859,7 @@
 							<param name="top">10</param>
 						</include>
                         <include condition="Skin.HasSetting(VerticalHome)" content="HomeNowPlayingVideoPreview">
-						    <param name="left">10</param>
+						    <param name="left">16</param>
 							<param name="top">460</param>
 						</include>
 					</control>
