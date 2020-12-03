@@ -11262,7 +11262,7 @@
         <match>any</match> 
         <controls>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.1.ShortDay)] • $INFO[Window(weather).Property(Daily.1.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.1.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.1.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.1.ShortDay)] • $INFO[Window(weather).Property(Daily.1.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.1.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.1.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.1.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.1.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.1.Cloudiness)]</property>
@@ -11274,7 +11274,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.1.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.2.ShortDay)] • $INFO[Window(weather).Property(Daily.2.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.2.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.2.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.2.ShortDay)] • $INFO[Window(weather).Property(Daily.2.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.2.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.2.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.2.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.2.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.2.Cloudiness)]</property>
@@ -11286,7 +11286,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.2.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.3.ShortDay)] • $INFO[Window(weather).Property(Daily.3.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.3.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.3.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.3.ShortDay)] • $INFO[Window(weather).Property(Daily.3.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.3.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.3.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.3.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.3.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.3.Cloudiness)]</property>
@@ -11298,7 +11298,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.3.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.4.ShortDay)] • $INFO[Window(weather).Property(Daily.4.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.4.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.4.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.4.ShortDay)] • $INFO[Window(weather).Property(Daily.4.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.4.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.4.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.4.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.4.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.4.Cloudiness)]</property>
@@ -11310,7 +11310,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.4.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.5.ShortDay)] • $INFO[Window(weather).Property(Daily.5.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.5.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.5.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.5.ShortDay)] • $INFO[Window(weather).Property(Daily.5.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.5.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.5.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.5.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.5.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.5.Cloudiness)]</property>
@@ -11322,7 +11322,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.5.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.6.ShortDay)] • $INFO[Window(weather).Property(Daily.6.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.6.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.6.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.6.ShortDay)] • $INFO[Window(weather).Property(Daily.6.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.6.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.6.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.6.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.6.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.6.Cloudiness)]</property>
@@ -11334,7 +11334,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.6.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.7.ShortDay)] • $INFO[Window(weather).Property(Daily.7.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.7.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.7.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.7.ShortDay)] • $INFO[Window(weather).Property(Daily.7.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.7.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.7.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.7.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.7.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.7.Cloudiness)]</property>
@@ -11346,7 +11346,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.7.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.8.ShortDay)] • $INFO[Window(weather).Property(Daily.8.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.8.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.8.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.8.ShortDay)] • $INFO[Window(weather).Property(Daily.8.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.8.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.8.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.8.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.8.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.8.Cloudiness)]</property>
@@ -11358,7 +11358,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.8.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.9.ShortDay)] • $INFO[Window(weather).Property(Daily.9.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.9.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.9.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.9.ShortDay)] • $INFO[Window(weather).Property(Daily.9.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.9.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.9.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.9.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.9.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.9.Cloudiness)]</property>
@@ -11370,7 +11370,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.9.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.10.ShortDay)] • $INFO[Window(weather).Property(Daily.10.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.10.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.10.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.10.ShortDay)] • $INFO[Window(weather).Property(Daily.10.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.10.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.10.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.10.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.10.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.10.Cloudiness)]</property>
@@ -11382,7 +11382,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.10.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.11.ShortDay)] • $INFO[Window(weather).Property(Daily.11.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.11.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.11.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.11.ShortDay)] • $INFO[Window(weather).Property(Daily.11.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.11.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.11.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.11.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.11.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.11.Cloudiness)]</property>
@@ -11394,7 +11394,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.11.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.12.ShortDay)] • $INFO[Window(weather).Property(Daily.12.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.12.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.12.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.12.ShortDay)] • $INFO[Window(weather).Property(Daily.12.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.12.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.12.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.12.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.12.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.12.Cloudiness)]</property>
@@ -11406,7 +11406,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.12.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.13.ShortDay)] • $INFO[Window(weather).Property(Daily.13.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.13.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.13.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.13.ShortDay)] • $INFO[Window(weather).Property(Daily.13.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.13.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.13.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.13.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.13.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.13.Cloudiness)]</property>
@@ -11418,7 +11418,7 @@
 			    <visible>!String.IsEmpty(Window(weather).Property(Daily.13.Outlook))</visible>
 		    </item>
 		    <item>
-			    <label>$INFO[Window(weather).Property(Daily.14.ShortDay)] • $INFO[Window(weather).Property(Daily.14.ShortDate)][CR][B][COLOR=Blue]$INFO[Window(weather).Property(Daily.14.LowTemperature)][/COLOR] • [COLOR=Red]$INFO[Window(weather).Property(Daily.14.HighTemperature)][/COLOR][/B]</label>
+			    <label>$INFO[Window(weather).Property(Daily.14.ShortDay)] • $INFO[Window(weather).Property(Daily.14.ShortDate)][CR][B][COLOR=Red]$INFO[Window(weather).Property(Daily.14.HighTemperature)][/COLOR] • [COLOR=Blue]$INFO[Window(weather).Property(Daily.14.LowTemperature)][/COLOR][/B]</label>
 			    <property name="LongDay">$INFO[Window(weather).Property(Daily.14.LongDay)]</property>
 			    <property name="TempDay">$INFO[Window(weather).Property(Daily.14.TempDay)]</property>
 			    <property name="Cloudiness">$INFO[Window(weather).Property(Daily.14.Cloudiness)]</property>

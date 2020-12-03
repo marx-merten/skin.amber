@@ -1507,10 +1507,10 @@
                     <height>150</height>
                     <width>140</width>
                     <font>MainMenu</font>
-                    <textcolor>Blue</textcolor>
+                    <textcolor>Red</textcolor>
                     <align>center</align>
                     <shadowcolor>ShadowDark</shadowcolor>
-                    <label>$INFO[Window.Property(Daily.$PARAM[dayid].LowTemperature)]</label>
+                    <label>$INFO[Window.Property(Daily.$PARAM[dayid].HighTemperature)]</label>
                 </control>
                 <control type="label" description="Low temp">
                     <posx>690</posx>
@@ -1518,10 +1518,10 @@
                     <height>150</height>
                     <width>140</width>
                     <font>MainMenu</font>
-                    <textcolor>Red</textcolor>
+                    <textcolor>Blue</textcolor>
                     <align>center</align>
                     <shadowcolor>ShadowDark</shadowcolor>
-                    <label>$INFO[Window.Property(Daily.$PARAM[dayid].HighTemperature)]</label>
+                    <label>$INFO[Window.Property(Daily.$PARAM[dayid].LowTemperature)]</label>
                 </control>
                 <control type="multiimage" description="Icon">
                     <posx>555</posx>
