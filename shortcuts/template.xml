@@ -19,7 +19,7 @@
 		<property name="onup5">'false' if (type1 in 'none' or type2 in 'none' or type3 in 'none' or type4 in 'none' or type5 in 'none') else 'String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),5)'</property>
 		<property name="onup6">'false' if (type1 in 'none' or type2 in 'none' or type3 in 'none' or type4 in 'none' or type5 in 'none' or type6 in 'none') else 'String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),6)'</property>
 		<controls>
-			<onup condition="String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEmpty(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]))">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
+			<onup condition="String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEmpty(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id])) + [!Player.HasMedia | [Player.HasMedia + !Skin.HasSetting(Hide.WidgetsWhenNowPlaying)]]">SetFocus(1600$SKINSHORTCUTS[id]1)</onup>
 			<onup condition="$PYTHON[$SKINSHORTCUTS[onup2]]">SetFocus(1600$SKINSHORTCUTS[id]2)</onup>
 			<onup condition="$PYTHON[$SKINSHORTCUTS[onup3]]">SetFocus(1600$SKINSHORTCUTS[id]3)</onup>
 			<onup condition="$PYTHON[$SKINSHORTCUTS[onup4]]">SetFocus(1600$SKINSHORTCUTS[id]4)</onup>
@@ -47,7 +47,7 @@
 		<property name="onright5">'false' if (type1 in 'none' or type2 in 'none' or type3 in 'none' or type4 in 'none' or type5 in 'none') else 'String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),5)'</property>
 		<property name="onright6">'false' if (type1 in 'none' or type2 in 'none' or type3 in 'none' or type4 in 'none' or type5 in 'none' or type6 in 'none') else 'String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEqual(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]),6)'</property>
 		<controls>
-			<onright condition="String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEmpty(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id]))">SetFocus(1600$SKINSHORTCUTS[id]1)</onright>
+			<onright condition="String.IsEqual(Container(300).ListItem.Property(id),$SKINSHORTCUTS[id]) + String.IsEmpty(Window(home).Property(WidgetFocus$SKINSHORTCUTS[id])) + [!Player.HasMedia | [Player.HasMedia + !Skin.HasSetting(Hide.WidgetsWhenNowPlaying)]]">SetFocus(1600$SKINSHORTCUTS[id]1)</onright>
 			<onright condition="$PYTHON[$SKINSHORTCUTS[onright2]]">SetFocus(1600$SKINSHORTCUTS[id]2)</onright>
 			<onright condition="$PYTHON[$SKINSHORTCUTS[onright3]]">SetFocus(1600$SKINSHORTCUTS[id]3)</onright>
 			<onright condition="$PYTHON[$SKINSHORTCUTS[onright4]]">SetFocus(1600$SKINSHORTCUTS[id]4)</onright>
