@@ -74,7 +74,7 @@
 						<font>InfoTitle</font>
 						<label>[B]$VAR[NowPlayingInfo1Var][/B]</label>
 						<textcolor>$VAR[HighlightColor]</textcolor>
-						<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingMovieInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]]</visible>
+						<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingMovieInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]]</visible>
 					</control>
 					<control type="label" id="90521">
 						<visible>!VideoPlayer.Content(movies)</visible>
@@ -86,7 +86,7 @@
 						<font>InfoTitle</font>
 						<label>[B]$VAR[NowPlayingInfo1Var][/B]</label>
 						<textcolor>$VAR[HighlightColor]</textcolor>
-						<visible>Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)</visible>
+						<visible>Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)</visible>
 					</control>
 					<control type="image">
 						<visible>!VideoPlayer.Content(movies)</visible>
@@ -95,7 +95,7 @@
 						<width>500</width>
 						<height>4</height>
 						<texture>panels/separator.png</texture>
-						<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingMovieInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]]</visible>
+						<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingMovieInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]]</visible>
 					</control>
 					<control type="image">
 						<visible>!VideoPlayer.Content(movies)</visible>
@@ -104,7 +104,7 @@
 						<width>500</width>
 						<height>4</height>
 						<texture>panels/separator.png</texture>
-						<visible>Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)</visible>
+						<visible>Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)</visible>
 					</control>
 					<control type="fadelabel">
 						<visible>!VideoPlayer.Content(movies)</visible>
@@ -123,7 +123,7 @@
 						<bordersize>48,0,0,0</bordersize>
 						<texture>$VAR[NowPlayingLogoVar]</texture>
 						<aspectratio align="left">keep</aspectratio>
-						<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingMovieInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]]</visible>
+						<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingMovieInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]]</visible>
 					</control>
 					<control type="image">
 						<visible>$PARAM[logo]</visible>
@@ -135,7 +135,7 @@
 						<bordersize>48,0,0,0</bordersize>
 						<texture>$VAR[NowPlayingLogoVar]</texture>
 						<aspectratio align="left">keep</aspectratio>
-						<visible>[Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)]</visible>
+						<visible>[Player.HasVideo + Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)]</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -234,7 +234,7 @@
 					<font>InfoTitle</font>
 					<label>[B]$VAR[NowPlayingInfo1Var][/B]</label>
 					<textcolor>$VAR[HighlightColor]</textcolor>
-					<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingVideoInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]]</visible>
+					<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingVideoInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]]</visible>
 				</control>
 				<control type="label" id="90521">
 					<left>0</left>
@@ -245,7 +245,7 @@
 					<font>InfoTitle</font>
 					<label>[B]$VAR[NowPlayingInfo1Var][/B]</label>
 					<textcolor>$VAR[HighlightColor]</textcolor>
-					<visible>Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)</visible>
+					<visible>Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)</visible>
 				</control>
 				<control type="image">
 					<visible>!String.IsEmpty(Control.GetLabel(9052)) | !String.IsEmpty(Control.GetLabel(9053))</visible>
@@ -254,7 +254,7 @@
 					<width>500</width>
 					<height>4</height>
 					<texture>panels/separator.png</texture>
-					<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingVideoInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]]</visible>
+					<visible>Player.HasAudio | [Player.HasVideo + !Skin.String(NowPlayingVideoInfo,preview)] | [Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]]</visible>
 				</control>
 				<control type="image">
 					<visible>!String.IsEmpty(Control.GetLabel(90521)) | !String.IsEmpty(Control.GetLabel(9053))</visible>
@@ -263,7 +263,7 @@
 					<width>290</width>
 					<height>4</height>
 					<texture>panels/separator.png</texture>
-					<visible>Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)</visible>
+					<visible>Player.HasVideo + Skin.String(NowPlayingVideoInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)</visible>
 				</control>
 				<control type="fadelabel" id="9053">
 					<top>74</top>
@@ -967,7 +967,7 @@
 						</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]</visible>
+						<visible>Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]</visible>
 						<include content="HomeNowPlayingVideoPreview">
 						    <param name="left">16</param>
 							<param name="top">420</param>
@@ -984,7 +984,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)</visible>
+						<visible>Skin.String(NowPlayingMovieInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)</visible>
 						<include content="HomeNowPlayingVideoPreview">
 						    <param name="left">770</param>
 							<param name="top">40</param>
@@ -1028,7 +1028,7 @@
 						</include>
 					</control>
 					<control type="group">
-						<visible>Skin.String(NowPlayingVideoInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview)]</visible>
+						<visible>Skin.String(NowPlayingVideoInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]</visible>
 						<include content="HomeNowPlayingVideoPreview">
 						    <param name="left">6</param>
 							<param name="top">420</param>
@@ -1045,7 +1045,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>Skin.String(NowPlayingVideoInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview)</visible>
+						<visible>Skin.String(NowPlayingVideoInfo,preview) + System.IdleTime(8) + Skin.HasSetting(Zoom.VideoPreview) + !Skin.HasSetting(VerticalHome)</visible>
 						<include content="HomeNowPlayingVideoPreview">
 						    <param name="left">870</param>
 							<param name="top">40</param>
