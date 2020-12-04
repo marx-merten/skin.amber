@@ -3216,4 +3216,8 @@ msgctxt "#32333"
 msgid "Hide Shelves when Now Playing is Visible"
 msgstr ""
 
+msgctxt "#32334"
+msgid "Enlarge Video Preview when Idle"
+msgstr ""
+
 

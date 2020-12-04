@@ -137,7 +137,7 @@
 		<control type="group" id="700">
             <visible>!Skin.HasSetting(Hide.AllShelves)</visible>
             <animation effect="fade" start="100" end="0" condition="[!String.IsEmpty(Container(300).ListItem.Property(widgetsHide)) + !ControlGroup(700).HasFocus] | 
-			                                                        [Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + [Control.IsVisible(70101) | Control.IsVisible(70102)]]">Conditional</animation>
+			                                                        [Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + !Skin.HasSetting(Hide.NowPlaying) + [Control.IsVisible(70101) | Control.IsVisible(70102)]]">Conditional</animation>
 			<top>95</top>
 			<left>431</left>
 			<include>skinshortcuts-template-shelfgroup2shelvesbackground</include>

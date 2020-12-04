@@ -798,6 +798,7 @@
 					    <texturenofocus />
 					    <textoffsetx>30</textoffsetx>
 			            <onclick>Skin.ToggleSetting(Hide.NowPlaying)</onclick>
+						<onclick>Skin.Reset(Hide.WidgetsWhenNowPlaying)</onclick>
 			            <label>$LOCALIZE[32327]</label>
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(Hide.NowPlaying)</visible>
@@ -863,6 +864,26 @@
 			            <label>$LOCALIZE[32319]</label>
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(Show_MusicVizBackground)</visible>
+		            </control>
+					<control type="button" id="9106104">
+					    <width>1350</width>
+					    <height>60</height>
+					    <texturenofocus />
+					    <textoffsetx>30</textoffsetx>
+			            <onclick>Skin.ToggleSetting(Zoom.VideoPreview)</onclick>
+			            <label>$LOCALIZE[32334]</label>
+			            <label2>$LOCALIZE[107]</label2>
+					    <visible>Skin.HasSetting(Zoom.VideoPreview)</visible>
+		            </control>
+					<control type="button" id="9106105">
+					    <width>1350</width>
+					    <height>60</height>
+					    <texturenofocus />
+					    <textoffsetx>30</textoffsetx>
+			            <onclick>Skin.ToggleSetting(Zoom.VideoPreview)</onclick>
+			            <label>$LOCALIZE[32334]</label>
+			            <label2>$LOCALIZE[106]</label2>
+					    <visible>!Skin.HasSetting(Zoom.VideoPreview)</visible>
 		            </control>
 					<control type="button" id="910605">
 					    <width>1350</width>
