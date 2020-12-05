@@ -842,7 +842,7 @@
 	<!-- Now playing -->
 	<include name="HomeNowPlaying">
 		<control type="image">
-			<visible>[!Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + ![$EXP[widgetsAreShowing]]] | Skin.HasSetting(Hide.WidgetsWhenNowPlaying)</visible>
+			<visible>![$EXP[widgetsAreShowing]]</visible>
 			<include>AnimationVisibleFade</include>
 			<width>1920</width>
 			<include>GradientPositionVertical</include>
@@ -850,7 +850,7 @@
             <colordiffuse>dfcebe9e</colordiffuse>
 		</control>
 		<control type="group" id="701">
-			<visible>[!Skin.HasSetting(Hide.WidgetsWhenNowPlaying) + ![$EXP[widgetsAreShowing]]] | Skin.HasSetting(Hide.WidgetsWhenNowPlaying)</visible>
+			<visible>![$EXP[widgetsAreShowing]]</visible>
 			<include condition="Skin.HasSetting(VerticalHome)">NowPlayingPositionVertical</include>
 			<include condition="!Skin.HasSetting(VerticalHome)">NowPlayingPositionHorizontal</include>
 			<include>AnimationVisibleFade</include>
