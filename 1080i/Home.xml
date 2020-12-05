@@ -25,7 +25,7 @@
 		<include condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHInfoLine)">HomeEHInfoLineLists</include>
 
         <!-- Extra fanart for Now Playing: Movie, not in extrafanart folder -->
-        <control type="fadelabel" id="4441">
+<!--        <control type="fadelabel" id="4441">
 			<top>-100</top>
 			<width>2560</width>
 			<height>0</height>
@@ -40,10 +40,10 @@
 			<label>$INFO[Player.FolderPath]fanart3.jpg</label>
 			<label>$INFO[Player.FolderPath]fanart4.jpg</label>
 			<label>$INFO[Player.FolderPath]fanart5.jpg</label>
-		</control>
+		</control> -->
 		
 		<!-- Extra fanart for Now Playing: Episode, not in extrafanart folder -->
-        <control type="fadelabel" id="4442">
+<!--        <control type="fadelabel" id="4442">
 			<top>-100</top>
 			<width>2560</width>
 			<height>0</height>
@@ -59,7 +59,7 @@
 			<label>$INFO[Player.FolderPath,,../]fanart3.jpg</label>
 			<label>$INFO[Player.FolderPath,,../]fanart4.jpg</label>
 			<label>$INFO[Player.FolderPath,,../]fanart5.jpg</label>
-		</control>
+		</control> -->
 		
 		<!-- Now Playing Extra Fanart, in extrafanart folder -->
 		<control type="multiimage" id="5045">
