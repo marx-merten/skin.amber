@@ -798,7 +798,6 @@
 					    <texturenofocus />
 					    <textoffsetx>30</textoffsetx>
 			            <onclick>Skin.ToggleSetting(Hide.NowPlaying)</onclick>
-						<onclick>Skin.Reset(Hide.WidgetsWhenNowPlaying)</onclick>
 			            <label>$LOCALIZE[32327]</label>
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(Hide.NowPlaying)</visible>
@@ -821,7 +820,8 @@
 			            <onclick>Skin.ToggleSetting(Show_VideoBackground)</onclick>
 						<onclick>Skin.SetString(NowPlayingMovieInfo,info)</onclick>
 						<onclick>Skin.SetString(NowPlayingVideoInfo,info)</onclick>
-			            <label>$LOCALIZE[32318]</label>
+			            <onclick>Skin.Reset(Hide.TitleBarNowPlaying)</onclick>
+						<label>$LOCALIZE[32318]</label>
 			            <label2>$LOCALIZE[106]</label2>
 					    <visible>!Skin.HasSetting(Show_VideoBackground)</visible>
 		            </control>

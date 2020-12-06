@@ -842,7 +842,7 @@
 	<!-- Now playing -->
 	<include name="HomeNowPlaying">
 		<control type="image">
-			<visible>!ControlGroup(700).HasFocus</visible>
+			<visible>!ControlGroup(700).HasFocus + !Skin.HasSetting(Show_VideoBackground)</visible>
 			<include>AnimationVisibleFade</include>
 			<width>1920</width>
 			<include>GradientPositionVertical</include>
@@ -856,7 +856,7 @@
 			<include>AnimationVisibleFade</include>
 			<!-- Video -->
 			<control type="group" id="70101">
-				<visible>Player.HasVideo</visible>
+				<visible>Player.HasVideo + !Skin.HasSetting(Show_VideoBackground)</visible>
 				<control type="group">
 					<visible>VideoPlayer.Content(movies) + [!Skin.String(NowPlayingMovieInfo,preview) | [Skin.String(NowPlayingMovieInfo,preview) + [!System.IdleTime(8) | !Skin.HasSetting(Zoom.VideoPreview) | Skin.HasSetting(VerticalHome)]]]</visible>
 					<control type="group">
