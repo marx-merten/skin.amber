@@ -23,59 +23,6 @@
 		<!-- Hidden lists if using script.embuary.helper for random fanart backgrounds and statistics lines -->
 		<include condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHBackgrounds)">HomeEHBackgroundLists</include>
 		<include condition="System.HasAddon(script.embuary.helper) + Skin.HasSetting(UseEHInfoLine)">HomeEHInfoLineLists</include>
-
-        <!-- Extra fanart for Now Playing: Movie, not in extrafanart folder -->
-<!--        <control type="fadelabel" id="4441">
-			<top>-100</top>
-			<width>2560</width>
-			<height>0</height>
-			<scrollspeed>20</scrollspeed>
-			<scroll>false</scroll>
-			<scrollout>false</scrollout>
-			<resetonlabelchange>true</resetonlabelchange>
-			<visible>Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible>
-			<include>FadeLabelTime</include>
-			<label>$INFO[Player.FolderPath]fanart1.jpg</label>
-			<label>$INFO[Player.FolderPath]fanart2.jpg</label>
-			<label>$INFO[Player.FolderPath]fanart3.jpg</label>
-			<label>$INFO[Player.FolderPath]fanart4.jpg</label>
-			<label>$INFO[Player.FolderPath]fanart5.jpg</label>
-		</control> -->
-		
-		<!-- Extra fanart for Now Playing: Episode, not in extrafanart folder -->
-<!--        <control type="fadelabel" id="4442">
-			<top>-100</top>
-			<width>2560</width>
-			<height>0</height>
-			<scrollspeed>20</scrollspeed>
-			<scroll>false</scroll>
-			<scrollout>false</scrollout>
-			<randomize>true</randomize>
-			<resetonlabelchange>true</resetonlabelchange>
-			<visible>Skin.HasSetting(SkinHelper.EnableExtraFanart)</visible>
-			<include>FadeLabelTime</include>
-			<label>$INFO[Player.FolderPath,,../]fanart1.jpg</label>
-			<label>$INFO[Player.FolderPath,,../]fanart2.jpg</label>
-			<label>$INFO[Player.FolderPath,,../]fanart3.jpg</label>
-			<label>$INFO[Player.FolderPath,,../]fanart4.jpg</label>
-			<label>$INFO[Player.FolderPath,,../]fanart5.jpg</label>
-		</control> -->
-		
-		<!-- Now Playing Extra Fanart, in extrafanart folder -->
-		<control type="multiimage" id="5045">
-			<!-- Extra Fanart Movie -->
-			<top>-100</top>
-			<width>2560</width>
-			<height>0</height>
-			<imagepath background="true">$INFO[Player.FolderPath]extrafanart/</imagepath>
-		</control>
-		<control type="multiimage" id="5046">
-			<!-- Extra Fanart Episode -->
-			<top>-100</top>
-			<width>2560</width>
-			<height>0</height>
-			<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
-		</control>		
 		 
 		<control type="multiimage">
 			<visible>![Player.HasVideo + Skin.HasSetting(Show_VideoBackground)]</visible>

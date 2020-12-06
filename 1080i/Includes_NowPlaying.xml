@@ -1469,10 +1469,10 @@
 	<variable name="NowPlayingVideoFanartVar">
 		<value condition="VideoPlayer.Content(movies) + !String.IsEmpty(Control.GetLabel(4441))">$INFO[Control.GetLabel(4441)]</value>
 		<value condition="VideoPlayer.Content(movies) + !String.IsEmpty(Control.GetLabel(5045))">$INFO[Player.FolderPath]extrafanart/</value>
-		<value condition="VideoPlayer.Content(movies) + String.IsEmpty(Control.GetLabel(5045))">$INFO[Player.Art(fanart)]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[Player.Art(fanart)]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Control.GetLabel(4442))">$INFO[Control.GetLabel(4442)]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Control.GetLabel(5046))">$INFO[Player.FolderPath,,../extrafanart/]</value>
-		<value condition="VideoPlayer.Content(episodes) + String.IsEmpty(Control.GetLabel(5046))">$INFO[Player.Art(fanart)]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.fanart)]</value>
 		<value condition="VideoPlayer.Content(musicvideos) + !String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value condition="VideoPlayer.Content(musicvideos) + !String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
 		<value condition="![VideoPlayer.Content(musicvideos) | VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
@@ -1481,6 +1481,7 @@
 	</variable>
 
     <variable name="NowPlayingAudioFanartVar">
+		<value condition="!String.IsEmpty(Control.GetLabel(4443))">$INFO[Control.GetLabel(4443)]</value>
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
 		<value>special://skin/backgrounds/Default.jpg</value>
     </variable>	
