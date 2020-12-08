@@ -403,11 +403,12 @@
 							<onclick>RunScript(script.skinvariables,action=buildviews,configure)</onclick>
 							<visible>Skin.HasSetting(Enable.NewViewSelector)</visible>
 						</item>
-						<include content="YesNoSettingItem">
-							<param name="itemid" value="2"/>
-							<param name="itemlabel" value="$LOCALIZE[32219]"/>
-							<param name="skinsetting" value="ShowLogoMediaViews"/>
-						</include>
+						<item id="2" description="Select Extra Art for Media Views">
+						    <label>$LOCALIZE[32335]</label>
+						    <label2>$VAR[MediaViewsExtraArtLabelVar]</label2>
+						    <onclick>SetProperty(CustomSelectMediaViewsExtraArt,True)</onclick>
+						    <onclick>ActivateWindow(1121)</onclick>
+		                </item>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="3"/>
 							<param name="itemlabel" value="$LOCALIZE[32223]"/>

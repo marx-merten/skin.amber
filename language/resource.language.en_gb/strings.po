@@ -3220,4 +3220,7 @@ msgctxt "#32334"
 msgid "Enlarge Video Preview when Idle"
 msgstr ""
 
+msgctxt "#32335"
+msgid "Select Extra Art to Show in Applicable Views"
+msgstr ""
 

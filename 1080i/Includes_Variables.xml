@@ -1673,6 +1673,14 @@
 		<value>$LOCALIZE[31119]</value>
 	</variable>
 	
+	<variable name="MediaViewsExtraArtLabelVar">
+	    <value condition="Skin.String(MediaViewsExtraArt,logo)">$LOCALIZE[31621]</value>
+		<value condition="Skin.String(MediaViewsExtraArt,clearart)">$LOCALIZE[31622]</value>
+		<value condition="Skin.String(MediaViewsExtraArt,discart)">$LOCALIZE[31623]</value>
+		<value condition="Skin.String(MediaViewsExtraArt,characterart)">$LOCALIZE[31624]</value>
+		<value>$LOCALIZE[32306]</value>
+	</variable>
+	
 	
     <expression name="WidgetFanartVisible">String.IsEmpty(Container(300).ListItem.Property(widgetDisableFanart)) + ControlGroup(700).HasFocus</expression>
     
