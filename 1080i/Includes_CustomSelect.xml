@@ -782,4 +782,41 @@
 			<onclick>Skin.SetString(MediaViewsExtraArt,characterart)</onclick>
 		</item>
 	</include>
+	<include name="SelectOSDTimeout">
+		<item>
+			<label>3 $LOCALIZE[32047]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,three)</onclick>
+		</item>
+		<item>
+			<label>5 $LOCALIZE[32047]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,five)</onclick>
+		</item>
+		<item>
+			<label>10 $LOCALIZE[32047]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,ten)</onclick>
+		</item>
+		<item>
+			<label>15 $LOCALIZE[32047]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,fifteen)</onclick>
+		</item>
+		<item>
+			<label>20 $LOCALIZE[32047]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,twenty)</onclick>
+		</item>
+		<item>
+			<label>30 $LOCALIZE[32047]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,thirty)</onclick>
+		</item>
+		<item>
+			<label>1 $LOCALIZE[32126]</label>
+			<onclick>Dialog.Close(1121)</onclick>
+			<onclick>Skin.SetString(OSDTimeout,oneminute)</onclick>
+		</item>
+	</include>
 </includes>

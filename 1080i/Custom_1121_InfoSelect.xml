@@ -13,6 +13,7 @@
 	<onunload>ClearProperty(CustomSelectMusicGenreFanart,skinsettings)</onunload>
 	<onunload>ClearProperty(CustomSelectDefaultFont,skinsettings)</onunload>
 	<onunload>ClearProperty(CustomSelectMediaViewsExtraArt,skinsettings)</onunload>
+	<onunload>ClearProperty(CustomSelectOSDTimeout,skinsettings)</onunload>
 	<onunload>ClearProperty(CustomSelectAmberFlixDimLevel,Home)</onunload>
     <onunload>ClearProperty(DoInfoExtras,Home)</onunload>
 	<onunload>ClearProperty(DoInfoExtrasMusic,Home)</onunload>
@@ -101,6 +102,7 @@
 					<include condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectMusicGenreFanart))">SelectMusicGenreFanart</include>
 					<include condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectDefaultFont))">SelectDefaultFont</include>
 					<include condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectMediaViewsExtraArt))">SelectMediaViewsExtraArt</include>
+					<include condition="!String.IsEmpty(Window(skinsettings).Property(CustomSelectOSDTimeout))">SelectOSDTimeout</include>
 				</content>
 			</control>
 		</control>

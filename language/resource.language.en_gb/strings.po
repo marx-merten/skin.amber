@@ -3224,3 +3224,11 @@ msgctxt "#32335"
 msgid "Select Extra Art to Show in Applicable Views"
 msgstr ""
 
+msgctxt "#32336"
+msgid "Full Screen/OSD"
+msgstr ""
+
+msgctxt "#32337"
+msgid "Select Interval for Auto Closing Video OSD"
+msgstr ""
+
