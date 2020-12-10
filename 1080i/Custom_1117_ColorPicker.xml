@@ -36,7 +36,7 @@
                 <height>120</height>
                 <align>center</align>
                 <aligny>center</aligny>
-				<label>Choose $INFO[Skin.String(SelectColorLabel)]</label>
+				<label>$LOCALIZE[22080] $INFO[Skin.String(SelectColorLabel)]</label>
 			    <textcolor>$VAR[LabelTextColor]</textcolor>
             </control>
 			
@@ -139,14 +139,14 @@
 					    <control type="label">
 					        <width>280</width>
 						    <height>40</height>
-						    <label>[B]Current Color[/B]</label>
+						    <label>[B]$LOCALIZE[32338][/B]</label>
 							<font>ListDetailsSmall</font>
 					    </control>
 					    <!-- color preview-->
 			            <control type="image">
 				            <top>40</top>
 							<width>280</width>
-				            <height>40</height>
+				            <height>60</height>
 				            <aspectratio>stretch</aspectratio>
 				            <texture border="5">panel.png</texture>
 				            <colordiffuse>$INFO[Window.Property(colorstring)]</colordiffuse>
@@ -156,7 +156,7 @@
 			        <control type="button" id="3010">
 				        <width>280</width>
 				        <height>60</height>
-				        <label>Value: $VAR[Label_ColorValue]</label>
+				        <label>$LOCALIZE[32339]: $VAR[ColorValueLabelVar]</label>
                         <onclick condition="String.IsEqual(Window(Home).Property(colorpick),HighlightColor)">Skin.SetString(HighlightColorStr)</onclick>
 				        <onclick condition="String.IsEqual(Window(Home).Property(colorpick),LabelTextColor)">Skin.SetString(LabelTextColorStr)</onclick>
 						<onclick condition="String.IsEqual(Window(Home).Property(colorpick),FocusedTextColor)">Skin.SetString(FocusedTextColorStr)</onclick>

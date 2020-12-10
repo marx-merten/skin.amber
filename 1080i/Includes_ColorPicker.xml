@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	
-    <include name="Items_ColorPalette_Material">
+    <variable name="ColorValueLabelVar">
+        <value condition="String.IsEqual(Window(Home).Property(colorpick),HighlightColor) + !String.IsEqual(Skin.String(HighlightColorStr),None)">$INFO[Skin.String(HighlightColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),LabelTextColor) + !String.IsEqual(Skin.String(LabelTextColorStr),None)">$INFO[Skin.String(LabelTextColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),FocusedTextColor) + !String.IsEqual(Skin.String(FocusedTextColorStr),None)">$INFO[Skin.String(FocusedTextColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),SelectedTextColor) + !String.IsEqual(Skin.String(SelectedTextColorStr),None)">$INFO[Skin.String(SelectedTextColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),GlowBarsColor) + !String.IsEqual(Skin.String(GlowBarsColorStr),None)">$INFO[Skin.String(GlowBarsColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),MenuBarColor) + !String.IsEqual(Skin.String(MenuBarColorStr),None)">$INFO[Skin.String(MenuBarColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),VertMenuBladeColor) + !String.IsEqual(Skin.String(VertMenuBladeColorStr),None)">$INFO[Skin.String(VertMenuBladeColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),TopBarColor) + !String.IsEqual(Skin.String(TopBarColorStr),None)">$INFO[Skin.String(TopBarColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),DialogBGColor) + !String.IsEqual(Skin.String(DialogBGColorStr),None)">$INFO[Skin.String(DialogBGColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),WidgetBGColor) + !String.IsEqual(Skin.String(WidgetBGColorStr),None)">$INFO[Skin.String(WidgetBGColorStr)]</value>
+	    <value condition="String.IsEqual(Window(Home).Property(colorpick),ViewsBGColor) + !String.IsEqual(Skin.String(ViewsBGColorStr),None)">$INFO[Skin.String(ViewsBGColorStr)]</value>
+        <value>$LOCALIZE[571]</value>
+    </variable>
+	
+	
+	<include name="Items_ColorPalette_Material">
         <content>
             <item>
                 <label>ffffebee</label>
