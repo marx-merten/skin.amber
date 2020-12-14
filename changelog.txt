@@ -1,3 +1,5 @@
+3.2.116 (14-12-2020)
+- Try to fix error of not being able to access media
 3.2.115 (13-12-2020)
 - Provide color picker without addons (thx jurialmunkey)
 - Replace backup options with script.xbmcbackup
