@@ -150,6 +150,21 @@
 			<include>FadeLabelTime</include>
 		</control>
 		
+		<control type="image" id="4444">
+			<visible>Skin.HasSetting(Use.ParentFolderFanart)</visible>
+            <width>1</width>
+            <height>1</height>
+			<texture>$INFO[Container.ListItem.FolderPath]fanart.jpg</texture>
+		</control>
+		
+		<control type="image" id="4445">
+			<visible>Skin.HasSetting(Use.ParentFolderFanart)</visible>
+			<top>-1000</top>
+            <width>1</width>
+            <height>1</height>
+			<texture>$INFO[Container.ListItem.FolderPath]../fanart.jpg</texture>
+		</control>
+		
 		<include condition="Skin.HasSetting(ShowSetCount)">SetCountList</include>
 		<include condition="Skin.HasSetting(ShowSpecialFanart)">SpecialFanartList</include>
 		
