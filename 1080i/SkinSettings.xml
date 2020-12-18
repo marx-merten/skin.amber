@@ -362,7 +362,7 @@
 						</include>
 						<include content="YesNoSettingItem">
 							<param name="itemid" value="16"/>
-							<param name="itemlabel" value="Use fanart.jpg if present in folder or parent folder"/>
+							<param name="itemlabel" value="$LOCALIZE[32344]"/>
 							<param name="skinsetting" value="Use.ParentFolderFanart"/>
 						</include>
 					</content>
