@@ -1072,7 +1072,7 @@
 	
 	<include name="FanartViewSwitches">
 		<control type="radiobutton" id="91560" description="Fanart View: Netflix for Posters">
-            <visible>Control.IsVisible(56)+ [container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + ![Skin.HasSetting(56_Posters_Info) | Skin.HasSetting(56_Posters_Logo)]</visible>
+            <visible>Control.IsVisible(56)+ [container.content(musicvideos) | container.content(movies) | container.content(sets) | container.content(tvshows) | container.content(seasons)] + !Skin.HasSetting(56_Posters_Info)</visible>
             <font>ListDetails</font>
             <include>9000SysButtons</include>
             <onclick>Skin.ToggleSetting(56_Posters_Netflix)</onclick>
