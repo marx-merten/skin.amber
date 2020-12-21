@@ -101,14 +101,14 @@
 					<label>$LOCALIZE[31024]</label>
 					<label2>[B]$INFO[Container.SortMethod][/B]</label2>
 					<onclick>Container.NextSortMethod</onclick>
-					<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
+<!--					<visible>!Window.IsActive(MyPVRGuide.xml)</visible> -->
 				</control>
 				<control type="button" id="6055">
 					<include>9000SysButtons</include>
 					<label>$LOCALIZE[31027]</label>
 					<label2>[B]$INFO[Container.SortOrder][/B]</label2>
 					<onclick>Container.SetSortDirection</onclick>
-					<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
+<!--					<visible>!Window.IsActive(MyPVRGuide.xml)</visible> -->
 				</control>
 				<control type="button" id="6051">
 					<include>9000SysButtons</include>
