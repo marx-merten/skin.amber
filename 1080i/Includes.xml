@@ -2110,10 +2110,13 @@
         <param name="subcontent_image_visible">true</param>
         <param name="subcontent_image_texture">$VAR[Overlay]</param>
         <param name="footer"></param>
+		<param name="footer2"></param>
         <param name="visibility"></param>
         <param name="showfooter">true</param>
+		<param name="showfooter2">true</param>
         <param name="showflags">true</param>
 		<param name="footertop">845</param>
+		<param name="footer2top">885</param>
         <param name="flagstop"></param>
 		<param name="footerheight">115</param>
         <definition>
@@ -2261,8 +2264,18 @@
                         <content sortby="$PARAM[subcontent_sortby]" sortorder="$PARAM[subcontent_order]">$PARAM[subcontent_path]</content>
                     </control>
                 </control>                
-                <control type="label" description="Footer">
+                <control type="label" description="Footer 2">
                     <top>$PARAM[footertop]</top>
+					<visible>$PARAM[showfooter2]</visible>
+					<visible>[Container.Content(sets) | Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+                    <width>$PARAM[width]</width>
+                    <height>40</height>
+                    <font>ListDetails</font>
+                    <label>$PARAM[footer2]</label>
+                    <aligny>top</aligny>
+                </control>
+				<control type="label" description="Footer">
+                    <top>$PARAM[footer2top]</top>
                     <visible>$PARAM[showfooter]</visible>
 					<visible>[!String.IsEmpty(Listitem.Duration) | !String.IsEmpty(Listitem.Genre) | !String.IsEmpty(Listitem.Year) | !String.IsEmpty(ListItem.Episode)] | 
 				         [Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366]) + !String.IsEmpty(ListItem.Episode)]</visible>
