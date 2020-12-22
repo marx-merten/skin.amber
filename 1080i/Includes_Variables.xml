@@ -895,7 +895,7 @@
 	</variable>
 	
 	<variable name="panelfooter2">
-		<value condition="String.IsEqual(ListItem.DBType,set) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Director))">$LOCALIZE[20339](s): $INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)]</value>
+		<value condition="String.IsEqual(ListItem.DBType,set) + !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Director))">[COLOR=$VAR[HighlightColor]]$LOCALIZE[20339](s): [/COLOR]$INFO[Window(Home).Property(SkinInfo.Set.Movies.Director)]</value>
 		<value condition="String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.Director)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[20339]: [/COLOR]$INFO[Listitem.Director]</value>
         <value condition="[String.IsEqual(ListItem.DBType,episode) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Director)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]</value>
         <value condition="String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Director)">[COLOR=$VAR[HighlightColor]]$LOCALIZE[20339]: [/COLOR]$INFO[ListItem.Director]</value>
