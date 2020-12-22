@@ -130,6 +130,8 @@
 		<aspectratio aligny="top">keep</aspectratio>
 	</include>
 	
+	
+	
 	<include name="SquareFanartThumbDimensions">
 		<posx>15</posx>
 		<width>297</width>

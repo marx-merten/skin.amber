@@ -2948,7 +2948,6 @@
 		<param name="isFocused">false</param>
 		<param name="isSmallIcon">false</param>
 		<param name="isSearch">false</param>
-		<param name="aspect">scale</param>
 		<definition>
 			<include content="GenericThumbIconTemplate">
 				<param name="isFocused">$PARAM[isFocused]</param>
@@ -2965,7 +2964,6 @@
 				<param name="overlaylabel">$VAR[PosterLabel]</param>
 				<param name="overlaylabelalign">center</param>
 				<param name="overlaylabelyoffset">80r</param>
-				<param name="aspect">$PARAM[aspect]</param>
 			</include>
 		</definition>
 	</include>
