@@ -281,7 +281,7 @@
 				<onright condition="Control.IsVisible(6)">6</onright>
 				<control type="button" id="5" description="Get more button">
 					<width>254</width>
-					<label></label>
+					<label>$LOCALIZE[186]</label>
 					<align>center</align>
 					<height>60</height>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
@@ -304,7 +304,7 @@
 				<onright condition="Control.IsVisible(6)">6</onright>
 				<control type="button" id="5" description="Get more button">
 					<width>254</width>
-					<label></label>
+					<label>$LOCALIZE[186]</label>
 					<align>right</align>
 					<height>60</height>
 					<texturenofocus border="3">buttons/ButtonNF.png</texturenofocus>
