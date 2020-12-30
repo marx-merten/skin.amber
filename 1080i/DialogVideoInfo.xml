@@ -1660,7 +1660,9 @@
                 <font>Details</font>
                 <align>center</align>
                 <label>$LOCALIZE[20410]</label>
-				<onclick>RunScript(plugin.video.themoviedb.helper,close_dialog=1134,playmedia=$INFO[ListItem.Trailer])</onclick>
+				<onclick condition="System.HasAddon(plugin.video.themoviedb.helper)">RunScript(plugin.video.themoviedb.helper,close_dialog=1134,playmedia=$INFO[ListItem.Trailer])</onclick>
+				<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">SendClick(11)</onclick>
+				<onclick condition="!System.HasAddon(plugin.video.themoviedb.helper)">Dialog.Close(all)</onclick>
                 <visible>!String.IsEmpty(ListItem.Trailer) + !ListItem.IsCollection + ![String.StartsWith(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]</visible>
             </control>
             <control type="button" id="6" description="Refresh">
