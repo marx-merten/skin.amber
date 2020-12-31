@@ -1,3 +1,6 @@
+3.2.121 (31-12-2020)
+- Add smaller favourites options
+- Fixes
 3.2.120 (27-12-2020)
 - Fixes for inclusion in Kodi repo
 3.2.119 (24-12-2020)
