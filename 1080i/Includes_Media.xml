@@ -2775,7 +2775,7 @@
 				<param name="belowtextboxfont">Shelf_Label</param>
 		        <param name="belowtextboxheight">$PARAM[belowtextboxheight]</param>
 		        <param name="belowtextboxbackheight">$PARAM[belowtextboxbackheight]</param>
-				<param name="belowtextboxbackwidth">310</param>
+				<param name="belowtextboxbackwidth">$PARAM[belowtextboxbackwidth]</param>
 				<param name="aspect">$PARAM[aspect]</param>
 			</include>
 		</definition>
@@ -2811,7 +2811,7 @@
 				<param name="belowtextboxfont">ListDetailsSmall</param>
 		        <param name="belowtextboxheight">$PARAM[belowtextboxheight]</param>
 		        <param name="belowtextboxbackheight">$PARAM[belowtextboxbackheight]</param>
-				<param name="belowtextboxbackwidth">232.5</param>
+				<param name="belowtextboxbackwidth">$PARAM[belowtextboxbackwidth]</param>
 				<param name="aspect">$PARAM[aspect]</param>
 			</include>
 		</definition>
