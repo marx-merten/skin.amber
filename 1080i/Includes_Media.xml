@@ -103,7 +103,7 @@
 		<definition>
 		    
 			<control type="group">
-			    <visible>[Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
+			    <visible>[Container.Content(files) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
 			    <!-- Overlay image when panel is in original position -->
 			    <control type="image">
 				    <visible>[![Container.Content(tvshows) | container.content(seasons) | Container.Content(addons)] | 
@@ -301,7 +301,7 @@
 		<definition>
 		    
 			<control type="group">
-			    <visible>[Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
+			    <visible>[Container.Content(files) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
 			    <!-- Overlay image when panel is in original position -->
 			    <control type="image">
 				    <visible>[![Container.Content(tvshows) | container.content(seasons) | Container.Content(addons)] | 
@@ -498,7 +498,7 @@
         <param name="BGposy">15</param>
 		<definition>
 		    <control type="group">
-			    <visible>[Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
+			    <visible>[Container.Content(files) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
 			    <!-- Overlay image when panel is in original position -->
 			    <control type="image">
 				    <visible>[![Container.Content(tvshows) | container.content(seasons) | Container.Content(addons)] | 
@@ -696,7 +696,7 @@
 		<definition>
 		    
 			<control type="group">
-			    <visible>[Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
+			    <visible>[Container.Content(files) | Container.Content(videos) | Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(addons)]</visible>
 			    <!-- Overlay image when panel is in original position -->
 			    <control type="image">
 				    <visible>[![Container.Content(tvshows) | container.content(seasons) | Container.Content(addons)] | 
