@@ -2826,6 +2826,7 @@
 				<param name="iconheight">400</param>
 				<param name="iconoffset">0</param>
 				<param name="aspect">keep</param>
+				<param name="aligny">bottom</param>
 				<param name="shadowoffset">8</param>
 				<param name="bordersizeLT">16</param>
 				<param name="bordersizeRB">24</param>
@@ -2849,6 +2850,7 @@
 				<param name="iconheight">250</param>
 				<param name="iconoffset">5</param>
 				<param name="aspect">keep</param>
+				<param name="aligny">bottom</param>
 				<param name="shadowoffset">8</param>
 				<param name="bordersizeLT">12</param>
 				<param name="bordersizeRB">20</param>
@@ -2874,6 +2876,7 @@
 				<param name="iconheight">160</param>
 				<param name="iconoffset">20</param>
 				<param name="aspect">keep</param>
+				<param name="aligny">bottom</param>
 				<param name="shadowoffset">28</param>
 				<param name="bordersizeLT">12</param>
 				<param name="bordersizeRB">20</param>
