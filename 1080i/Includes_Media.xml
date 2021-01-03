@@ -1152,7 +1152,7 @@
 		    <!-- Overlay for small icons in custom video lists in info dialog -->
 			<control type="group">
 			    <visible>Window.IsActive(DialogVideoInfo.xml) + [String.IsEqual(Container.ListItem.DBType,movie) | String.IsEqual(Container.ListItem.DBType,tvshow)] + 
-						 String.StartsWith(Container.ListItem.FolderPath,plugin://) + !String.IsEmpty(Container.ListItem.DBID)</visible>
+						 [String.StartsWith(Container.ListItem.FolderPath,plugin://) | String.StartsWith(Container.ListItem.FolderPath,videodb)] + !String.IsEmpty(Container.ListItem.DBID)</visible>
 			    <control type="group">
 				    <control type="image">
 				        <visible>!$PARAM[isFocused]</visible>
@@ -3197,7 +3197,8 @@
 				    <param name="belowdoublelabelvisibility">true</param>
 				    <param name="belowdoublelabel1">$INFO[ListItem.Label]</param>
 				    <param name="belowdoublelabel2">$INFO[ListItem.Year]</param>
-				    <param name="aspect">scale</param>
+				    <param name="aspect">stretch</param>
+					<param name="isSmallIcon">true</param>
 			    </include>
 			</itemlayout>
 			<focusedlayout height="410" width="232.5">
@@ -3214,7 +3215,8 @@
 				    <param name="belowdoublelabelvisibility">true</param>
 				    <param name="belowdoublelabel1">$INFO[ListItem.Label]</param>
 				    <param name="belowdoublelabel2">$INFO[ListItem.Year]</param>
-				    <param name="aspect">scale</param>
+				    <param name="aspect">stretch</param>
+					<param name="isSmallIcon">true</param>
 			    </include>                
 			</focusedlayout>
 		</definition>

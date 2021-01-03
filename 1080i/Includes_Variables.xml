@@ -185,8 +185,8 @@
     </variable>
 	
 	<variable name="TopRightOverlay" description="Overlay image">
-        <value condition="[[Window.IsActive(DialogVideoInfo.xml) + !Window.IsActive(Custom_1122_Search.xml) + !Window.IsActive(Custom_1131_SingleSearch.xml)] | 
-		                  String.StartsWith(Container.ListItem.FolderPath,plugin://)] + !String.IsEmpty(Container.ListItem.DBID)">overlays/toprightlibrary.png</value>
+        <value condition="[[Window.IsActive(DialogVideoInfo.xml) + !Window.IsActive(Custom_1122_Search.xml) + !Window.IsActive(Custom_1131_SingleSearch.xml)] + 
+		                  !String.IsEmpty(ListItem.Property(Container.Info))] + !String.IsEmpty(Container.ListItem.DBID)">overlays/toprightlibrary.png</value>
 		<value condition="!Skin.HasSetting(Hide_Collection_Marks) + ListItem.IsCollection + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/toprightcollectionsnf.png</value>
 		<value condition="!Skin.HasSetting(Hide_Collection_Marks) + ListItem.IsCollection + String.IsEqual(ListItem.Overlay,OverlayWatched.png)">overlays/toprightwatched.png</value>
         <value condition="!Skin.HasSetting(Hide_InProgress_Marks) + !String.IsEmpty(ListItem.Overlay) + ListItem.IsResumable">overlays/toprightinprogress.png</value>
