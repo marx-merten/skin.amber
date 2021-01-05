@@ -1,3 +1,5 @@
+3.2.123 (05-01-2021)
+- Fix for inclusion in Kodi repo
 3.2.122 (04-01-2021)
 - Make embuary helper and tmdb helper completely optional
 - Fix for overlay not shown for files in list views
