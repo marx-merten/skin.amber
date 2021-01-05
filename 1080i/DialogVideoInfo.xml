@@ -1908,7 +1908,7 @@
                 <param name="sortorder">descending</param>
             </include>
             <!-- Crew in Movies -->
-            <include content="VideoInfoPosterWidget" condition="String.Contains(ListItem.FolderPath,type=person) + Skin.HasSetting(Enable.TMDbHelper))">
+            <include content="VideoInfoPosterWidget" condition="String.Contains(ListItem.FolderPath,type=person) + Skin.HasSetting(Enable.TMDbHelper)">
                 <param name="id">910013</param>
     			<param name="labelid">9100131</param>
                 <param name="headinglabel">$LOCALIZE[32089]</param>
