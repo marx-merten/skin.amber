@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 
-	<visible>!Player.HasGame + [[[VideoPlayer.IsFullscreen + !Skin.HasSetting(Hide.SeekBarWhenPaused)] | 
+    <visible>$EXP[SeekbarShouldShow]</visible>
+
+<!--	<visible>!Player.HasGame + [[[VideoPlayer.IsFullscreen + [!Skin.HasSetting(Hide.SeekBarWhenPaused) | !Player.Paused]] | 
 	                             [VideoPlayer.IsFullscreen + Player.Paused + Skin.HasSetting(Hide.SeekBarWhenPaused) + !System.IdleTime(5)]] | Window.IsVisible(MusicVisualisation.xml)] + 
 	         [Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput) | 
 			  Player.Caching | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | 
 			 [[Player.Paused + Skin.HasSetting(Hide.SeekBarWhenPaused) + !System.IdleTime(5)] | 
 			  [Player.Paused + !Skin.HasSetting(Hide.SeekBarWhenPaused)]] | Player.Forwarding | Player.Rewinding | 
-			  Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)]</visible>	
+			  Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)]</visible>	-->
     <include>OSDFade</include>
 	<zorder>0</zorder>
 	<controls>
