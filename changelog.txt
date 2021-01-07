@@ -1,3 +1,6 @@
+3.2.125 (07-01-2021)
+- Option to hide seek bar when paused
+- Use EPGEventIcon instead of Icon for PVR
 3.2.124 (06-01-2021)
 - Fix for playing items that have no path from video info
 3.2.123 (05-01-2021)
