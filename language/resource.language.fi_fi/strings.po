@@ -3222,6 +3222,10 @@ msgctxt "#32357"
 msgid "Enable Video Lyrics"
 msgstr ""
 
+msgctxt "#32358"
+msgid "Play Whole Albums from Shelves"
+msgstr ""
+
 #~ msgctxt "#32065"
 #~ msgid "Backup Skin Settings"
 #~ msgstr "Varmuuskopioi ulkoasun asetukset"
