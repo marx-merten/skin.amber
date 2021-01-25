@@ -1569,6 +1569,10 @@ msgctxt "#31633"
 msgid "Disable Simple List View"
 msgstr "Désactiver la vue Liste Simple"
 
+msgctxt "#31634"
+msgid "High"
+msgstr ""
+
 msgctxt "#31901"
 msgid "36 Hour Forecast"
 msgstr "Prévisions sur 36 heures"
@@ -3225,6 +3229,10 @@ msgstr ""
 
 msgctxt "#32359"
 msgid "Show Item Name in Top Bar"
+msgstr ""
+
+msgctxt "#32360"
+msgid "Animate backgrounds using Ken Burns effect"
 msgstr ""
 
 #~ msgctxt "#32065"
