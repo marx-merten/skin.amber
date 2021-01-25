@@ -1287,6 +1287,7 @@
 	<variable name="WidgetPosLabelVar">
 	    <value condition="String.IsEqual(Container(211).ListItem.Property(horizontalWidgetPos),Standard)">$LOCALIZE[31613]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(horizontalWidgetPos),Low)">$LOCALIZE[31614]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(horizontalWidgetPos),High)">$LOCALIZE[31634]</value>
 	</variable>
 	
 	<variable name="Widget1ArtLabelVar">
@@ -1714,10 +1715,13 @@
 	</variable>
 	
 	<variable name="VideoPlayerIcon">
-	    <value condition="!String.IsEmpty(PVR.EPGEventIcon)">$INFO[PVR.EPGEventIcon]</value>
+	    <value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(PVR.EPGEventIcon)">$INFO[PVR.EPGEventIcon]</value>
 	    <value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Fanart))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Fanart)]</value>
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Thumb))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Thumb)]</value>
 		<value condition="VideoPlayer.Content(livetv) + !String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Poster))">$INFO[Window(Home).Property(TMDbHelper.ListItem.Poster)]</value>
+		<value condition="VideoPlayer.Content(movies) + !String.IsEmpty(Player.Art(poster))">$INFO[Player.Art(poster)]</value>
+		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(thumb))">$INFO[Player.Art(thumb)]</value>
+		<value condition="VideoPlayer.Content(episodes) + String.IsEmpty(Player.Art(thumb)) + !String.IsEmpty(Player.Art(tvshow.poster))">$INFO[Player.Art(tvshow.poster)]</value>
 		<value>$INFO[Player.Icon]</value>
 	</variable>
 	
